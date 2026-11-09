@@ -2,7 +2,8 @@
 
 The code behind Tufa Labs' ARC-AGI-2 and ARC-AGI-3 entries in ARC Prize 2026.
 Our [paper](https://tufalabs.github.io/arc-writeups/paper/paper.html),
-[ARC2 writeup](https://tufalabs.github.io/arc-writeups/arc2_writeup/arc2_writeup.html) and
+[ARC2 writeup](https://tufalabs.github.io/arc-writeups/arc2_writeup/arc2_writeup.html),
+[ARC3 writeup](https://tufalabs.github.io/arc-writeups/arc3_writeup/arc3_writeup.html) and
 [supplementary material](https://tufalabs.github.io/arc-writeups/supplementary/overview.html)
 explain what it does and what each part is worth.
 
