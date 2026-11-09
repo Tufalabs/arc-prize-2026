@@ -1,0 +1,34 @@
+{
+  "variant": "0001",
+  "spec_id": "key-door-handcrafted-0001",
+  "game_id": "key_door-0001",
+  "slug": "key_door",
+  "class_name": "KeyDoor",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.key_door",
+    "mech.hazard",
+    "mech.laser_cycle",
+    "mech.guard_patrol",
+    "mech.wait"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "grid_size": [
+    31,
+    19
+  ],
+  "levels": 6
+}

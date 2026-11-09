@@ -1,0 +1,22 @@
+{
+  "game_id": "orbx-0001",
+  "title": "Mirror Orbit",
+  "idea": "A symmetry puzzle where movement traces mirrored orbital paths, forcing the player to think about paired positions instead of a single token.",
+  "default_fps": 8,
+  "baseline_actions": [
+    10,
+    28,
+    12,
+    18,
+    14,
+    14,
+    16,
+    20
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Orbx"
+}

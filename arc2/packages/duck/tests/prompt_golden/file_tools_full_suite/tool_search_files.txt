@@ -1,0 +1,22 @@
+Find text in your working directory without printing whole files. The pattern is a regular expression.
+
+{
+  "type": "object",
+  "properties": {
+    "pattern": {
+      "type": "string",
+      "description": "Regular expression to search for"
+    },
+    "files": {
+      "type": "string",
+      "description": "Which files to search, as a glob (default: all files)"
+    },
+    "context_lines": {
+      "type": "integer",
+      "description": "Lines of context around each hit (default 2)"
+    }
+  },
+  "required": [
+    "pattern"
+  ]
+}

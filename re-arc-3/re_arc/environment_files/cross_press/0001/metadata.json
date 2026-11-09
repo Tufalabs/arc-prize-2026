@@ -1,0 +1,8 @@
+{
+  "game_id": "cross_press-0001",
+  "title": "Cross Press",
+  "default_fps": 8,
+  "baseline_actions": [1, 5, 4, 27, 34, 43, 53],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "CrossPress"
+}

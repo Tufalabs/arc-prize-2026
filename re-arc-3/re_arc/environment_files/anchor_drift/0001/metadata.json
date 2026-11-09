@@ -1,0 +1,21 @@
+{
+  "game_id": "anchor_drift-0001",
+  "title": "Anchor Drift",
+  "default_fps": 8,
+  "baseline_actions": [
+    3,
+    11,
+    14,
+    31,
+    41,
+    25,
+    74,
+    64
+  ],
+  "tags": [
+    "keys-only",
+    "arc-like",
+    "hard"
+  ],
+  "class_name": "AnchorDrift"
+}

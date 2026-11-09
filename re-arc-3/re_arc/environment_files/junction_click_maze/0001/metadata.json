@@ -1,0 +1,17 @@
+{
+  "baseline_actions": [
+    4,
+    5,
+    4
+  ],
+  "default_fps": 8,
+  "game_id": "junction_click_maze-0001",
+  "local_dir": "re_arc/environment_files/junction_click_maze/0001",
+  "tags": [
+    "click-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Junction Click Maze",
+  "idea": "A click-routed maze where the player does not walk tile by tile, but instead commits to turns at junctions, so solving the level means choosing the correct branch points in sequence."
+}

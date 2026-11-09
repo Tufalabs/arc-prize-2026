@@ -1,0 +1,9 @@
+{
+  "game_id": "locksmith_warded_routes-0001",
+  "title": "Locksmith - Warded Routes",
+  "idea": "Carry one mutable key through route-dependent lock mazes where every modifier changes which gates can open next.",
+  "default_fps": 4,
+  "baseline_actions": [5, 13, 14, 28, 17, 19, 31],
+  "tags": ["keys-only"],
+  "class_name": "LocksmithWardedRoutes"
+}

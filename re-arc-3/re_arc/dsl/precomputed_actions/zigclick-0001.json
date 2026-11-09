@@ -1,0 +1,58 @@
+{
+  "actions": [
+    [
+      6,
+      {
+        "x": 7,
+        "y": 8
+      }
+    ],
+    [
+      6,
+      {
+        "x": 54,
+        "y": 15
+      }
+    ],
+    [
+      6,
+      {
+        "x": 10,
+        "y": 23
+      }
+    ],
+    [
+      6,
+      {
+        "x": 51,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 13,
+        "y": 39
+      }
+    ],
+    [
+      6,
+      {
+        "x": 48,
+        "y": 47
+      }
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "zigclick-0001",
+  "generated_at_utc": "2026-03-01T08:46:43.130831+00:00",
+  "generator_agent": "ZigclickDslAgent",
+  "initial_observation_signature": "12ca1aec4517fae45ca58df75125538cada983eb",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 6,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 1,
+  "terminal_state": "WIN",
+  "total_levels": 1
+}

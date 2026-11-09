@@ -1,0 +1,104 @@
+{
+  "model": "/data/shared/research/checkpoints/Qwen3.8-Flash-Next-NVFP4-arc3-reap307",
+  "rows": {
+    "data": "/data/shared/research/arc_3_results/shared/reap307-kimi-mixed-toolcalls-20261030/data/rows.jsonl",
+    "data_sha256": "ecf6d1c3231ec1c55163a3f86cade6efefed8460b9c91b298731aa9c71a19769"
+  },
+  "rows_render_files": {
+    "tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+    "tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+    "chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+  },
+  "validation": {
+    "data": "/data/shared/research/arc_3_results/shared/reap307-kimi-mixed-toolcalls-20261030/data/validation-probe.jsonl",
+    "data_sha256": "777df654ce22abb7607116ff50a455df2786c7652910fdcdd52905b61f0fbead",
+    "every": 20,
+    "group_by": [
+      "source_set"
+    ]
+  },
+  "lora": {
+    "r": 128,
+    "alpha": 256,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "in_proj_qkv",
+      "in_proj_z",
+      "in_proj_b",
+      "in_proj_a",
+      "out_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "group_ranks": {
+      "mlp.shared_expert": [
+        256,
+        512
+      ]
+    }
+  },
+  "expert_lora": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0
+  },
+  "train_routers": false,
+  "expert_storage": "nvfp4_sharded",
+  "nvfp4_materialization": "fused",
+  "kernel_mode": "fast",
+  "kernel_overrides": {
+    "checkpoint_policy": "full"
+  },
+  "offload_every": 1,
+  "offload_chunk_mib": 256,
+  "reuse_qsa_selection": true,
+  "retain_qsa_attention": false,
+  "cuda_expandable_segments": true,
+  "preflight_longest_rows": 2,
+  "expert_lora_sharded": true,
+  "expert_lora_inplace_delta": true,
+  "optimizer": {
+    "lr": 0.0001,
+    "warmup_updates": 5,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "placement": "host",
+    "decay": {
+      "decay_from": 5,
+      "decay_until": 483,
+      "final_fraction": 0.1
+    }
+  },
+  "passes": 2,
+  "batching": {
+    "policy": "length_bucket",
+    "pool_size": 128
+  },
+  "max_length": 192000,
+  "head_chunk": 64,
+  "save_every": 20,
+  "seed": 20261029,
+  "wandb": {
+    "entity": "tufalabs",
+    "project": "flash-router-distillation",
+    "group": "kimi-sft-baseline",
+    "name": "reap307-kimi-mixed-toolcalls-xcl03",
+    "id": "reap307kimimixedtoolcallsxcl0320261030"
+  },
+  "recorded_logprobs": {
+    "weight": 0.3,
+    "tokenizer_sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+    "require_logprobs": false,
+    "ce_positions": "unaligned"
+  }
+}

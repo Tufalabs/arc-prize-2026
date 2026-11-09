@@ -1,0 +1,15 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "game_id": "stack_equalizer-0001",
+  "slug": "stack_equalizer",
+  "class_name": "StackEqualizer",
+  "objective": "obj.balance",
+  "mechanics": [],
+  "action_set": [],
+  "available_actions": [6],
+  "source_spec": {
+    "grid_size": [64, 64],
+    "description": "Balance two block towers by clicking the button below each platform to move the top block from the other tower."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "game_id": "mirror_push-0001",
+  "title": "Mirror Push",
+  "default_fps": 10,
+  "baseline_actions": [
+    5,
+    8,
+    20
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "MirrorPush"
+}

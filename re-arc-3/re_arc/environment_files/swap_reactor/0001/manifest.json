@@ -1,0 +1,18 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "swap-reactor",
+  "game_id": "swap_reactor-0001",
+  "slug": "swap_reactor",
+  "class_name": "SwapReactor",
+  "objective": "obj.clear_targets",
+  "mechanics": [
+    "mech.connector_swap",
+    "mech.match_three",
+    "mech.gravity_cascade",
+    "mech.undo",
+    "mech.action_budget"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

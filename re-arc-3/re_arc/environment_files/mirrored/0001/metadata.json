@@ -1,0 +1,20 @@
+{
+  "baseline_actions": [
+    3,
+    3,
+    5,
+    11,
+    7,
+    14
+  ],
+  "class_name": "Mirrored",
+  "default_fps": 8,
+  "game_id": "mirrored-0001",
+  "idea": "Control two main blocks at once until they meet on the same grid cell or cross horizontally in a mirrored move. Up and down move both blocks together, while left and right move the left block in the commanded direction and the right block in the opposite direction. Each block resolves collisions independently, so walls, gates, edges, hazards, and movable blockers can pin one block while the other continues and changes their relative alignment. Levels should teach mirrored horizontal motion, independent pinning, hazard resets, clickable blockers, gate pads that open only while occupied, multiple gate families, and final layouts where meeting requires temporarily separating the pair to create the right collision asymmetry.",
+  "tags": [
+    "click-keys",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Mirrored"
+}

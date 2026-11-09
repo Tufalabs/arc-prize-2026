@@ -1,0 +1,35 @@
+palette_legend_caption: Palette legend image: one swatch per color index, labelled with the index (top-left), the character `.ascii` renders it as (top-right), and its name.
+
+color_name_legend_caption: Color legend image: one swatch per color, labelled with the color name used in this prompt.
+
+game_over_refusal: The game is over: UP cannot be executed. RESET is the only valid action.
+
+already_acted_skip: not executed: an earlier tool call in this response executed actions; re-issue next turn if still needed
+
+stop_detail_run_complete: No further actions were executed because the run is already complete.
+
+stop_detail_game_over: No further actions were executed because the previous action reached GAME_OVER; RESET on your next turn to restart the level.
+
+stop_detail_level_completed: No further actions were executed because the previous action completed a level; re-ground on the new scene before acting again.
+
+stop_detail_done: No further actions were executed because the environment reported done.
+
+stop_detail_max_moves: No further actions were executed because the run's action limit was reached; the run ends here.
+
+stop_detail_terminal: No further actions were executed because the previous action reached a terminal state.
+
+stop_detail_invalid_action: UP is not valid in the current state; remaining actions were not executed.
+
+invalid_action_error: Action 1: UP is not currently valid.
+
+stage_error_unknown_action: Action 1: unknown action 'WARP'.
+
+stage_error_undo_disabled: Action 1: UNDO is disabled by expose_undo=False.
+
+stage_error_mouse_coords: Action 1: MOUSE requires integer row and col.
+
+memory_budget_not_positive: memory_context_tokens must be positive to append memory.
+
+memory_empty_text: The memory tool requires a non-empty `text` entry.
+
+memory_entry_too_large: Memory entry is about <entry_tokens> tokens, exceeding the 1000-token memory limit. Append a shorter finding.

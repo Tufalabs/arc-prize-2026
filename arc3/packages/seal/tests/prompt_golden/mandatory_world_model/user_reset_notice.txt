@@ -1,0 +1,13 @@
+Palette legend image: one swatch per color index, labelled with the index (top-left), the character `ascii_grid` renders it as (top-right), and its name.
+[image:512x512]
+Your `python` session was cleared because a new level started: definitions and variables from earlier snippets are gone. Your files are still there — re-create anything else you need.
+No actions have been executed yet.
+Current state: step 1, level 1.
+You may explore for up to 10 more moves, but write a world model as soon as feasible. Until you do, you may only perform one action per tool call.
+This turn:
+1. Orient on the newest frame: `segment(history[-1].frame.grid)` for structure.
+2. Read `world_model.py`, a working example of the contract for another game, then decide what to learn next — a move to learn from, or rules to write into `world_model.py` in its place — or, once `test_world_model()` passes, the next move or sequence.
+3. Act with `submit_action([...])`: one action until your world model passes, any sequence after it does.
+
+Current grid image:
+[image:32x32]

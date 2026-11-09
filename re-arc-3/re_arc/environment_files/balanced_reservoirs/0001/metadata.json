@@ -1,0 +1,8 @@
+{
+  "game_id": "balanced_reservoirs-0001",
+  "title": "Balanced Reservoirs",
+  "default_fps": 8,
+  "baseline_actions": [1, 6, 6, 27, 41, 44, 52],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "BalancedReservoirs"
+}

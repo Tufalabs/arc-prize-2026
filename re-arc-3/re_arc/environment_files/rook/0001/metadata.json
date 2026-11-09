@@ -1,0 +1,21 @@
+{
+  "game_id": "rook-0001",
+  "title": "Rook Slides",
+  "idea": "A chess-inspired movement puzzle where the player slides like a rook in straight lines and must use that constraint to reach the target.",
+  "default_fps": 8,
+  "baseline_actions": [
+    4,
+    4,
+    3,
+    1,
+    4,
+    1,
+    7
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Rook"
+}

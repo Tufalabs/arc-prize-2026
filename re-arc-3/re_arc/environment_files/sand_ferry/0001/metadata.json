@@ -1,0 +1,8 @@
+{
+  "game_id": "sand_ferry-0001",
+  "title": "Sand Ferry",
+  "default_fps": 8,
+  "baseline_actions": [8, 20, 27, 33, 58, 72, 98],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "SandFerry"
+}

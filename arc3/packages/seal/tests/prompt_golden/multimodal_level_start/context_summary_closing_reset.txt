@@ -1,0 +1,10 @@
+[context compacted — your `python` session was reset but your files are intact; continue from the summary]
+
+Your files:
+- `board_tools.py` (2.1 KB)
+- `notes.md` (340 B)
+- `runs/`
+
+Your `python` session, objects you defined:
+Python session listing unavailable. The Python kernel is unavailable; its next call starts a fresh session. Earlier variables may have been lost.
+<the listing's error>

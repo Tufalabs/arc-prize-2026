@@ -1,0 +1,17 @@
+{
+  "game_id": "scale_gate_flood-0001",
+  "title": "Scale Gate Flood",
+  "default_fps": 10,
+  "baseline_actions": [
+    2,
+    4,
+    7
+  ],
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "ScaleGateFlood"
+}

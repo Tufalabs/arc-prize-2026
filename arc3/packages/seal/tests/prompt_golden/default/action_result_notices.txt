@@ -1,0 +1,65 @@
+palette_legend_caption: Palette legend image: one swatch per color index, labelled with the index (top-left), the character `ascii_grid` renders it as (top-right), and its name.
+
+color_name_legend_caption: Color legend image: one swatch per color, labelled with the color name used in this prompt.
+
+diff_image_caption: Diff image of your last move, `<move>` (step <step>): the cells that differ from <baseline>, in their new color; every other cell is dark navy, which is not a game color.
+
+diff_image_caption_won: Diff image of the move that won the level, `<move>` (step <step>): the cells of the frame it ended on that differ from <baseline>, in their new color; every other cell is dark navy, which is not a game color.
+
+compaction_restart_preamble: [context compacted — this game is already under way: its earlier turns are left out here, and your own summary of them follows the latest prompt and tool call below]
+
+game_over_refusal: The game is over: UP cannot be executed. RESET is the only valid action.
+
+already_acted_skip: not executed: an earlier tool call in this response executed actions; re-issue next turn if still needed
+
+suggest_moves_note: You have not done any move for <tokens> tokens. Consider experimenting rather than thinking.
+
+stop_detail_run_complete: No further actions were executed because the run is already complete.
+
+stop_detail_game_over: No further actions were executed because the previous action reached GAME_OVER; RESET on your next turn to restart the level.
+
+stop_detail_level_completed: No further actions were executed because the previous action completed a level; re-ground on the new scene before acting again.
+
+stop_detail_done: No further actions were executed because the environment reported done.
+
+stop_detail_max_moves: No further actions were executed because the run's action limit was reached; the run ends here.
+
+stop_detail_terminal: No further actions were executed because the previous action reached a terminal state.
+
+stop_detail_invalid_action: UP is not valid in the current state; remaining actions were not executed.
+
+invalid_action_error: Action 1: UP is not currently valid.
+
+valid_actions_note:  This game's actions: <actions>.
+
+stage_error_unknown_action: Action 1: unknown action 'WARP'.
+
+stage_error_undo_disabled: Action 1: UNDO is disabled.
+
+stage_error_mouse_coords: Action 1: MOUSE requires integer row and col.
+
+world_model_required: A passing test_world_model() is required to make moves.
+
+exploration_single_action_refusal: While exploring, an action batch holds one action; this one has <count>. Nothing was executed.
+
+exploration_one_per_call_refusal: While exploring, one action runs per python call. Nothing was executed.
+
+memory_budget_not_positive: memory_context_tokens must be positive to append memory.
+
+memory_empty_text: The memory tool requires a non-empty `text` entry.
+
+memory_entry_too_large: Memory entry is about <entry_tokens> tokens, exceeding the 1000-token memory limit. Append a shorter finding.
+
+repl_reset_notice_with_files: Your `python` session was cleared because <reason>: definitions and variables from earlier snippets are gone. Your files are still there — re-create anything else you need.
+
+kernel_stopped_responding_reason: it stopped responding
+
+kernel_out_of_memory_reason: it ran out of memory
+
+reflection_cut_note: The reflection turn was ended due to token limits. Stop reflecting and continue with the next level.
+
+no_action_turn_refusal: submit_action is not available in this turn. Nothing was executed. Answer the questions in plain text, with no tool call, to end the turn.
+
+audit_continue_line: Continue playing the level. `submit_action` is available again now.
+
+audit_cut_note: The audit turn was ended because it went on too long. Stop auditing and continue playing the level. `submit_action` is available again now.

@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+.vscode/
+slurm*
+.nfs*
+*.out
+.DS_Store
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Generated outputs
+notebooks/*.gif
+notebooks/*.mp4
+notebooks/runs/
+*.pkl

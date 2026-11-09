@@ -1,0 +1,18 @@
+{
+  "game_id": "trail_follow_touch_all_floor_a1-0001",
+  "title": "Trail Follow (touch all floor)",
+  "idea": "A coverage puzzle where the player leaves a trail and must touch all required floor cells while handling switches, teleports, and enemies.",
+  "default_fps": 8,
+  "baseline_actions": [
+    15,
+    18,
+    38,
+    43,
+    64,
+    118
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "TrailFollowTouchAllFloorA1"
+}

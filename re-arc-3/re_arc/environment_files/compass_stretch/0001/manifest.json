@@ -1,0 +1,31 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "compass-stretch",
+  "game_id": "compass_stretch-0001",
+  "slug": "compass_stretch",
+  "class_name": "CompassStretch",
+  "objective": "obj.activate_seals_and_exit",
+  "mechanics": [
+    "mech.variable_reach",
+    "mech.opposed_reach_transfer",
+    "mech.exact_landing",
+    "mech.action_budget"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

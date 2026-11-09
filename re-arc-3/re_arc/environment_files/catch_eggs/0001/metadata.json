@@ -1,0 +1,17 @@
+{
+  "game_id": "catch_eggs-0001",
+  "title": "Catch Eggs",
+  "default_fps": 10,
+  "baseline_actions": [
+    12,
+    13,
+    13
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "CatchEggs"
+}

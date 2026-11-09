@@ -1,0 +1,8 @@
+{
+  "game_id": "beam_paths-0001",
+  "title": "Beam Paths",
+  "default_fps": 8,
+  "baseline_actions": [5, 7, 6, 37, 43, 60, 77],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "BeamPaths"
+}

@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    9,
+    8,
+    19
+  ],
+  "class_name": "HingeBridge",
+  "default_fps": 8,
+  "game_id": "hinge_bridge-0001",
+  "idea": "This is a traversal puzzle where the player moves a small walker with the arrow keys across gaps and platforms. The main objects are fixed floors, empty gaps, anchor posts, and long bridge bars attached to those anchors. Clicking an anchor flips its bar between two clear orientations, for example horizontal and vertical. In one orientation the bar may create a bridge across a gap, while in the other orientation it may block a corridor or leave the gap open. Because each bar is just a single thick line, the mechanic stays visually clean on a low-resolution grid. The objective is to reach the target pad by arranging the bridge bars into a useful layout. Feedback is immediate because the bar visibly rotates as soon as it is clicked. Level 1 has one gap and one hinged bar. The player learns that clicking the anchor changes whether the gap is crossable. Level 2 has two bars, where opening one route closes another, so the player must understand that the bars are both bridges and blockers. Level 3 uses longer bars and side corridors so the player must cross, backtrack, and reorient bars in the correct order to reach the exit.",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Hinge Bridge"
+}

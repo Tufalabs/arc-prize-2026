@@ -1,0 +1,8 @@
+{
+  "game_id": "shift_mosaic-0001",
+  "title": "Shift Mosaic",
+  "default_fps": 8,
+  "baseline_actions": [1, 5, 13, 91, 153, 151, 193],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "ShiftMosaic"
+}

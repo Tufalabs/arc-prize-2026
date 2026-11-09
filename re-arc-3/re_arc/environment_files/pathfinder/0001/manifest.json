@@ -1,0 +1,27 @@
+{
+  "generator": "manual-spec-implementation",
+  "variant": "0001",
+  "game_id": "pathfinder-0001",
+  "slug": "pathfinder",
+  "class_name": "Pathfinder",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.grid_movement",
+    "mech.wall_collision",
+    "mech.fixed_layout",
+    "mech.multi_level_progression"
+  ],
+  "layout_template": "maze",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4
+  ]
+}

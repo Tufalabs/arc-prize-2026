@@ -1,0 +1,25 @@
+{
+  "game_id": "lf52-271a04aa",
+  "title": "LF52",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 30,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/leap_frog",
+  "tags": [
+    "official",
+    "click-only"
+  ],
+  "baseline_actions": [
+    32,
+    81,
+    60,
+    71,
+    205,
+    148,
+    244,
+    109,
+    164,
+    225
+  ],
+  "local_dir": "environment_files/lf52/271a04aa",
+  "date_downloaded": "2026-04-08T20:07:48.931954+00:00"
+}

@@ -1,0 +1,44 @@
+{
+  "actions": [
+    [
+      6,
+      {
+        "x": 10,
+        "y": 11
+      }
+    ],
+    [
+      6,
+      {
+        "x": 31,
+        "y": 12
+      }
+    ],
+    [
+      6,
+      {
+        "x": 51,
+        "y": 30
+      }
+    ],
+    [
+      6,
+      {
+        "x": 32,
+        "y": 51
+      }
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "splitpathclick-0001",
+  "generated_at_utc": "2026-03-01T07:32:38.946126+00:00",
+  "generator_agent": "SplitpathclickDslAgent",
+  "initial_observation_signature": "2c9db95ac2d09396734e0a45ea9a40669548208d",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 4,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 1,
+  "terminal_state": "WIN",
+  "total_levels": 1
+}

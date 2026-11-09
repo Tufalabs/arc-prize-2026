@@ -1,0 +1,8 @@
+{
+  "game_id": "bumper_circuit-0001",
+  "title": "Bumper Circuit",
+  "default_fps": 8,
+  "baseline_actions": [2, 5, 8, 30, 41, 50, 63],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "BumperCircuit"
+}

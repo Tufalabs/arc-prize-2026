@@ -1,0 +1,13 @@
+{
+  "game_id": "splitlink-0001",
+  "title": "Splitlink",
+  "idea": "A connection puzzle where the board contains split routes and paired endpoints, and the player has to join the correct pairs without letting the branches interfere with each other.",
+  "default_fps": 8,
+  "baseline_actions": [
+    31
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Splitlink"
+}

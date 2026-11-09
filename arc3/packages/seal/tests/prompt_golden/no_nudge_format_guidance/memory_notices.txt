@@ -1,0 +1,7 @@
+Persistent memory appended successfully [#2 | response=5 | step=3 | level=1 | last_action=UP].
+
+memory_context_tokens must be positive to append memory.
+
+The memory tool requires a non-empty `text` entry.
+
+Memory entry is about 412 tokens, exceeding the 1000-token memory limit. Append a shorter finding.

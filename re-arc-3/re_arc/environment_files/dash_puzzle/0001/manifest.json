@@ -1,0 +1,21 @@
+{
+  "game_id": "dash_puzzle-0001",
+  "slug": "dash_puzzle",
+  "variant": "0001",
+  "class_name": "DashPuzzle",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.dash",
+    "mech.timed_hazard",
+    "mech.crumble",
+    "mech.moving_platform"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space"
+  ],
+  "available_actions": [1, 2, 3, 4, 5]
+}

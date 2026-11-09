@@ -1,0 +1,27 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "fuse-doors",
+  "game_id": "fuse_doors-0001",
+  "slug": "fuse_doors",
+  "class_name": "FuseDoors",
+  "objective": "obj.carry_core_to_exit",
+  "mechanics": [
+    "mech.push_fuse",
+    "mech.color_socket",
+    "mech.consume_resource",
+    "mech.open_door",
+    "mech.undo",
+    "mech.step_budget"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

@@ -1,0 +1,20 @@
+{
+  "baseline_actions": [
+    4,
+    7,
+    7
+  ],
+  "class_name": "IslandPortalDock",
+  "default_fps": 6,
+  "game_id": "island_portal_dock-0001",
+  "local_dir": "re_arc/environment_files/island_portal_dock/0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Island Portal Dock",
+  "idea": "A teleportation puzzle across separated islands where portals are the only way to cross water and the final objective is to reach the dock."
+}

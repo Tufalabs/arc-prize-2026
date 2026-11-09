@@ -1,0 +1,26 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "forked-seeds",
+  "game_id": "forked_seeds-0001",
+  "slug": "forked_seeds",
+  "class_name": "ForkedSeeds",
+  "objective": "obj.cover_targets",
+  "mechanics": [
+    "mech.click_split",
+    "mech.atomic_fork",
+    "mech.target_transit",
+    "mech.undo",
+    "mech.action_budget"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

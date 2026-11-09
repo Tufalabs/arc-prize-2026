@@ -1,0 +1,18 @@
+{
+  "game_id": "maze_runner_reach_the_goal-0001",
+  "title": "MazeRunnerReachTheGoal",
+  "idea": "A stripped-down maze race where the player simply pilots a token from start to finish through wall layouts before the available time budget is exhausted.",
+  "default_fps": 8,
+  "baseline_actions": [
+    29,
+    45,
+    46,
+    66,
+    72,
+    100
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "MazeRunnerReachTheGoal"
+}

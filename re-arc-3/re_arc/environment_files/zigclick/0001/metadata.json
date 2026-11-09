@@ -1,0 +1,14 @@
+{
+  "game_id": "zigclick-0001",
+  "title": "Zig Click",
+  "idea": "A click-order puzzle on a zigzag track where nodes have to be activated in the proper progression before time expires, so both ordering and pace matter.",
+  "default_fps": 8,
+  "baseline_actions": [
+    6
+  ],
+  "tags": [
+    "click-only",
+    "debugging"
+  ],
+  "class_name": "Zigclick"
+}

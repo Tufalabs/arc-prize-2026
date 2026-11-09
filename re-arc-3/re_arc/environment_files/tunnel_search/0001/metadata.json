@@ -1,0 +1,17 @@
+{
+  "game_id": "tunnel_search-0001",
+  "title": "Tunnel Search",
+  "default_fps": 10,
+  "baseline_actions": [
+    30,
+    85,
+    261
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "TunnelSearch"
+}

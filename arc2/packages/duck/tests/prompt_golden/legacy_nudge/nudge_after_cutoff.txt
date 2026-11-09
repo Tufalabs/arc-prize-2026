@@ -1,0 +1,1 @@
+You have not answered yet. Investigate first. Call `python` to inspect `train_in`, `train_out` and `test_in`; derive the rule, verify it with `check(fn)`, then assign your answers into `test_out[i][0]` inside Python. 

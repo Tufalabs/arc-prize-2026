@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "stone-skaters",
+  "game_id": "stone_skaters-0001",
+  "slug": "stone_skaters",
+  "class_name": "StoneSkaters",
+  "objective": "obj.fill_matching_sockets",
+  "mechanics": ["mech.sliding_push", "mech.type_matching", "mech.permanent_brakes", "mech.undo"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

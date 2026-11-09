@@ -1,0 +1,12 @@
+Here is the puzzle.
+
+2 example pairs, in train_in and train_out:
+train_in[0] -> train_out[0]  (3x4 -> 5x9)
+train_in[1] -> train_out[1]  (3x4 -> 5x9)
+
+3 test inputs to answer, in test_in:
+test_in[0]  (7x7)
+test_in[1]  (7x7)
+test_in[2]  (7x7)
+
+Work in the kernel. The arrays named above are already there, and printing one is how you see it. When you are done, describe the rule you applied in full in your final reply.

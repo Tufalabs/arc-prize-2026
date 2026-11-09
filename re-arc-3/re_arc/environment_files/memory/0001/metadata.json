@@ -1,0 +1,23 @@
+{
+  "game_id": "memory-0001",
+  "title": "Memory",
+  "idea": "A sequence-memory puzzle where colored pads must be visited in the generated order, after which the player still has to explicitly confirm the completed sequence with the finalize actions to clear the level.",
+  "default_fps": 8,
+  "baseline_actions": [
+    6,
+    13,
+    21,
+    30,
+    32,
+    36,
+    43,
+    55,
+    66
+  ],
+  "tags": [
+    "click-keys",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Memory"
+}

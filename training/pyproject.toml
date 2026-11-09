@@ -1,0 +1,131 @@
+[build-system]
+requires = ["setuptools>=80.0.0,<81", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arc3-training"
+version = "0.1.0"
+description = "Minimal adapter-based RL training pipeline for ARC-AGI-3 rollouts."
+readme = "README.md"
+requires-python = "==3.12.12"
+dependencies = [
+    "aiohttp>=3.13.0,<4",
+    "huggingface-hub>=1.5.0,<2",
+    "peft>=0.17.0",
+    "numpy==2.3.5",
+    "pillow==12.3.0",
+    "requests>=2.32.0",
+    "safetensors>=0.8.0",
+    "setuptools>=80.0.0,<81",
+    "tensorboard>=2.18.0",
+    "torch>=2.5.0",
+    "torchvision>=0.26.0,<0.29; sys_platform == 'linux'",
+    "torchvision==0.28.0; sys_platform != 'linux'",
+    "transformers>=5.14.1,<5.17",
+]
+
+[project.optional-dependencies]
+# The rollout harness (arc3-platypus, pinned as the `platypus` submodule) and
+# its engine are part of THIS environment: one venv serves the trainer, the
+# vLLM server and the rollout worker. The RL launcher selects the harness
+# and fa4 extras; CI and CPU development leave these out.
+# The engine version is pinned here, within ullm's admitted range. 0.25.1,
+# not 0.27.x: the 0.27.1 engine's sampled logprobs disagree with the
+# trainer's forward pass 4x more (same-policy mean |dlogprob| 0.05 vs
+# 0.013), independent of its GDN/attention kernel choices, and that put
+# every run on the edge of the parity gate (bisected 2026-08-25).
+harness = [
+    "platypus",
+    "duck",
+    "ullm",
+    "vllm==0.25.1; sys_platform == 'linux'",
+    # Keep the qualified RL/serving stack independent from the newer
+    # Qwen4-Exp-only distillation environment.
+    "transformers==5.14.1",
+]
+dev = [
+    # Exercise the native metrics route without installing the GPU harness.
+    "prometheus-client>=0.26.0",
+    "pytest>=8.3.0",
+    "ruff>=0.8.0",
+    "vulture>=2.14",
+]
+flash-distillation = [
+    "flash-linear-attention==0.5.1; sys_platform == 'linux'",
+    "torch==2.13.0; sys_platform == 'linux'",
+    "torchvision==0.28.0; sys_platform == 'linux'",
+    "transformers==5.16.1",
+    "wandb==0.30.0",
+]
+# Blackwell full-attention kernels for training. The cluster selects this extra
+# explicitly in its CUDA 13 environment; the Linux marker keeps CPU/macOS
+# development and CI from installing the CUDA-only stack.
+fa4 = [
+    "flash-attn-4[cu13]==4.0.0b19; sys_platform == 'linux'",
+]
+# Per-action SFT from TAAF traces (`sft/`). The data/cache path stays public
+# and CI-friendly; named re_arc dataset resolution and the GPU trainer are
+# separate opt-ins.
+sft = [
+    "datasets>=4.0.0",
+    "pillow>=11",
+]
+sft-rearc = [
+    # Named dataset splits (`DatasetSpec.dataset`) resolve from the installed
+    # re_arc package. Its revision must match the workspace override below.
+    "arc-agi-3-local",
+]
+sft-train = [
+    "trl>=0.23.0",
+    "accelerate>=1.0.0",
+    # Match the prebuilt causal-conv1d wheel used by slurm/sft_train.sbatch.
+    "torch==2.11.0; sys_platform == 'linux'",
+    "torchvision==0.26.0; sys_platform == 'linux'",
+    "transformers==5.14.1",
+]
+
+[project.scripts]
+arc3-train = "training.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["training", "training.*", "sft", "sft.*", "harness_support", "harness_support.*"]
+namespaces = false
+
+# The harness packages live in the `platypus` submodule and resolve as
+# editable workspace members, so `uv sync --locked` from a fresh clone (with
+# the submodule initialized — the sbatch does that) builds the whole stack.
+[tool.uv.sources]
+platypus = { path = "../arc3/packages/platypus", editable = true }
+duck = { path = "../arc3/packages/duck", editable = true }
+ullm = { path = "../arc3/packages/ullm", editable = true }
+arc-agi-3-local = { path = "../re-arc-3", editable = true }
+
+[tool.uv]
+conflicts = [
+    [
+        { extra = "harness" },
+        { extra = "flash-distillation" },
+    ],
+    [
+        { extra = "sft-train" },
+        { extra = "flash-distillation" },
+    ],
+]
+# Same pin the platypus workspace applies (its scene-decomposition dep names
+# a sibling path source that only resolves inside that checkout): every
+# consumer agrees on which games they run.
+override-dependencies = [
+    # ullm's optional prebuilt cache targets FlashInfer 0.6.18. Training
+    # keeps vLLM 0.25.1's FlashInfer 0.6.13 and its matching cubin package.
+    "flashinfer-jit-cache; python_full_version < '3'",
+]
+
+[tool.pytest.ini_options]
+# spec_decode/ holds the drafter package (`drafter`) and its tests.
+testpaths = ["tests", "spec_decode/tests"]
+pythonpath = ["spec_decode"]
+addopts = ["-m", "not integration"]
+markers = [
+    "integration: end-to-end tests that require the real runtime server and GPU resources",
+]

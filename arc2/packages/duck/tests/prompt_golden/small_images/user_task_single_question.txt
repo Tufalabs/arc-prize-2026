@@ -1,0 +1,17 @@
+Here is the puzzle.
+
+2 example pairs, each input followed by its output:
+train_in[0]  (3x4)
+<image 4x3 sha256:0aed719efe41afc0 alt='train_in[0]  (3x4)'>
+train_out[0]  (5x9)
+<image 9x5 sha256:68e509b83f5f1175 alt='train_out[0]  (5x9)'>
+train_in[1]  (3x4)
+<image 4x3 sha256:2e0bcb3b9adf5485 alt='train_in[1]  (3x4)'>
+train_out[1]  (5x9)
+<image 9x5 sha256:6f056f7b1e9ecbf1 alt='train_out[1]  (5x9)'>
+
+1 test input to answer, in test_in:
+test_in[0]  (7x7)
+<image 7x7 sha256:1e9d509833f05850 alt='test_in[0]  (7x7)'>
+
+Work in the kernel. The arrays above are already there — you do not need to retype them. When you are done, describe the rule you applied in full in your final reply.

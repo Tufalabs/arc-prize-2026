@@ -1,0 +1,121 @@
+{
+  "actions": [
+    [
+      6,
+      {
+        "x": 58,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 58,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 58,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 31,
+        "y": 4
+      }
+    ],
+    [
+      6,
+      {
+        "x": 58,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 58,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 31,
+        "y": 58
+      }
+    ],
+    [
+      6,
+      {
+        "x": 58,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 58,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 31,
+        "y": 4
+      }
+    ],
+    [
+      6,
+      {
+        "x": 58,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 31,
+        "y": 58
+      }
+    ],
+    [
+      6,
+      {
+        "x": 4,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 58,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 58,
+        "y": 31
+      }
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "beat_dock_buttons-0001",
+  "generated_at_utc": "2026-04-01T14:28:26.947846+00:00",
+  "generator_agent": "BeatDockButtonsDslAgent",
+  "initial_observation_signature": "3c168bb38d9477d11850d1dff4b807934a9ed663",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 15,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 3,
+  "terminal_state": "WIN",
+  "total_levels": 3
+}

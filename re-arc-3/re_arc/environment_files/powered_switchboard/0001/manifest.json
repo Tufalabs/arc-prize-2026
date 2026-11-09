@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "powered-switchboard",
+  "game_id": "powered_switchboard-0001",
+  "slug": "powered_switchboard",
+  "class_name": "PoweredSwitchboard",
+  "objective": "obj.light_all_bulbs",
+  "mechanics": ["mech.powered_click", "mech.incident_edge_toggle", "mech.power_component", "mech.undo", "mech.step_budget"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

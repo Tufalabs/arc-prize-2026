@@ -1,0 +1,17 @@
+{
+  "game_id": "home_finding-0001",
+  "title": "Home Finding",
+  "default_fps": 10,
+  "baseline_actions": [
+    10,
+    24,
+    32
+  ],
+  "tags": [
+    "click-only",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "HomeFinding"
+}

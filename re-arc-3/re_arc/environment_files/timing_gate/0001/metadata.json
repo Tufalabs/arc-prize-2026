@@ -1,0 +1,18 @@
+{
+  "game_id": "timing_gate-0001",
+  "title": "TimingGate",
+  "idea": "A gate-timing puzzle where movement windows are short and the route only works when the player syncs actions with the gate cycle.",
+  "default_fps": 8,
+  "baseline_actions": [
+    34,
+    39,
+    41,
+    24,
+    35,
+    51
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "TimingGate"
+}

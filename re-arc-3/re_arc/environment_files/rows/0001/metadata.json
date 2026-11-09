@@ -1,0 +1,23 @@
+{
+  "game_id": "rows-0001",
+  "title": "Row-Column Matrix",
+  "idea": "A board-manipulation puzzle where whole rows and columns are the pieces being moved or aligned, so the player solves patterns by thinking in strips instead of individual cells.",
+  "default_fps": 10,
+  "baseline_actions": [
+    5,
+    9,
+    8,
+    11,
+    14,
+    13,
+    16,
+    19
+  ],
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "Rows"
+}

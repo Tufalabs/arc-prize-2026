@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    7,
+    6,
+    7
+  ],
+  "class_name": "ColumnSculptor",
+  "default_fps": 8,
+  "game_id": "column_sculptor-0001",
+  "idea": "This is a terrain-shaping puzzle where the player edits a landscape of vertical columns before releasing a ball. Each column is shown as a simple solid bar rising from the floor. Clicking a column cycles it through a small set of clearly different heights. A ball sits on top of the terrain, and pressing SPACE starts the run. Once released, the ball moves one cell at a time toward lower neighboring terrain, so the player sees a deterministic downhill path. The objective is to sculpt the terrain so the ball rolls into the correct catch basin. The object set is minimal: terrain bars, one or more balls, one or more basins, and a few walls. This stays close to low-resolution primitives and gives very readable feedback because every click visibly changes the terrain profile. Level 1 has one ball and one basin, with a simple misalignment that teaches terrain editing and the one-way release. Level 2 has two balls starting on different parts of the terrain, and both must be guided into separate basins using the same final landscape. Level 3 adds a raised blocker wall so the player must shape not just a slope but also an intermediate shelf that redirects the ball before the final drop.",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Column Sculptor"
+}

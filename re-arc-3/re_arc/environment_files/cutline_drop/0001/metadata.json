@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    8,
+    9,
+    9
+  ],
+  "class_name": "CutlineDrop",
+  "default_fps": 8,
+  "game_id": "cutline_drop-0001",
+  "idea": "This is a structure-reconfiguration puzzle using hanging bars and cuttable ropes. The board shows a few horizontal bars suspended by straight vertical rope lines over gaps and corridors. Clicking a rope cuts it, causing its attached bar to fall straight downward until it lands on the floor, on another bar, or across a gap. A small walker can then move across the newly formed structure. The objective is to create a path to the goal by cutting the right ropes in the right order. Visually this is ideal for a 64x64 grid because everything is made of straight segments: ropes, bars, floors, and gaps. Feedback is immediate and self-explanatory because the cut bar visibly drops into a new position. Level 1 has one suspended bar over one gap, so cutting the rope obviously creates a bridge. Level 2 has multiple hanging bars where dropping one too early blocks the route, so the player learns that order matters. Level 3 uses stacked interactions where one fallen bar becomes the support that catches another, creating a staircase to the goal.",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Cutline Drop"
+}

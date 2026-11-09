@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    4,
+    5,
+    9
+  ],
+  "class_name": "AlternatingHelpers",
+  "default_fps": 8,
+  "game_id": "alternating_helpers-0001",
+  "local_dir": "re_arc/environment_files/alternating_helpers/0001",
+  "tags": [
+    "click-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Alternating Helpers",
+  "idea": "A two-helper coordination puzzle where only one colored helper is active at a time, so the player alternates control to use arrows, switches, and positioning rules until both helpers can reach the final beacon setup."
+}

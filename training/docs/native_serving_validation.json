@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-07",
+  "result": "passed",
+  "engine": "vLLM 0.25.1",
+  "gpu_count": 1,
+  "shared_harness_revision": "b4d84271ed2501f17f1406c0bd8ba752fca3f5ec",
+  "native_runtime_revisions": {
+    "levels": "2479248a8431644e28bf42cdd0fdf7a11c2bacb5",
+    "full_game": "3e872339b5b73fff5798764032ad30b7a4276299"
+  },
+  "parity": {
+    "captures": 12,
+    "sampled_tokens": 274,
+    "mean_abs": 0.015048075467348099,
+    "p95_abs": 0.09807358682155609,
+    "max_abs": 0.30213212966918945,
+    "mean_abs_limit": 0.05,
+    "p95_abs_limit": 0.2
+  },
+  "branches": {
+    "levels": {
+      "diagnostics": {
+        "model_vocab_size": 248320,
+        "tokenizer_size": 248077,
+        "tokenizer_max_token_id": 248076,
+        "eos_token_id": 248046
+      },
+      "all_adapter_identities_exact": true,
+      "all_sampled_token_logprob_lengths_exact": true,
+      "all_continuation_prefixes_exact": true,
+      "sampled_stop_tokens_retained": 5,
+      "greedy_stop_output": "OK"
+    },
+    "fullgame": {
+      "diagnostics": {
+        "model_vocab_size": 248320,
+        "tokenizer_size": 248077,
+        "tokenizer_max_token_id": 248076,
+        "eos_token_id": 248046
+      },
+      "all_adapter_identities_exact": true,
+      "all_sampled_token_logprob_lengths_exact": true,
+      "all_continuation_prefixes_exact": true,
+      "sampled_stop_tokens_retained": 5,
+      "greedy_stop_output": "OK"
+    }
+  },
+  "scope": {
+    "real_gpu": [
+      "native AsyncLLMEngine serving",
+      "same-alias LoRA replacement with adapter identity pinned for all subsequent draws",
+      "trainer gateways and real NativeVLLM rendering/parser/continuation",
+      "sampled-token raw logprobs versus independent PPO forward for the same adapter"
+    ],
+    "not_run_on_gpu": [
+      "gameplay or game reward callback",
+      "optimizer update"
+    ],
+    "cpu_coverage": [
+      "service/gateway/native client/Unix BackendHost/TurnManager and callback integration",
+      "native EOS suppression and partial-UTF8 detokenizer regressions"
+    ]
+  }
+}

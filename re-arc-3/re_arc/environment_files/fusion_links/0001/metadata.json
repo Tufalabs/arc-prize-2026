@@ -1,0 +1,8 @@
+{
+  "game_id": "fusion_links-0001",
+  "title": "Fusion Links",
+  "default_fps": 8,
+  "baseline_actions": [2, 5, 6, 31, 47, 55, 63],
+  "tags": ["click-only", "codex-reviewed", "codex-evaluated"],
+  "class_name": "FusionLinks"
+}

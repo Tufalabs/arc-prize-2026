@@ -1,0 +1,8 @@
+{
+  "game_id": "telescopic_causeway-0001",
+  "title": "Telescopic Causeway",
+  "default_fps": 8,
+  "baseline_actions": [10, 20, 32, 42, 56, 68, 78],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "TelescopicCauseway"
+}

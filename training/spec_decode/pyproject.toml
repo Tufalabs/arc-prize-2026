@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=80,<81", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drafter"
+version = "0.1.0"
+description = "ARC training's Flash-Next drafter distillation and export pipeline"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy==2.3.5",
+    "safetensors==0.8.0",
+    "tensorboard==2.20.0",
+    "torch==2.13.0",
+    "transformers==5.16.1",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.3.0"]
+
+# Extraction runs in a serving runtime, with this package installed without
+# replacing that runtime's engine dependencies. The plugin is inert otherwise.
+[project.entry-points."vllm.general_plugins"]
+drafter_capture = "drafter.capture:register"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["drafter", "drafter.*"]
+namespaces = false
+
+# Deliberately separate from the root RL/SFT environment and its vLLM pin.
+[tool.uv.workspace]
+members = []

@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Mirror Fog",
+    "description": "Clear a foggy observatory by pushing mirrors that reflect a single moving sunbeam across the board. Direction actions move the astronomer and push mirrors; Space rotates the mirror in front of the astronomer; clicks lock or unlock marked mirror stands. At the end of each turn, the beam travels in straight lines, clearing fog where it passes and hardening cleared fog into glass when hit twice. Fog blocks vision but not walking, while glass blocks walking and can redirect rolling prisms. Levels should teach clearing a path, accidentally turning cleared space into a wall, using glass as a stopper, moving mirrors to protect unhit fog, locking a mirror to preserve a beam route, and final rooms where the same beam must first open space and later deliberately close it.",
+    "num_levels": 8
+  }, 
+    {
+    "title": "Sailor",
+    "description": "Move sail crates into colored harbors by rotating their sails and releasing global wind gusts. Clicks select or rotate a sail crate, direction keys move the worker, and Space blows wind one step in the current wind direction. A sail crate moves only if its sail faces the wind, while sideways sails act as blockers; crates can block each other, press pads, or shield other crates from gusts. Levels should teach single-crate wind movement, rotating sails to stop motion, using one crate as a windbreak, staging several crates before a gust, changing wind direction with corner fans, and final harbors where the same crate must be blocker, passenger, and pad-holder at different times.",
+    "num_levels": 8
+  }
+]

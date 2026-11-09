@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "wind-sails",
+  "game_id": "wind_sails-0001",
+  "slug": "wind_sails",
+  "class_name": "WindSails",
+  "objective": "obj.match_harbors",
+  "mechanics": [
+    "mech.grid_walk",
+    "mech.click_rotate",
+    "mech.global_wind",
+    "mech.pressure_gates",
+    "mech.fan_direction"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

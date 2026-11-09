@@ -1,0 +1,8 @@
+{
+  "game_id": "toggle_labyrinth-0001",
+  "title": "Toggle Labyrinth",
+  "default_fps": 8,
+  "baseline_actions": [4, 11, 13, 28, 44, 50, 76],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "ToggleLabyrinth"
+}

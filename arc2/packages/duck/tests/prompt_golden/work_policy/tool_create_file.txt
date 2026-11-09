@@ -1,0 +1,19 @@
+Create a file in your working directory, or replace one entirely.
+
+{
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "description": "Path to the file to create"
+    },
+    "content": {
+      "type": "string",
+      "description": "What the file should contain"
+    }
+  },
+  "required": [
+    "path",
+    "content"
+  ]
+}

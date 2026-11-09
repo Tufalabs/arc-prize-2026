@@ -1,0 +1,19 @@
+{
+  "game_id": "flux-0001",
+  "title": "Flux Lattice",
+  "idea": "A phase-switching maze where the player changes between two movement states to cross matching tiles, bridges, and relays on the way to the goal.",
+  "default_fps": 8,
+  "baseline_actions": [
+    9,
+    9,
+    11,
+    11,
+    10
+  ],
+  "tags": [
+    "click-keys",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Flux"
+}

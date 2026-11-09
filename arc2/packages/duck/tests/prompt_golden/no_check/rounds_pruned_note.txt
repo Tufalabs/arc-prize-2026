@@ -1,0 +1,1 @@
+[Context note] 7 earlier round(s) of this turn were dropped to fit the context window. Anything you established in them is gone from this conversation — the kernel still holds what you put in it, so re-read that rather than re-deriving it, and prefer acting on what you already know over re-investigating.

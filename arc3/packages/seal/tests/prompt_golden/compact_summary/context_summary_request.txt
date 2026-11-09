@@ -1,0 +1,10 @@
+Your context window is nearly full. Write a compact summary of your work so far to carry forward. Everything before this message will be discarded; your `python` session (its variables, functions and `history`) and your files will not. At most ~5,632 tokens. In this order:
+1. Known rules of the game: the hypotheses you tested and the outcome of each.
+2. Key observations about the frames on the current level that informed your thinking.
+3. The current state of the board: the objects that matter and where they are now.
+4. How you used `python` and your files for this game: the variables, functions and files worth knowing about, and what each is for.
+5. Open questions: the hypotheses you are working on now.
+6. Your immediate next step.
+A listing of your `python` session's objects and your files will be provided after compaction, so you need not repeat it, but do explain the most important ones.
+`world_model.py` will be shown in full after compaction, so do not restate it; say instead what it still gets wrong or leaves open.
+Reply in plain text only — do NOT call any tools (any earlier instruction to make a tool call is superseded for this reply). Do not add anything else.

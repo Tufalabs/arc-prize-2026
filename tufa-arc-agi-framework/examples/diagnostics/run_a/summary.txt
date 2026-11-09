@@ -1,0 +1,19 @@
+benchmark: seq_winner
+solver:    SolverSequence
+games:     2
+passes:    3
+runs:      6 (won: 3)
+states:    3 gave_up, 3 won
+started:   2026-10-10 09:16:34
+ended:     2026-10-10 09:16:35
+duration:  0s
+mean score:    51.79
+median score:  51.79
+total actions: 78
+total tokens:  1560
+generated tokens/sec: 2484.75 (job wallclock)
+total wallclock: 3.1s
+
+per-game (mean across passes):
+  example_game: score=100.00, levels=2.0/2, actions=6, tokens=120
+  ls20-9607627b: score=3.57, levels=1.0/7, actions=20, tokens=400

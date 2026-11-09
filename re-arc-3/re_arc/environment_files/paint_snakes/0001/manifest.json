@@ -1,0 +1,30 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "paint-snakes",
+  "game_id": "paint_snakes-0001",
+  "slug": "paint_snakes",
+  "class_name": "PaintSnakes",
+  "objective": "obj.paint_targets",
+  "mechanics": [
+    "mech.route_painting",
+    "mech.directional_wet_barriers",
+    "mech.multi_agent_selection"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "undo"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+  ]
+}

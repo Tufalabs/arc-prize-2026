@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "crane-dipper",
+  "game_id": "crane_dipper-0001",
+  "slug": "crane_dipper",
+  "class_name": "CraneDipper",
+  "objective": "obj.match_reference_ignoring_diagonals",
+  "mechanics": [
+    "mech.rim_station_painting",
+    "mech.overwrite_strokes",
+    "mech.ignored_diagonals",
+    "mech.small_inset_strips",
+    "mech.step_bar"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "game_id": "grid_archery-0001",
+  "title": "Grid Archery",
+  "idea": "A tactical archery puzzle where movement sets aim, arrows ricochet off mirrors or break obstacles, and every target must be hit to open the exit.",
+  "default_fps": 8,
+  "baseline_actions": [
+    33,
+    32,
+    44,
+    34,
+    58,
+    56
+  ],
+  "tags": [
+    "click-keys"
+  ],
+  "class_name": "GridArchery"
+}

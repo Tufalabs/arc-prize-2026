@@ -1,0 +1,26 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "airtime-glider-v1",
+  "game_id": "airtime_glider-0001",
+  "slug": "airtime_glider",
+  "class_name": "AirtimeGlider",
+  "objective": "obj.survive",
+  "mechanics": [
+    "mech.lane_change",
+    "mech.scroller",
+    "mech.moving_hazard",
+    "mech.wind_push_delayed",
+    "mech.pickup_shield"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "idle"
+  ],
+  "available_actions": [
+    1,
+    2,
+    5
+  ]
+}

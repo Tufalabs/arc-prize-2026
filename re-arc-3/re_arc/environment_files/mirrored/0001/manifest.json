@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "mirrored",
+  "game_id": "mirrored-0001",
+  "slug": "mirrored",
+  "class_name": "Mirrored",
+  "objective": "obj.meet_or_cross",
+  "mechanics": [
+    "mech.mirrored_movement",
+    "mech.independent_pinning",
+    "mech.hazards",
+    "mech.clickable_blocker",
+    "mech.gate_pads"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

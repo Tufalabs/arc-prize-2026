@@ -1,0 +1,23 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "sweeper-blade",
+  "game_id": "sweeper_blade-0001",
+  "slug": "sweeper_blade",
+  "class_name": "SweeperBlade",
+  "objective": "obj.sort_pellets_into_bins",
+  "mechanics": [
+    "mech.front_edge_push",
+    "mech.component_push",
+    "mech.shape_gate",
+    "mech.color_bins",
+    "mech.action_budget"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right"
+  ],
+  "available_actions": [1, 2, 3, 4]
+}

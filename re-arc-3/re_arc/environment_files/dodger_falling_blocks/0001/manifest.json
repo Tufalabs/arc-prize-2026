@@ -1,0 +1,31 @@
+{
+  "generator": "manual.codex",
+  "variant": "0001",
+  "spec_id": "dodger-falling-blocks",
+  "game_id": "dodger_falling_blocks-0001",
+  "slug": "dodger_falling_blocks",
+  "class_name": "DodgerFallingBlocks",
+  "objective": "obj.survive_timer",
+  "mechanics": [
+    "mech.falling_hazards",
+    "mech.warning_telegraph",
+    "mech.wind_drift",
+    "mech.fragile_barrier",
+    "mech.rubble_timer"
+  ],
+  "action_set": ["up", "down", "left", "right", "space"],
+  "available_actions": [1, 2, 3, 4, 5],
+  "source_spec": {
+    "slug_hint": "dodger-falling-blocks",
+    "grid_size": [26, 22],
+    "time_limit": 48,
+    "levels": 6,
+    "required_terminal_state": "WIN",
+    "trait_ids": [
+      "family.avatar_navigation",
+      "ctrl.arrows_space",
+      "obj.survive_timer",
+      "time.semi_realtime"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "game_id": "cn04-2fe56bfb",
+  "title": "CN04",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 5,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/connector",
+  "tags": [
+    "official",
+    "click-keys"
+  ],
+  "baseline_actions": [
+    29,
+    54,
+    85,
+    300,
+    208,
+    113
+  ],
+  "local_dir": "environment_files/cn04/2fe56bfb",
+  "date_downloaded": "2026-04-08T20:07:49.199835+00:00"
+}

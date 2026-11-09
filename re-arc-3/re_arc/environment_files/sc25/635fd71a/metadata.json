@@ -1,0 +1,21 @@
+{
+  "game_id": "sc25-635fd71a",
+  "title": "SC25",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 20,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/spellcaster",
+  "tags": [
+    "official",
+    "click-keys"
+  ],
+  "baseline_actions": [
+    36,
+    6,
+    32,
+    83,
+    143,
+    50
+  ],
+  "local_dir": "environment_files/sc25/635fd71a",
+  "date_downloaded": "2026-04-08T20:07:48.528260+00:00"
+}

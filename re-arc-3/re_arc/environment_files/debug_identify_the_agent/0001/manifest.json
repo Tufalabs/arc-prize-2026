@@ -1,0 +1,28 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "game_id": "debug_identify_the_agent-0001",
+  "slug": "debug_identify_the_agent",
+  "class_name": "DebugIdentifyTheAgent",
+  "objective": "obj.reach_target",
+  "mechanics": [
+    "mech.grid_move"
+  ],
+  "action_set": [
+    "move_4"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "source_spec": {
+    "levels": 2,
+    "grid_sizes": [
+      5,
+      15
+    ],
+    "description": "Two deterministic levels: move the blue agent onto the green target."
+  }
+}

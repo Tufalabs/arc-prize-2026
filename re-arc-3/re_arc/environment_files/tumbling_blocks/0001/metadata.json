@@ -1,0 +1,8 @@
+{
+  "game_id": "tumbling_blocks-0001",
+  "title": "Tumbling Blocks",
+  "default_fps": 8,
+  "baseline_actions": [4, 11, 5, 26, 49, 51, 85],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "TumblingBlocks"
+}

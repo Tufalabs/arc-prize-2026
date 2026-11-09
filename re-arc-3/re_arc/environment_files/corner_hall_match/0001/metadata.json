@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    7,
+    8,
+    7
+  ],
+  "class_name": "CornerHallMatch",
+  "default_fps": 8,
+  "game_id": "corner_hall_match-0001",
+  "local_dir": "re_arc/environment_files/corner_hall_match/0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Corner Hall Match",
+  "idea": "A spatial layout puzzle where corner pieces and hallway segments have to be matched so the resulting corridor geometry forms the intended traversable route across the board."
+}

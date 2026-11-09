@@ -1,0 +1,18 @@
+{
+  "game_id": "snake-0001",
+  "title": "Snake Gridworld",
+  "idea": "A grid-based Snake variant where the player grows while collecting food and must avoid collisions with walls and the body's trail.",
+  "default_fps": 8,
+  "baseline_actions": [
+    29,
+    44,
+    39,
+    39,
+    44,
+    40
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Snake"
+}

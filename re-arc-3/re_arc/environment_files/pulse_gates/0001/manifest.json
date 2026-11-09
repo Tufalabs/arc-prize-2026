@@ -1,0 +1,18 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "pulse-gates",
+  "game_id": "pulse_gates-0001",
+  "slug": "pulse_gates",
+  "class_name": "PulseGates",
+  "objective": "obj.connect_source_receiver",
+  "mechanics": [
+    "mech.click_rotate_clockwise",
+    "mech.reciprocal_ports",
+    "mech.dynamic_reachability",
+    "mech.native_undo",
+    "mech.action_budget"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

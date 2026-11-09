@@ -1,0 +1,17 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "tumbling-colors",
+  "game_id": "tumbling_colors-0001",
+  "slug": "tumbling_colors",
+  "class_name": "TumblingColors",
+  "objective": "obj.oriented_dock",
+  "mechanics": [
+    "mech.cube_roll",
+    "mech.ordered_checkpoints",
+    "mech.directional_face_gates",
+    "mech.orientation_match"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click"],
+  "available_actions": [1, 2, 3, 4, 5, 6]
+}

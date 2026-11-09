@@ -1,0 +1,17 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "dodge_ball-0001",
+  "game_id": "dodge_ball-0001",
+  "slug": "dodge_ball",
+  "class_name": "DodgeBall",
+  "objective": "obj.collect_all",
+  "mechanics": [
+    "mech.grid_move",
+    "mech.enemy_chase",
+    "mech.ray_hazard"
+  ],
+  "layout_template": "dodge_1_level",
+  "action_set": ["up", "down", "left", "right"],
+  "available_actions": [1, 2, 3, 4]
+}

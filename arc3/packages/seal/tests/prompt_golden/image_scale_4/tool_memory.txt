@@ -1,0 +1,16 @@
+Append one new durable game finding to persistent memory. Pass it in the required `text` argument.
+
+parameters:
+{
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "description": "One new durable game finding to append."
+    }
+  },
+  "required": [
+    "text"
+  ],
+  "additionalProperties": false
+}

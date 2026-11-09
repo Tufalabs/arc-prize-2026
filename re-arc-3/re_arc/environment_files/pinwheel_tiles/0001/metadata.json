@@ -1,0 +1,8 @@
+{
+  "game_id": "pinwheel_tiles-0001",
+  "title": "Pinwheel Tiles",
+  "default_fps": 8,
+  "baseline_actions": [1, 2, 2, 6, 8, 10, 12],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "PinwheelTiles"
+}

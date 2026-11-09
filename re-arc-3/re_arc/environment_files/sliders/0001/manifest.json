@@ -1,0 +1,34 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "sliders",
+  "game_id": "sliders-0001",
+  "slug": "sliders",
+  "class_name": "Sliders",
+  "objective": "obj.cover_targets",
+  "mechanics": [
+    "mech.click_controls",
+    "mech.slider_length",
+    "mech.linked_children",
+    "mech.translation",
+    "mech.rotation",
+    "mech.rollback_collision",
+    "mech.timer"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

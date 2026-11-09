@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    5,
+    9,
+    3
+  ],
+  "class_name": "HazardSkipPortals",
+  "default_fps": 8,
+  "game_id": "hazard_skip_portals-0001",
+  "local_dir": "re_arc/environment_files/hazard_skip_portals/0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Hazard Skip Portals",
+  "idea": "A movement puzzle where the player jumps through portals and around hazards, using careful skip lengths to reach the dock safely."
+}

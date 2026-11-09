@@ -1,0 +1,21 @@
+{
+  "baseline_actions": [
+    10,
+    14,
+    16,
+    27,
+    46,
+    52,
+    59
+  ],
+  "class_name": "BellBuoys",
+  "default_fps": 8,
+  "game_id": "bell_buoys",
+  "idea": "Guide boats through a tiny harbor by ringing buoys that create circular waves. Clicks select a buoy, Space rings it, and direction keys move movable buoys one cell along dock rails. A wave expands one cell per turn, pushes boats outward, opens wave gates while touching them, and cancels if it meets another wave. Levels should teach pushing one boat, moving a buoy before ringing, using waves as temporary gates, canceling waves to protect a boat, timing two boats with one wave, and final harbors where a wave must first move a boat away from its target so it can later open the return route.",
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "medium"
+  ],
+  "title": "Bell Buoys"
+}

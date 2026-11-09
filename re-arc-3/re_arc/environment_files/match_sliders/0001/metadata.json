@@ -1,0 +1,17 @@
+{
+  "game_id": "match_sliders-0001",
+  "title": "MatchSliders",
+  "idea": "A slider puzzle where pieces must be shifted until the visible arrangement matches the target pattern.",
+  "default_fps": 8,
+  "baseline_actions": [
+    3,
+    3,
+    3
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "MatchSliders"
+}

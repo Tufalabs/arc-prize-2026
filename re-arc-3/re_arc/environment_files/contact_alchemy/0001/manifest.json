@@ -1,0 +1,17 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "contact-alchemy",
+  "game_id": "contact_alchemy-0001",
+  "slug": "contact_alchemy",
+  "class_name": "ContactAlchemy",
+  "objective": "obj.match_tiles",
+  "mechanics": [
+    "mech.click_flip",
+    "mech.contact_stamp",
+    "mech.undo",
+    "mech.timer"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

@@ -1,0 +1,1 @@
+[context] 2 earlier round(s) of this turn were dropped to fit the context window. Anything you established in them is gone from this conversation — re-derive what you still need, and prefer acting on what you already know over re-investigating.

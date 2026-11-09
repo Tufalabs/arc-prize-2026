@@ -1,0 +1,18 @@
+{
+  "game_id": "dash_puzzle-0001",
+  "title": "DashPuzzle",
+  "idea": "A mobility puzzle where the player uses dash moves, crumbling tiles, moving platforms, and hazard timing to reach the exit.",
+  "default_fps": 8,
+  "baseline_actions": [
+    7,
+    7,
+    7,
+    8,
+    11,
+    8
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "DashPuzzle"
+}

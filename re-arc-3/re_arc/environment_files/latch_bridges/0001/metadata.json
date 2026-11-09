@@ -1,0 +1,20 @@
+{
+  "baseline_actions": [
+    6,
+    24,
+    28,
+    23,
+    28,
+    40
+  ],
+  "class_name": "LatchBridges",
+  "default_fps": 8,
+  "game_id": "latch_bridges-0001",
+  "idea": "Cross a maze of drawbridges where stepping on one end of a bridge flips the bridge's orientation and changes future routes. Direction actions move the hiker one cell, Space waits without moving, and clicks rotate only marked fixed turnstiles. A bridge is a visible 1x3 or 3x1 platform; entering it from either end is allowed, but leaving it causes it to rotate 90 degrees around its center if the rotated cells are clear. Levels should teach bridge flipping, using a bridge as a temporary path, avoiding unwanted rotations, waiting to let moving stones clear space, turnstile redirection, and final layouts where a bridge must be flipped away from the exit to open a return route later.",
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "medium"
+  ],
+  "title": "Latch Bridges"
+}

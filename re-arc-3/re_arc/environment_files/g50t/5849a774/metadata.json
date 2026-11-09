@@ -1,0 +1,22 @@
+{
+  "game_id": "g50t-5849a774",
+  "title": "G50T",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 30,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/ghost",
+  "tags": [
+    "official",
+    "keys-only"
+  ],
+  "baseline_actions": [
+    78,
+    175,
+    179,
+    230,
+    96,
+    54,
+    67
+  ],
+  "local_dir": "environment_files/g50t/5849a774",
+  "date_downloaded": "2026-04-08T20:07:49.106051+00:00"
+}

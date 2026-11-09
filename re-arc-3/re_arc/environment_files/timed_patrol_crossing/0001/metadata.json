@@ -1,0 +1,18 @@
+{
+  "game_id": "timed_patrol_crossing-0001",
+  "title": "TimedPatrolCrossing",
+  "idea": "A stealth-routing game where guard patrol timings determine when crossings are safe and whether the remote gate can be reached in time.",
+  "default_fps": 8,
+  "baseline_actions": [
+    26,
+    26,
+    12,
+    29,
+    61,
+    36
+  ],
+  "tags": [
+    "click-keys"
+  ],
+  "class_name": "TimedPatrolCrossing"
+}

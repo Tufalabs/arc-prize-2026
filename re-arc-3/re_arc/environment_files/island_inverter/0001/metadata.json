@@ -1,0 +1,8 @@
+{
+  "game_id": "island_inverter-0001",
+  "title": "Island Inverter",
+  "default_fps": 8,
+  "baseline_actions": [1, 2, 3, 6, 11, 30, 56],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "IslandInverter"
+}

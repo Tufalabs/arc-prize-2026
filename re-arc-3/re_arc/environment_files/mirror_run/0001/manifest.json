@@ -1,0 +1,25 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "mirror-run",
+  "game_id": "mirror_run-0001",
+  "slug": "mirror_run",
+  "class_name": "MirrorRun",
+  "objective": "obj.route_beam",
+  "mechanics": [
+    "mech.click_rotate",
+    "mech.mirror_reflection",
+    "mech.route_recompute",
+    "mech.undo"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

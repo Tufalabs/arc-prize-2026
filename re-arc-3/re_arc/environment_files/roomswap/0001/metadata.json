@@ -1,0 +1,14 @@
+{
+  "game_id": "roomswap-0001",
+  "title": "Roomswap",
+  "idea": "A multi-room adventure puzzle where progress depends on moving between connected rooms, collecting the right pickups, and unlocking the correct transition so the final room becomes reachable.",
+  "default_fps": 8,
+  "baseline_actions": [
+    50
+  ],
+  "tags": [
+    "keys-only", 
+    "debugging"
+  ],
+  "class_name": "Roomswap"
+}

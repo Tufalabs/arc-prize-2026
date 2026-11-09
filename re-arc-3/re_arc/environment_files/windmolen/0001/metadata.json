@@ -1,0 +1,17 @@
+{
+  "game_id": "windmolen-0001",
+  "title": "Windmolen",
+  "default_fps": 6,
+  "baseline_actions": [
+    26,
+    26,
+    28
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "Windmolen"
+}

@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "bell-buoys",
+  "game_id": "bell_buoys",
+  "slug": "bell_buoys",
+  "class_name": "BellBuoys",
+  "objective": "obj.moored_harbors",
+  "mechanics": [
+    "mech.expanding_waves",
+    "mech.wave_gates",
+    "mech.wave_cancellation",
+    "mech.rail_buoys"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}
+

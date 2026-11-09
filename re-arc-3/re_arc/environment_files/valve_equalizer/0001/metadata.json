@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    2,
+    3,
+    6
+  ],
+  "class_name": "ValveEqualizer",
+  "default_fps": 8,
+  "game_id": "valve_equalizer-0001",
+  "idea": "This is a fluid-balancing puzzle made from a few vertical tanks, visible water fill bars, simple valves between tanks, one or more floating blocks, and exit ledges. Clicking a valve toggles it open or closed. After each action, water redistributes one step across the currently open connections, so the player can watch levels rise and fall rather than seeing a hidden calculation. Floating blocks move with the water level, and the objective is to raise the correct float to the exit height. The board remains visually simple because each tank is just a rectangle, the water is a solid fill region, the valves are single gate tiles, and the floats are blocks. The mechanic is easy to read: open or close paths, then watch levels equalize. Level 1 has two tanks and one float. Opening the only valve raises the float to a reachable exit ledge. Level 2 has three tanks with different starting water levels, so the player must choose which valves to open and when. Level 3 has two floats in the same system, and the player must sequence valve changes so one float reaches its goal without dropping the other below its required height.",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Valve Equalizer"
+}

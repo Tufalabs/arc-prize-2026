@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "bumper-circuit",
+  "game_id": "bumper_circuit-0001",
+  "slug": "bumper_circuit",
+  "class_name": "BumperCircuit",
+  "objective": "obj.light_all_switches",
+  "mechanics": ["mech.ice_slide", "mech.diagonal_reflection", "mech.permanent_switch_geometry", "mech.undo"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

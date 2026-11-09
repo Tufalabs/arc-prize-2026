@@ -1,0 +1,19 @@
+{
+  "baseline_actions": [
+    7,
+    12,
+    6
+  ],
+  "class_name": "CommandTwins",
+  "default_fps": 5,
+  "game_id": "command_twins-0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Command Twins",
+  "idea": "A dual-agent command puzzle where the player switches between two characters sharing one level and must issue movement instructions that leave both twins in the right places to finish the room."
+}

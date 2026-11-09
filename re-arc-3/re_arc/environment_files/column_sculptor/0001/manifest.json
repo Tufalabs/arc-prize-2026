@@ -1,0 +1,15 @@
+{
+  "variant": "0001",
+  "game_id": "column_sculptor-0001",
+  "slug": "column_sculptor",
+  "class_name": "ColumnSculptor",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6]
+}

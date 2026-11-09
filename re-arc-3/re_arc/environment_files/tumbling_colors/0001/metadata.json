@@ -1,0 +1,8 @@
+{
+  "game_id": "tumbling_colors-0001",
+  "title": "Tumbling Colors",
+  "default_fps": 8,
+  "baseline_actions": [2, 4, 6, 15, 34, 46, 64],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "TumblingColors"
+}

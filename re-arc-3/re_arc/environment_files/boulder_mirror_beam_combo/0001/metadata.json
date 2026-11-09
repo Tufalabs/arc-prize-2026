@@ -1,0 +1,18 @@
+{
+  "game_id": "boulder_mirror_beam_combo-0001",
+  "title": "Boulder Mirror Beam Combo",
+  "idea": "A multi-mechanic puzzle about pushing a large boulder, rotating mirrors, and routing a dangerous beam so the receiver unlocks the path forward.",
+  "default_fps": 8,
+  "baseline_actions": [
+    45,
+    49,
+    39,
+    45,
+    49,
+    39
+  ],
+  "tags": [
+    "click-keys"
+  ],
+  "class_name": "BoulderMirrorBeamCombo"
+}

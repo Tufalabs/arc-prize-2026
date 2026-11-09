@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "telescopic-causeway",
+  "game_id": "telescopic_causeway-0001",
+  "slug": "telescopic_causeway",
+  "class_name": "TelescopicCauseway",
+  "objective": "obj.reach_goal",
+  "mechanics": ["mech.conserved_beam_shift", "mech.temporary_support", "mech.step_cap"],
+  "action_set": ["up", "down", "left", "right", "space", "click"],
+  "available_actions": [1, 2, 3, 4, 5, 6]
+}

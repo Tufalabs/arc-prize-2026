@@ -1,0 +1,18 @@
+{
+  "game_id": "hookshot-0001",
+  "title": "Hookshot",
+  "idea": "A traversal puzzle centered on a hookshot that pulls the player across gaps or around obstacles to reach otherwise inaccessible areas.",
+  "default_fps": 8,
+  "baseline_actions": [
+    15,
+    21,
+    20,
+    15,
+    36,
+    61
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Hookshot"
+}

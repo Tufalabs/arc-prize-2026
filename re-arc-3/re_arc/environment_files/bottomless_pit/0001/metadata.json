@@ -1,0 +1,23 @@
+{
+  "baseline_actions": [
+    8,
+    5,
+    7,
+    6,
+    13,
+    10,
+    17,
+    17,
+    27
+  ],
+  "class_name": "BottomlessPit",
+  "default_fps": 8,
+  "game_id": "bottomless_pit-0001",
+  "idea": "Guide a one-cell side-view player through a tall falling maze where each left or right move is followed by automatic gravity until support, goal, switch, or trap. The player can only move horizontally, while clicks edit visible special blocks: green breakables, orange on/off supports, one-use red gravity reversers, and later purple builders that grow new supports. The camera scrolls over an 11-column map, with early descending ceilings and later offscreen terrain making memory and pre-editing matter. Levels should teach falling to supports, remote block removal, trap avoidance, orange toggles, gravity reversal, builder expansion, and late routes where the player must alter future fall paths before committing.",
+  "tags": [
+    "click-keys",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Bottomless Pit"
+}

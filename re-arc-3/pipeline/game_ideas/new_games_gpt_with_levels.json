@@ -1,0 +1,62 @@
+[
+{
+"title": "Gear Gardens",
+"description": "Grow mechanical flowers by clicking gear flowers to rotate their toothed petals, transmitting rotation through touching teeth. There is no avatar; each click rotates one flower 90 degrees clockwise, and any meshed neighbor rotates in the opposite direction, causing a visible chain reaction across connected flowers. Petal orientation controls which water channels are open, which seed pods are blocked, and whether a nearby bud can bloom. The goal is to bloom all target buds while keeping thorn buds closed. Levels should teach one gear rotation, then meshed counter-rotation, using a flower as a blocker, deliberately disconnecting a gear chain by rotating teeth away, and final gardens where an early click must misalign one flower so a later chain reaction rotates three others without reopening a thorn path.",
+"num_levels": 8
+},
+{
+"title": "Paper Lanterns",
+"description": "Arrange hanging paper lanterns whose light cones fold and unfold like fans. There is no avatar; clicking a lantern toggles it between narrow beam, wide fan, and closed shade. Lit cells become warm platforms that wake origami birds, but overlapping light overheats paper screens into permanent ash walls. Birds automatically hop one cell toward the nearest lit perch after each click, so light can attract, block, separate, or accidentally burn routes. Levels should teach opening one lantern, guiding one bird, using darkness as a stop, overheating a screen as a deliberate wall, cycling a lantern to reduce light, and final rooms where a lantern must first burn away a shortcut to stop one bird before later guiding another through the cooled corridor.",
+"num_levels": 8
+},
+{
+"title": "Marble Loom",
+"description": "Route colored marbles through a loom of sliding thread gates until every marble rests in a matching cup. There is no avatar; clicking a thread gate slides that entire row or column of thread one cell, wrapping around if unobstructed. Threads have visible gaps; marbles fall along gravity arrows through gaps after every click and stop on solid thread. A shifted thread can open a chute, close a chute, carry a marble sideways, or trap another marble above the wrong cup. Levels should teach one falling marble, sliding a gap under it, using a solid thread as a shelf, moving one marble while freezing another, creating temporary vertical shafts, and final boards where a row must be shifted away from its target position so a later column shift can rescue a blocked marble.",
+"num_levels": 8
+},
+{
+"title": "Tile Tides",
+"description": "Control a shoreline made of tide tiles that rise and sink in repeating local waves. There is no avatar; clicking any tide tile raises it one height step and sends a visible ripple that lowers its orthogonal neighbors. Height states are water, sand, rock, and cliff. Shells drift from water to adjacent sand after each click, boats can cross only water, and crabs block movement on rock. The goal is to place shells on pearl marks while keeping boats connected to docks. Levels should teach raising sand from water, accidentally creating cliffs, lowering neighbors to open channels, using rocks as crab blockers, timing shell drift, and final beaches where one click must sacrifice a shell route to lower a boat channel that later carries the last shell into place.",
+"num_levels": 8
+},
+{
+"title": "Shadow Puppets",
+"description": "Solve a stage puzzle by clicking cardboard puppets that cast chunky shadows onto the floor grid. There is no avatar; clicking a puppet flips it between two poses, changing the shape and direction of its shadow. Shadow cells block rolling balls, hide trapdoors, and count as safe bridges over spotlight holes, while lit cells activate wind fans that push balls after every click. The goal is to roll all balls into painted bowls by shaping shadows at the right times. Levels should teach one shadow bridge, using a shadow as a wall, flipping a puppet to release a ball, blocking a fan with darkness, and final stages where a shadow must first protect a ball from a fan, then vanish so the same fan can deliver it.",
+"num_levels": 8
+},
+{
+"title": "Crystal Bells",
+"description": "Tune crystal bells whose vibrations push matching colored shards along straight lines. There is no avatar; clicking a bell rings it, sending a pulse through connected crystal paths of the bell's color. The first shard hit slides one cell away from the bell, and if it hits another shard, the motion transfers like a visible billiard impulse. Shards can open resonance doors, block future pulses, shield fragile glass, or become stuck against walls. Levels should teach ringing one bell, pushing one shard, transferring motion through a shard chain, using a shard as a pulse stopper, moving a blocker out of a path, and final chambers where a shard must be pushed into a bad-looking blocking position so a later pulse skips over the correct target.",
+"num_levels": 8
+},
+{
+"title": "Mosaic Pressure",
+"description": "Restore a cracked mosaic by clicking tiles that press down and raise neighboring tiles like a chunky relief sculpture. There is no avatar; clicking a tile toggles it between raised and sunken, while all same-color connected neighbors change one step in the opposite direction. Rolling beads move automatically downhill after each click, sunken cracks trap beads, and raised ridges act as walls. The goal is to park beads on matching inlaid gems without leaving any bead in a crack. Levels should teach one height toggle, connected color reactions, making a ridge wall, freeing a bead by raising a crack, splitting a color region, and final mosaics where the player must sink a useful path to raise a distant blocker before rebuilding the path for the final bead.",
+"num_levels": 8
+},
+{
+"title": "Kelp Knots",
+"description": "Untangle floating kelp strands so fish can swim from nests to matching reefs. There is no avatar; clicking a knot twists it 90 degrees, rotating every attached kelp segment around the knot if space is clear. Kelp segments are solid barriers to fish, but also form current channels that fish follow automatically after each click. Twisting a knot can open a gate, close a gate, redirect a current, wrap around a fish, or create a temporary holding pen. Levels should teach rotating one knot, redirecting one fish, using kelp as a wall, trapping a fish safely, avoiding self-blocking knots, and final reefs where a strand must first cage the wrong fish while another current is rebuilt, then unwind to release both fish in order.",
+"num_levels": 8
+},
+{
+"title": "Candle Constellations",
+"description": "Light a ritual board by clicking candles whose flames spread along visible wax lines. There is no avatar; clicking a candle toggles it lit or unlit, and flame spreads instantly through connected wax lines unless blocked by a stone seal. Lit wax melts into thinner one-way channels after each spread, so repeated lighting changes the network permanently. Fire opens brass flowers, blocks moth tokens from crossing hot cells, and melts ice beads that must remain solid until delivered. Levels should teach lighting one path, extinguishing to stop spread, using fire as a wall, melting a wax line into a one-way route, preserving ice, and final boards where a candle must burn a route almost too early so later flames can travel only in the safe direction.",
+"num_levels": 8
+},
+{
+"title": "Clockwork Clouds",
+"description": "Move rain clouds over farms by clicking wind vanes that rotate local wind arrows. There is no avatar; each click rotates one vane 90 degrees, then every cloud moves one cell in the direction of the arrow under it if not blocked. Clouds leave wet ground behind, wet ground grows crops, and overwatered ground becomes mud that blocks later clouds. Stone chimneys split clouds into two smaller clouds, while mountains merge small clouds back together. Levels should teach rotating one vane, pushing one cloud, using wet ground as progress, avoiding mud, splitting a cloud to water two farms, merging to cross a windy gap, and final skies where overwatering one cell intentionally creates the only wall that stops a later cloud at the correct farm.",
+"num_levels": 8
+},
+{
+"title": "Bone Dominoes",
+"description": "Arrange museum bones that tip over in visible domino chains to rebuild skeleton outlines. There is no avatar; clicking an upright bone tips it in its facing direction, pushing the first bone it hits and leaving itself flat as a bridge or obstacle. Flat bones can support rolling skulls over pits, block other falling bones, or be stood back up only by clicking marked hinge bones. The goal is to place skulls and ribs on fossil shadows while preserving enough upright bones for later chains. Levels should teach one falling bone, chain reaction, using a fallen bone as a bridge, blocking an unwanted chain, resetting a hinge bone, and final exhibits where a bone must fall away from its target outline to create the bridge that later lets the skull arrive.",
+"num_levels": 8
+},
+{
+"title": "Honeycomb Slides",
+"description": "Guide nectar drops through a honeycomb where clicking wax walls melts or rebuilds local barriers. There is no avatar; clicking a wax edge toggles it open or closed, then all nectar drops slide along their current slope until stopped by a wall or another drop. Drops merge when they meet, split when crossing sharp comb points, and crystallize permanently if trapped in a closed cell. The goal is to fill all flower cells with the right drop sizes. Levels should teach opening one edge, stopping a drop with a wall, merging two drops, splitting at a point, avoiding crystallization, and final combs where a wall must be rebuilt behind a moving drop to trap it temporarily before reopening the same edge for a larger merged drop.",
+"num_levels": 8
+}
+]

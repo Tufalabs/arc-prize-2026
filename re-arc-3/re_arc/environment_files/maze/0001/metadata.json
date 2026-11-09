@@ -1,0 +1,22 @@
+{
+  "game_id": "maze-0001",
+  "title": "Door Maze",
+  "idea": "A maze game with click-opened doors placed along a single winding corridor, where progress depends on navigating the path and opening the right door tiles at the right moments to reach the goal.",
+  "default_fps": 8,
+  "baseline_actions": [
+    31,
+    39,
+    50,
+    60,
+    73,
+    85,
+    100,
+    115
+  ],
+  "tags": [
+    "click-keys",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Maze"
+}

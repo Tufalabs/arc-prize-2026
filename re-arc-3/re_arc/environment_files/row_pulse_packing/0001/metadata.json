@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    6,
+    11,
+    8
+  ],
+  "class_name": "RowPulsePacking",
+  "default_fps": 8,
+  "game_id": "row_pulse_packing-0001",
+  "idea": "This is a click-only packing puzzle where discs are moved indirectly by row and column emitters. The board contains a small number of loose discs, fixed walls, target pads, and emitters on the edges. Clicking an emitter sends a one-cell pulse through its whole row or column, pushing every free disc in that line by one cell unless blocked. The player never drags discs directly, which makes the cause-and-effect structure very clean: click a line, watch all affected discs shift. Because the board consists of squares, pads, and edge arrows, the visual complexity stays low. The objective is to push the discs into the correct pad layout. Level 1 has one disc and two useful emitters, so the player immediately understands that pulses move objects along straight lines. Level 2 has multiple discs that can block each other, so the player must reason about packing order rather than only direction. Level 3 adds a narrow chamber where the discs must be staged into temporary holding cells before the final pulse sequence can place them on their pads.",
+  "tags": [
+    "click-only",
+    "debugging"
+  ],
+  "title": "Row Pulse Packing"
+}

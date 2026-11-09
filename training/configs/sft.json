@@ -1,0 +1,17 @@
+{
+  "run_name": "sft",
+  "trace_root": "traces",
+  "training_mode": "auto",
+  "model_name": "Qwen/Qwen3.5-9B",
+  "output_dir": "runs/sft",
+  "learning_rate": 1e-05,
+  "num_train_epochs": 1.0,
+  "per_device_train_batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "max_length": 65536,
+  "gradient_checkpointing": true,
+  "bf16": true,
+  "use_lora": true,
+  "lora_r": 16,
+  "lora_alpha": 32
+}

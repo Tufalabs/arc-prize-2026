@@ -1,0 +1,20 @@
+{
+  "baseline_actions": [
+    5,
+    7,
+    4,
+    10,
+    20,
+    25
+  ],
+  "class_name": "CraneDipper",
+  "default_fps": 8,
+  "game_id": "crane_dipper-0001",
+  "idea": "Paint a 10x10 editable canvas until it matches an upper-left reference pattern, using a basket that moves around the eight outside positions of the canvas. Direction actions move the basket on the rim, clicks select toolbar colors or the small dipper, and Space paints a half-plane, triangle, or narrow inset strip depending on basket position and tool. Paint overwrites previous paint, and validation ignores the two main diagonals, while the reference display uses ordinary target colors there instead of marker lines. Levels should teach broad single-color strokes, color selection, ignored diagonal boundaries, small-dipper precision, and final reference patterns solved by planning a layered overwrite stack.",
+  "tags": [
+    "click-keys",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Crane Dipper"
+}

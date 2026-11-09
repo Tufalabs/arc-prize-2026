@@ -1,0 +1,10 @@
+{
+  "harness_commit": "9f292f04936ba1bdd8f4ddb1151e3b131f5e10eb",
+  "taaf_commit": "0df4e7e93ca0d33b8906e17d3516f2502b46d21d",
+  "harness_archive_sha256": "1818c942b15a548294be33a8951e134359c487a6e57f5551057ea6bb8398b63d",
+  "files": {
+    "harness-source.tar.gz": "1818c942b15a548294be33a8951e134359c487a6e57f5551057ea6bb8398b63d",
+    "harness-runtime.tar.zst": "4e0ac3142fda63731d3e01a2908777cfa1b80eea919ad3602eb1c9cc9ddfd37d",
+    "trainer-runtime.tar.zst": "c92437e6efea0f73eae22b7fce24d020b7acfc602d57cbcd6c8a32ab4cc552f9"
+  }
+}

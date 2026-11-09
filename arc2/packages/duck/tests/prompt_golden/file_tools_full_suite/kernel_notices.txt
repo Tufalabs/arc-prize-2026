@@ -1,0 +1,5 @@
+!!! Your cwd had drifted away from the working directory; we've restored it so relative paths resolve against the directory your files live in. Keep cwd stable within a single cell if you need relative paths to work across calls.
+
+!!! `check` had been replaced or deleted; it is the harness's own again.
+
+Note: removed directory 'sub/' — your working directory is flat; keep every file directly in it, with no subdirectories.

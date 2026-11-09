@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "crate-caps",
+  "game_id": "crate_caps-0001",
+  "slug": "crate_caps",
+  "class_name": "CrateCaps",
+  "objective": "obj.reach_exit",
+  "mechanics": ["mech.carry", "mech.stack", "mech.reversible_bridge", "mech.undo", "mech.action_limit"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

@@ -1,0 +1,22 @@
+{
+  "game_id": "keys-0001",
+  "title": "Key Order",
+  "idea": "A corridor maze where colored keys have to be collected in a strict order, because touching the wrong key resets progress and the final lock only opens after the full sequence is gathered correctly.",
+  "default_fps": 8,
+  "baseline_actions": [
+    12,
+    26,
+    36,
+    34,
+    44,
+    46,
+    56,
+    168
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Keys"
+}

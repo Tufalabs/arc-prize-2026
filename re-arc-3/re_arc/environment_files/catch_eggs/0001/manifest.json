@@ -1,0 +1,16 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "catch_eggs-0001",
+  "game_id": "catch_eggs-0001",
+  "slug": "catch_eggs",
+  "class_name": "CatchEggs",
+  "objective": "obj.collect_all",
+  "mechanics": [
+    "mech.grid_move",
+    "mech.falling_objects"
+  ],
+  "layout_template": "catch_1_level",
+  "action_set": ["down", "left", "right"],
+  "available_actions": [2, 3, 4]
+}

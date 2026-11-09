@@ -1,0 +1,1 @@
+[budget] About 11,000 generated tokens remain for this puzzle. Implement your best current candidate as `fn(grid) -> grid` and run `check(fn)`; only a passing check submits an answer.

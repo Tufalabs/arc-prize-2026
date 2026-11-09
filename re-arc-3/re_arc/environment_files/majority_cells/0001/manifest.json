@@ -1,0 +1,25 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "majority-cells",
+  "game_id": "majority_cells-0001",
+  "slug": "majority_cells",
+  "class_name": "MajorityCells",
+  "objective": "obj.match_cells",
+  "mechanics": [
+    "mech.orthogonal_majority",
+    "mech.local_rewrite",
+    "mech.undo",
+    "mech.action_budget"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

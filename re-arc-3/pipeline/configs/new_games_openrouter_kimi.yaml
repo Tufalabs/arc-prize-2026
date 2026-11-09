@@ -1,0 +1,9 @@
+idea_json: pipeline/game_ideas/new_games_gpt_with_levels.json
+spec_provider: openrouter
+model: moonshotai/kimi-k2-thinking
+reasoning_effort: xhigh
+codex_reasoning_effort: medium
+spec_background: false
+implementation_prompt_path: pipeline/prompts/codex_check_visual_prompt.md
+implementation_backend: codex
+spec_instructions_path: pipeline/prompts/spec_prompt.md

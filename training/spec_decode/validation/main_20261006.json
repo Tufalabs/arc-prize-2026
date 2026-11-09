@@ -1,0 +1,259 @@
+{
+  "date": "2026-10-06",
+  "purpose": "Compatibility smoke checks; no gameplay-quality comparison",
+  "artifact_root": "/data/personal/$USER/drafter_main_compat_20261006",
+  "harness_main": {
+    "arc3": "ad812b515057e1b860a3839870927886856ef7d5",
+    "arc2": "81401ce8fab64b638da55ab85758b3060dd4b713"
+  },
+  "training_source_commit": "c364f4f7",
+  "checks": {
+    "arc3": {
+      "harness_preflight": {
+        "harness": "arc3",
+        "duck_source": "/cache/users/10003/drafter-main-compat/2903417/harness/packages/duck/src/duck/agent.py",
+        "main_project": "harness",
+        "versions": {
+          "vllm": "0.29.1.dev166+g3bda1ba09.precompiled",
+          "torch": "2.13.0",
+          "transformers": "5.16.1"
+        },
+        "games": 25,
+        "benchmark_pickle_bytes": 41010,
+        "target": "/data/shared/research/checkpoints/Qwen3.8-Flash-Next-NVFP4-arc3-reap307",
+        "drafter": "/data/shared/research/checkpoints/Qwen3.8-Flash-Next-NVFP4-arc3-reap307-drafter",
+        "extraction_speculative_config": null,
+        "online_speculative_config": {
+          "method": "mtp",
+          "num_speculative_tokens": 4,
+          "quantization": "modelopt_fp4",
+          "draft_sample_method": "probabilistic",
+          "gdn_recoverssm": true,
+          "disable_eagle_block_drop": true,
+          "model": "/data/shared/research/checkpoints/Qwen3.8-Flash-Next-NVFP4-arc3-reap307-drafter"
+        }
+      },
+      "extraction_job": 2903417,
+      "images": 2,
+      "extraction": {
+        "format": "drafter-stream-v1",
+        "dataset": "/data/personal/$USER/drafter_main_compat_20261006/arc3-2903417/dataset",
+        "shard": [
+          0,
+          1
+        ],
+        "vllm": "0.29.1.dev166+g3bda1ba09",
+        "engine_args": {
+          "model": "/data/shared/research/checkpoints/Qwen3.8-Flash-Next-NVFP4-arc3-reap307",
+          "dtype": "bfloat16",
+          "quantization": "modelopt_fp4",
+          "kv_cache_dtype": "fp8_per_token_head",
+          "mamba_ssm_cache_dtype": "bfloat16",
+          "mamba_cache_mode": "align",
+          "max_model_len": 262144,
+          "max_num_batched_tokens": 8192,
+          "max_num_seqs": 1,
+          "enable_prefix_caching": false,
+          "enforce_eager": false
+        },
+        "prompt_logprobs": 0,
+        "drafter": null,
+        "chains": [
+          {
+            "chain_id": "arc3-main-smoke",
+            "harness": "arc3",
+            "tokens": 4105,
+            "generated": 125,
+            "ids_sha256": "413f9973661fb4237c4226d73b6c98df486633aefe467f2af1a21e46e17cf131",
+            "served_s": 16.89
+          }
+        ]
+      },
+      "training_job": 2903429,
+      "gpus": 4,
+      "draft_steps": 4,
+      "training_updates": 1,
+      "training_input": "same captured chain repeated once per GPU to exercise gradient all-reduce",
+      "metrics": [
+        {
+          "kind": "train",
+          "update": 1,
+          "elapsed_s": 102.5,
+          "step0/kl": 0.4729854522212859,
+          "step0/top1": 0.8064516129032258,
+          "step0/argmax_is_sample": 0.8145161290322581,
+          "step0/accept_t1": 0.8278824590867565,
+          "step0/accept_t0.6": 0.8242337626795615,
+          "step0/accept_served": 0.793593006749307,
+          "step0/ceiling_served": 0.9434611412786669,
+          "step0/reach_t0.6": 0.8486884947746031,
+          "step0/reach_served": 0.856674317390688,
+          "step0/rows": 496.0,
+          "step1/kl": 0.8027428727809006,
+          "step1/top1": 0.6991869918699187,
+          "step1/argmax_is_sample": 0.7235772357723578,
+          "step1/accept_t1": 0.7499468423486725,
+          "step1/accept_t0.6": 0.7331684391673018,
+          "step1/accept_served": 0.7245820208293635,
+          "step1/ceiling_served": 0.9430457634654471,
+          "step1/reach_t0.6": 0.6372163353896723,
+          "step1/reach_served": 0.6491777373523246,
+          "step1/rows": 492.0,
+          "step2/kl": 1.2389909087634476,
+          "step2/top1": 0.7049180327868853,
+          "step2/argmax_is_sample": 0.6885245901639344,
+          "step2/accept_t1": 0.7200101008180713,
+          "step2/accept_t0.6": 0.7142202658731429,
+          "step2/accept_served": 0.6939857983198322,
+          "step2/ceiling_served": 0.9426777949098681,
+          "step2/reach_t0.6": 0.4763224867523694,
+          "step2/reach_served": 0.47052139532370646,
+          "step2/rows": 488.0,
+          "step3/kl": 1.6215426862732438,
+          "step3/top1": 0.6611570247933884,
+          "step3/argmax_is_sample": 0.6694214876033058,
+          "step3/accept_t1": 0.689870534849561,
+          "step3/accept_t0.6": 0.6804296320134943,
+          "step3/accept_served": 0.6654007336324896,
+          "step3/ceiling_served": 0.9422040576777182,
+          "step3/reach_t0.6": 0.34641379364265884,
+          "step3/reach_served": 0.34287154773050105,
+          "step3/rows": 484.0,
+          "grad_norm": 33.26167297363281,
+          "lr": 2e-05,
+          "update_ratio": 0.0006152245914563537,
+          "loss": 1.0340654850006104,
+          "seconds": 28.636672816006467,
+          "tokens_per_s": 573.3906346418164,
+          "epoch": 1.0,
+          "max_memory_gib": 70.45945358276367
+        }
+      ],
+      "checkpoint": "/data/personal/$USER/drafter_main_compat_20261006/arc3-standalone-train/checkpoints/update-000001/head.safetensors"
+    },
+    "arc2": {
+      "harness_preflight": {
+        "harness": "arc2",
+        "duck_source": "/cache/users/10003/drafter-main-compat/2903418/harness/packages/duck/src/duck/agent.py",
+        "main_project": "harness",
+        "versions": {
+          "vllm": "0.29.1.dev166+g3bda1ba09.precompiled",
+          "torch": "2.13.0",
+          "transformers": "5.16.1"
+        },
+        "games": 120,
+        "benchmark_pickle_bytes": 478439,
+        "target": "/data/shared/research/checkpoints/Qwen3.8-Flash-Next-NVFP4-arc2-reap307",
+        "drafter": "/data/shared/research/checkpoints/Qwen3.8-Flash-Next-NVFP4-arc2-reap307-drafter",
+        "extraction_speculative_config": null,
+        "online_speculative_config": {
+          "method": "mtp",
+          "num_speculative_tokens": 4,
+          "quantization": "modelopt_fp4",
+          "draft_sample_method": "probabilistic",
+          "gdn_recoverssm": true,
+          "disable_eagle_block_drop": true,
+          "model": "/data/shared/research/checkpoints/Qwen3.8-Flash-Next-NVFP4-arc2-reap307-drafter"
+        }
+      },
+      "extraction_job": 2903418,
+      "images": 5,
+      "extraction": {
+        "format": "drafter-stream-v1",
+        "dataset": "/data/personal/$USER/drafter_main_compat_20261006/arc2-2903418/dataset",
+        "shard": [
+          0,
+          1
+        ],
+        "vllm": "0.29.1.dev166+g3bda1ba09",
+        "engine_args": {
+          "model": "/data/shared/research/checkpoints/Qwen3.8-Flash-Next-NVFP4-arc2-reap307",
+          "dtype": "bfloat16",
+          "quantization": "modelopt_fp4",
+          "kv_cache_dtype": "fp8_per_token_head",
+          "mamba_ssm_cache_dtype": "bfloat16",
+          "mamba_cache_mode": "align",
+          "max_model_len": 262144,
+          "max_num_batched_tokens": 8192,
+          "max_num_seqs": 1,
+          "enable_prefix_caching": false,
+          "enforce_eager": false
+        },
+        "prompt_logprobs": 0,
+        "drafter": null,
+        "chains": [
+          {
+            "chain_id": "arc2-main-smoke",
+            "harness": "arc2",
+            "tokens": 2104,
+            "generated": 128,
+            "ids_sha256": "ffe55fc5d47129c6f21b72e69e364812b18c38e7cbcbc576861e59ef6dac7cdf",
+            "served_s": 12.36
+          }
+        ]
+      },
+      "training_job": 2903430,
+      "gpus": 4,
+      "draft_steps": 4,
+      "training_updates": 1,
+      "training_input": "same captured chain repeated once per GPU to exercise gradient all-reduce",
+      "metrics": [
+        {
+          "kind": "train",
+          "update": 1,
+          "elapsed_s": 103.9,
+          "step0/kl": 0.5593121145653912,
+          "step0/top1": 0.8188976377952756,
+          "step0/argmax_is_sample": 0.7795275590551181,
+          "step0/accept_t1": 0.8047509981891302,
+          "step0/accept_t0.6": 0.8090305478554073,
+          "step0/accept_served": 0.7982577226293368,
+          "step0/ceiling_served": 0.9289551982729454,
+          "step0/reach_t0.6": 0.8026766439122478,
+          "step0/reach_served": 0.828166451041154,
+          "step0/rows": 508.0,
+          "step1/kl": 0.9046245756603423,
+          "step1/top1": 0.7301587301587301,
+          "step1/argmax_is_sample": 0.7142857142857143,
+          "step1/accept_t1": 0.7367778959728423,
+          "step1/accept_t0.6": 0.7418493240598648,
+          "step1/accept_served": 0.7270361885191903,
+          "step1/ceiling_served": 0.928391350640191,
+          "step1/reach_t0.6": 0.615607428172278,
+          "step1/reach_served": 0.6377019730825273,
+          "step1/rows": 504.0,
+          "step2/kl": 1.1773414306640626,
+          "step2/top1": 0.688,
+          "step2/argmax_is_sample": 0.672,
+          "step2/accept_t1": 0.7001722412109375,
+          "step2/accept_t0.6": 0.7021385498046875,
+          "step2/accept_served": 0.687619873046875,
+          "step2/ceiling_served": 0.92781982421875,
+          "step2/reach_t0.6": 0.45146624755859377,
+          "step2/reach_served": 0.480521240234375,
+          "step2/rows": 500.0,
+          "step3/kl": 1.4216095709031629,
+          "step3/top1": 0.6935483870967742,
+          "step3/argmax_is_sample": 0.6774193548387096,
+          "step3/accept_t1": 0.6749423242384388,
+          "step3/accept_t0.6": 0.6837627656998173,
+          "step3/accept_served": 0.6648677087599232,
+          "step3/ceiling_served": 0.9272533539802797,
+          "step3/reach_t0.6": 0.3432388613300939,
+          "step3/reach_served": 0.3663289162420457,
+          "step3/rows": 496.0,
+          "grad_norm": 29.8492374420166,
+          "lr": 2e-05,
+          "update_ratio": 0.0006091419490985572,
+          "loss": 1.0157220363616943,
+          "seconds": 26.779482912039384,
+          "tokens_per_s": 314.27044456546906,
+          "epoch": 1.0,
+          "max_memory_gib": 70.4201226234436
+        }
+      ],
+      "checkpoint": "/data/personal/$USER/drafter_main_compat_20261006/arc2-standalone-train/checkpoints/update-000001/head.safetensors"
+    }
+  },
+  "probe_note": "The initial combined probes completed extraction, then stopped when training was attempted in the serving environment (TensorBoard absent). Both subsequent standalone four-GPU training jobs completed successfully with exit 0."
+}

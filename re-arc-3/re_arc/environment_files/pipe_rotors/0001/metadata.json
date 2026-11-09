@@ -1,0 +1,8 @@
+{
+  "game_id": "pipe_rotors-0001",
+  "title": "Pipe Rotors",
+  "default_fps": 8,
+  "baseline_actions": [1, 5, 7, 28, 40, 42, 51],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "PipeRotors"
+}

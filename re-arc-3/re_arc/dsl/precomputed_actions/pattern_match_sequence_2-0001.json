@@ -1,0 +1,142 @@
+{
+  "actions": [
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    [
+      6,
+      {
+        "x": 13,
+        "y": 44
+      }
+    ],
+    [
+      6,
+      {
+        "x": 39,
+        "y": 44
+      }
+    ],
+    [
+      6,
+      {
+        "x": 26,
+        "y": 44
+      }
+    ],
+    [
+      6,
+      {
+        "x": 52,
+        "y": 44
+      }
+    ],
+    [
+      6,
+      {
+        "x": 26,
+        "y": 44
+      }
+    ],
+    [
+      6,
+      {
+        "x": 13,
+        "y": 44
+      }
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "pattern_match_sequence_2-0001",
+  "generated_at_utc": "2026-03-01T07:29:04.003666+00:00",
+  "generator_agent": "PatternMatchSequence2DslAgent",
+  "initial_observation_signature": "085415c4bd607ba8f2ab2f155ca810e77ff52247",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 18,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 1,
+  "terminal_state": "WIN",
+  "total_levels": 1
+}

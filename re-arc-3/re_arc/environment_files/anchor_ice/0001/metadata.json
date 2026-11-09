@@ -1,0 +1,19 @@
+{
+  "game_id": "anchor_ice-0001",
+  "title": "Anchor Ice",
+  "default_fps": 20,
+  "baseline_actions": [
+    4,
+    5,
+    5,
+    25,
+    44,
+    52,
+    62
+  ],
+  "tags": [
+    "click-keys",
+    "codex-reviewed"
+  ],
+  "class_name": "AnchorIce"
+}

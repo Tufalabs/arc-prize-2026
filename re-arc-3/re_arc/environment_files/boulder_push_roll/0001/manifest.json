@@ -1,0 +1,24 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "boulder-push-roll",
+  "game_id": "boulder_push_roll-0001",
+  "slug": "boulder_push_roll",
+  "class_name": "BoulderPushRoll",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.push",
+    "mech.plate_door",
+    "mech.gravity",
+    "mech.hazard",
+    "mech.time_limit"
+  ],
+  "layout_template": "handcrafted",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right"
+  ],
+  "available_actions": [1, 2, 3, 4]
+}

@@ -1,0 +1,8 @@
+{
+  "game_id": "floodline-0001",
+  "title": "Floodline",
+  "default_fps": 8,
+  "baseline_actions": [3, 9, 6, 25, 51, 62, 79],
+  "tags": ["keys-only", "codex-reviewed"],
+  "class_name": "Floodline"
+}

@@ -1,0 +1,25 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "moving-platforms-manual-animation",
+  "game_id": "moving_platforms_manual_animation-0001",
+  "slug": "moving_platforms_manual_animation",
+  "class_name": "MovingPlatformsManualAnimation",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.moving_platform",
+    "mech.timed_gate",
+    "mech.button",
+    "mech.lever",
+    "mech.hazard"
+  ],
+  "layout_template": "manual",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "click"
+  ],
+  "available_actions": [1, 2, 3, 4, 6]
+}

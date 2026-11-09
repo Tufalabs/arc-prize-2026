@@ -1,0 +1,28 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "twin-shadow",
+  "game_id": "twin_shadow-0001",
+  "slug": "twin_shadow",
+  "class_name": "TwinShadow",
+  "objective": "obj.simultaneous_goals",
+  "mechanics": [
+    "mech.linked_twins",
+    "mech.mirrored_horizontal_movement",
+    "mech.independent_collision",
+    "mech.pressure_plate_gates",
+    "mech.goal_docking",
+    "mech.step_budget",
+    "mech.undo"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

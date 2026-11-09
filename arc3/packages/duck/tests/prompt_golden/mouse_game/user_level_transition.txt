@@ -1,0 +1,15 @@
+Color legend image: one swatch per color, labelled with the color name used in this prompt.
+[image:128x512]
+The code executed 2 actions in the previous sequence.
+Executed actions: UP, LEFT.
+You have progressed to a new level!
+Actions that seemed inert on previous levels may not be now; retest your assumptions.
+Current state: step 3, level 3.
+Valid actions right now: UP, DOWN, LEFT, RIGHT.
+This turn:
+1. Orient on the newest frame: `current_frame.segment()` for structure.
+2. Decide the next move or short sequence — explore, or advance the level. Write a search if the right order is not obvious.
+3. Act with `submit_action([...])`.
+
+Current grid image:
+[image:32x32]

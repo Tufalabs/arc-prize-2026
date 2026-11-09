@@ -1,0 +1,4 @@
+Your reply made no `python` call and the answer is not complete:
+  - test_out has not been written to yet
+
+Fix that in the kernel. When calling `python`, emit exactly the tool-call format shown elsewhere in this prompt for this model. Use only that format; do not add markdown fences, prose wrappers, or alternate tool-call syntax. Do not quote or place tool-call markup inside explanatory text; when you decide to call the tool, emit the tool call itself.

@@ -1,0 +1,18 @@
+{
+  "game_id": "avoid_the_lava_timed_hazards-0001",
+  "title": "Avoid the Lava (Timed Hazards)",
+  "idea": "A timed maze game where the player crosses a compact map while lava vents and other hazards cycle on and off around the route to the exit.",
+  "default_fps": 8,
+  "baseline_actions": [
+    26,
+    27,
+    30,
+    31,
+    32,
+    41
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "AvoidTheLavaTimedHazards"
+}

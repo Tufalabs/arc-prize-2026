@@ -1,0 +1,51 @@
+[project]
+name = "ullm"
+version = "0.1.0"
+description = "Platypus LLM layer: backends, conversation model, tools (hard fork of ullm)"
+requires-python = "==3.12.12"
+dependencies = [
+    "anthropic>=0.94.1",
+    "jsonschema>=4.0.0",
+    "mistune>=3.0",  # markdown rendering of conversation text (ullm.html_render)
+    "numpy>=2.0.0",
+    "openai>=2.24.0",
+    "pillow>=11.0.0",
+    "typeguard>=4.0.0",
+    # GPU serving stack. cu13 toolchain pinned as one self-consistent set
+    # for flashinfer/deep_gemm JIT on heterogeneous nodes.
+    # A RANGE, not the shipped engine. This workspace's root pins one exact
+    # revision of the arc-prize-2026-vllm fork (see vllm_fork.md), which the range
+    # only has to admit. A DOWNSTREAM workspace root -- one consuming these
+    # packages as members -- resolves within this range by its own rules and
+    # gets no fork unless it copies that pin.
+    "vllm>=0.25.1,<0.28; sys_platform == 'linux'",
+    "transformers>=5.5.0",
+    "openai-harmony>=0.0.8",
+    "nvidia-cuda-nvcc==13.0.88; sys_platform == 'linux'",
+    "nvidia-cuda-cccl==13.0.85; sys_platform == 'linux'",
+    "nvidia-cuda-crt==13.0.88; sys_platform == 'linux'",
+    "nvidia-nvvm==13.0.88; sys_platform == 'linux'",
+    # FlashInfer's kernels prebuilt for its release and this CUDA line, so an
+    # engine start compiles nothing. Without them the JIT builds each
+    # kernel set in the venv that starts the engine and bakes that venv's
+    # path into its cache, so per-job venvs pay the whole build every job.
+    # A release asset, not on PyPI; the version must start with
+    # flashinfer-python's, which FlashInfer checks at import.
+    "flashinfer-jit-cache @ https://github.com/flashinfer-ai/flashinfer/releases/download/v0.6.18.post1/flashinfer_jit_cache-0.6.18.post1+cu130-cp39-abi3-manylinux_2_28_x86_64.whl ; sys_platform == 'linux'",
+]
+
+# Runs in every vLLM worker process, the spawned engine core included, which
+# is where a routing hook has to be installed. Inert unless ULLM_EXPERT_LOG_DIR
+# is set.
+[project.entry-points."vllm.general_plugins"]
+ullm_expert_log = "ullm.expert_log:register"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+ullm = ["data/*.txt", "data/*.json"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,8 @@
+{
+  "game_id": "vanishing_levers-0001",
+  "title": "Vanishing Levers",
+  "default_fps": 8,
+  "baseline_actions": [1, 3, 5, 7, 14, 18, 28],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "VanishingLevers"
+}

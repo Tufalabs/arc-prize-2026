@@ -1,0 +1,11 @@
+{
+  "variant": "0001",
+  "game_id": "domino_socket-0001",
+  "slug": "domino_socket",
+  "class_name": "DominoSocket",
+  "action_set": [
+    "space",
+    "click"
+  ],
+  "available_actions": [5, 6]
+}

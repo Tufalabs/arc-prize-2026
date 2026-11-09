@@ -1,0 +1,17 @@
+{
+  "baseline_actions": [
+    6,
+    6,
+    8
+  ],
+  "default_fps": 12,
+  "game_id": "panel_door_dock-0001",
+  "local_dir": "re_arc/environment_files/panel_door_dock/0001",
+  "tags": [
+    "click-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Panel Door Dock",
+  "idea": "A cargo-routing puzzle where clicking control panels opens or closes doors so a block can be moved into its dock."
+}

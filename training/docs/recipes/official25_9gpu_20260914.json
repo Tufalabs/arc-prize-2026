@@ -1,0 +1,220 @@
+{
+  "run": "20260914_075232_platypus_official25_dppo_production_resume30_seed61_9gpu",
+  "frozen_config_sha256": "b6f911b838eb6aea1541e05ec9c7ccfee84e484ab694ca0be1b797070b358e07",
+  "omitted_allocation_fields": [
+    "inference.base_url",
+    "inference.platypus_venv",
+    "inference.server_log_paths",
+    "official_eval.base_urls",
+    "official_eval.server_log_paths"
+  ],
+  "source_run": "20260913_130049_platypus_official25_dppo_production_fresh_overlap_seed61_9gpu",
+  "initial_checkpoint": 30,
+  "initial_optimizer_steps": 124,
+  "initial_trainer_commit": "353dc0721dc32c69a36e2bf0ee240aac3dd2b21a",
+  "initial_harness_commit": "977964e51b4a719837bcfc170dd5dc0a48c610dc",
+  "repaired_trainer_commit": "295fda6775bca1d5045cc8a7c948b5e7975f7deb",
+  "repaired_harness_commit": "d5062d44fb92c1fd719beedd005303405898d277",
+  "observed_adapter_dropout": 0.0,
+  "checkpoint_242_optimizer_steps": 972,
+  "historical_config": {
+    "inference": {
+      "agent_allow_level_boundary_compaction": false,
+      "agent_compaction_mode": "journal",
+      "agent_context_window": 32768,
+      "agent_level_memory_tokens": 1000,
+      "agent_max_completion_tokens": 8192,
+      "agent_max_reset_prompt_tokens": 14336,
+      "agent_prompt_profile": "main",
+      "agent_reasoning_effort": "xhigh",
+      "agent_reasoning_prefill": "We need solve game. ",
+      "agent_safety_margin_tokens": 0,
+      "agent_temperature": 1.0,
+      "agent_top_k": 0,
+      "agent_top_p": 1.0,
+      "games": [
+        "ar25-0c556536",
+        "bp35-0a0ad940",
+        "cd82-fb555c5d",
+        "cn04-2fe56bfb",
+        "dc22-fdcac232",
+        "ft09-0d8bbf25",
+        "g50t-5849a774",
+        "ka59-38d34dbb",
+        "lf52-271a04aa",
+        "lp85-305b61c3",
+        "ls20-9607627b",
+        "m0r0-492f87ba",
+        "r11l-495a7899",
+        "re86-8af5384d",
+        "s5i5-18d95033",
+        "sb26-7fbdac44",
+        "sc25-635fd71a",
+        "sk48-d8078629",
+        "sp80-589a99af",
+        "su15-1944f8ab",
+        "tn36-ef4dde99",
+        "tr87-cd924810",
+        "tu93-0768757b",
+        "vc33-5430563c",
+        "wa30-ee6fef47"
+      ],
+      "level_data_dir": "training/level_data",
+      "max_runtime_minutes": 15.0,
+      "model_id": "Qwen/Qwen3.8-27B",
+      "server_gpus": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    },
+    "memory_profiler": {
+      "log_every_n_steps": 1,
+      "log_gpu_utilization": true,
+      "max_logged_steps": 20,
+      "reset_peak_stats_per_region": true,
+      "sync": true
+    },
+    "metrics": {
+      "log_per_game": true,
+      "log_raw_returns": false
+    },
+    "num_iterations": 10000,
+    "official_eval": {
+      "baseline_adapter_dir": "",
+      "compaction_target_tokens": 33925,
+      "compare_before_training": false,
+      "context_window_tokens": 90112,
+      "cycle_minutes": 45.0,
+      "enabled": true,
+      "games": [
+        "ar25-0c556536",
+        "bp35-0a0ad940",
+        "cd82-fb555c5d",
+        "cn04-2fe56bfb",
+        "dc22-fdcac232",
+        "ft09-0d8bbf25",
+        "g50t-5849a774",
+        "ka59-38d34dbb",
+        "lf52-271a04aa",
+        "lp85-305b61c3",
+        "ls20-9607627b",
+        "m0r0-492f87ba",
+        "r11l-495a7899",
+        "re86-8af5384d",
+        "s5i5-18d95033",
+        "sb26-7fbdac44",
+        "sc25-635fd71a",
+        "sk48-d8078629",
+        "sp80-589a99af",
+        "su15-1944f8ab",
+        "tn36-ef4dde99",
+        "tr87-cd924810",
+        "tu93-0768757b",
+        "vc33-5430563c",
+        "wa30-ee6fef47"
+      ],
+      "malformed_retries": 0,
+      "max_completion_tokens": 32768,
+      "max_tokens_per_level": null,
+      "min_request_gap_s": 0.0,
+      "presence_penalty": 0.0,
+      "profile": "main",
+      "reasoning_effort": "xhigh",
+      "rollouts_per_game": 1,
+      "safety_margin_tokens": 512,
+      "server_gpus": [
+        "12"
+      ],
+      "stats_minutes": [
+        15.0
+      ],
+      "temperature": 0.6,
+      "token_stats": [
+        30000,
+        60000,
+        90000,
+        120000
+      ],
+      "top_k": 194,
+      "top_p": 0.8899009607194754
+    },
+    "parallel_rollouts": 100,
+    "rollout_buffer_size": 1,
+    "sampling": {
+      "level_curriculum": "first"
+    },
+    "training": {
+      "advantage_clip": 0.0,
+      "attn_implementation": "flash_attention_4",
+      "cleanup_rollout_artifacts": false,
+      "device": "cuda:0",
+      "device_map_gpus": [
+        0
+      ],
+      "dppo_importance_ratio_cap": 5.0,
+      "dppo_tv_threshold": 0.15,
+      "entropy_coef": 0.0,
+      "episode_packing": true,
+      "epochs_per_window": 1,
+      "gae_gamma": 1.0,
+      "gae_lambda": 1.0,
+      "gradient_accumulation_steps": 1,
+      "init_adapter_dir": null,
+      "init_trainer_state_path": null,
+      "learning_rate": 5e-06,
+      "lora": {
+        "alpha": 64,
+        "r": 32,
+        "target_modules": [
+          "q_proj",
+          "k_proj",
+          "v_proj",
+          "o_proj",
+          "in_proj_qkv",
+          "in_proj_z",
+          "out_proj",
+          "gate_proj",
+          "up_proj",
+          "down_proj"
+        ]
+      },
+      "loss_aggregation": "token_mean",
+      "max_micro_batch_tokens": 40960,
+      "max_sequence_tokens": 32768,
+      "model_name": "Qwen/Qwen3.8-27B",
+      "model_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+      "multimodal": true,
+      "optimizer_minibatch_rollouts": 25,
+      "output_dir": "runs",
+      "pinned_adapter_interval": 25,
+      "policy_loss": "dppo_binary_tv",
+      "reference_kl_coef": 0.0,
+      "rollout_logprob_check_batches": 1,
+      "rollout_schedule": "overlapped",
+      "sample_budget": {
+        "mode": "full"
+      },
+      "seed": 61,
+      "state_critic_normalization_alpha": 0.125,
+      "state_critic_normalization_min_rollouts": 16,
+      "state_critic_normalization_min_std": 1.0,
+      "state_critic_target_normalization": "per_game",
+      "stop_on_collapse": false,
+      "value_baseline": "hidden_critic",
+      "warmup_steps": 0,
+      "worker_device_map_gpus": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ]
+    }
+  }
+}

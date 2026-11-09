@@ -1,0 +1,17 @@
+{
+  "game_id": "marble_loom-0001",
+  "title": "Marble Loom",
+  "default_fps": 8,
+  "baseline_actions": [
+    7,
+    21,
+    22,
+    46,
+    54,
+    59
+  ],
+  "tags": [
+    "click-only"
+  ],
+  "class_name": "MarbleLoom"
+}

@@ -1,0 +1,22 @@
+{
+  "baseline_actions": [
+    8,
+    10,
+    14,
+    27,
+    33,
+    41,
+    60,
+    63
+  ],
+  "class_name": "PocketElevators",
+  "default_fps": 8,
+  "game_id": "pocket_elevators-0001",
+  "idea": "Move stones between height levels by stepping on pocket elevators that swap height with whatever stands on them. Direction keys move the miner, Space activates the current elevator, and clicks rotate marked rail pockets that constrain stone movement. Activating an elevator raises one cell while lowering another paired cell, so it can lift the miner, lower a stone into a pit, create a wall, or flatten a path. Levels should teach one lift, using height as a blocker, lowering stones into sockets, swapping height to recover a route, rotating rail pockets, and final caves where the only solution requires spending a useful high platform to create a later low passage.",
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "medium"
+  ],
+  "title": "Pocket Elevators"
+}

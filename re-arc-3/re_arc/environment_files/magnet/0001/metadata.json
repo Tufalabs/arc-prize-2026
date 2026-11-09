@@ -1,0 +1,18 @@
+{
+  "game_id": "magnet-0001",
+  "title": "Magnet Pull",
+  "idea": "A positioning puzzle where a magnetic pull attracts objects or the player, making distance and line alignment the core challenge.",
+  "default_fps": 8,
+  "baseline_actions": [
+    25,
+    36,
+    41,
+    34,
+    51,
+    50
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Magnet"
+}

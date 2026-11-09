@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    10,
+    9,
+    8
+  ],
+  "class_name": "StampPress",
+  "default_fps": 8,
+  "game_id": "stamp_press-0001",
+  "idea": "This is a spatial pattern puzzle built around a movable stamp head and a blank board of target cells. The player moves the stamp head with the arrow keys and presses SPACE to imprint its current shape onto the cells underneath it. Clicking side knobs rotates the stamp by 90 degrees. The simplest version uses a chunky 2x2 or 1x3 stamp so the printed result is always visually legible on the grid. The objective is to cover the required target cells while avoiding forbidden cells. This keeps the object set extremely small: stamp head, target cells, forbidden cells, and maybe one or two different ink colors. The feedback is very direct because every press leaves a visible mark immediately. Level 1 uses one stamp shape and a very small target region, so the player learns movement, rotation, and pressing. Level 2 introduces forbidden cells, forcing the player to care about exact placement rather than just covering the area. Level 3 adds a second stamp color or a second stamp head, so the player must place overlapping shapes in the right order to satisfy the full pattern.",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Stamp Press"
+}

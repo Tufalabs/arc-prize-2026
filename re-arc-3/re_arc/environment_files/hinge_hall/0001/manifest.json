@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "hinge-hall",
+  "game_id": "hinge_hall-0001",
+  "slug": "hinge_hall",
+  "class_name": "HingeHall",
+  "objective": "obj.reach_exit",
+  "mechanics": ["mech.hinged_wall_rotation", "mech.discrete_sweep_collision", "mech.step_budget", "mech.undo"],
+  "action_set": ["up", "down", "left", "right", "undo"],
+  "available_actions": [1, 2, 3, 4, 7]
+}

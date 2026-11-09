@@ -1,0 +1,19 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "rotating-maze",
+  "game_id": "rotating_maze-0001",
+  "slug": "rotating_maze",
+  "class_name": "RotatingMaze",
+  "objective": "obj.route_cargo_then_exit",
+  "mechanics": [
+    "mech.rotating_arrows",
+    "mech.continuous_cargo",
+    "mech.cargo_bays",
+    "mech.arrow_deflection",
+    "mech.undo",
+    "mech.step_budget"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

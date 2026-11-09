@@ -1,0 +1,47 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "circuit-connect-path-drawing-by-clicks",
+  "game_id": "circuit_connect_path_drawing_by_clicks-0001",
+  "slug": "circuit_connect_path_drawing_by_clicks",
+  "class_name": "CircuitConnectPathDrawingByClicks",
+  "objective": "obj.path_connect",
+  "mechanics": [
+    "mech.path_connect",
+    "mech.directional_flow",
+    "mech.relay_door",
+    "mech.hazard_short"
+  ],
+  "layout_template": "fixed_six_level_progression",
+  "action_set": [
+    "click"
+  ],
+  "available_actions": [
+    6
+  ],
+  "source_spec": {
+    "spec_id": "circuit-connect-path-drawing-by-clicks",
+    "difficulty": "hard",
+    "grid_size": [
+      24,
+      16
+    ],
+    "action_set": [
+      "click"
+    ],
+    "target_optimal_steps": 220,
+    "time_limit": 260,
+    "objective": "obj.path_connect",
+    "mechanics": [
+      "mech.path_connect",
+      "mech.directional_flow",
+      "mech.relay_door",
+      "mech.hazard_short"
+    ],
+    "validation": {
+      "require_dsl_win": true,
+      "max_actions_test": 1200,
+      "required_terminal_state": "WIN"
+    }
+  }
+}

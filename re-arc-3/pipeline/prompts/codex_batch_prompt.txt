@@ -1,0 +1,39 @@
+On {game}
+
+I want all complete level-failure paths in this game to call `self.lose()`.
+The important distinction is:
+
+- Complete level failure should become terminal and call `self.lose()`.
+- Partial failures should remain nonterminal. Do not convert things like
+  losing a life, taking damage, temporary fail flashes, rewinds, retries,
+  invalid actions, ignored clicks, or other intermediate failure states
+  into `self.lose()` unless they already represent complete level failure.
+
+Inside the game, complete level failure should not directly call
+`self.level_reset()` or `self.full_reset()`. If a complete failure path
+currently resets internally, replace that final reset behavior with
+`self.lose()`.
+
+If the game has a complete failure condition that is currently not handled
+at all, add `self.lose()` for that complete failure condition. For example,
+if time runs out and that is meant to be a complete level failure, it should
+call `self.lose()`.
+
+If the game has no true complete failure path, leave it that way and do not
+invent one.
+
+`on_set_level()` should be implemented if it's not already implemented.
+If level-reset reconstruction logic already exists, move or consolidate the
+per-level runtime reconstruction into `on_set_level()` when that is the
+correct place for it.
+
+
+The idea is that the outside engine will manage the level reset using
+`self.level_reset()` or `self.full_reset()`, and the game only has to call
+`self.lose()`.
+
+No need to run any test after this. 
+
+There will be other agents running in the same repo, please ignore them.
+
+Operate only inside `{folder}`.

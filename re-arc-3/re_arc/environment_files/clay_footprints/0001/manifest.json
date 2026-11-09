@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "clay-footprints",
+  "game_id": "clay_footprints",
+  "slug": "clay_footprints",
+  "class_name": "ClayFootprints",
+  "objective": "obj.fill_molds_reach_kiln",
+  "mechanics": [
+    "mech.terrain_stamping",
+    "mech.sliding_mounds",
+    "mech.fill_molds",
+    "mech.fill_pits",
+    "mech.braced_turns"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

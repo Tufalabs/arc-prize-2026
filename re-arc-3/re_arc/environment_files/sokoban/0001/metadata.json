@@ -1,0 +1,18 @@
+{
+  "game_id": "sokoban-0001",
+  "title": "Sokoban Timebar",
+  "idea": "A Sokoban-style box-pushing puzzle with an added time bar, so efficient crate routing matters as much as correctness.",
+  "default_fps": 8,
+  "baseline_actions": [
+    5,
+    22,
+    43,
+    34,
+    41,
+    21
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Sokoban"
+}

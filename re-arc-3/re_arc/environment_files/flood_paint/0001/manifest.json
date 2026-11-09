@@ -1,0 +1,26 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "flood-paint",
+  "game_id": "flood_paint-0001",
+  "slug": "flood_paint",
+  "class_name": "FloodPaint",
+  "objective": "obj.absorb_all_paint",
+  "mechanics": [
+    "mech.click_color",
+    "mech.orthogonal_flood",
+    "mech.shared_frontiers",
+    "mech.droplet_budget",
+    "mech.undo"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

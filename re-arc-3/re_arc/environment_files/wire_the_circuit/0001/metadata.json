@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    7,
+    17,
+    33
+  ],
+  "class_name": "WireTheCircuit",
+  "default_fps": 8,
+  "game_id": "wire_the_circuit-0001",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Wire the Circuit",
+  "idea": "A click-based circuit puzzle where missing wire pieces must be placed in the right orientations to carry power from the source to the load."
+}

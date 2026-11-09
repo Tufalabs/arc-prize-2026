@@ -1,0 +1,58 @@
+Here is the puzzle.
+
+2 example pairs, shown as exact digit rows:
+train_in[0] -> train_out[0]  (3x4 -> 5x9)
+train_in[0]:
+0	7348
+1	2092
+2	3491
+
+train_out[0]:
+0	394216941
+1	048945465
+2	088731165
+3	411839570
+4	919821663
+train_in[1] -> train_out[1]  (3x4 -> 5x9)
+train_in[1]:
+0	8010
+1	4895
+2	4332
+
+train_out[1]:
+0	775165675
+1	234695585
+2	204410177
+3	287480763
+4	036599762
+
+3 test inputs to answer, shown as exact digit rows in test_in:
+test_in[0]  (7x7)
+test_in[0]:
+0	4622430
+1	6093998
+2	6931180
+3	3861933
+4	4523601
+5	0879126
+6	2388537
+test_in[1]  (7x7)
+test_in[1]:
+0	2285902
+1	6721878
+2	5873576
+3	8092043
+4	7945990
+5	2285549
+6	3759167
+test_in[2]  (7x7)
+test_in[2]:
+0	1941630
+1	4837402
+2	9826157
+3	9422488
+4	2657106
+5	1842548
+6	3105479
+
+Work in the kernel. The arrays above are already there — you do not need to retype them. When you are done, describe the rule you applied in full in your final reply.

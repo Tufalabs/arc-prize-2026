@@ -1,0 +1,18 @@
+{
+  "game_id": "breakout-0001",
+  "title": "Breakout Grid Version",
+  "idea": "A compact single-player Breakout variant with a paddle, bouncing ball, brick durability, and time pressure on a readable grid board.",
+  "default_fps": 8,
+  "baseline_actions": [
+    1299,
+    990,
+    1158,
+    1114,
+    1531,
+    1091
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Breakout"
+}

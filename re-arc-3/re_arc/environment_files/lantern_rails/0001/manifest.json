@@ -1,0 +1,31 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "lantern-rails",
+  "game_id": "lantern_rails-0001",
+  "slug": "lantern_rails",
+  "class_name": "LanternRails",
+  "objective": "obj.park_all_carts",
+  "mechanics": [
+    "mech.light_permission",
+    "mech.lantern_rails",
+    "mech.simultaneous_carts",
+    "mech.switch_routing"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

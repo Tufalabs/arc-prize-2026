@@ -1,0 +1,18 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "beacon-relay",
+  "game_id": "beacon_relay-0001",
+  "slug": "beacon_relay",
+  "class_name": "BeaconRelay",
+  "objective": "obj.directional_relay",
+  "mechanics": [
+    "mech.cardinal_movement",
+    "mech.directional_targeting",
+    "mech.beacon_skipping",
+    "mech.reset",
+    "mech.timer"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click"],
+  "available_actions": [1, 2, 3, 4, 5, 6]
+}

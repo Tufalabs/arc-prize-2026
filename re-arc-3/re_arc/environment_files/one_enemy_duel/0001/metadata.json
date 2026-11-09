@@ -1,0 +1,19 @@
+{
+  "game_id": "one_enemy_duel-0001",
+  "title": "OneEnemyDuel",
+  "idea": "A compact combat puzzle where one enemy reacts to the player inside a tiny arena, so every move is really a prediction about the opponent's response and the opening it creates.",
+  "default_fps": 8,
+  "baseline_actions": [
+    14,
+    14,
+    15,
+    20,
+    38,
+    45
+  ],
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "class_name": "OneEnemyDuel"
+}

@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "lantern-moths",
+  "game_id": "lantern_moths-0001",
+  "slug": "lantern_moths",
+  "class_name": "LanternMoths",
+  "objective": "obj.sleep_matching_flowers",
+  "mechanics": [
+    "mech.sightline_attraction",
+    "mech.selection",
+    "mech.movable_blockers",
+    "mech.simultaneous_movement",
+    "mech.sleep_wake"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

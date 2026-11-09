@@ -1,0 +1,17 @@
+{
+  "baseline_actions": [
+    8,
+    31,
+    50
+  ],
+  "class_name": "Hll1",
+  "default_fps": 5,
+  "game_id": "hll1-0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Heavy Light Latches",
+  "idea": "A weight-and-state puzzle where heavy and light interactions latch doors and switches differently, so the route depends on controlled toggling."
+}

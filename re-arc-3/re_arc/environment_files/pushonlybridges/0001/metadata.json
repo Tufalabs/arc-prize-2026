@@ -1,0 +1,18 @@
+{
+  "game_id": "pushonlybridges-0001",
+  "title": "Push-Only Bridges",
+  "idea": "A bridge-building puzzle where pushable pieces can only move forward and must be arranged to span gaps without wasting moves.",
+  "default_fps": 8,
+  "baseline_actions": [
+    10,
+    18,
+    11,
+    22,
+    19,
+    57
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Pushonlybridges"
+}

@@ -1,0 +1,31 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "chase-escape-v1",
+  "game_id": "chase_escape-0001",
+  "slug": "chase_escape",
+  "class_name": "ChaseEscape",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.chaser",
+    "mech.switch_remote_gate",
+    "mech.key_door",
+    "mech.push",
+    "mech.timed_pickup"
+  ],
+  "layout_template": "fixed",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}

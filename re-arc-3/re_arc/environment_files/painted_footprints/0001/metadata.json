@@ -1,0 +1,8 @@
+{
+  "game_id": "painted_footprints-0001",
+  "title": "Painted Footprints",
+  "default_fps": 8,
+  "baseline_actions": [4, 10, 12, 37, 57, 58, 92],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "PaintedFootprints"
+}

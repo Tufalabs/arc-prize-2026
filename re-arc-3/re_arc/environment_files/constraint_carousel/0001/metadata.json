@@ -1,0 +1,8 @@
+{
+  "game_id": "constraint_carousel-0001",
+  "title": "Constraint Carousel",
+  "default_fps": 8,
+  "baseline_actions": [1, 2, 3, 5, 8, 9, 11],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "ConstraintCarousel"
+}

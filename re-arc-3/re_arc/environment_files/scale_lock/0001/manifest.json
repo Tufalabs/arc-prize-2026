@@ -1,0 +1,22 @@
+{
+  "variant": "0001",
+  "game_id": "scale_lock-0001",
+  "slug": "scale_lock",
+  "class_name": "ScaleLock",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

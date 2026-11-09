@@ -1,0 +1,18 @@
+{
+  "game_id": "traffic_jam_rush_hour_mini-0001",
+  "title": "Traffic Jam Rush Hour Mini",
+  "idea": "A Rush Hour style sliding-block puzzle where each vehicle can move only along its own orientation, and the player wins by clearing a lane so the goal car can finally drive out.",
+  "default_fps": 8,
+  "baseline_actions": [
+    26,
+    32,
+    34,
+    43,
+    37,
+    39
+  ],
+  "tags": [
+    "click-only"
+  ],
+  "class_name": "TrafficJamRushHourMini"
+}

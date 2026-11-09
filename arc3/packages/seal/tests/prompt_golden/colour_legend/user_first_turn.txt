@@ -1,0 +1,11 @@
+Color legend image: one swatch per color, labelled with the color name used in this prompt.
+[image:128x512]
+No actions have been executed yet.
+Current state: step 1, level 1.
+This turn:
+1. Orient on the newest frame: `segment(history[-1].frame.grid)` for structure.
+2. Decide the next move or short sequence — explore, advance the level, or write or update `world_model.py`, unless it does not pay here. Write a search if the right order is not obvious. `world_model.py` holds a working example of the contract for another game; read it if you decide to write one.
+3. Act with `submit_action([...])`.
+
+Current grid image:
+[image:32x32]

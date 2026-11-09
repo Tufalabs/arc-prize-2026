@@ -1,0 +1,43 @@
+Here is the puzzle.
+
+2 example pairs, input on the left and output on the right; exact digit rows follow each label:
+train_in[0] -> train_out[0]  (3x4 -> 5x9)
+train_in[0]:
+0	7348
+1	2092
+2	3491
+
+train_out[0]:
+0	394216941
+1	048945465
+2	088731165
+3	411839570
+4	919821663
+<image 76x36 sha256:2840116d71687c94 alt='train_in[0] -> train_out[0]  (3x4 -> 5x9)'>
+train_in[1] -> train_out[1]  (3x4 -> 5x9)
+train_in[1]:
+0	8010
+1	4895
+2	4332
+
+train_out[1]:
+0	775165675
+1	234695585
+2	204410177
+3	287480763
+4	036599762
+<image 76x36 sha256:57585d8f2745b553 alt='train_in[1] -> train_out[1]  (3x4 -> 5x9)'>
+
+1 test input to answer, as pictures and exact digit rows in test_in:
+test_in[0]  (7x7)
+test_in[0]:
+0	4622430
+1	6093998
+2	6931180
+3	3861933
+4	4523601
+5	0879126
+6	2388537
+<image 44x44 sha256:b3fed63b25916350 alt='test_in[0]  (7x7)'>
+
+Work in the kernel. The arrays above are already there — you do not need to retype them. When you are done, describe the rule you applied in full in your final reply.

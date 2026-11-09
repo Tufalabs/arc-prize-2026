@@ -1,0 +1,21 @@
+Rendered grids from show():
+intermediate candidate
+<image 11x11 sha256:93d44f224b6e0271 alt='intermediate candidate'>
+
+<next user message>
+
+You changed test_out[0][0] and test_out[0][1] to this:
+test_in[0]  (7x7)
+<image 36x36 sha256:ed6e8ae237ec3236 alt='test_in[0]  (7x7)'>
+test_out[0][0]  (7x7)
+<image 36x36 sha256:ed6e8ae237ec3236 alt='test_out[0][0]  (7x7)'>
+test_out[0][1]  (7x7)
+<image 36x36 sha256:ed6e8ae237ec3236 alt='test_out[0][1]  (7x7)'>
+
+<next user message>
+
+check(fn) FAILED. Your fn's output for each failed train pair is rendered below:
+Train pair 0 — your output:
+0	10
+1	01
+Train pair 1 — your fn raised an error; no output to render.

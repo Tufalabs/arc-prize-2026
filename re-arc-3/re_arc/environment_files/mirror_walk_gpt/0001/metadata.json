@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    10,
+    10,
+    10
+  ],
+  "class_name": "MirrorWalkGpt",
+  "default_fps": 4,
+  "game_id": "mirror_walk_gpt-0001",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Mirror Walk GPT",
+  "idea": "A dual-control puzzle where mirrored movement means every step affects two positions at once, so the player solves levels by exploiting symmetry."
+}

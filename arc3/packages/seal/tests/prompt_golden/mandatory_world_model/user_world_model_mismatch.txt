@@ -1,0 +1,11 @@
+Palette legend image: one swatch per color index, labelled with the index (top-left), the character `ascii_grid` renders it as (top-right), and its name.
+[image:512x512]
+The code executed 2 actions in the previous sequence.
+Executed actions: UP, LEFT.
+You are still on the same level.
+Your world model mispredicted the last executed action, so the rest of the sequence was not executed. `test_world_model()` now fails on that turn.
+Current state: step 3, level 1.
+A passing `test_world_model()` is required to make moves.
+
+Current grid image:
+[image:32x32]

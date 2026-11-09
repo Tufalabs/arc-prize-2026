@@ -1,0 +1,30 @@
+[project]
+name = "duck"
+version = "0.1.0"
+description = "The duck agent, re-enacted on the platypus harness"
+requires-python = "==3.12.12"
+dependencies = [
+    "platypus",
+    "ullm",
+    "numpy>=1.26",
+    # The file search runs a model-authored pattern; stdlib re cannot be
+    # interrupted, and this one honours a deadline.
+    "regex>=2024.0",
+]
+
+[tool.uv.sources]
+platypus = { workspace = true }
+ullm = { workspace = true }
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# The bundled DejaVu files are data, so a wheel build drops them unless they
+# are named. Workspace installs are editable and read them from the source
+# tree, which is why nothing local notices.
+[tool.setuptools.package-data]
+"duck.fonts" = ["*.ttf", "LICENSE_DEJAVU"]

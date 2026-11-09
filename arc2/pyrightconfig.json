@@ -1,0 +1,33 @@
+{
+  "typeCheckingMode": "strict",
+  "pythonVersion": "3.12",
+  "pythonPlatform": "Linux",
+  "include": [
+    "packages",
+    "tests",
+    "tools"
+  ],
+  "extraPaths": [
+    "tests"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    ".*"
+  ],
+  "reportUnnecessaryIsInstance": true,
+  "reportConstantRedefinition": true,
+  "reportInvalidStringEscapeSequence": true,
+  "reportUnknownVariableType": "warning",
+  "reportUnknownMemberType": false,
+  "reportUnknownParameterType": "warning",
+  "reportUnknownArgumentType": "warning",
+  // Unused imports are ruff's check (F401, in `make lint`). Pyright's copy
+  // is off: on the GitHub runner it can report a used import as not
+  // accessed, and `make static` fails on any warning, so the same rule with
+  // a deterministic verdict is the one that stays on.
+  "reportUnusedImport": "none",
+  "reportUnusedVariable": "warning",
+  "reportMissingTypeStubs": false,
+  "reportPrivateUsage": false
+}

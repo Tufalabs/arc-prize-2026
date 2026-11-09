@@ -1,0 +1,13 @@
+Color legend image: one swatch per color, labelled with the color name used in this prompt.
+[image:128x512]
+No actions have been executed yet.
+Current state: step 1, level 1.
+Valid actions right now: UP, DOWN, LEFT, RIGHT.
+This turn:
+1. Orient on the newest frame: `current_frame.segment()` for structure.
+2. Decide the next move or short sequence — explore, or advance the level. Write a search if the right order is not obvious.
+3. Append anything new and durable with `memory`, before you act: the turn ends as soon as you do.
+4. Act with `submit_action([...])`.
+
+Current grid image:
+[image:32x32]

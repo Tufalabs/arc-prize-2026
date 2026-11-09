@@ -1,0 +1,16 @@
+{
+  "game_id": "make_all_same-0001",
+  "title": "Make All Same",
+  "default_fps": 10,
+  "baseline_actions": [
+    6,
+    12,
+    22
+  ],
+  "tags": [
+    "click-keys",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "MakeAllSame"
+}

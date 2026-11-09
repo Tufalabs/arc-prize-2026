@@ -1,0 +1,20 @@
+{
+  "baseline_actions": [
+    7,
+    6,
+    9
+  ],
+  "class_name": "GreedyFriendMeeting",
+  "default_fps": 6,
+  "game_id": "greedy_friend_meeting-0001",
+  "local_dir": "re_arc/environment_files/greedy_friend_meeting/0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Greedy Friend Meeting",
+  "idea": "A coordination puzzle where a greedy companion follows its own pickup-seeking logic, so the player must route both characters around the board until their positions finally allow them to meet."
+}

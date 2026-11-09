@@ -1,0 +1,24 @@
+{
+  "variant": "0001",
+  "game_id": "breakout-0001",
+  "slug": "breakout",
+  "class_name": "Breakout",
+  "objective": "obj.clear_breakables",
+  "mechanics": [
+    "mech.paddle_bounce",
+    "mech.brick_hp",
+    "mech.timebar",
+    "mech.powerups",
+    "mech.moving_bumpers"
+  ],
+  "action_set": [
+    "left",
+    "right",
+    "space"
+  ],
+  "available_actions": [
+    3,
+    4,
+    5
+  ]
+}

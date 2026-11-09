@@ -1,0 +1,93 @@
+{
+  "generator": "scripts/generate_from_specs.py",
+  "variant": "0001",
+  "spec_id": "spec-hard-0003",
+  "game_id": "pattern_match_sequence_2-0001",
+  "slug": "pattern_match_sequence_2",
+  "class_name": "PatternMatchSequence2",
+  "objective": "obj.sequence",
+  "mechanics": [
+    "mech.path_connect",
+    "mech.pattern_match",
+    "mech.region_rotate"
+  ],
+  "layout_template": "lanes",
+  "action_set": [
+    "click"
+  ],
+  "available_actions": [
+    6
+  ],
+  "source_spec": {
+    "spec_id": "spec-hard-0003",
+    "slug_hint": "pattern_match-sequence-0003",
+    "difficulty": "hard",
+    "grid_size": [
+      64,
+      64
+    ],
+    "action_set": [
+      "click"
+    ],
+    "target_optimal_steps": 51,
+    "time_limit": 228,
+    "player_step_matches_size": true,
+    "objective": "obj.sequence",
+    "discovery": "aha.remote_effect",
+    "mechanics": [
+      "mech.path_connect",
+      "mech.pattern_match",
+      "mech.region_rotate"
+    ],
+    "trait_ids": [
+      "family.click_puzzle",
+      "board.wide",
+      "ctrl.click_only",
+      "sem.multi_select",
+      "drag.connect_nodes",
+      "select.connected_component",
+      "time.resolve_on_drop",
+      "info.hidden_links",
+      "topo.wrap_x",
+      "ostruct.single",
+      "obj.sequence",
+      "aha.remote_effect"
+    ],
+    "object_profile": {
+      "player_size": [
+        3,
+        3
+      ],
+      "key_interactables_min_size": [
+        3,
+        3
+      ],
+      "composite_sprites": true
+    },
+    "object_shape_profile": {
+      "required_motifs": [
+        "l_shape",
+        "asymmetric"
+      ],
+      "forbidden_motifs": [
+        "solid_rect_2x2"
+      ],
+      "min_non_rectangular_interactables": 2,
+      "max_uniform_solid_ratio": 0.45,
+      "min_palette_entropy": 1.2
+    },
+    "layout": {
+      "seed": 3131403398,
+      "generator": "template_mix_v1",
+      "template": "lanes",
+      "wall_fill_ratio": 0.22,
+      "min_player_goal_distance": 15,
+      "require_path_spawn_to_goal": true
+    },
+    "validation": {
+      "require_dsl_win": true,
+      "max_actions_test": 300,
+      "required_terminal_state": "WIN"
+    }
+  }
+}

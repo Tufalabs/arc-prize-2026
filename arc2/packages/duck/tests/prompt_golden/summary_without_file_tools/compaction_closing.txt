@@ -1,0 +1,25 @@
+[context compacted — your `python` session is intact; continue from here]
+
+Your `python` session, objects you defined:
+- `find_frame`: function
+- `solve`: function
+- `scratch100`: int
+- `scratch101`: int
+- `scratch102`: int
+- `scratch103`: int
+- `scratch104`: int
+- `scratch105`: int
+- `scratch106`: int
+- `scratch107`: int
+- `scratch108`: int
+- `scratch109`: int
+- `scratch110`: int
+- `scratch111`: int
+- `scratch112`: int
+- `scratch113`: int
+- `scratch114`: int
+- `scratch115`: int
+- `scratch116`: int
+- `scratch117`: int
+and more: scratch118, scratch119, scratch120, scratch121, scratch122, scratch123, scratch124, scratch125, scratch126, scratch127, scratch128, scratch129, scratch10, scratch11, scratch12, scratch13, scratch14, scratch15, scratch16, scratch17, scratch18, scratch19, scratch20, scratch21, scratch22, scratch23, scratch24, scratch25, scratch26, scratch27, scratch28, scratch29, scratch30, scratch31, scratch32, scratch33, scratch34, scratch35, scratch36, scratch37, scratch38, scratch39, scratch40, scratch41, scratch42, scratch43, scratch44, scratch45, scratch46, scratch47, scratch48, scratch49, scratch50, scratch51, scratch52, scratch53, scratch54, scratch55, scratch56, scratch57, scratch58, scratch59, scratch60, scratch61, scratch62, scratch63, scratch64, scratch65, scratch66, scratch67, scratch68, scratch69, scratch70, scratch71, scratch72, scratch73, scratch74, scratch75, scratch76, scratch77, scratch78, scratch79, scratch80, scratch81, scratch82, scratch83, scratch84, scratch85, scratch86, scratch87, scratch88, scratch89, scratch90, scratch91, scratch92, scratch93, scratch94, scratch95, scratch96, scratch97
+and 15 more not named here.

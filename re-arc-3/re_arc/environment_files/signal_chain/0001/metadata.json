@@ -1,0 +1,20 @@
+{
+  "baseline_actions": [
+    4,
+    5,
+    6
+  ],
+  "class_name": "SignalChain",
+  "date_downloaded": "2026-04-03T11:20:46+00:00",
+  "default_fps": 8,
+  "game_id": "signal_chain-0001",
+  "local_dir": "re_arc/environment_files/signal_chain/0001",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Signal Chain",
+  "idea": "A click-based sequencing puzzle where nodes must be activated in the proper order while walls block line of sight and the action budget stays tight."
+}

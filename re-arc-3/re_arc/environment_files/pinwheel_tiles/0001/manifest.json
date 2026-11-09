@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "pinwheel-tiles",
+  "game_id": "pinwheel_tiles-0001",
+  "slug": "pinwheel_tiles",
+  "class_name": "PinwheelTiles",
+  "objective": "obj.match_tiles",
+  "mechanics": ["mech.clockwise_rotation", "mech.one_shot_pivots", "mech.overlap_transfer", "mech.undo", "mech.step_budget"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

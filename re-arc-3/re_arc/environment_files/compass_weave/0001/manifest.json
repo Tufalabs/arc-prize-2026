@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "compass-weave",
+  "game_id": "compass_weave-0001",
+  "slug": "compass_weave",
+  "class_name": "CompassWeave",
+  "objective": "obj.cut_seals_and_enter_dock_tip_first",
+  "mechanics": ["mech.forward_backward", "mech.fixed_rotation_thresholds", "mech.tip_first_seals", "mech.undo"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

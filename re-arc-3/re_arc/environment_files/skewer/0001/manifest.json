@@ -1,0 +1,33 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "skewer",
+  "game_id": "skewer-0001",
+  "slug": "skewer",
+  "class_name": "Skewer",
+  "objective": "obj.score_color_sequences",
+  "mechanics": [
+    "mech.skewer_pierce",
+    "mech.skewer_push",
+    "mech.crossing_transfer",
+    "mech.selection_cycle",
+    "mech.step_bar"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}
+

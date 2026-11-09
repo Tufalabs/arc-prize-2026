@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "pair-sort",
+  "game_id": "pair_sort-0001",
+  "slug": "pair_sort",
+  "class_name": "PairSort",
+  "objective": "obj.match_pairs",
+  "mechanics": ["mech.click_swap", "mech.exact_pair_match", "mech.undo", "mech.step_budget"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

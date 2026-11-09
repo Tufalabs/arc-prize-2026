@@ -1,0 +1,8 @@
+{
+  "game_id": "conveyor_weave-0001",
+  "title": "Conveyor Weave",
+  "default_fps": 8,
+  "baseline_actions": [1, 5, 6, 22, 40, 42, 50],
+  "tags": ["keys-only", "codex-reviewed"],
+  "class_name": "ConveyorWeave"
+}

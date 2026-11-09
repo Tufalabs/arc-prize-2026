@@ -1,0 +1,8 @@
+{
+  "game_id": "sand_channels-0001",
+  "title": "Sand Channels",
+  "default_fps": 8,
+  "baseline_actions": [3, 6, 7, 27, 34, 41, 52],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "SandChannels"
+}

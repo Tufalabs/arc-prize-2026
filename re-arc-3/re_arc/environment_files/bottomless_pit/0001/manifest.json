@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "bottomless-pit",
+  "game_id": "bottomless_pit-0001",
+  "slug": "bottomless_pit",
+  "class_name": "BottomlessPit",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.gravity_fall",
+    "mech.remote_edit",
+    "mech.gravity_reversal",
+    "mech.builder_supports",
+    "mech.step_bar"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "beam-compass",
+  "game_id": "beam_compass-0001",
+  "slug": "beam_compass",
+  "class_name": "BeamCompass",
+  "objective": "obj.light_all_terminals",
+  "mechanics": [
+    "mech.click_rotate",
+    "mech.line_of_sight",
+    "mech.opaque_emitters",
+    "mech.absorbing_terminals",
+    "mech.beam_crossings",
+    "mech.undo",
+    "mech.action_budget"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

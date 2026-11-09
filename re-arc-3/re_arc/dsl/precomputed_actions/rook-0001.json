@@ -1,0 +1,112 @@
+{
+  "actions": [
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "rook-0001",
+  "generated_at_utc": "2026-03-01T07:30:57.100965+00:00",
+  "generator_agent": "RookDslAgent",
+  "initial_observation_signature": "60fbb57ade428ecb1f1b99bf278cd456e6172edf",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 24,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 7,
+  "terminal_state": "WIN",
+  "total_levels": 7
+}

@@ -1,0 +1,104 @@
+{
+  "actions": [
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "greedy_friend_meeting-0001",
+  "generated_at_utc": "2026-04-01T14:28:27.022994+00:00",
+  "generator_agent": "GreedyFriendMeetingDslAgent",
+  "initial_observation_signature": "21c8af0463b742eb984e36a369d39f0cb4b678c5",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 22,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 3,
+  "terminal_state": "WIN",
+  "total_levels": 3
+}

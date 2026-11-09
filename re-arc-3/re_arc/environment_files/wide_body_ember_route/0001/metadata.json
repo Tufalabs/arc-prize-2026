@@ -1,0 +1,17 @@
+{
+  "baseline_actions": [
+    10,
+    19,
+    15
+  ],
+  "class_name": "WideBodyEmberRoute",
+  "default_fps": 8,
+  "game_id": "wide_body_ember_route-0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Wide Body Ember Route",
+  "idea": "A navigation puzzle where a bulky 2x2 body must be driven through ember-lined corridors and parked fully on the dock without clipping danger."
+}

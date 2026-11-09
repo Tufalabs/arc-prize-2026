@@ -1,0 +1,4 @@
+Your answer cannot be read yet:
+  - test_out[0][0] is not set
+
+Fix that in the kernel and carry on.

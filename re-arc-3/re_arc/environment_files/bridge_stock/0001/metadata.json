@@ -1,0 +1,8 @@
+{
+  "game_id": "bridge_stock-0001",
+  "title": "Bridge Stock",
+  "default_fps": 8,
+  "baseline_actions": [2, 6, 12, 25, 44, 70, 73],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "BridgeStock"
+}

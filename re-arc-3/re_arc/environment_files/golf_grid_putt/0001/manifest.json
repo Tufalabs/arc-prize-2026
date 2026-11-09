@@ -1,0 +1,27 @@
+{
+  "generator": "manual_from_spec",
+  "variant": "0001",
+  "spec_id": "golf-grid-putt-6lvl",
+  "game_id": "golf_grid_putt-0001",
+  "slug": "golf_grid_putt",
+  "class_name": "GolfGridPutt",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.click_aim",
+    "mech.friction",
+    "mech.hazard",
+    "mech.wind",
+    "mech.gate",
+    "mech.portal",
+    "mech.bumper"
+  ],
+  "layout_template": "fixed_24x18",
+  "action_set": [
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    5,
+    6
+  ]
+}

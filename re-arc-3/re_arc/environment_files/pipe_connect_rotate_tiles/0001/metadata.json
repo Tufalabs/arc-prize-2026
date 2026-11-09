@@ -1,0 +1,19 @@
+{
+  "game_id": "pipe_connect_rotate_tiles-0001",
+  "title": "Pipe Connect Rotate Tiles",
+  "idea": "A pipe puzzle where tiles are rotated until a continuous connection carries flow from the source to the endpoint.",
+  "default_fps": 8,
+  "baseline_actions": [
+    5,
+    10,
+    9,
+    15,
+    20,
+    21
+  ],
+  "tags": [
+    "click-only",
+    "debugging"
+  ],
+  "class_name": "PipeConnectRotateTiles"
+}

@@ -1,0 +1,80 @@
+{
+  "actions": [
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "arrow_crate_dock-0001",
+  "generated_at_utc": "2026-04-01T14:28:26.937674+00:00",
+  "generator_agent": "ArrowCrateDockDslAgent",
+  "initial_observation_signature": "6de1e24e0d9d67e09bcb648ef2b63f96a3b62dc3",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 16,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 3,
+  "terminal_state": "WIN",
+  "total_levels": 3
+}

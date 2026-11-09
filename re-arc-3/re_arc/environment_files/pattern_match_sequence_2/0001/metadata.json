@@ -1,0 +1,14 @@
+{
+  "game_id": "pattern_match_sequence_2-0001",
+  "title": "PatternMatchSequence2",
+  "idea": "A second sequence-matching path puzzle where the board is manipulated until the built route reproduces the required pattern, with the challenge coming from the order and structure of the constructed path.",
+  "default_fps": 8,
+  "baseline_actions": [
+    18
+  ],
+  "tags": [
+    "click-only",
+    "debugging"
+  ],
+  "class_name": "PatternMatchSequence2"
+}

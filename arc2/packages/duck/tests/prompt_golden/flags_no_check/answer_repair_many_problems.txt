@@ -1,0 +1,6 @@
+Your answer cannot be read yet:
+  - test_out[0][0] is not set
+  - test_out[1][0] has values outside 0..9
+  - test_out[2][1] is 31 rows, over the 30 limit
+
+Fix that in the kernel and carry on.

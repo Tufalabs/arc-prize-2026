@@ -1,0 +1,30 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "anchor-drift",
+  "game_id": "anchor_drift-0001",
+  "slug": "anchor_drift",
+  "class_name": "AnchorDrift",
+  "objective": "obj.dock_all_crates",
+  "mechanics": [
+    "mech.sliding_crates",
+    "mech.anchor_pivot",
+    "mech.rope_group"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "undo"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+  ]
+}

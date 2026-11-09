@@ -1,0 +1,19 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "exchange-rooms",
+  "game_id": "exchange_rooms-0001",
+  "slug": "exchange_rooms",
+  "class_name": "ExchangeRooms",
+  "objective": "obj.match_pads",
+  "mechanics": [
+    "mech.position_swap",
+    "mech.emblem_exchange",
+    "mech.color_gates",
+    "mech.requirement_pads",
+    "mech.action_budget",
+    "mech.undo"
+  ],
+  "action_set": ["up", "down", "left", "right", "undo"],
+  "available_actions": [1, 2, 3, 4, 7]
+}

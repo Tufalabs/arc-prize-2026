@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+cd "$ROOT"
+
+if command -v uv >/dev/null 2>&1; then
+  UV_BIN="$(command -v uv)"
+else
+  UV_BIN="$ROOT/.tools/bin/uv"
+  if [[ ! -x "$UV_BIN" ]]; then
+    echo "uv is not installed; bootstrapping a repo-local copy from Astral."
+    mkdir -p "$ROOT/.tools/bin"
+    curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="$ROOT/.tools/bin" sh
+  fi
+fi
+
+"$UV_BIN" sync --python 3.12 --locked --no-dev
+
+if ! command -v codex >/dev/null 2>&1; then
+  CODEX_BIN="$ROOT/.tools/node_modules/.bin/codex"
+  if [[ ! -x "$CODEX_BIN" ]]; then
+    if ! command -v npm >/dev/null 2>&1; then
+      echo "Node.js/npm is required to bootstrap the Codex CLI." >&2
+      exit 2
+    fi
+    echo "Codex CLI is not installed; bootstrapping a repo-local copy from npm."
+    npm install --prefix "$ROOT/.tools" @openai/codex@latest
+  fi
+  export PATH="$ROOT/.tools/node_modules/.bin:$PATH"
+fi
+
+exec "$ROOT/.venv/bin/python" "$ROOT/scripts/prolong_panel.py" evaluate "$@"

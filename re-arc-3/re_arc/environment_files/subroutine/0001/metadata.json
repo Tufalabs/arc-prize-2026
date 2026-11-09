@@ -1,0 +1,23 @@
+{
+  "baseline_actions": [
+    7,
+    9,
+    13,
+    13,
+    15,
+    21,
+    19,
+    25
+  ],
+  "class_name": "Subroutine",
+  "default_fps": 8,
+  "game_id": "subroutine-0001",
+  "idea": "Build small component programs from tray tokens so running the red main component emits the target color sequence. The upper area shows hollow target boxes and colored component frames; clicks move or swap solid literal tokens and hollow pointer tokens into component slots, while Space runs the checker. Literals emit their color, pointers call the component with the same border color and then return, and recursive levels may finish as soon as the final target is emitted. Levels should teach direct literal order, fixed and movable pointers, multiple subcomponents, repeated subroutine calls, pointer color identity without connector hints, recursion, two-row target scanning, and energy-limited edit-and-test planning.",
+  "local_dir": "environment_files/subroutine/0001",
+  "tags": [
+    "click-keys",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Subroutine"
+}

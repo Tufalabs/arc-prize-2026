@@ -1,0 +1,29 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "size-gates",
+  "game_id": "szgt-0001",
+  "slug": "szgt",
+  "class_name": "Szgt",
+  "objective": "obj.reach_exit",
+  "mechanics": [
+    "mech.size_toggle",
+    "mech.footprint_collision",
+    "mech.pressure_plate",
+    "mech.permanent_gate"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}

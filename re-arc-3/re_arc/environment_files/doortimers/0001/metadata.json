@@ -1,0 +1,18 @@
+{
+  "game_id": "doortimers-0001",
+  "title": "Door Timers",
+  "idea": "A timing maze where doors repeatedly open, warn, and close, so the player must move and wait on the right beats to slip through.",
+  "default_fps": 8,
+  "baseline_actions": [
+    21,
+    29,
+    31,
+    47,
+    30,
+    35
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Doortimers"
+}

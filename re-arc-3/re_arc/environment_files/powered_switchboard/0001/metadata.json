@@ -1,0 +1,8 @@
+{
+  "game_id": "powered_switchboard-0001",
+  "title": "Powered Switchboard",
+  "default_fps": 8,
+  "baseline_actions": [1, 2, 3, 26, 35, 45, 53],
+  "tags": ["click-only", "codex-reviewed", "codex-evaluated"],
+  "class_name": "PoweredSwitchboard"
+}

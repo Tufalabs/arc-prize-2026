@@ -1,0 +1,33 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "reticle",
+  "game_id": "reticle-0001",
+  "slug": "reticle",
+  "class_name": "Reticle",
+  "objective": "obj.match_topmost_reticle_pixels",
+  "mechanics": [
+    "mech.coarse_translation",
+    "mech.selection_cycle",
+    "mech.layer_order",
+    "mech.recolor_pad",
+    "mech.transform_pad",
+    "mech.step_bar"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "game_id": "dodge_ball-0001",
+  "title": "Dodge Ball",
+  "default_fps": 10,
+  "baseline_actions": [
+    9,
+    11,
+    6
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "DodgeBall"
+}

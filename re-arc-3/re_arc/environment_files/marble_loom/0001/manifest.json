@@ -1,0 +1,22 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "marble-loom",
+  "game_id": "marble_loom-0001",
+  "slug": "marble_loom",
+  "class_name": "MarbleLoom",
+  "objective": "obj.match_cups",
+  "mechanics": [
+    "mech.click_gates",
+    "mech.gravity_settle",
+    "mech.thread_carry",
+    "mech.side_gate_release",
+    "mech.step_budget"
+  ],
+  "action_set": [
+    "click"
+  ],
+  "available_actions": [
+    6
+  ]
+}

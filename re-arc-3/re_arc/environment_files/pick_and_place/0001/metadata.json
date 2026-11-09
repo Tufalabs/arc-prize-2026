@@ -1,0 +1,17 @@
+{
+  "game_id": "pick_and_place-0001",
+  "title": "Pick and Place",
+  "default_fps": 6,
+  "baseline_actions": [
+    2,
+    4,
+    8
+  ],
+  "tags": [
+    "click-only",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "PickAndPlace"
+}

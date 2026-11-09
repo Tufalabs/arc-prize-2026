@@ -1,0 +1,19 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "tumbling-blocks",
+  "game_id": "tumbling_blocks-0001",
+  "slug": "tumbling_blocks",
+  "class_name": "TumblingBlocks",
+  "objective": "obj.oriented_docks",
+  "mechanics": [
+    "mech.push_cube",
+    "mech.cube_orientation",
+    "mech.face_terminals",
+    "mech.identity_matching",
+    "mech.undo",
+    "mech.step_budget"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

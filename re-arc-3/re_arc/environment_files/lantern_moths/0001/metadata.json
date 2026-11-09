@@ -1,0 +1,21 @@
+{
+  "baseline_actions": [
+    2,
+    4,
+    12,
+    8,
+    37,
+    21,
+    37
+  ],
+  "class_name": "LanternMoths",
+  "default_fps": 8,
+  "game_id": "lantern_moths-0001",
+  "idea": "Route moths into flower lamps by moving large lanterns whose light pulls moths in straight lines. There is no avatar; clicks select lanterns or blockers, direction actions move the selected object one cell, and Space advances one moth step. Each moth moves toward the brightest visible lantern along its row or column, stops at blockers, and sleeps permanently when it reaches a matching flower lamp. Levels should teach one-lantern attraction, blocking sightlines, moving lanterns as temporary walls, competing lanterns, waking sleeping moths by moving light away, and final boards where the same lantern must first separate moths and later reunite them at different flowers.",
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "hard"
+  ],
+  "title": "Lantern Moths"
+}

@@ -1,0 +1,19 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "corner-cart",
+  "game_id": "corner_cart-0001",
+  "slug": "corner_cart",
+  "class_name": "CornerCart",
+  "objective": "obj.route_rigid_cart",
+  "mechanics": [
+    "mech.rigid_l_cart",
+    "mech.notch_clearance",
+    "mech.posts_in_notch",
+    "mech.front_contact_plates",
+    "mech.oriented_dock",
+    "mech.undo"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

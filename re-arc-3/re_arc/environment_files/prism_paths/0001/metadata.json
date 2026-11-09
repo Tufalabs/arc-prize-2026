@@ -1,0 +1,8 @@
+{
+  "game_id": "prism_paths-0001",
+  "title": "Prism Paths",
+  "default_fps": 8,
+  "baseline_actions": [8, 15, 26, 26, 59, 64, 74],
+  "tags": ["keys-only", "arc-like", "medium", "codex-reviewed"],
+  "class_name": "PrismPaths"
+}

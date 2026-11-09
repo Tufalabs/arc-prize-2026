@@ -1,0 +1,33 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "mirror-fog",
+  "game_id": "mirror_fog-0001",
+  "slug": "mirror_fog",
+  "class_name": "MirrorFog",
+  "objective": "obj.clear_fog",
+  "mechanics": [
+    "mech.mirror_push",
+    "mech.mirror_rotate",
+    "mech.click_locks",
+    "mech.beam_fog_glass",
+    "mech.rolling_prism",
+    "mech.step_budget"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

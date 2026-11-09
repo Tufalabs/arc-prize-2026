@@ -1,0 +1,21 @@
+{
+  "baseline_actions": [
+    4,
+    7,
+    15,
+    28,
+    56,
+    19,
+    108
+  ],
+  "class_name": "Reticle",
+  "default_fps": 8,
+  "game_id": "reticle-0001",
+  "idea": "Move colored reticle shapes on a 64x64 pixel grid so their non-transparent pixels cover every matching target center. Direction actions move the selected reticle exactly 3 pixels, Space cycles selection, and the selected reticle is marked by a temporary white center pixel that is not part of any target. Targets are small dark frames with colored centers; only the center pixels matter, extra reticle pixels are allowed, and overlapping reticles can hide earlier pixels if drawn later. Levels should teach single-reticle alignment, multiple reticles, crosses and hollow shapes, overlap ordering, off-camera partial placement, recolor or transform pads, and final boards where all target centers must be covered without occluding needed colors.",
+  "tags": [
+    "keys-only",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Reticle"
+}

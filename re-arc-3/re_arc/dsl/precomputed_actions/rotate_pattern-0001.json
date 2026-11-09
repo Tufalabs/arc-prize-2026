@@ -1,0 +1,88 @@
+{
+  "actions": [
+    [
+      3,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      5,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "rotate_pattern-0001",
+  "generated_at_utc": "2026-03-18T16:53:34.774126+00:00",
+  "generator_agent": "RotatePatternDslAgent",
+  "initial_observation_signature": "592a6b38969737ce006a55a1f27e6f5263b53cfe",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 18,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 5,
+  "terminal_state": "WIN",
+  "total_levels": 5
+}

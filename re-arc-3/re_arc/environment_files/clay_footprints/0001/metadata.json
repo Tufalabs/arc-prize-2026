@@ -1,0 +1,22 @@
+{
+  "baseline_actions": [
+    8,
+    19,
+    20,
+    27,
+    40,
+    43,
+    50,
+    58
+  ],
+  "class_name": "ClayFootprints",
+  "default_fps": 8,
+  "game_id": "clay_footprints",
+  "idea": "Implementation from existing spec clay-footprints.md",
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "medium"
+  ],
+  "title": "Clay Footprints"
+}

@@ -1,0 +1,28 @@
+Replace an exact substring in a file in your working directory. `old_string` must match the file exactly, so strip the line number and tab that a view puts in front of each line. It must appear exactly once unless you pass `replace_all`. You are shown where the change landed.
+
+{
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "description": "Path to the file to edit"
+    },
+    "old_string": {
+      "type": "string",
+      "description": "Exact text to replace, matched verbatim including indentation"
+    },
+    "new_string": {
+      "type": "string",
+      "description": "Text to put in its place"
+    },
+    "replace_all": {
+      "type": "boolean",
+      "description": "Replace every occurrence (default false)"
+    }
+  },
+  "required": [
+    "path",
+    "old_string",
+    "new_string"
+  ]
+}

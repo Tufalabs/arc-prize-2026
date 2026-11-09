@@ -1,0 +1,18 @@
+{
+  "game_id": "frogger-0001",
+  "title": "Frogger Grid World",
+  "idea": "A Frogger-style crossing game where the player advances lane by lane through traffic and water, using logs and turtles as temporary footing while racing the timer to fill the required home slots.",
+  "default_fps": 8,
+  "baseline_actions": [
+    13,
+    19,
+    73,
+    82,
+    83,
+    78
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Frogger"
+}

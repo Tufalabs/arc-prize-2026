@@ -1,0 +1,8 @@
+{
+  "game_id": "lockstep_doors-0001",
+  "title": "Lockstep Doors",
+  "default_fps": 8,
+  "baseline_actions": [1, 2, 6, 28, 42, 46, 56],
+  "tags": ["click-only", "codex-reviewed", "codex-evaluated"],
+  "class_name": "LockstepDoors"
+}

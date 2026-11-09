@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "leap-frog",
+  "game_id": "leap_frog-0001",
+  "slug": "leap_frog",
+  "class_name": "LeapFrog",
+  "objective": "obj.leave_one_green",
+  "mechanics": [
+    "mech.orthogonal_jump",
+    "mech.population_reduction",
+    "mech.rail_platforms",
+    "mech.click_selection",
+    "mech.step_bar"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

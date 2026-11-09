@@ -1,0 +1,8 @@
+{
+  "game_id": "towline-0001",
+  "title": "Towline",
+  "default_fps": 8,
+  "baseline_actions": [4, 10, 13, 32, 45, 91, 102],
+  "tags": ["keys-only", "codex-reviewed"],
+  "class_name": "Towline"
+}

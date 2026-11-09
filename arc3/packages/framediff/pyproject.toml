@@ -1,0 +1,17 @@
+[project]
+name = "framediff"
+version = "0.1.0"
+description = "What changed between two frames, as a short numpy edit script"
+requires-python = "==3.12.12"
+dependencies = [
+    "numpy>=1.26",
+    # The notebook views draw frames as PNGs; nothing on the edit path uses it.
+    "pillow>=11.0.0",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

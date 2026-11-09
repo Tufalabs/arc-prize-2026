@@ -1,0 +1,15 @@
+{
+  "variant": "0001",
+  "game_id": "echo_maze_gpt-0001",
+  "slug": "echo_maze_gpt",
+  "class_name": "EchoMazeGpt",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6]
+}

@@ -1,0 +1,14 @@
+{
+  "game_id": "path_connect_sequence-0001",
+  "title": "PathConnectSequence",
+  "idea": "A click puzzle where path segments are connected step by step in a required order, so the player has to satisfy both the network topology and the sequence constraint of which link comes next.",
+  "default_fps": 8,
+  "baseline_actions": [
+    29
+  ],
+  "tags": [
+    "click-only",
+    "debugging"
+  ],
+  "class_name": "PathConnectSequence"
+}

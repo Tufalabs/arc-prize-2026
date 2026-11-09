@@ -1,0 +1,18 @@
+{
+  "variant": "0001",
+  "game_id": "territory_capture-0001",
+  "slug": "territory_capture",
+  "class_name": "TerritoryCapture",
+  "objective": "obj.capture_and_reach_goal",
+  "mechanics": [
+    "mech.trail_capture",
+    "mech.enemy_avoidance",
+    "mech.pulse_barrier",
+    "mech.time_management"
+  ],
+  "action_set": [
+    "move_4",
+    "wait"
+  ],
+  "available_actions": [1, 2, 3, 4, 5]
+}

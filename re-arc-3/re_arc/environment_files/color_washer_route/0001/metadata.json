@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    16,
+    15,
+    17
+  ],
+  "class_name": "ColorWasherRoute",
+  "default_fps": 8,
+  "game_id": "color_washer_route-0001",
+  "idea": "This is a state-based routing puzzle where the player directly moves a single block with the arrow keys. The board contains color washer pads, matching color gates, walls, and a final dock. Stepping on a washer immediately recolors the block to that washer's color. Gates only allow passage when the block currently matches their color. The objective is to visit the washers in the correct order so the block can pass the needed gates and arrive on the final dock in the required color. The visual system is extremely simple: one block, a few colored pads, a few matching gates, and the goal. Feedback is immediate because the block visibly changes color the moment it touches a washer. Level 1 has one washer and one gate, so the player learns that color is a movement state rather than just decoration. Level 2 has two washer colors and two gates arranged so the order of recoloring matters. Level 3 adds a neutralizer pad that removes the current color, forcing the player to intentionally reset and rebuild the correct color route.",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Color Washer Route"
+}

@@ -1,0 +1,31 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "axis-reflect",
+  "game_id": "axis_reflect-0001",
+  "slug": "axis_reflect",
+  "class_name": "AxisReflect",
+  "objective": "obj.cover_targets_with_reflections",
+  "mechanics": [
+    "mech.polyomino_slide",
+    "mech.selection_cycle",
+    "mech.mirror_axis",
+    "mech.recursive_reflection"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

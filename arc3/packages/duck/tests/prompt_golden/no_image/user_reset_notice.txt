@@ -1,0 +1,8 @@
+Your `python` session was cleared because a new level started: definitions and variables from earlier snippets are gone. Your files are still there — re-create anything else you need.
+No actions have been executed yet.
+Current state: step 1, level 1.
+Valid actions right now: UP, DOWN, LEFT, RIGHT.
+This turn:
+1. Orient on the newest frame: `current_frame.segment()` for structure.
+2. Decide the next move or short sequence — explore, or advance the level. Write a search if the right order is not obvious.
+3. Act with `submit_action([...])`.

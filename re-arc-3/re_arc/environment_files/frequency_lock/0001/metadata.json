@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    7,
+    16,
+    16
+  ],
+  "default_fps": 8,
+  "game_id": "frequency_lock-0001",
+  "local_dir": "re_arc/environment_files/frequency_lock/0001",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Frequency Lock",
+  "idea": "A timing puzzle where the player synchronizes movement with a repeating frequency pattern to open locks and safely advance."
+}

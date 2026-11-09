@@ -1,0 +1,22 @@
+{
+  "baseline_actions": [
+    3,
+    12,
+    10,
+    15,
+    9,
+    15,
+    23,
+    65
+  ],
+  "class_name": "Skewer",
+  "default_fps": 8,
+  "game_id": "skewer-0001",
+  "idea": "Move one or more skewer handles on a 6-pixel grid to pierce colored blocks and arrange ordered stacks on scoring skewers. A handle carries a row or column of gray skewer segments; colored blocks can be pushed, pierced onto a segment, carried with the handle, or transferred at intersections between horizontal and vertical skewers. The bottom display shows the required color sequence for each scoring skewer, read from the handle outward, and structural gray segments do not count as target colors. Levels should teach single horizontal skewering, reordering a row of blocks, fixed vertical sticks, distributing one load across multiple targets, obstacles, two controllable skewers, shared intersection blocks, and final short-rail transfer puzzles.",
+  "tags": [
+    "click-keys",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Skewer"
+}

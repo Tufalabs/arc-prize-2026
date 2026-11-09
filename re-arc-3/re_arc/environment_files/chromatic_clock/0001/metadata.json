@@ -1,0 +1,8 @@
+{
+  "game_id": "chromatic_clock-0001",
+  "title": "Chromatic Clock",
+  "default_fps": 8,
+  "baseline_actions": [1, 6, 6, 27, 44, 47, 52],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "ChromaticClock"
+}

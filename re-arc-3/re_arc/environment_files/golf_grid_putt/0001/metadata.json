@@ -1,0 +1,18 @@
+{
+  "game_id": "golf_grid_putt-0001",
+  "title": "Golf Grid Putt",
+  "idea": "A click-to-aim mini golf puzzle where the player putts a ball around hazards, portals, gates, and bumpers into the hole.",
+  "default_fps": 8,
+  "baseline_actions": [
+    18,
+    20,
+    30,
+    25,
+    23,
+    31
+  ],
+  "tags": [
+    "click-keys"
+  ],
+  "class_name": "GolfGridPutt"
+}

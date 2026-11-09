@@ -1,0 +1,20 @@
+{
+  "game_id": "ls20_close-0001",
+  "title": "LS20 Close",
+  "idea": "A readable sprite-based reconstruction of LS20 Locksmith's seven tutorial levels: carry a mutable key, rotate it, change color and shape, use recharges, open sequential locks, ride animated pushers, and navigate a fogged finale.",
+  "default_fps": 8,
+  "baseline_actions": [
+    13,
+    41,
+    35,
+    43,
+    40,
+    88,
+    55
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Ls20Close",
+  "local_dir": "environment_files/ls20_close/0001"
+}

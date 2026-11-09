@@ -1,0 +1,25 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "towline",
+  "game_id": "towline-0001",
+  "slug": "towline",
+  "class_name": "Towline",
+  "objective": "obj.fill_docks",
+  "mechanics": [
+    "mech.horizontal_pull",
+    "mech.gravity",
+    "mech.cargo_support",
+    "mech.persistent_attachment",
+    "mech.undo"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 7]
+}

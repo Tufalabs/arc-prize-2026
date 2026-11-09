@@ -1,0 +1,18 @@
+{
+  "game_id": "push_enemies_into_hazards-0001",
+  "title": "Push Enemies Into Hazards",
+  "idea": "A combat puzzle where the player cannot simply dodge foes and instead has to shove different enemy types into spikes and other hazards.",
+  "default_fps": 8,
+  "baseline_actions": [
+    25,
+    38,
+    64,
+    33,
+    63,
+    74
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "PushEnemiesIntoHazards"
+}

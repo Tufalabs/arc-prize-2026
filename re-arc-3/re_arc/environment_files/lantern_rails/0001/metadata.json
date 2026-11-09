@@ -1,0 +1,22 @@
+{
+  "baseline_actions": [
+    8,
+    14,
+    17,
+    30,
+    40,
+    46,
+    51,
+    68
+  ],
+  "class_name": "LanternRails",
+  "default_fps": 8,
+  "game_id": "lantern_rails-0001",
+  "idea": "Route mine carts by moving lanterns whose beams activate rail segments. Clicks select lanterns, direction keys move the selected lantern along wall rails, and Space advances all carts one rail step. A rail segment is usable only while lit; unlit rails stop carts, lit switch rails flip after a cart crosses, and carts can block or push each other. Levels should teach lighting a direct path, using darkness as a brake, moving lanterns while carts wait, making one cart hold another back, switch rails, and final mines where the same lantern must alternately release, stop, and redirect carts before all reach depots.",
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "medium"
+  ],
+  "title": "Lantern Rails"
+}

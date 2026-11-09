@@ -1,0 +1,16 @@
+You have been on level 1 for a while without clearing it. Take a step back and reflect briefly on your approach before playing on.
+
+Some things that may help:
+- If the win condition is unclear or mechanics seem arbitrary, consider if any static board elements give a clue.
+- If an action seems to be inert so far, consider if it may do something in some other game state.
+- If the rules are clear but your plans keep failing, search over your model instead of planning by hand.
+- The level is winnable by humans, so if it seems impossible reconsider what you may have missed.
+- Not yet tried on this level: DOWN, LEFT, RIGHT; DOWN, LEFT and RIGHT have not been tried in this game at all. Colors on the board that no click has hit on this level: 0, 9; 0 and 9 have never been clicked in this game.
+
+When you are done, reply in plain text, with no tool call: that reply ends this turn.
+`submit_action` is not available in this turn.
+
+Level start image:
+[image:32x32]
+Current grid image:
+[image:32x32]

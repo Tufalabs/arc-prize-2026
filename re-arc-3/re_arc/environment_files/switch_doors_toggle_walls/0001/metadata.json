@@ -1,0 +1,18 @@
+{
+  "game_id": "switch_doors_toggle_walls-0001",
+  "title": "Switch Doors Toggle Walls",
+  "idea": "A switch puzzle where each activation changes the wall or door layout, so progress depends on choosing the right toggle order.",
+  "default_fps": 8,
+  "baseline_actions": [
+    25,
+    27,
+    41,
+    28,
+    60,
+    37
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "SwitchDoorsToggleWalls"
+}

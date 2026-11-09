@@ -1,0 +1,17 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "stepstack",
+  "game_id": "stepstack-0001",
+  "slug": "stepstack",
+  "class_name": "Stepstack",
+  "objective": "obj.reach_exit",
+  "mechanics": [
+    "mech.push_blocks",
+    "mech.gravity",
+    "mech.climb",
+    "mech.undo"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click"],
+  "available_actions": [1, 2, 3, 4, 5, 6]
+}

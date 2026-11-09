@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Tether Hook",
+    "description": "The player controls a magnetic core that moves orthogonally until it hits a wall. The core can fire a permanent energy tether in its current direction to attach to floating metallic anchor blocks. Once tethered, the core pivots in a strict 90-degree arc around that anchor instead of moving linearly, sweeping through empty space. Sweeping allows the core to push loose obstacles into buttons or shield itself from laser grids. However, tethers cannot overlap walls or other tethers; a misplaced connection instantly cuts off entire quadrants of the board or traps the core in an infinite orbit. Early levels teach basic pivoting and momentum shifting. Mid-game levels introduce multi-anchor networks where the player must use one tether to drag an anchor into a new position to change a future pivot radius. Late levels require creating intricate dependency chains where tethers block lasers for other tethers to form.",
+    "num_levels": 9
+  },
+  {
+    "title": "Fold Line",
+    "description": "The player manipulates an elastic ribbon fixed between two pegs on a grid. By moving an avatar, the player can push the ribbon from the side, stretching it across the board to catch and drag sliding cargo blocks toward goal zones. The ribbon acts as a kinetic sling, but every grid intersection it crosses increases its tension state, which is visually indicated by the ribbon changing from blue to flashing red. If tension limits are exceeded, the ribbon snaps back to its starting straight line, destroying any cargo in its path. This mechanic forces players to use cargo blocks as structural corner-pins to redirect the ribbon's path safely. A block acts as a helpful anchor initially, but becomes a physical blockage later when the player needs to cross back through that space. Late levels involve weaving the ribbon through narrow bottlenecks to compress blocks into tight spaces.",
+    "num_levels": 8
+  },
+  {
+    "title": "Weight Balance",
+    "description": "Set on a floating 2D grid that tilts dynamically based on total mass distribution. The player steps onto the grid alongside several stone blocks of varying weights. Moving the player or pushing a block shifts the board's collective center of gravity. If any row or column becomes too heavy, that specific line dips downward, causing all loose blocks on it to slide rapidly toward the edge unless blocked by a wall. Players must intentionally tilt the board to slide heavy blocks across wide gaps into recessed sockets. The core conflict arises because the path needed to reach the goal requires a level board, but moving the blocks to the goal naturally unbalances it. Success requires using lighter blocks as temporary counterweights on opposite sides of the axis. Later levels feature complex networks where moving one block into a socket triggers a tilt that unlocks a gate elsewhere.",
+    "num_levels": 8
+  },
+  {
+    "title": "Signal Mirror",
+    "description": "The player moves grid-based mirror blocks to redirect a continuous laser beam into a solar receiver. Mirrors are double-sided: one side reflects the beam at 90 degrees, while the back side is completely opaque and blocks it. When the laser hits a reflective surface, the intense light pressure pushes that mirror block backward by one grid square, permanently altering the geometry of the beam path. Players must deliberately bounce the laser off specific mirrors to reposition them into new lanes to activate secondary switches. Miscalculating a bounce can cause a mirror to push itself into a dead-end corner, permanently blocking the beam. Early levels teach single-push alignment. Middle levels introduce situations where a mirror must block a deadly beam before being pushed out of the way to let a second beam pass. Late levels require multi-stage recursive loops where mirrors push other mirrors.",
+    "num_levels": 9
+  },
+  {
+    "title": "Growth Spark",
+    "description": "The player plants a seed that grows a continuous vine forward by one tile each turn. The vine grows straight until it hits an obstacle, at which point it splits orthogonally into two new growing tips. The objective is to guide at least one vine tip to a blooming flower tile. Vines are solid structures; they permanently block movement and cannot intersect themselves or other vines. This turns the growing trail into a self-inflicted maze. Players can place stone blocks before starting the growth to force the vine to split at precise coordinates. A splitting vine can be used as a simultaneous multi-button activator, but a single wrong split can choke off the main pathway to the goal. Later levels require using one branch of a vine to push a heavy block into position just in time to redirect a separate branch of the same vine.",
+    "num_levels": 7
+  },
+  {
+    "title": "Shift Rail",
+    "description": "The player moves a cart along an interconnected network of physical train tracks to collect cargo. The core mechanic relies on magnetic track switches: passing through a switch toggles its orientation globally across the entire level, shifting all parallel tracks from horizontal to vertical alignments. Changing the rails alters the layout of the map, opening new pathways while instantly cutting off others. A track segment can act as a bridge to reach cargo, but toggling it might split a different rail line, stranding the cart in a dead-end loop. Players must plan movements based on the global state of the network. Early levels focus on simple back-and-forth toggles to clear paths. Advanced levels introduce dependency puzzles where the cart must push cargo onto a pressure plate, which fixes one specific switch in place, breaking the global symmetry to allow access to the exit.",
+    "num_levels": 8
+  }
+]

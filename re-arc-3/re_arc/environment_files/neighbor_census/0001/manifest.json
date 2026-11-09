@@ -1,0 +1,26 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "neighbor-census",
+  "game_id": "neighbor_census-0001",
+  "slug": "neighbor_census",
+  "class_name": "NeighborCensus",
+  "objective": "obj.exact_neighbor_counts",
+  "mechanics": [
+    "mech.toggle_switch",
+    "mech.orthogonal_neighbor_count",
+    "mech.cursor_selection",
+    "mech.undo",
+    "mech.step_budget"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

@@ -1,0 +1,8 @@
+{
+  "game_id": "stepstack-0001",
+  "title": "Stepstack",
+  "default_fps": 8,
+  "baseline_actions": [9, 11, 25, 26, 45, 58, 66],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "Stepstack"
+}

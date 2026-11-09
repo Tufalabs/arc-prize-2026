@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "cross-press",
+  "game_id": "cross_press-0001",
+  "slug": "cross_press",
+  "class_name": "CrossPress",
+  "objective": "obj.turn_all_cells_off",
+  "mechanics": ["mech.cross_toggle", "mech.boundary_clipping", "mech.undo", "mech.action_budget"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

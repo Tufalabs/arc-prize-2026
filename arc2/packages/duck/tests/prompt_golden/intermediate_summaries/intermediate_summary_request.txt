@@ -1,0 +1,6 @@
+Take stock: write a summary of your work so far. In this order:
+1. Hypotheses tested and the outcome of each (include check failure/success tallies).
+2. Key observations about the grids (exact coordinates, colors, shapes) that informed your thinking.
+3. Open questions, any doubts or inconsistencies you have noticed so far, and what has been ruled out.
+4. Your immediate next step.
+Reply in plain text only — do NOT call any tools (any earlier instruction to make a tool call is superseded for this reply). Do not add anything else.

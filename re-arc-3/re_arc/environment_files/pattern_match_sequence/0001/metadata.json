@@ -1,0 +1,14 @@
+{
+  "game_id": "pattern_match_sequence-0001",
+  "title": "PatternMatchSequence",
+  "idea": "A path-building puzzle where each click changes how the route is drawn, and the player must shape the resulting path so its structure matches a displayed target sequence exactly.",
+  "default_fps": 8,
+  "baseline_actions": [
+    28
+  ],
+  "tags": [
+    "click-only",
+    "debugging"
+  ],
+  "class_name": "PatternMatchSequence"
+}

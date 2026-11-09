@@ -1,0 +1,8 @@
+{
+  "game_id": "corner_cart-0001",
+  "title": "Corner Cart",
+  "default_fps": 8,
+  "baseline_actions": [8, 14, 20, 34, 45, 51, 63],
+  "tags": ["click-keys", "arc-like", "medium", "codex-reviewed"],
+  "class_name": "CornerCart"
+}

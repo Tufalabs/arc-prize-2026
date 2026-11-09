@@ -1,0 +1,20 @@
+{
+  "game_id": "en18-0001",
+  "title": "EN18",
+  "idea": "NetSlide-style wiring puzzle: slide and rotate tiles to connect the power source to the goal bulb, using gates, belts, teleports and rotation across 6 levels.",
+  "default_fps": 10,
+  "tags": [
+    "arc-like",
+    "easy",
+    "click-only"
+  ],
+  "class_name": "En18",
+  "baseline_actions": [
+    3,
+    8,
+    9,
+    13,
+    11,
+    19
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "baseline_actions": [
+    4,
+    5,
+    5,
+    4,
+    5,
+    6,
+    4,
+    9,
+    15,
+    25
+  ],
+  "class_name": "LeapFrog",
+  "default_fps": 8,
+  "game_id": "leap_frog-0001",
+  "idea": "Reduce the counted bud population by making selected buds jump over other pieces on a white-tile board with movable rail platforms. The player clicks a bud and then a highlighted legal landing cell to jump, while direction actions move every yellow platform one rail cell when legal. Green-over-green jumps remove the jumped bud, purple posts are permanent jump hurdles, red buds can reposition without consuming greens, and blue buds are useful non-counted pieces. Levels should teach basic jump elimination, platforms as moving bridges, multiple platforms moving together, fixed and riding posts, reusable red movement, non-counted blue setup pieces, and final rail puzzles where preserving future jump opportunities matters more than greedy elimination.",
+  "tags": [
+    "click-keys",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Leap Frog"
+}

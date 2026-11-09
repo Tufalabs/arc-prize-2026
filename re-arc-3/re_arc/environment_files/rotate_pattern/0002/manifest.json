@@ -1,0 +1,15 @@
+{
+  "generator": "manual",
+  "variant": "0002",
+  "game_id": "rotate_pattern-0002",
+  "slug": "rotate_pattern",
+  "class_name": "RotatePattern",
+  "objective": "obj.view",
+  "mechanics": [],
+  "action_set": [],
+  "available_actions": [3, 4, 5],
+  "source_spec": {
+    "grid_size": [64, 64],
+    "description": "Make shapes match by rotating them."
+  }
+}

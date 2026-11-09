@@ -1,0 +1,8 @@
+{
+  "game_id": "freight_train-0001",
+  "title": "Freight Train",
+  "default_fps": 8,
+  "baseline_actions": [2, 6, 7, 28, 40, 47, 50],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "FreightTrain"
+}

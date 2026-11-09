@@ -1,0 +1,8 @@
+{
+  "game_id": "prism_blockers-0001",
+  "title": "Prism Blockers",
+  "default_fps": 8,
+  "baseline_actions": [1, 5, 6, 25, 47, 54, 62],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "PrismBlockers"
+}

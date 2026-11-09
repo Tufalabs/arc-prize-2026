@@ -1,0 +1,22 @@
+{
+  "variant": "0001",
+  "game_id": "boulder_mirror_beam_combo-0001",
+  "slug": "boulder_mirror_beam_combo",
+  "class_name": "BoulderMirrorBeamCombo",
+  "objective": "light_receiver",
+  "mechanics": [
+    "move",
+    "push_2x2_boulder",
+    "adjacent_click_rotate_mirror",
+    "beam_warm_then_lethal",
+    "timebar_top_row"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "click"
+  ],
+  "available_actions": [1, 2, 3, 4, 6]
+}

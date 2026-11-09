@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    3,
+    9,
+    22
+  ],
+  "default_fps": 20,
+  "game_id": "sliding_rows-0001",
+  "local_dir": "re_arc/environment_files/sliding_rows/0001",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Sliding Rows",
+  "idea": "A row-shifting puzzle where each click slides an entire strip of the board, and the target arrangement only appears after the right sequence of whole-row moves."
+}

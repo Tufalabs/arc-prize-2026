@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    11,
+    10,
+    12
+  ],
+  "class_name": "MirrorGreedyFriend",
+  "default_fps": 5,
+  "game_id": "mirror_greedy_friend-0001",
+  "local_dir": "re_arc/environment_files/mirror_greedy_friend/0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Mirror Greedy Friend",
+  "idea": "A coordination puzzle where a helper mirrors or reacts to the player's moves, and both positions have to be managed to solve the room."
+}

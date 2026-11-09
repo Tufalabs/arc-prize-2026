@@ -1,0 +1,18 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "shepherd-pair",
+  "game_id": "shepherd_pair-0001",
+  "slug": "shepherd_pair",
+  "class_name": "ShepherdPair",
+  "objective": "obj.escort_companion",
+  "mechanics": [
+    "mech.echo_move",
+    "mech.asymmetric_collision",
+    "mech.one_way_gate",
+    "mech.undo",
+    "mech.action_budget"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

@@ -1,0 +1,8 @@
+{
+  "game_id": "hinge_hall-0001",
+  "title": "Hinge Hall",
+  "default_fps": 8,
+  "baseline_actions": [7, 12, 19, 28, 40, 46, 60],
+  "tags": ["keys-only", "codex-reviewed"],
+  "class_name": "HingeHall"
+}

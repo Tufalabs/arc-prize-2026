@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Paint Snakes",
+    "description": "Guide colored snakes across a small grid so their bodies paint the floor into the target pattern, but each snake cannot cross its own wet trail. Direction actions move the active snake one cell, Space cycles the active snake, and clicks erase marked dry paint patches back to blank floor. A snake paints every cell it leaves with its color; later snakes may overwrite older paint, but wet paint blocks movement until another snake dries it by crossing from the side. Levels should teach direct painting, avoiding self-traps, overwriting, using one snake to dry another's trail, erasing as a commitment tool, and final canvases where a wrong-looking early loop is needed to create a safe corridor for the last color.",
+    "num_levels": 8
+  },
+  {
+    "title": "Anchor Drift",
+    "description": "Move floating crates to matching docks by dropping anchors that make future pushes pivot instead of slide. Direction actions move the sailor one cell and push adjacent crates; Space drops or lifts the carried anchor on the sailor's current cell, and clicks select which crate is active when several are linked by rope. Unanchored crates slide across water until blocked, while anchored crates rotate around the anchor when pushed from the side. Levels should teach sliding crates, anchoring to stop drift, pivoting around anchors, moving anchors after use, linking two crates with a rope, and final docks where a crate must first be anchored as a wall, then released and pivoted into place.",
+    "num_levels": 8
+  },
+  {
+    "title": "Lantern Moths",
+    "description": "Route moths into flower lamps by moving large lanterns whose light pulls moths in straight lines. There is no avatar; clicks select lanterns or blockers, direction actions move the selected object one cell, and Space advances one moth step. Each moth moves toward the brightest visible lantern along its row or column, stops at blockers, and sleeps permanently when it reaches a matching flower lamp. Levels should teach one-lantern attraction, blocking sightlines, moving lanterns as temporary walls, competing lanterns, waking sleeping moths by moving light away, and final boards where the same lantern must first separate moths and later reunite them at different flowers.",
+    "num_levels": 7
+  },
+  {
+    "title": "Latch Bridges",
+    "description": "Cross a maze of drawbridges where stepping on one end of a bridge flips the bridge's orientation and changes future routes. Direction actions move the hiker one cell, Space waits without moving, and clicks rotate only marked fixed turnstiles. A bridge is a visible 1x3 or 3x1 platform; entering it from either end is allowed, but leaving it causes it to rotate 90 degrees around its center if the rotated cells are clear. Levels should teach bridge flipping, using a bridge as a temporary path, avoiding unwanted rotations, waiting to let moving stones clear space, turnstile redirection, and final layouts where a bridge must be flipped away from the exit to open a return route later.",
+    "num_levels": 8
+  },
+  {
+    "title": "Bubble Courier",
+    "description": "Carry bubbles through a grid of currents so every colored bubble ends inside a matching ring without popping on thorns. Direction actions move the diver one cell; pushed bubbles drift one extra cell after each push, Space hardens or softens the nearest bubble, and clicks rotate marked current arrows. Soft bubbles can be pushed and drift with currents, while hardened bubbles stop drifting and can act as blockers for other bubbles. Levels should teach pushing, drift, hardening as a stopper, softening to continue movement, rotating currents, using one bubble to shield another from thorns, and final levels where a bubble must temporarily become a wall before being delivered.",
+    "num_levels": 8
+  },
+  {
+    "title": "Mold Garden",
+    "description": "Grow colored mold patches over a tiled board so all yellow nutrient cells are covered while red clean cells remain empty. Clicks place the growth cursor on an existing mold edge, direction actions choose a growth direction, and Space grows all active mold fronts one cell if legal. Mold spreads visibly, cannot cross stone, merges with same-color mold, and cancels into gray dead mold when opposite colors meet. Levels should teach direct growth, wall-guided spreading, using dead mold as a barrier, merging fronts, preventing accidental contamination, pruning marked dead cells by clicking them, and final boards where creating a dead barrier early is the only way to keep later growth clean.",
+    "num_levels": 7
+  },
+  {
+    "title": "Counterweights",
+    "description": "Move blocks across seesaw platforms so every lift ends at the height needed to connect paths to the exit. Direction actions move the worker and push blocks, Space picks up or drops one small block, and clicks lock or unlock marked seesaw pivots. Each seesaw visibly tilts toward the heavier side after every move; tilted ends become ramps or walls depending on height. Levels should teach weighing one platform, using tilt as a bridge, stealing a weight after crossing, locking a useful tilt, sharing one block between two platforms, and final puzzles where the player must make a bridge, cross it, then undo it to move the same weight elsewhere.",
+    "num_levels": 8
+  },
+  {
+    "title": "Wind Quilts",
+    "description": "Slide cloth patches across a loom so their visible top colors cover all target holes, while wind gusts move loose patches after each action. Clicks select a patch, direction actions move it one cell if clear, and Space pins or unpins the selected patch. Unpinned patches drift one cell with the current wind after every valid action, pinned patches stay fixed and block drift, and overlapping cloth shows only the top patch color. Levels should teach direct covering, pinning to stop drift, using drift to move without direct access, stacking color order, unpinning as a risk, and final quilts where one patch must drift past its target so it can later serve as the top layer.",
+    "num_levels": 8
+  },
+  {
+    "title": "Echo Tiles",
+    "description": "Guide a robot over floor tiles that record its last movement direction and later push anything that steps on them. Direction actions move the robot one cell, Space toggles record mode on or off, and clicks erase marked recorded arrows. In record mode, every tile the robot leaves becomes an arrow tile pointing in the movement direction; entering an arrow tile immediately pushes the robot or a crate one extra cell in that direction if clear. Levels should teach writing arrows, being pushed by your own trail, turning arrows into crate conveyors, erasing bad arrows, using record-off movement to preserve safe floor, and final levels where an early arrow field seems harmful but later routes a crate around a wall.",
+    "num_levels": 8
+  },
+  {
+    "title": "Glass Orchard",
+    "description": "Roll colored fruits into baskets by cracking glass walls that then become one-use ramps. Direction actions move the farmer one cell and push fruit; Space cracks an adjacent glass wall, and clicks rotate marked ramp shards before they are used. Intact glass blocks movement, cracked glass becomes a ramp that redirects the next pushed fruit by 90 degrees, and after one fruit crosses it the ramp disappears into empty floor. Levels should teach pushing fruit, cracking a direct passage, redirecting fruit with one-use ramps, preserving glass for later, rotating shards, using a fruit as a temporary blocker, and final orchards where cracking the obvious wall too early removes the only later redirect.",
+    "num_levels": 8
+  }
+]

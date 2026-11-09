@@ -1,0 +1,19 @@
+{
+  "game_id": "rotate_pattern-0002",
+  "title": "RotatePattern",
+  "idea": "A visual pattern puzzle where left and right inputs rotate a shape until it matches the displayed target orientation.",
+  "default_fps": 8,
+  "baseline_actions": [
+    2,
+    4,
+    4,
+    5,
+    3
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "RotatePattern"
+}

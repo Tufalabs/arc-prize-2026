@@ -1,0 +1,16 @@
+{
+  "game_id": "identify_the_agent-0002",
+  "title": "IdentifyTheAgent",
+  "idea": "A perception-and-control puzzle where several similar tokens are shown at once, the player must infer which one is actually controllable, and only then guide that real agent to the target.",
+  "default_fps": 8,
+  "baseline_actions": [
+    19,
+    27,
+    16
+  ],
+  "tags": [
+    "keys-only",
+    "debugging"
+  ],
+  "class_name": "IdentifyTheAgent"
+}

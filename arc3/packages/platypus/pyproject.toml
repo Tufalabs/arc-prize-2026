@@ -1,0 +1,23 @@
+[project]
+name = "platypus"
+version = "0.1.0"
+description = "Platypus infrastructure layer: agent contract and hosting machinery"
+requires-python = "==3.12.12"
+dependencies = [
+    "tufa-arc-agi-framework",
+    "ullm",
+]
+
+[tool.uv.sources]
+ullm = { workspace = true }
+tufa-arc-agi-framework = { path = "../../../tufa-arc-agi-framework", editable = true }
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+platypus = ["viewer_app.html"]

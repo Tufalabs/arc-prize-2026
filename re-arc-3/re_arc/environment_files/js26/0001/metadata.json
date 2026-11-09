@@ -1,0 +1,20 @@
+{
+  "game_id": "js26-0001",
+  "title": "JS26",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 5,
+  "baseline_actions": [
+    11,
+    22,
+    24,
+    26,
+    15,
+    24
+  ],
+  "tags": [
+    "keys-only",
+    "arc-like",
+    "hard"
+  ],
+  "local_dir": "re_arc/environment_files/js26/0001"
+}

@@ -1,0 +1,84 @@
+{
+  "actions": [
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "one_way_warp_maze-0001",
+  "generated_at_utc": "2026-04-01T14:28:27.195381+00:00",
+  "generator_agent": "OneWayWarpMazeDslAgent",
+  "initial_observation_signature": "bada9f509eed5e9e9cb51e7b6d4a5f0187e597e9",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 17,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 3,
+  "terminal_state": "WIN",
+  "total_levels": 3
+}

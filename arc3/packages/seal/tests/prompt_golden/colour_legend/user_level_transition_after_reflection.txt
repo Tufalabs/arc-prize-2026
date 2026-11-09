@@ -1,0 +1,14 @@
+Color legend image: one swatch per color, labelled with the color name used in this prompt.
+[image:128x512]
+You have progressed to a new level!
+Actions that seemed inert on previous levels may not be now; retest your assumptions.
+Current state: step 3, level 3.
+`history` has started over for this level: `history[0]` is its starting state, and the previous level's turns are gone.
+Your files carried over, `world_model.py` among them; `test_world_model()` now checks this level's turns only, and it runs at your first move. New levels will generally change the layout and introduce new mechanics and elements; existing mechanics are usually preserved, and elements you've seen before will behave similarly. If you keep one, read `world_model.py` against the new board: keep what still applies, add what is new, and recheck anything calibrated from the previous level. Each new level starts with fresh energy, usually more than the last. Update it for this level unless you have good reason not to.
+This turn:
+1. Orient on the newest frame: `segment(history[-1].frame.grid)` for structure.
+2. Decide the next move or short sequence — explore, advance the level, or write or update `world_model.py`, unless it does not pay here. Write a search if the right order is not obvious.
+3. Act with `submit_action([...])`.
+
+Current grid image:
+[image:32x32]

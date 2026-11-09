@@ -1,0 +1,24 @@
+{
+  "game_id": "wa30-ee6fef47",
+  "title": "WA30",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 5,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/warehouse",
+  "tags": [
+    "official",
+    "keys-only"
+  ],
+  "baseline_actions": [
+    71,
+    119,
+    183,
+    98,
+    368,
+    68,
+    79,
+    442,
+    415
+  ],
+  "local_dir": "environment_files/wa30/ee6fef47",
+  "date_downloaded": "2026-04-08T20:07:48.770199+00:00"
+}

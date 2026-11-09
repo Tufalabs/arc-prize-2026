@@ -1,0 +1,27 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "freight-train",
+  "game_id": "freight_train-0001",
+  "slug": "freight_train",
+  "class_name": "FreightTrain",
+  "objective": "obj.match_bays",
+  "mechanics": [
+    "mech.push_carts",
+    "mech.push_propagation",
+    "mech.permanent_coupling",
+    "mech.rigid_train",
+    "mech.step_budget",
+    "mech.undo"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

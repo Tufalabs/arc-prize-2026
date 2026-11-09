@@ -1,0 +1,18 @@
+{
+  "game_id": "key_door-0001",
+  "title": "KeyDoor",
+  "idea": "A classic key-and-door maze expanded with lasers, patrols, hazards, and waiting windows that make the collection order matter.",
+  "default_fps": 8,
+  "baseline_actions": [
+    30,
+    63,
+    67,
+    67,
+    75,
+    75
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "KeyDoor"
+}

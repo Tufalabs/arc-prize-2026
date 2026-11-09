@@ -1,0 +1,125 @@
+{
+  "inference": {
+    "agent_compact_to_tokens": 16384,
+    "agent_context_window": 32768,
+    "agent_max_completion_tokens": 4096,
+    "agent_reasoning_effort": "medium",
+    "agent_temperature": 1.0,
+    "agent_top_k": 0,
+    "agent_top_p": 1.0,
+    "base_url": "http://127.0.0.1:58900",
+    "games": [
+      "ar25-0c556536",
+      "bp35-0a0ad940",
+      "cd82-fb555c5d",
+      "cn04-2fe56bfb",
+      "dc22-fdcac232",
+      "ft09-0d8bbf25",
+      "g50t-5849a774",
+      "ka59-38d34dbb",
+      "lf52-271a04aa",
+      "lp85-305b61c3",
+      "ls20-9607627b",
+      "m0r0-492f87ba",
+      "r11l-495a7899",
+      "re86-8af5384d",
+      "s5i5-18d95033",
+      "sb26-7fbdac44",
+      "sc25-635fd71a",
+      "sk48-d8078629",
+      "sp80-589a99af",
+      "su15-1944f8ab",
+      "tn36-ef4dde99",
+      "tr87-cd924810",
+      "tu93-0768757b",
+      "vc33-5430563c",
+      "wa30-ee6fef47"
+    ],
+    "max_runtime_minutes": 15.0,
+    "model_id": "Qwen/Qwen3.8-27B",
+    "server_gpus": [
+      "0"
+    ],
+    "platypus_venv": "/home/$USER/train_second/arc3-platypus-main/.venv",
+    "agent_safety_margin_tokens": 0
+  },
+  "memory_profiler": {
+    "log_every_n_steps": 1,
+    "log_gpu_utilization": true,
+    "max_logged_steps": 20,
+    "reset_peak_stats_per_region": true,
+    "sync": true
+  },
+  "num_iterations": 10000,
+  "official_eval": {
+    "enabled": false
+  },
+  "parallel_rollouts": 25,
+  "sampling": {
+    "return_history_size": 16
+  },
+  "training": {
+    "attn_implementation": "flash_attention_4",
+    "cleanup_rollout_artifacts": true,
+    "clip_ratio_high": 0.3,
+    "clip_ratio_low": 0.3,
+    "device": "cuda:1",
+    "device_map_gpus": [
+      1
+    ],
+    "entropy_coef": 0.0,
+    "entropy_control": {
+      "coef_init": 5e-05,
+      "coef_max": 0.001,
+      "coef_min": 0.0,
+      "coef_step": 5e-05,
+      "enabled": true,
+      "target_high": 0.42,
+      "target_low": 0.32
+    },
+    "episode_packing": true,
+    "extra_train_cycles_until_window": true,
+    "format_break_penalty": 0,
+    "gradient_accumulation_steps": 16,
+    "learning_rate": 5e-06,
+    "lora": {
+      "alpha": 32,
+      "r": 16,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "in_proj_qkv",
+        "in_proj_z",
+        "out_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "max_micro_batch_tokens": 40960,
+    "max_sequence_tokens": 32768,
+    "max_window_clip_fraction": 0.5,
+    "model_name": "Qwen/Qwen3.8-27B",
+    "model_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "multimodal": true,
+    "output_dir": "runs",
+    "pinned_adapter_interval": 25,
+    "previous_policy_kl_coef": 0.02,
+    "sample_budget": {
+      "adjustment_rate": 0.25,
+      "initial_fraction": 0.3,
+      "max_fraction": 1.0,
+      "min_fraction": 0.1,
+      "mode": "auto",
+      "target_train_to_collection_ratio": 0.95
+    },
+    "seed": 42,
+    "tool_error_penalty": 0,
+    "warmup_steps": 40,
+    "worker_device_map_gpus": [],
+    "loss_aggregation": "token_mean",
+    "value_baseline": "hidden_critic"
+  }
+}

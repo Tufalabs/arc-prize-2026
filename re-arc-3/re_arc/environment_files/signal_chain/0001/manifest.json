@@ -1,0 +1,21 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "signal-chain",
+  "game_id": "signal_chain-0001",
+  "slug": "signal_chain",
+  "class_name": "SignalChain",
+  "objective": "obj.route_sequence",
+  "mechanics": [
+    "mech.sequence_preview",
+    "mech.click_nodes",
+    "mech.line_of_sight",
+    "mech.wall_blockers",
+    "mech.action_budget"
+  ],
+  "action_set": [
+    "space",
+    "click"
+  ],
+  "available_actions": [5, 6]
+}

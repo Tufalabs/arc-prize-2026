@@ -1,0 +1,22 @@
+{
+  "game_id": "taps-0001",
+  "title": "Sequence Taps",
+  "idea": "A click-order game where targets must be tapped in the exact prescribed sequence and mistakes reset progress.",
+  "default_fps": 10,
+  "baseline_actions": [
+    3,
+    5,
+    7,
+    9,
+    12,
+    15,
+    18,
+    22
+  ],
+  "tags": [
+    "click-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Taps"
+}

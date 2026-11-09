@@ -1,0 +1,18 @@
+[project]
+name = "sweeper"
+version = "0.1.0"
+description = "Parameter sweeping: one run, several agent configurations"
+requires-python = "==3.12.12"
+dependencies = [
+    "platypus",
+]
+
+[tool.uv.sources]
+platypus = { workspace = true }
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

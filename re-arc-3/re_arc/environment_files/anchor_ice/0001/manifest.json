@@ -1,0 +1,35 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "anchor-ice",
+  "game_id": "anchor_ice-0001",
+  "slug": "anchor_ice",
+  "class_name": "AnchorIce",
+  "objective": "obj.reach_exit",
+  "mechanics": [
+    "mech.ice_slide",
+    "mech.push_sliding_crate",
+    "mech.socket_capture",
+    "mech.crate_backstop",
+    "mech.undo",
+    "mech.action_budget"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}

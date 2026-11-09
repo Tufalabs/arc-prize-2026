@@ -1,0 +1,132 @@
+[
+{
+"title": "Seam Shepherd",
+"description": "A small cloth grid contains stitched seams, colored buttons, and a needle cursor. The player moves the needle between seam nodes and presses Space to pull one visible seam tight; a tightened seam contracts by one cell, dragging any attached cloth patches and buttons with it unless blocked. Tight seams remain taut and become barriers that the needle cannot cross until loosened by pulling an adjacent slack seam. The objective is to align buttons onto matching buttonholes. The first interaction teaches that pulling is both movement and topology editing: the board physically wrinkles into a new adjacency pattern. Wrong moves fail visibly because buttons are dragged past holes, seams block access, or a needed slack path disappears. Later levels use the same seam as transporter, wall, latch, spacing constraint, and recovery tool, ending in puzzles where one contraction must intentionally misalign a button to create the only later pull angle.",
+"num_levels": 8
+},
+{
+"title": "Ledger Scales",
+"description": "A puzzle board is split into small account boxes connected by arrows. Each box contains visible coin pips, and the player clicks an arrow to transfer exactly one pip along it; however, every transfer flips the arrow direction and increments a small tax marker on the source box. A box with two tax markers becomes locked until another box sends a coin into it. The objective is to make every account match a displayed target pip count. The first level teaches that moving value also changes the future graph. Wrong moves are readable because arrows visibly reverse, tax marks accumulate, and locked boxes stop accepting outgoing moves. The same arrow can be payment route, reversible gate, trap, unlocker, or timing device. Later levels use cycles, tax clearing, and asymmetric targets so the player must route coins through temporary debts rather than simply balance totals.",
+"num_levels": 7
+},
+{
+"title": "Mosaic Quarry",
+"description": "A board contains chunky mosaic slabs made of two or three colored cells, empty sockets, and fracture lines. The player selects a slab and pushes it one cell; when a slab crosses a fracture line, it splits permanently into its visible component cells, each continuing to move as a smaller piece if space allows. The objective is to fill a target mosaic pattern. The first interaction teaches that movement can deliberately destroy a useful large piece into more flexible fragments. Wrong moves fail visibly because fragments scatter, block sockets, or lose the ability to carry colors together. The same slab can be cargo, blocker, temporary bridge, color bundle, or future fragment source. Later levels revolve around choosing where to split, preserving composite shapes for tight corridors, and using one broken fragment to pin another before the final pattern assembly.",
+"num_levels": 8
+},
+{
+"title": "Bell Margins",
+"description": "A grid holds bells, listening tiles, mute stones, and a pawn. The player can step normally, and pressing Space rings the bell nearest in the pawn's row or column. A ring expands as a diamond wave; every listening tile it touches toggles between solid floor and soft floor, while mute stones absorb the wave and move one cell away from the bell. The objective is to reach the exit while leaving all marked listening tiles soft. The first level teaches that sound edits terrain and pushes absorbers at the same time. Wrong moves show their cause through the wave outline, toggled floor state, and displaced mute stones. The same bell can create paths, erase paths, shove blockers, protect tiles by absorption, or synchronize distant state. Later levels make the player position mute stones to sculpt which parts of a ring survive.",
+"num_levels": 8
+},
+{
+"title": "Pocket Orbit",
+"description": "The board is a set of circular pockets drawn as four-cell rings. Colored marbles sit in ring positions, and the player clicks a pocket to rotate all marbles inside it one step clockwise. Adjacent pockets may share one cell, so a marble in the shared cell belongs to whichever pocket was clicked last, indicated by a tiny rim highlight. The objective is to place marbles on matching rim goals. The first level teaches rotation as both position change and ownership change. Wrong moves are obvious because a marble enters the wrong pocket, blocks a shared transfer, or rotates away from a goal. The same pocket can be mover, storage loop, transfer gate, ordering constraint, or trap. Later levels use shared cells as bottlenecks where the player must rotate one pocket mainly to hand a marble to another pocket at the correct phase.",
+"num_levels": 9
+},
+{
+"title": "Rune Loom",
+"description": "A small loom shows horizontal threads crossing vertical rune posts. The player slides one thread left or right by one notch; every time a thread passes over a rune post, it copies that rune onto the thread's next empty bead slot, while passing under erases the last copied rune. Posts can be clicked to flip between over and under, with a large visual bridge marker. The objective is to produce a target sequence on each thread. The first interaction teaches that spatial weaving writes symbolic history. Wrong moves are inspectable because bead slots show the exact copied sequence and over/under posts show why it happened. The same post can be writer, eraser, delay, separator, or shared resource across threads. Later levels require temporarily writing wrong runes to erase earlier symbols or to shift thread alignment for a second thread.",
+"num_levels": 7
+},
+{
+"title": "Pebble Votes",
+"description": "A board contains districts, candidate markers, and movable pebbles. Each district has a visible majority badge determined by the colors of pebbles inside it. The player moves one pebble across a border per action; crossing a border rotates that border between open, one-way inward, and one-way outward. The objective is to make every district show the required majority badges simultaneously. The first level teaches that moving population also changes future mobility. Wrong moves are legible because badges update immediately and border arrows show trapped pebbles. The same border can be route, lock, filter, timing gate, or commitment. Later levels use narrow swing districts, one pebble affecting two majorities across time, and border states that force the player to sacrifice an already-correct district temporarily to repair another.",
+"num_levels": 8
+},
+{
+"title": "Cork Pressure",
+"description": "The grid contains sealed air chambers, cork plugs, vents, and a pump cursor. Clicking a chamber increases its visible pressure pip count; at three pips, every cork on its boundary pops one cell outward, then the chamber resets to zero. Popped corks can seal neighboring vents, become floors, or block the pump's path. The objective is to open a route to the exit while leaving marked vents sealed. The first level teaches pressure as a delayed spatial push. Wrong moves fail visibly because corks pop in the wrong direction, seal needed passages, or block the pump. The same chamber can be mover, timer, cork launcher, reset device, or liability. Later levels require chaining pressure bursts so one chamber's cork becomes the boundary needed to control a second chamber's burst.",
+"num_levels": 8
+},
+{
+"title": "Borrowed Steps",
+"description": "A pawn crosses numbered stepping stones. Each stone has a visible height count. Stepping off a stone subtracts one height from it and adds one height to the next stone entered; stones at zero sink and become water, while stones at three become too tall to enter unless approached from another height-three stone. The objective is to reach the shrine and leave specific stones at target heights. The first level teaches that movement transfers walkability rather than merely consuming it. Wrong moves are visible through sunk stones, overgrown towers, and mismatched target counts. The same step can be path, reservoir, wall, bridge builder, or height debt. Later levels require pumping height around loops, deliberately sinking a shortcut to raise a later bridge, and planning final stone heights instead of only reaching the exit.",
+"num_levels": 9
+},
+{
+"title": "Glass Registry",
+"description": "A grid contains glass panes with etched symbols, opaque blocks, and a viewing cursor on the border. The player moves the cursor around the outside and presses Space to shine a view ray across a row or column. The first pane seen by the ray records the cursor's current symbol; the second pane compares against it and either opens if matching or cracks if different. Cracked panes block future rays. The objective is to open all marked panes. The first level teaches that line of sight writes state before validating it. Wrong moves are readable because panes show recorded symbols, cracks, and the exact ray path. The same pane can be recorder, comparator, blocker, shield, or relay. Later levels use opaque blocks and pane ordering so the player must intentionally record a symbol through one view to make a later perpendicular view succeed.",
+"num_levels": 7
+},
+{
+"title": "Root Promises",
+"description": "The board shows seedlings, soil cells, stones, and promise markers. Clicking a seedling grows a root one cell in its arrow direction; if the root hits a promise marker, the seedling's arrow rotates to point toward the nearest water droplet, but if it hits a stone the root hardens into an immovable wall. The objective is to connect every seedling to water without blocking the gardener pawn's final route. The first interaction teaches that growth creates both navigation structure and future direction changes. Wrong moves are visible because roots harden, arrows point badly, or water becomes unreachable. The same root can be path, wall, pointer changer, blocker, or connector. Later levels make the player grow sacrificial roots to rotate seedlings, then avoid their hardened remains while completing the living network.",
+"num_levels": 8
+},
+{
+"title": "Archive Slots",
+"description": "A compact interface shows shelves, labeled files, and three visible hand slots. The player clicks a shelf file to pull it into the left hand slot; all existing hand files shift right, and the rightmost file is pushed back onto the clicked shelf. Shelves accept only files matching their current top label, but the top label changes to whatever file was just pushed there. The objective is to arrange shelves into a target top-label pattern. The first level teaches the hand as a visible queue that transforms shelves through displacement. Wrong moves are clear because the hand order and shelf labels show exactly what was overwritten. The same click can retrieve, store, rotate the hand queue, change shelf acceptance, or set up a later displacement. Later levels use the three-slot memory to perform indirect swaps and temporary label pollution.",
+"num_levels": 7
+},
+{
+"title": "Tuning Forks",
+"description": "A board contains tuning forks, resonant tiles, dampers, and a movable striker. The player can strike an adjacent fork; the fork vibrates for two turns, shown by expanding rings, and every resonant tile of the same shape shifts one cell toward the fork at the end of each turn. Dampers stop vibration but become resonant themselves for the next strike. The objective is to slide resonant tiles onto matching outlines. The first level teaches that one local strike causes delayed global motion. Wrong moves fail visibly as tiles drift into walls, dampers change type, or vibration expires too early. The same fork can pull cargo, convert dampers, create blockers, time a passage, or split grouped tiles. Later levels require striking a fork not for its pull but to transform a damper into the shape needed for a later resonance.",
+"num_levels": 8
+},
+{
+"title": "Chalk Frames",
+"description": "The player draws rectangular chalk frames on a small grid by choosing two corner dots. Every object fully inside the new frame advances one state: arrows rotate, stones become sand, sand becomes floor, and floor becomes wall. The frame itself remains as a faint boundary and future frames cannot cross existing chalk lines. The objective is to transform marked cells to target states while preserving a route for the pawn. The first level teaches that a single rectangle edits a whole contained region and creates a lasting spatial constraint. Wrong moves are visible because incorrect cells advance and chalk boundaries block later frames. The same frame can transform, protect by exclusion, partition, trap, or prepare a later nested edit. Later levels use overlapping-but-not-crossing frames where the player must plan containment order like a tiny geometric proof.",
+"num_levels": 8
+},
+{
+"title": "Crane Shadows",
+"description": "A top-down construction grid has cranes, crates, and shadow zones. The player clicks a crane to swing its hook ninety degrees; any crate under the hook's arc is lifted and placed at the arc's end if empty. The crane's arm also casts a solid shadow that the worker cannot cross. The objective is to arrange crates on foundations and reach the inspection flag. The first level teaches that swinging a crane moves cargo and redraws a wall at once. Wrong moves are clear because crates land in wrong cells or the arm shadow cuts off the worker. The same crane can be mover, blocker, bridge-maker by crate placement, route separator, or self-trap. Later levels chain cranes so one swing must place a crate that allows access to another crane while its shadow intentionally blocks a premature route.",
+"num_levels": 8
+},
+{
+"title": "Echo Catalog",
+"description": "The board contains catalog cards with symbols and a cursor carrying one visible symbol. Moving onto a card swaps the carried symbol with the card's symbol, but leaving a card echoes the carried symbol onto every card in the same outlined group. The objective is to make each group display a required multiset of symbols. The first level teaches that local swapping creates group-wide mutation when the cursor exits. Wrong moves are readable because group contents update immediately and the carried symbol is always shown above the cursor. The same card can be source, sink, buffer, group broadcaster, or contamination risk. Later levels use overlapping travel corridors and shared groups where a swap that fixes one group pollutes another unless the player exits with a carefully chosen carried symbol.",
+"num_levels": 7
+},
+{
+"title": "Buoy Ledger",
+"description": "A water grid contains buoys connected by numbered rope segments. Clicking a buoy transfers one unit of rope length from each adjacent segment on its left/top side to each adjacent segment on its right/bottom side, with segment lengths shown as pips. Boats may pass over a segment only when its length is exactly two, treating it as a bridge. The objective is to create a route for all boats to docks. The first level teaches that clicking redistributes bridge length rather than toggling it. Wrong moves are visible because segment pips show too short, too long, or exactly passable ropes. The same buoy can build bridges, destroy bridges, store slack, equalize routes, or starve another crossing. Later levels use loops where borrowing rope to open one crossing closes another needed for return movement.",
+"num_levels": 8
+},
+{
+"title": "Lantern Registry",
+"description": "A board of dark rooms contains lanterns with small identity glyphs. The player moves a clerk pawn and can stamp the room they stand in with the glyph of the nearest visible lantern. Stamped rooms become passable only to lantern light of the same glyph; mismatched light turns them back into walls. The objective is to stamp a continuous legal route from entrance to archive. The first level teaches stamping as a visible commitment about future illumination. Wrong moves fail visibly because rooms darken, stamps mismatch current light, or a route seals behind the pawn. The same lantern can provide access, invalidate access, label territory, force ordering, or act as a moving constraint if carried. Later levels require stamping temporary detours to reposition lanterns, then letting those detours collapse safely.",
+"num_levels": 8
+},
+{
+"title": "Knot Customs",
+"description": "Colored cords run between border pegs, crossing at customs nodes. Clicking a node swaps which cord passes over and which passes under; only the over-cord can carry a bead through that crossing when the player advances the bead one step along its cord. The objective is to deliver beads to matching exit pegs. The first level teaches crossings as visible priority choices rather than abstract intersections. Wrong moves are inspectable because a bead stops at an under-crossing, or a swapped node helps one cord while blocking another. The same crossing can be gate, ordering device, bead separator, temporary storage, or conflict resolver. Later levels use beads on multiple cords where a node must first privilege one bead to clear space, then be swapped back to let another bead pass.",
+"num_levels": 9
+},
+{
+"title": "Wax Seals",
+"description": "A parchment board contains wax blobs, seal stamps, channels, and envelopes. The player pushes a stamp token over wax; each push imprints the stamp's current icon into the wax cell and rotates the stamp icon clockwise. Wax cells with matching icons act as bridges over channels, while mismatched wax is sticky and stops the stamp. The objective is to deliver envelopes across completed wax bridges. The first level teaches that pushing writes a walkable material while changing the writer. Wrong moves are visible through wrong icons, sticky stops, and broken channel crossings. The same wax cell can be bridge, stopper, icon buffer, rotation payment, or trap. Later levels require stamping extra wax only to rotate the stamp to the icon needed for a later critical bridge.",
+"num_levels": 8
+},
+{
+"title": "Angle Tax",
+"description": "A pawn carries a visible angle token: straight, left, or right. The pawn may enter corridors only if the turn just made matches the carried angle. Entering a corridor spends the token and leaves it printed on the previous tile; stepping onto a printed tile picks that token up and erases it. The objective is to reach the exit after placing specific angle tokens on marked plaques. The first level teaches that movement consumes and relocates the rule that permits movement. Wrong moves are clear because the pawn visibly holds the wrong turn token or the needed token is stranded behind a corridor. The same token can be permission, breadcrumb, blocker, storage, or objective material. Later levels make the player deposit tokens to satisfy plaques while still preserving enough mobility to retrieve a token for the final turn.",
+"num_levels": 8
+},
+{
+"title": "Nested Rooms",
+"description": "A tiny map contains room tiles drawn as small boxes inside bigger boxes. The player can step into a room tile, which zooms that room to become the active grid; leaving through a marked edge returns to the parent grid at the corresponding room tile. Objects placed on a room tile in the parent appear as walls inside that child room, and moving an object inside a child shifts the room tile's icon in the parent. The objective is to align room icons and reach the final door. The first level teaches that inside and outside states visibly correspond. Wrong moves are readable because a parent object blocks a child passage or a child edit misaligns the parent icon. The same room can be container, obstacle, movable symbol, shortcut, or dependency. Later levels require editing a child room specifically to change parent traversal.",
+"num_levels": 7
+},
+{
+"title": "Comb Sorter",
+"description": "A conveyor-like board contains colored beads on parallel teeth of a comb. The player clicks a comb handle to shift one whole tooth inward or outward; when two teeth align, their front beads compare colors, and the darker bead automatically drops to the lower tooth if space exists. The objective is to sort beads into target pockets by color order. The first level teaches that alignment triggers deterministic exchange. Wrong moves are visible because beads drop onto wrong teeth, block future comparisons, or end in the wrong pocket. The same tooth shift can compare, transport, store, block, or delay a bead. Later levels use partial teeth, limited pockets, and repeated comparisons so the player must build a sorting network through physical alignment rather than directly moving beads.",
+"num_levels": 8
+},
+{
+"title": "Promise Doors",
+"description": "The maze contains doors with promised symbols and floor contracts. Stepping on a contract writes a visible promise above the pawn, such as circle-next or square-before. A door opens only if the player's recent movement trace satisfies the carried promise, and opening the door consumes the promise but prints its symbol onto the door. The objective is to mark all doors with required symbols and exit. The first level teaches that movement history is a visible resource, shown as the last three ghost steps. Wrong moves fail because the trace does not match the contract or the wrong promise was consumed. The same contract can be permission, scoring material, route constraint, decoy, or history reset. Later levels require walking non-shortest traces to satisfy one door while positioning the pawn to use the printed door as part of the next promise route.",
+"num_levels": 8
+},
+{
+"title": "Tessellate Herd",
+"description": "A board contains animal-shaped polyominoes that cannot overlap and a few pasture outlines. The player clicks an animal to make it perform its species move: sheep rotate around their head cell, goats reflect across their spine, and cows slide one cell but only if touching another animal. The objective is to tessellate the pasture outlines with all animals. The first level teaches one animal transformation as a visible shape-state change. Wrong moves are obvious because shapes collide, leave holes, or lose contact needed for movement. The core interaction is not many object effects but using shape transformation as both motion and constraint: the same animal can fill space, block, push contact, preserve orientation, or create a hinge for another. Later levels use contact dependencies where moving one shape changes which transformations are legal for the rest.",
+"num_levels": 8
+},
+{
+"title": "Semaphore Orchard",
+"description": "A grid of trees has semaphore arms pointing in one of four directions, with fruit baskets at edges. The player clicks a tree to rotate its arm; after each click, every fruit moves one cell along the direction of the tree it currently occupies, then stops on the next tree. When a fruit leaves a tree, that tree's arm flips to the opposite direction. The objective is to route fruit to matching baskets. The first level teaches trees as both routers and memory cells. Wrong moves are readable because arms show the current route and the last-used tree has visibly flipped. The same tree can direct, delay, reverse, trap, or prepare a return route. Later levels require sending one fruit through a tree to flip it for another fruit, then avoiding that now-changed route on the way back.",
+"num_levels": 9
+}
+]

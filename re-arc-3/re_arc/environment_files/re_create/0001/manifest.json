@@ -1,0 +1,44 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "spec-custom-re-create-0001",
+  "game_id": "re_create-0001",
+  "slug": "re_create",
+  "class_name": "ReCreate",
+  "objective": "obj.recreate_pattern",
+  "mechanics": [
+    "mech.cursor_navigation",
+    "mech.color_cycling",
+    "mech.pattern_match"
+  ],
+  "layout_template": "dual_pane",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space"
+  ],
+  "available_actions": [1, 2, 3, 4, 5],
+  "source_spec": {
+    "spec_id": "spec-custom-re-create-0001",
+    "difficulty": "debugging",
+    "grid_size": [
+      32,
+      18
+    ],
+    "action_set": [
+      "up",
+      "down",
+      "left",
+      "right",
+      "space"
+    ],
+    "objective": "obj.recreate_pattern",
+    "levels": 3,
+    "validation": {
+      "require_dsl_win": true,
+      "required_terminal_state": "WIN"
+    }
+  }
+}

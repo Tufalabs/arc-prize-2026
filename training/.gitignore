@@ -1,0 +1,29 @@
+.venv
+.venv/
+.venvs/
+.env
+.env.*
+.pytest_cache/
+__pycache__/
+*.pyc
+*.egg-info/
+training_runs/
+runs
+runs/
+runs_old
+runs_old/
+debug_plots/
+/debug/
+/inference-image-harness-clean/
+configs/generated/inference_from_ppo.json
+slurm-*.out
+
+# Slurm job stdout logs
+slurm/*.out
+
+# Packed-dataset cache written by sft/dataset_cache.py (arrow data, not code)
+dataset_cache/
+
+# Local run-analysis artifacts (plots, deck, extracted metrics)
+docs/analysis/
+ci-requirements.txt

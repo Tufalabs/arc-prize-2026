@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "escape_velocity",
+  "game_id": "escape_velocity-0001",
+  "slug": "escape_velocity",
+  "class_name": "EscapeVelocity",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.portal_pairing",
+    "mech.portal_relocation",
+    "mech.momentum_preservation",
+    "mech.accelerator_pad",
+    "mech.carry_and_deposit"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

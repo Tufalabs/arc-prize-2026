@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    6,
+    7,
+    10
+  ],
+  "class_name": "WinchLine",
+  "default_fps": 8,
+  "game_id": "winch_line-0001",
+  "idea": "This is a reconfiguration puzzle where the player moves a walker through a room whose long bars can slide between two fixed positions. Each movable bar is connected by a visible straight line to a winch tile. Clicking a winch pulls its bar to its alternate position; clicking again returns it. A bar may become a bridge over a gap in one state and a wall or ceiling in the other. Because each interaction only toggles between two clearly drawn positions, the board remains readable even on a low-resolution grid. The objective is to use the winches to create a traversable route to the goal while sometimes standing in the correct place before moving the bar back. Level 1 has a single sliding bar that toggles between blocking a hallway and spanning a gap. Level 2 has two winches whose bars overlap spatially, so pulling one can prevent the other from being useful. Level 3 requires the player to stand on a bar, move it with a nearby winch, and then continue on foot, creating a more layered traversal puzzle without adding new object types.",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Winch Line"
+}

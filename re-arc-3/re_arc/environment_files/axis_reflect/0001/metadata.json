@@ -1,0 +1,22 @@
+{
+  "baseline_actions": [
+    4,
+    4,
+    6,
+    10,
+    10,
+    8,
+    18,
+    35
+  ],
+  "class_name": "AxisReflect",
+  "default_fps": 8,
+  "game_id": "axis_reflect-0001",
+  "idea": "Move blue polyominoes and cyan mirror axes on a 21x21 board so every yellow target cell is covered by either real blue material or a reflected ghost copy. There is no avatar; clicks or Space select a shape or full-board mirror axis, and direction actions translate the selected object by one legal cell. Vertical and horizontal axes reflect recursively when both are present, so one real shape can generate vertical, horizontal, and double-reflected coverage while extra blue away from targets is allowed. Levels should teach fixed reflection, movable axes, multiple shapes, horizontal and vertical mirrors, and final two-axis placement where target coverage depends on recursive reflected copies rather than direct overlap.",
+  "tags": [
+    "click-keys",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Axis Reflect"
+}

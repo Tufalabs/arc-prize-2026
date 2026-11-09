@@ -1,0 +1,14 @@
+{
+  "variant": "0001",
+  "game_id": "winch_line-0001",
+  "slug": "winch_line",
+  "class_name": "WinchLine",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "click"
+  ],
+  "available_actions": [1, 2, 3, 4, 6]
+}

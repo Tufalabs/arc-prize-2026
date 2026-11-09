@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    11,
+    18,
+    37
+  ],
+  "class_name": "LatchHolders",
+  "default_fps": 8,
+  "game_id": "latch_holders-0001",
+  "local_dir": "re_arc/environment_files/latch_holders/0001",
+  "tags": [
+    "click-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Latch Holders",
+  "idea": "A two-pawn click puzzle where one pawn must hold a latch or gate state open while the other uses that temporary opening to advance."
+}

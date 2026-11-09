@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "hold-the-door",
+  "game_id": "hold_the_door-0001",
+  "slug": "hold_the_door",
+  "class_name": "HoldTheDoor",
+  "objective": "obj.reach_exit",
+  "mechanics": ["mech.pull", "mech.occupancy_plate", "mech.linked_gate", "mech.undo", "mech.step_bar"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

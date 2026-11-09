@@ -1,0 +1,14 @@
+{
+  "game_id": "relaygems-0001",
+  "title": "Relaygems",
+  "idea": "A gated collection puzzle where gems, switches, and doors form a relay chain, so early pickups and toggles determine whether the later parts of the route can be opened in time.",
+  "default_fps": 8,
+  "baseline_actions": [
+    40
+  ],
+  "tags": [
+    "keys-only", 
+    "debugging"
+  ],
+  "class_name": "Relaygems"
+}

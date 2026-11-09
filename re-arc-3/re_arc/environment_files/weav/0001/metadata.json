@@ -1,0 +1,21 @@
+{
+  "game_id": "weav-0001",
+  "title": "Weave Lanes",
+  "idea": "A lane puzzle where alternating phases and interwoven corridors force the player to thread a path through the board in the correct rhythm.",
+  "default_fps": 8,
+  "baseline_actions": [
+    31,
+    39,
+    57,
+    69,
+    83,
+    97,
+    113
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Weav"
+}

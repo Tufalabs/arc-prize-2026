@@ -1,0 +1,4 @@
+{
+  "entrypoint": "locksmithwardedroutes.py",
+  "class_name": "LocksmithWardedRoutes"
+}

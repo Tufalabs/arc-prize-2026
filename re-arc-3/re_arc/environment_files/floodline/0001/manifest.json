@@ -1,0 +1,17 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "floodline",
+  "game_id": "floodline-0001",
+  "slug": "floodline",
+  "class_name": "Floodline",
+  "objective": "obj.reach_exit",
+  "mechanics": [
+    "mech.simultaneous_flood",
+    "mech.build_dam",
+    "mech.route_race",
+    "mech.undo"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 7]
+}

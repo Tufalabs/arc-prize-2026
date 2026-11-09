@@ -1,0 +1,82 @@
+{
+  "actions": [
+    [
+      6,
+      {
+        "x": 50,
+        "y": 31
+      }
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      6,
+      {
+        "x": 45,
+        "y": 20
+      }
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      6,
+      {
+        "x": 50,
+        "y": 45
+      }
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      6,
+      {
+        "x": 36,
+        "y": 2
+      }
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      6,
+      {
+        "x": 23,
+        "y": 62
+      }
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      6,
+      {
+        "x": 23,
+        "y": 1
+      }
+    ],
+    [
+      5,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "ss99-0001",
+  "generated_at_utc": "2026-05-12T11:12:06.430685+00:00",
+  "generator_agent": "Ss99DslAgent",
+  "initial_observation_signature": "d60e9b16077c0f2c2ba5161f72952aa63a3005fe",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 12,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 4,
+  "terminal_state": "WIN",
+  "total_levels": 4
+}

@@ -1,0 +1,21 @@
+{
+  "baseline_actions": [
+    3,
+    3,
+    4,
+    5,
+    6
+  ],
+  "class_name": "IceStop",
+  "date_downloaded": "2026-04-03T09:46:09+00:00",
+  "default_fps": 12,
+  "game_id": "ice_stop-0001",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Ice Stop",
+  "idea": "An ice-sliding puzzle where movement continues until something stops the player, so level design is built around ricochet-like positioning."
+}

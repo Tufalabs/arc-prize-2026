@@ -1,0 +1,26 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "shift-mosaic",
+  "game_id": "shift_mosaic-0001",
+  "slug": "shift_mosaic",
+  "class_name": "ShiftMosaic",
+  "objective": "obj.match_tiles",
+  "mechanics": [
+    "mech.cyclic_row_shift",
+    "mech.cyclic_column_shift",
+    "mech.focus_navigation",
+    "mech.undo",
+    "mech.timer"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

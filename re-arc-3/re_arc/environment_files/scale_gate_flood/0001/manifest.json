@@ -1,0 +1,17 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "scale_gate_flood-0001",
+  "game_id": "scale_gate_flood-0001",
+  "slug": "scale_gate_flood",
+  "class_name": "ScaleGateFlood",
+  "objective": "obj.flood_target",
+  "mechanics": [
+    "mech.click_toggle",
+    "mech.flood_fill",
+    "mech.gate"
+  ],
+  "layout_template": "tile_flood_1_level",
+  "action_set": ["space", "click"],
+  "available_actions": [5, 6]
+}

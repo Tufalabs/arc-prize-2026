@@ -1,0 +1,19 @@
+Palette legend image: one swatch per color index, labelled with the index (top-left), the character `ascii_grid` renders it as (top-right), and its name.
+[image:512x512]
+The code executed 2 actions in the previous sequence.
+Executed actions: UP, LEFT.
+You have won level 1!
+Your world model did not predict this win: `test_world_model()` now fails on `history[-1]`.
+<the win screen as a delta from the frame before the move>
+
+Reflect on what you learned from this level and how you beat it. Challenge your assumptions, and try to see if a simpler model explains what you saw. You may also write/update and clean up your world model along the way. Then answer these questions:
+
+(1) Which mechanics are proven, based on what evidence?
+(2) Which mechanics are hypothesized (i.e. holding up so far but not yet proven)?
+(3) What learnings do you want to keep in mind for future levels? Consider how to read the board, how to find mechanics, and how to find winning strategies.
+
+When you are done, answer the questions in plain text, with no tool call: that reply ends this turn.
+`submit_action` is not available in this turn.
+
+Current grid image:
+[image:16x16]

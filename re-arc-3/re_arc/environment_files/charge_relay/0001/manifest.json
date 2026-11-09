@@ -1,0 +1,17 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "charge-relay",
+  "game_id": "charge_relay-0001",
+  "slug": "charge_relay",
+  "class_name": "ChargeRelay",
+  "objective": "obj.activate_receptors",
+  "mechanics": [
+    "mech.transfer_charge",
+    "mech.type_keyed_gates",
+    "mech.straight_conduction",
+    "mech.simultaneous_receptors"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

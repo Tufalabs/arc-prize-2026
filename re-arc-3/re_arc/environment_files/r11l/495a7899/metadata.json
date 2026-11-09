@@ -1,0 +1,21 @@
+{
+  "game_id": "r11l-495a7899",
+  "title": "R11L",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 30,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/robot_legs",
+  "tags": [
+    "official",
+    "click-only"
+  ],
+  "baseline_actions": [
+    22,
+    33,
+    51,
+    26,
+    52,
+    49
+  ],
+  "local_dir": "environment_files/r11l/495a7899",
+  "date_downloaded": "2026-04-08T20:07:49.059979+00:00"
+}

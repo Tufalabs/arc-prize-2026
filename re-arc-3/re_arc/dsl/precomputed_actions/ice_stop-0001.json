@@ -1,0 +1,100 @@
+{
+  "actions": [
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "ice_stop-0001",
+  "generated_at_utc": "2026-04-03T16:56:56.787084+00:00",
+  "generator_agent": "IceStopDslAgent",
+  "initial_observation_signature": "4a9c0b90fa5528ec5f5c570061df4bb54840d436",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 21,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 5,
+  "terminal_state": "WIN",
+  "total_levels": 5
+}

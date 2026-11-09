@@ -1,0 +1,23 @@
+{
+  "baseline_actions": [
+    13,
+    20,
+    40,
+    30,
+    134,
+    49,
+    33,
+    147
+  ],
+  "class_name": "EscapeVelocity",
+  "default_fps": 8,
+  "game_id": "escape_velocity-0001",
+  "idea": "A top-down puzzle game about walking through doorways you place yourself, taught gently: level 1 has no portal gun (pre-placed portals, the box, a button-gate, the purple goal tile), and every later mechanic debuts in a tiny room before its sandbox. Bolts place portals only on the clicked cell - blocked line of sight animates the bolt to the obstruction and fizzles, never placing elsewhere. SPACE lifts/drops/feeds the box or toggles the gun; pads launch players and parcels alike; doors are switch-gates (often guarding the goal) wired to red buttons weighted by player or box. Eight levels build from walking through one portal to the Grand Tour: keyhole shots, shielded crossings, pocket extractions through both faces of one wall cell, forced elbow flights, ferry discipline, box artillery, and holding a gate open for your own parcel's flight. Levels are data: one JSON file per level.",
+  "tags": [
+    "portals",
+    "top-down",
+    "easy",
+    "click-keys"
+  ],
+  "title": "Escape Velocity"
+}

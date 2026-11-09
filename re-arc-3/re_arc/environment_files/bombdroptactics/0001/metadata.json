@@ -1,0 +1,18 @@
+{
+  "game_id": "bombdroptactics-0001",
+  "title": "Bomb Drop Tactics",
+  "idea": "A bomber-style tactics game where bombs clear blocks, threaten enemies, and open the exit, but mistimed blasts or routes get the player trapped.",
+  "default_fps": 8,
+  "baseline_actions": [
+    43,
+    49,
+    79,
+    51,
+    66,
+    89
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "Bombdroptactics"
+}

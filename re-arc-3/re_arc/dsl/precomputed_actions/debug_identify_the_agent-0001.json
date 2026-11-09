@@ -1,0 +1,128 @@
+{
+  "actions": [
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "debug_identify_the_agent-0001",
+  "generated_at_utc": "2026-05-14T15:37:14.460003+00:00",
+  "generator_agent": "DebugIdentifyTheAgentAgent",
+  "initial_observation_signature": "4e36a01a18b63b0792210b0f08b391fdba6b983a",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 28,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 2,
+  "terminal_state": "WIN",
+  "total_levels": 2
+}

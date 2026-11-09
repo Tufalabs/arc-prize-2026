@@ -1,0 +1,19 @@
+{
+  "baseline_actions": [
+    10,
+    20,
+    39
+  ],
+  "class_name": "EchoMazeGpt",
+  "default_fps": 8,
+  "game_id": "echo_maze_gpt-0001",
+  "local_dir": "re_arc/environment_files/echo_maze_gpt/0001",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Echo Maze GPT",
+  "idea": "A hidden-maze exploration game where local visual feedback acts like an echo, helping the player discover walls and find the route out."
+}

@@ -1,0 +1,18 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "glass-orchard",
+  "game_id": "glass_orchard-0001",
+  "slug": "glass_orchard",
+  "class_name": "GlassOrchard",
+  "objective": "obj.fill_matching_baskets",
+  "mechanics": [
+    "mech.push_roll",
+    "mech.breakable_glass",
+    "mech.one_use_ramps",
+    "mech.remote_rotation",
+    "mech.temporary_blockers"
+  ],
+  "action_set": ["up", "down", "left", "right", "click"],
+  "available_actions": [1, 2, 3, 4, 6]
+}

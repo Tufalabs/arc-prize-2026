@@ -1,0 +1,12 @@
+[context compacted — your `python` session and files are intact; continue from here]
+
+Your `world_model.py`:
+````python
+"""Keys open doors."""
+
+DOC = '```'
+
+
+def do_move(state, action):
+    return state
+````

@@ -1,0 +1,23 @@
+View a file in your working directory. Each line is prefixed with its number and a tab. Pass `view_range` to see part of it, or `.` to list the directory.
+
+{
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "description": "File to view, or `.` to list the working directory"
+    },
+    "view_range": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "First and last line to show, 1-based and inclusive; -1 as the last means end of file"
+    }
+  },
+  "required": [
+    "path"
+  ]
+}

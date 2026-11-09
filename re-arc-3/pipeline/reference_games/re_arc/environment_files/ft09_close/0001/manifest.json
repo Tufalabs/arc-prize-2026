@@ -1,0 +1,21 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "ft09-close",
+  "game_id": "ft09_close-0001",
+  "slug": "ft09_close",
+  "class_name": "Ft09Close",
+  "objective": "obj.match_tiles",
+  "mechanics": [
+    "mech.click_cycle_color",
+    "mech.local_constraints",
+    "mech.stencil_clicks",
+    "mech.timer"
+  ],
+  "action_set": [
+    "click"
+  ],
+  "available_actions": [
+    6
+  ]
+}

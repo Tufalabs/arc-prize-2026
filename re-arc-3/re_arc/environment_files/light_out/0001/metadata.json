@@ -1,0 +1,17 @@
+{
+  "game_id": "light_out-0001",
+  "title": "Light Out",
+  "default_fps": 10,
+  "baseline_actions": [
+    21,
+    17,
+    26
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "LightOut"
+}

@@ -1,0 +1,18 @@
+{
+  "game_id": "light_shadow-0001",
+  "title": "Light & Shadow",
+  "idea": "A puzzle about moving through illuminated and shadowed spaces where safety and accessibility depend on the current light state.",
+  "default_fps": 8,
+  "baseline_actions": [
+    30,
+    24,
+    23,
+    28,
+    26,
+    33
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "LightShadow"
+}

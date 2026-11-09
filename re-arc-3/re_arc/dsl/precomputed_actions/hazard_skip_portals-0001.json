@@ -1,0 +1,84 @@
+{
+  "actions": [
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "hazard_skip_portals-0001",
+  "generated_at_utc": "2026-04-01T14:28:27.065863+00:00",
+  "generator_agent": "HazardSkipPortalsDslAgent",
+  "initial_observation_signature": "1c7e9341255e7e6e7f057e9631b427f69c2e2694",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 17,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 3,
+  "terminal_state": "WIN",
+  "total_levels": 3
+}

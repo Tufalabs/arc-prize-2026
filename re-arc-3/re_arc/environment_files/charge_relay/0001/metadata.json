@@ -1,0 +1,8 @@
+{
+  "game_id": "charge_relay-0001",
+  "title": "Charge Relay",
+  "default_fps": 8,
+  "baseline_actions": [3, 6, 5, 25, 32, 44, 56],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "ChargeRelay"
+}

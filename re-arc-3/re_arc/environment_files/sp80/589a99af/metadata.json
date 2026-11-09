@@ -1,0 +1,21 @@
+{
+  "game_id": "sp80-589a99af",
+  "title": "SP80",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 10,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/spill",
+  "tags": [
+    "official",
+    "click-keys"
+  ],
+  "baseline_actions": [
+    39,
+    58,
+    25,
+    148,
+    96,
+    152
+  ],
+  "local_dir": "environment_files/sp80/589a99af",
+  "date_downloaded": "2026-04-08T20:07:49.027130+00:00"
+}

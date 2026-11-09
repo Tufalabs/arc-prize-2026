@@ -1,0 +1,22 @@
+{
+  "game_id": "jc26-0001",
+  "title": "jc26",
+  "idea": "Codenamed to keep the mechanics a surprise. Click + SPACE maze/turret puzzle: toggle purple gates (and place movable turrets) to route blue movers through dark-red turrets that never miss; press SPACE to run the round. Clear every mover to win, let one reach the green target and you lose. A mandatory energy bar drains 1 per action.",
+  "default_fps": 12,
+  "baseline_actions": [
+    6,
+    9,
+    5,
+    10,
+    13,
+    11,
+    24,
+    43
+  ],
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "hard"
+  ],
+  "class_name": "JC26"
+}

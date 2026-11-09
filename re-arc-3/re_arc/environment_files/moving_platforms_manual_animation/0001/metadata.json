@@ -1,0 +1,18 @@
+{
+  "game_id": "moving_platforms_manual_animation-0001",
+  "title": "Moving Platforms Manual Animation",
+  "idea": "A platforming room series where the player times movement around moving platforms, buttons, gates, and hazards to reach the goal.",
+  "default_fps": 8,
+  "baseline_actions": [
+    36,
+    35,
+    42,
+    42,
+    89,
+    100
+  ],
+  "tags": [
+    "click-keys"
+  ],
+  "class_name": "MovingPlatformsManualAnimation"
+}

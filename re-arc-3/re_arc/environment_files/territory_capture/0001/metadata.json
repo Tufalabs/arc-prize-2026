@@ -1,0 +1,13 @@
+{
+  "game_id": "territory_capture-0001",
+  "title": "Territory Capture",
+  "idea": "An area-control puzzle where the player claims territory by tracing safe loops while avoiding enemies and surviving barrier pulses.",
+  "default_fps": 8,
+  "baseline_actions": [
+    71
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "TerritoryCapture"
+}

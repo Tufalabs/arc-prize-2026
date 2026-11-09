@@ -1,0 +1,112 @@
+{
+  "actions": [
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      5,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "clock_dock_walk-0001",
+  "generated_at_utc": "2026-04-01T14:28:26.962559+00:00",
+  "generator_agent": "ClockDockWalkDslAgent",
+  "initial_observation_signature": "f231abe0c7fa1e527ad6b362c040c6e029b3db61",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 24,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 3,
+  "terminal_state": "WIN",
+  "total_levels": 3
+}

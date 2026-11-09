@@ -1,0 +1,17 @@
+{
+  "baseline_actions": [
+    3,
+    5,
+    7
+  ],
+  "default_fps": 6,
+  "game_id": "beat_dock_buttons-0001",
+  "local_dir": "re_arc/environment_files/beat_dock_buttons/0001",
+  "tags": [
+    "click-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Beat Dock Buttons",
+  "idea": "A button-sequencing puzzle framed like a rhythm toy, where large directional beat pads move a token around the board and the player must press them in the right order to steer it into the dock."
+}

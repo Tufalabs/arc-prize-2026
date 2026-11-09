@@ -1,0 +1,8 @@
+{
+  "game_id": "majority_cells-0001",
+  "title": "Majority Cells",
+  "default_fps": 8,
+  "baseline_actions": [1, 5, 3, 27, 46, 57, 69],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "MajorityCells"
+}

@@ -1,0 +1,20 @@
+{
+  "baseline_actions": [
+    5,
+    17,
+    18
+  ],
+  "class_name": "SelectAndSettle",
+  "default_fps": 12,
+  "game_id": "select_and_settle-0001",
+  "local_dir": "re_arc/environment_files/select_and_settle/0001",
+  "tags": [
+    "click-keys",
+    "ka59_mechanics",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Select and Settle",
+  "idea": "A multi-pawn puzzle where the player clicks to choose which pawn is active, moves it into place, and alternates until the board settles into the solved arrangement."
+}

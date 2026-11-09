@@ -1,0 +1,21 @@
+{
+  "baseline_actions": [
+    4,
+    6,
+    11,
+    29,
+    16,
+    27,
+    28
+  ],
+  "class_name": "GlassOrchard",
+  "default_fps": 8,
+  "game_id": "glass_orchard-0001",
+  "idea": "Roll colored fruits into baskets by steering them through reusable corner redirectors and configurable splitters. Direction actions move the farmer one cell and push fruit; clicks rotate marked corner redirectors and splitters, while Space can also rotate an adjacent splitter. Corner redirectors are active from the start and can be reused. Splitters duplicate only allowed fruit colors into the highlighted output directions. Levels should teach pushing fruit, redirecting fruit with reusable corners, rotating marked corners, color-limited splitting, using fruit as blockers, and final orchards where several corner pieces must be calibrated before pushing.",
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "hard"
+  ],
+  "title": "Glass Orchard"
+}

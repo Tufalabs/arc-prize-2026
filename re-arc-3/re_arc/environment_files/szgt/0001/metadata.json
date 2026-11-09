@@ -1,0 +1,19 @@
+{
+  "baseline_actions": [
+    9,
+    16,
+    27,
+    33
+  ],
+  "class_name": "Szgt",
+  "default_fps": 6,
+  "game_id": "szgt-0001",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Size Gates",
+  "idea": "A shape-and-size puzzle where the player toggles body size to pass different gates, press plates, and solve rooms that care about footprint."
+}

@@ -1,0 +1,8 @@
+{
+  "variant": "0001",
+  "game_id": "mirror_match-0001",
+  "slug": "mirror_match",
+  "class_name": "MirrorMatch",
+  "action_set": ["up", "down", "left", "right", "click"],
+  "available_actions": [1, 2, 3, 4, 6]
+}

@@ -1,0 +1,19 @@
+{
+  "typeCheckingMode": "strict",
+  "pythonVersion": "3.12",
+  "pythonPlatform": "Linux",
+  "include": ["src"],
+  "exclude": ["**/node_modules", "**/__pycache__", ".*"],
+  "extraPaths": ["../re-arc-3"],
+  "reportUnnecessaryIsInstance": true,
+  "reportConstantRedefinition": true,
+  "reportInvalidStringEscapeSequence": true,
+  "reportUnknownVariableType": "warning",
+  "reportUnknownMemberType": false,
+  "reportUnknownParameterType": "warning",
+  "reportUnknownArgumentType": "warning",
+  "reportUnusedImport": "warning",
+  "reportUnusedVariable": "warning",
+  "reportMissingTypeStubs": false,
+  "reportPrivateUsage": false
+}

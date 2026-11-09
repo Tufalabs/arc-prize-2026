@@ -1,0 +1,7 @@
+No actions have been executed yet.
+Current state: step 1, level 1.
+Valid actions right now: UP, DOWN, LEFT, RIGHT.
+This turn:
+1. Orient on the newest frame: `current_frame.segment()` for structure.
+2. Decide the next move or short sequence — explore, or advance the level. Write a search if the right order is not obvious.
+3. Act with `submit_action([...])`.

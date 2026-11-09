@@ -1,0 +1,126 @@
+[project]
+name = "arc-agi-3-local"
+version = "0.1.0"
+description = "Local ARC-AGI tooling with dataset sampling and transition rewards."
+requires-python = ">=3.12"
+dependencies = [
+    "arc-agi",
+    "imageio",
+    "pillow",
+    "platformdirs",
+    "pydantic>=2,<3",
+    "PyYAML",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipyevents",
+    "ipykernel",
+    "ipywidgets",
+    "jupyter-client",
+    "mypy>=1.19.1,<2",
+    "pytest>=9.0.2",
+    "ruff>=0.15.4",
+    "tqdm",
+]
+
+[project.scripts]
+re-arc = "re_arc.cli:main"
+pipeline-codex-batch = "pipeline.codex_batch:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["re_arc*", "pipeline*"]
+
+[tool.setuptools.package-data]
+re_arc = [
+    "datasets/**/*.json",
+    "environment_files/**/*.json",
+    "environment_files/**/*.py",
+]
+
+[tool.ruff]
+line-length = 120
+exclude = [
+    "re_arc/environment_files/ar25/0c556536",
+    "re_arc/environment_files/bp35/0a0ad940",
+    "re_arc/environment_files/cd82/fb555c5d",
+    "re_arc/environment_files/cn04/2fe56bfb",
+    "re_arc/environment_files/dc22/fdcac232",
+    "re_arc/environment_files/en18/0001",
+    "re_arc/environment_files/ft09/0d8bbf25",
+    "re_arc/environment_files/g50t/5849a774",
+    "re_arc/environment_files/ka59/38d34dbb",
+    "re_arc/environment_files/lf52/271a04aa",
+    "re_arc/environment_files/lp85/305b61c3",
+    "re_arc/environment_files/ls20/9607627b",
+    "re_arc/environment_files/m0r0/492f87ba",
+    "re_arc/environment_files/r11l/495a7899",
+    "re_arc/environment_files/re86/8af5384d",
+    "re_arc/environment_files/s5i5/18d95033",
+    "re_arc/environment_files/sb26/7fbdac44",
+    "re_arc/environment_files/sc25/635fd71a",
+    "re_arc/environment_files/sk48/d8078629",
+    "re_arc/environment_files/sp80/589a99af",
+    "re_arc/environment_files/su15/1944f8ab",
+    "re_arc/environment_files/tn36/ef4dde99",
+    "re_arc/environment_files/tr87/cd924810",
+    "re_arc/environment_files/tu93/0768757b",
+    "re_arc/environment_files/vc33/5430563c",
+    "re_arc/environment_files/wa30/ee6fef47",
+    "pipeline/runs",
+]
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+select = [
+    "A",
+    "B",
+    "E",
+    "F",
+    "G",
+    "I",
+    "PT",
+    "UP",
+    "ARG",
+    "ERA",
+    "PIE",
+    "RET",
+    "RSE",
+    "RUF",
+]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.mypy]
+exclude = [
+    "re_arc/environment_files",
+    "re_arc/dsl",
+    "pipeline/runs",
+    "pipeline/worker_tests",
+    "runs",
+]
+strict_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+disallow_untyped_defs = true
+allow_redefinition = true
+
+[[tool.mypy.overrides]]
+module = ["re_arc.*"]
+no_implicit_reexport = true
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+norecursedirs = [
+    "pipeline/runs","runs", ".venv", ".git"
+]

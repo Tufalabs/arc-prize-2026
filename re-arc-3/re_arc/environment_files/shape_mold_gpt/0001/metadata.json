@@ -1,0 +1,17 @@
+{
+  "baseline_actions": [
+    9,
+    10,
+    13,
+    13
+  ],
+  "class_name": "ShapeMoldGpt",
+  "default_fps": 8,
+  "game_id": "shape_mold_gpt-0001",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Shape Mold GPT",
+  "idea": "A movement puzzle where the player's current shape matters, so progress comes from remolding the avatar to fit gates and corridors."
+}

@@ -1,0 +1,18 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "lockstep-doors",
+  "game_id": "lockstep_doors-0001",
+  "slug": "lockstep_doors",
+  "class_name": "LockstepDoors",
+  "objective": "obj.open_powered_door",
+  "mechanics": [
+    "mech.click_rotate",
+    "mech.directed_power_network",
+    "mech.color_permission",
+    "mech.undo",
+    "mech.step_budget"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

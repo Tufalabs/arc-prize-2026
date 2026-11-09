@@ -1,0 +1,11 @@
+Palette legend image: one swatch per color index, labelled with the index (top-left), the character `ascii_grid` renders it as (top-right), and its name.
+[image:512x512]
+The code executed 2 actions in the previous sequence.
+Executed actions: UP, LEFT.
+You are still on the same level.
+Your world model raised `Unknown` for the last executed action, so nothing after it was executed. That move is in `history` now, where `Unknown` fails `test_world_model()` until `do_move` models it.
+Current state: step 3, level 1.
+A passing `test_world_model()` is required to make moves.
+
+Current grid image:
+[image:32x32]

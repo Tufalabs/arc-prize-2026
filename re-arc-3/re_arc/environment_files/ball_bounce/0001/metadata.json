@@ -1,0 +1,20 @@
+{
+  "game_id": "ball_bounce-0001",
+  "title": "Ball Bounce",
+  "idea": "Pick deflectors from the tray, place them in the playfield, then press space to launch the ball and ride gravity, bounces and ramps into the goal ring.",
+  "default_fps": 10,
+  "baseline_actions": [
+    5,
+    5,
+    7,
+    11,
+    13,
+    3
+  ],
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "medium"
+  ],
+  "class_name": "BallBounce"
+}

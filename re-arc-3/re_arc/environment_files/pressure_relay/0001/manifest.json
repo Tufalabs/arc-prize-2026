@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "pressure-relay",
+  "game_id": "pressure_relay-0001",
+  "slug": "pressure_relay",
+  "class_name": "PressureRelay",
+  "objective": "obj.carry_artifact_to_exit",
+  "mechanics": ["mech.carry", "mech.pressure_gate", "mech.key_lock", "mech.undo"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

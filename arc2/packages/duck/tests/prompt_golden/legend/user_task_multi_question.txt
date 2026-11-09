@@ -1,0 +1,23 @@
+Colour legend:
+<image 320x128 sha256:64a768ba062057c8 alt='ARC colour legend: value and name'>
+Here is the puzzle.
+
+2 example pairs, each input followed by its output:
+train_in[0]  (3x4)
+<image 16x12 sha256:1931ed6c75520aaa alt='train_in[0]  (3x4)'>
+train_out[0]  (5x9)
+<image 36x20 sha256:e678d4d9c83ffd00 alt='train_out[0]  (5x9)'>
+train_in[1]  (3x4)
+<image 16x12 sha256:d3292bcfff54891a alt='train_in[1]  (3x4)'>
+train_out[1]  (5x9)
+<image 36x20 sha256:8abe5c8106c20b21 alt='train_out[1]  (5x9)'>
+
+3 test inputs to answer, in test_in:
+test_in[0]  (7x7)
+<image 28x28 sha256:4cf819f3b1f02fe5 alt='test_in[0]  (7x7)'>
+test_in[1]  (7x7)
+<image 28x28 sha256:130000f3dc595b8a alt='test_in[1]  (7x7)'>
+test_in[2]  (7x7)
+<image 28x28 sha256:aabf4fb82d9c51b6 alt='test_in[2]  (7x7)'>
+
+Work in the kernel. The arrays above are already there — you do not need to retype them. When you are done, describe the rule you applied in full in your final reply.

@@ -1,0 +1,21 @@
+{
+  "baseline_actions": [
+    7,
+    6,
+    11,
+    9,
+    18,
+    26,
+    37
+  ],
+  "class_name": "Ghost",
+  "default_fps": 8,
+  "game_id": "ghost-0001",
+  "idea": "Navigate a blue body to a blue outlined goal while recording routes that return to the start and replay as pale ghosts on later attempts. Direction actions move the live player one board cell, and Space saves the route so far, animates the player rewinding through it, leaves a ghost with that timed route, and spawns a fresh live player at the start. Ghosts replay one recorded step for each live step, can hold pressure plates, can be blocked by current gate states, and can desynchronize if timing is wrong. Levels should teach simple goal movement, route recording, ghost-held devices, rewind side effects, gates and teleport timing, and final puzzles where saved routes act as both tools and obstacles.",
+  "tags": [
+    "keys-only",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Ghost"
+}

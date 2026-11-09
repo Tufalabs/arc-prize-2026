@@ -1,0 +1,21 @@
+{
+  "game_id": "m0r0-492f87ba",
+  "title": "M0R0",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 7,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/mirrored",
+  "tags": [
+    "official",
+    "click-keys"
+  ],
+  "baseline_actions": [
+    30,
+    111,
+    203,
+    26,
+    500,
+    237
+  ],
+  "local_dir": "environment_files/m0r0/492f87ba",
+  "date_downloaded": "2026-04-08T20:07:48.602424+00:00"
+}

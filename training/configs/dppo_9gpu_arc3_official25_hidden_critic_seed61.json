@@ -1,0 +1,184 @@
+{
+  "inference": {
+    "agent_context_window": 32768,
+    "agent_max_completion_tokens": 8192,
+    "agent_reasoning_effort": "xhigh",
+    "agent_safety_margin_tokens": 0,
+    "agent_temperature": 1.0,
+    "agent_top_k": 0,
+    "agent_top_p": 1.0,
+    "base_url": "http://127.0.0.1:59200",
+    "games": [
+      "ar25-0c556536",
+      "bp35-0a0ad940",
+      "cd82-fb555c5d",
+      "cn04-2fe56bfb",
+      "dc22-fdcac232",
+      "ft09-0d8bbf25",
+      "g50t-5849a774",
+      "ka59-38d34dbb",
+      "lf52-271a04aa",
+      "lp85-305b61c3",
+      "ls20-9607627b",
+      "m0r0-492f87ba",
+      "r11l-495a7899",
+      "re86-8af5384d",
+      "s5i5-18d95033",
+      "sb26-7fbdac44",
+      "sc25-635fd71a",
+      "sk48-d8078629",
+      "sp80-589a99af",
+      "su15-1944f8ab",
+      "tn36-ef4dde99",
+      "tr87-cd924810",
+      "tu93-0768757b",
+      "vc33-5430563c",
+      "wa30-ee6fef47"
+    ],
+    "max_runtime_minutes": 15.0,
+    "model_id": "Qwen/Qwen3.8-27B",
+    "platypus_venv": ".venv",
+    "server_gpus": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "server_log_paths": [],
+    "agent_compact_to_tokens": 14336,
+    "agent_malformed_retries": 0,
+    "agent_accept_malformed_output": true
+  },
+  "memory_profiler": {
+    "log_every_n_steps": 1,
+    "log_gpu_utilization": true,
+    "max_logged_steps": 20,
+    "reset_peak_stats_per_region": true,
+    "sync": true
+  },
+  "metrics": {
+    "log_per_game": true
+  },
+  "num_iterations": 10000,
+  "official_eval": {
+    "base_urls": [],
+    "context_window_tokens": 90112,
+    "cycle_minutes": 45.0,
+    "enabled": true,
+    "games": [
+      "ar25-0c556536",
+      "bp35-0a0ad940",
+      "cd82-fb555c5d",
+      "cn04-2fe56bfb",
+      "dc22-fdcac232",
+      "ft09-0d8bbf25",
+      "g50t-5849a774",
+      "ka59-38d34dbb",
+      "lf52-271a04aa",
+      "lp85-305b61c3",
+      "ls20-9607627b",
+      "m0r0-492f87ba",
+      "r11l-495a7899",
+      "re86-8af5384d",
+      "s5i5-18d95033",
+      "sb26-7fbdac44",
+      "sc25-635fd71a",
+      "sk48-d8078629",
+      "sp80-589a99af",
+      "su15-1944f8ab",
+      "tn36-ef4dde99",
+      "tr87-cd924810",
+      "tu93-0768757b",
+      "vc33-5430563c",
+      "wa30-ee6fef47"
+    ],
+    "rollouts_per_game": 1,
+    "server_gpus": [
+      "8"
+    ],
+    "server_log_paths": [],
+    "stats_minutes": [
+      15.0
+    ],
+    "temperature": 0.6,
+    "top_k": 194,
+    "top_p": 0.8899009607194754,
+    "compact_to_tokens": 33925
+  },
+  "parallel_rollouts": 100,
+  "rollout_buffer_size": 1,
+  "sampling": {},
+  "training": {
+    "advantage_clip": 0.0,
+    "attn_implementation": "flash_attention_4",
+    "cleanup_rollout_artifacts": false,
+    "device": "cuda:0",
+    "device_map_gpus": [
+      0
+    ],
+    "dppo_importance_ratio_cap": 5.0,
+    "dppo_tv_threshold": 0.15,
+    "entropy_coef": 0.0,
+    "episode_packing": true,
+    "epochs_per_window": 1,
+    "gae_gamma": 1.0,
+    "gae_lambda": 1.0,
+    "gradient_accumulation_steps": 1,
+    "init_adapter_dir": null,
+    "init_trainer_state_path": null,
+    "learning_rate": 5e-06,
+    "lora": {
+      "alpha": 64,
+      "r": 32,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "in_proj_qkv",
+        "in_proj_z",
+        "out_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ],
+      "dropout": 0.0
+    },
+    "loss_aggregation": "token_mean",
+    "max_micro_batch_tokens": 40960,
+    "max_sequence_tokens": 32768,
+    "model_name": "Qwen/Qwen3.8-27B",
+    "model_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "multimodal": true,
+    "optimizer_minibatch_rollouts": 25,
+    "output_dir": "runs",
+    "pinned_adapter_interval": 25,
+    "policy_loss": "dppo_binary_tv",
+    "reference_kl_coef": 0.0,
+    "rollout_logprob_check_batches": 1,
+    "rollout_schedule": "overlapped",
+    "sample_budget": {
+      "mode": "full"
+    },
+    "seed": 61,
+    "state_critic_normalization_alpha": 0.125,
+    "state_critic_normalization_min_rollouts": 16,
+    "state_critic_normalization_min_std": 1.0,
+    "state_critic_target_normalization": "per_game",
+    "stop_on_collapse": false,
+    "value_baseline": "hidden_critic",
+    "warmup_steps": 0,
+    "worker_device_map_gpus": [
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "disable_dropout": true
+  }
+}

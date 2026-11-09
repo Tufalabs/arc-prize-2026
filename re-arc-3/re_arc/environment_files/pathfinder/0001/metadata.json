@@ -1,0 +1,19 @@
+{
+  "game_id": "pathfinder-0001",
+  "title": "Pathfinder",
+  "idea": "A pure shortest-path maze series where each room has one start, one goal, and fixed walls, asking the player to reason cleanly about the navigable route rather than about extra mechanics.",
+  "default_fps": 8,
+  "baseline_actions": [
+    2,
+    16,
+    60,
+    86,
+    304
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Pathfinder"
+}

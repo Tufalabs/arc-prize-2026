@@ -1,0 +1,21 @@
+{
+  "game_id": "talos_beams-0001",
+  "title": "Talos Beams",
+  "idea": "Connector/laser puzzle in the spirit of The Talos Principle: carry and rewire connectors to route coloured beams from sources to matching targets, charging them to open doors and reach the exit.",
+  "default_fps": 8,
+  "baseline_actions": [
+    22,
+    28,
+    31,
+    62,
+    147,
+    118
+  ],
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "no-time-bar",
+    "hard"
+  ],
+  "class_name": "TalosBeams"
+}

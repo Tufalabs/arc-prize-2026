@@ -1,0 +1,3 @@
+git status:
+  tufa-arc-agi-framework           dc69bc8     DIRTY  wallclock-plot     Refresh example diagnostics for the job-clock wallclock plot
+  re-arc-3                         8a6cd22e0f  pinned  8a6cd22e0f425c3ee73641298908d96feb915657  (non-editable)

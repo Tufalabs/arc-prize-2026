@@ -1,0 +1,104 @@
+{
+  "actions": [
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      2,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "sweeper_blade-0001",
+  "generated_at_utc": "2026-04-08T08:46:04.021644+00:00",
+  "generator_agent": "SweeperBladeDslAgent",
+  "initial_observation_signature": "9377db14a5f2b19707b5838f727cfc22594995e4",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 22,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 3,
+  "terminal_state": "WIN",
+  "total_levels": 3
+}

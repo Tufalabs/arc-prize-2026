@@ -1,0 +1,22 @@
+{
+  "baseline_actions": [
+    3,
+    5,
+    4,
+    8,
+    9,
+    9,
+    15,
+    20
+  ],
+  "class_name": "LoopingChains",
+  "default_fps": 8,
+  "game_id": "looping_chains-0001",
+  "idea": "Click buttons to advance or reverse objects riding on closed loops, belts, and chained tracks until every tracked object sits in its matching target box simultaneously. There is no avatar; each button deterministically changes one loop, several loops, or a coupled subset of positions, and some objects belong to more than one logical cycle. Later loops can overlap, rotate, teleport across edges, share objects, or hide an indirect relationship, so the puzzle is about phase synchronization rather than pathfinding. Levels should teach a single controllable loop, overlapping belts, rotation, multiple targets, edge teleportation, subset coupling, missing reverse controls, hidden object relationships, and a final three-object simultaneous alignment.",
+  "tags": [
+    "click-only",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Looping Chains"
+}

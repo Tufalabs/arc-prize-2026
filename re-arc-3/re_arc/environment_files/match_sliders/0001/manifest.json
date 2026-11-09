@@ -1,0 +1,15 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "game_id": "match_sliders-0001",
+  "slug": "match_sliders",
+  "class_name": "MatchSliders",
+  "objective": "obj.view",
+  "mechanics": [],
+  "action_set": [],
+  "available_actions": [3, 4],
+  "source_spec": {
+    "grid_size": [64, 64],
+    "description": "Slide the misaligned row left or right to match all rows."
+  }
+}

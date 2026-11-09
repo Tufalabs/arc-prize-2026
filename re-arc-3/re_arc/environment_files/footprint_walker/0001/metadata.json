@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    8,
+    16,
+    18
+  ],
+  "class_name": "FootprintWalker",
+  "default_fps": 6,
+  "game_id": "footprint_walker-0001",
+  "local_dir": "re_arc/environment_files/footprint_walker/0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Footprint Walker",
+  "idea": "A path-shape puzzle where a footprint-shaped walker occupies several cells at once, so the player has to route that bulky footprint through narrow corridors without clipping walls or blocking the exit path."
+}

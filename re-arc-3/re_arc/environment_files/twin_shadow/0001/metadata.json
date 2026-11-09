@@ -1,0 +1,8 @@
+{
+  "game_id": "twin_shadow-0001",
+  "title": "Twin Shadow",
+  "default_fps": 8,
+  "baseline_actions": [3, 10, 5, 26, 45, 50, 54],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "TwinShadow"
+}

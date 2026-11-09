@@ -1,0 +1,8 @@
+{
+  "game_id": "plank_relay-0001",
+  "title": "Plank Relay",
+  "default_fps": 8,
+  "baseline_actions": [10, 19, 30, 36, 52, 59, 71],
+  "tags": ["click-keys", "arc-like", "medium", "codex-reviewed"],
+  "class_name": "PlankRelay"
+}

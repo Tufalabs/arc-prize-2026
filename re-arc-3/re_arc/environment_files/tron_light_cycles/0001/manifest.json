@@ -1,0 +1,12 @@
+{
+  "variant": "0001",
+  "game_id": "tron_light_cycles-0001",
+  "slug": "tron_light_cycles",
+  "class_name": "TronLightCycles",
+  "action_set": ["up", "down", "left", "right", "space"],
+  "available_actions": [1, 2, 3, 4, 5],
+  "grid_size": [32, 22],
+  "time_limits": [120, 150, 180, 200, 230, 260],
+  "levels": 6,
+  "objective": "obj.survive"
+}

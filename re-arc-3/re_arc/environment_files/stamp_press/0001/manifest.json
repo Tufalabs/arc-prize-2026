@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "stamp-press",
+  "game_id": "stamp_press-0001",
+  "slug": "stamp_press",
+  "class_name": "StampPress",
+  "objective": "obj.print_pattern",
+  "mechanics": [
+    "mech.move_stamp",
+    "mech.rotate_click_knob",
+    "mech.press_footprint",
+    "mech.forbidden_cells",
+    "mech.ink_overwrite_order"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

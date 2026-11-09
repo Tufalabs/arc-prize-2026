@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "pocket-elevators",
+  "game_id": "pocket_elevators-0001",
+  "slug": "pocket_elevators",
+  "class_name": "PocketElevators",
+  "objective": "obj.reach_exit_after_filling_low_sockets",
+  "mechanics": [
+    "mech.height_swapping_elevators",
+    "mech.stone_push",
+    "mech.rail_rotation",
+    "mech.low_sockets",
+    "mech.step_bar"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

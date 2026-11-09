@@ -1,0 +1,25 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "turnback-gates",
+  "game_id": "turnback_gates-0001",
+  "slug": "turnback_gates",
+  "class_name": "TurnbackGates",
+  "objective": "obj.collect_and_escape",
+  "mechanics": [
+    "mech.reversible_one_way_gates",
+    "mech.collect_relic",
+    "mech.step_budget",
+    "mech.undo"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

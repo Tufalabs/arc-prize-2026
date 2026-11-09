@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "color-census",
+  "game_id": "color_census-0001",
+  "slug": "color_census",
+  "class_name": "ColorCensus",
+  "objective": "obj.match_population_counts",
+  "mechanics": ["mech.global_recolor", "mech.irreversible_merge", "mech.covered_clicks", "mech.step_budget", "mech.undo"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

@@ -1,0 +1,23 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "game_id": "flood_fill_water-0001",
+  "slug": "flood_fill_water",
+  "class_name": "FloodFillWater",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.water_spread",
+    "mech.switch_remote_gate",
+    "mech.push_block",
+    "mech.timed_hazard"
+  ],
+  "layout_template": "handcrafted",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space"
+  ],
+  "available_actions": [1, 2, 3, 4, 5]
+}

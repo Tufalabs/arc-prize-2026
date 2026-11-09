@@ -1,0 +1,22 @@
+{
+  "baseline_actions": [
+    10,
+    14,
+    20,
+    26,
+    54,
+    66,
+    77,
+    88
+  ],
+  "class_name": "WindSails",
+  "default_fps": 8,
+  "game_id": "wind_sails-0001",
+  "idea": "Move sail crates into colored harbors by rotating their sails and releasing global wind gusts. Clicks select or rotate a sail crate, direction keys move the worker, and Space blows wind one step in the current wind direction. A sail crate moves only if its sail faces the wind, while sideways sails act as blockers; crates can block each other, press pads, or shield other crates from gusts. Levels should teach single-crate wind movement, rotating sails to stop motion, using one crate as a windbreak, staging several crates before a gust, changing wind direction with corner fans, and final harbors where the same crate must be blocker, passenger, and pad-holder at different times.",
+  "tags": [
+    "click-keys",
+    "arc-like",
+    "medium"
+  ],
+  "title": "Wind Sails"
+}

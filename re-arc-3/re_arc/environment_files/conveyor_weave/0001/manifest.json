@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "conveyor-weave",
+  "game_id": "conveyor_weave-0001",
+  "slug": "conveyor_weave",
+  "class_name": "ConveyorWeave",
+  "objective": "obj.reach_exit",
+  "mechanics": ["mech.conveyor", "mech.rotate", "mech.one_way_gate", "mech.jam", "mech.undo"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

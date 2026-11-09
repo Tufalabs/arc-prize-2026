@@ -1,0 +1,17 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "sand-ferry",
+  "game_id": "sand_ferry-0001",
+  "slug": "sand_ferry",
+  "class_name": "SandFerry",
+  "objective": "obj.reach_exit",
+  "mechanics": [
+    "mech.scoop_sand",
+    "mech.floor_cache",
+    "mech.fill_pits",
+    "mech.reclaim_bridge"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click"],
+  "available_actions": [1, 2, 3, 4, 5, 6]
+}

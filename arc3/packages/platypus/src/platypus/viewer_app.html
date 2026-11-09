@@ -1,0 +1,2169 @@
+<!doctype html>
+<!-- Adapted from ARC3-Training inference/viewer/improved at commit 3903a160. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARC3 Replay Viewer</title>
+  <style>
+    :root {
+      --bg: #070b10;
+      --surface: #0f171e;
+      --surface-2: #151f27;
+      --ink: #edf4f7;
+      --muted: #91a3ad;
+      --line: #293743;
+      --line-strong: #465866;
+      --teal: #33c8ca;
+      --teal-soft: #123d43;
+      --red: #ff6b63;
+      --amber: #e0a341;
+      --orange: #ff9a3c;
+      --green: #58d68b;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
+      --control: #0b1117;
+      --card: #101922;
+      --card-2: #0c141b;
+      --board-bg: #0a1016;
+      --row-line: #1b2730;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", system-ui, sans-serif;
+      letter-spacing: 0;
+    }
+
+    body {
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    button,
+    select {
+      font: inherit;
+      color: inherit;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: none;
+      height: calc(100vh - 20px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      gap: 10px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .brand {
+      min-width: 0;
+      display: grid;
+      gap: 4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.15rem, 1.7vw, 1.65rem);
+      font-weight: 760;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.92rem;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .select-wrap {
+      display: grid;
+      gap: 3px;
+    }
+
+    .select-wrap label {
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 720;
+      text-transform: uppercase;
+    }
+
+    select {
+      height: 36px;
+      min-width: 190px;
+      max-width: 320px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--control);
+      padding: 0 9px;
+    }
+
+    .icon-button {
+      width: 36px;
+      height: 36px;
+      display: inline-grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--control);
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .icon-button.primary {
+      border-color: var(--teal);
+      background: var(--teal);
+      color: #031112;
+    }
+
+    .icon-button:disabled {
+      cursor: not-allowed;
+      opacity: 0.45;
+    }
+
+    .main {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: minmax(560px, 1.18fr) minmax(480px, 0.82fr);
+      gap: 10px;
+    }
+
+    .panel {
+      min-height: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .agent-panel {
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+    }
+
+    .panel-head {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-2);
+    }
+
+    .panel-title {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+    }
+
+    .panel-title h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 760;
+    }
+
+    .panel-title span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .token-meter {
+      display: grid;
+      grid-template-columns: minmax(170px, 1.5fr) repeat(2, minmax(110px, 1fr));
+      gap: 10px;
+      width: min(560px, 58vw);
+    }
+
+    .token-meter-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .token-meter-top span:first-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .token-meter strong {
+      color: var(--ink);
+      font-size: 0.95rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .meter-track {
+      height: 7px;
+      border-radius: 999px;
+      background: var(--row-line);
+      overflow: hidden;
+    }
+
+    .meter-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--teal), var(--green));
+    }
+
+    .meter-fill.response-fill {
+      background: linear-gradient(90deg, var(--amber), var(--teal));
+    }
+
+    .transcript-log {
+      min-height: 0;
+      overflow: auto;
+      overflow-anchor: none;
+      padding: 10px;
+      background: linear-gradient(180deg, var(--card), var(--card-2));
+    }
+
+    .transcript-entry {
+      display: block;
+      width: 100%;
+      margin: 0 0 8px;
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(11, 18, 24, 0.82);
+      color: var(--ink);
+      text-align: left;
+      cursor: text;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-family: "IBM Plex Mono", "SFMono-Regular", ui-monospace, monospace;
+      font-size: 0.92rem;
+      line-height: 1.56;
+      user-select: text;
+    }
+
+    .transcript-entry:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: -2px;
+    }
+
+    .transcript-label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-family: Inter, "Segoe UI", system-ui, sans-serif;
+      font-size: 0.74rem;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .transcript-system {
+      border-left: 2px solid var(--amber);
+      background: rgba(224, 163, 65, 0.08);
+    }
+
+    .transcript-user {
+      border-left: 2px solid var(--green);
+      background: rgba(88, 214, 139, 0.08);
+    }
+
+    .transcript-tool-call,
+    .transcript-tool-response {
+      border-left: 2px solid var(--teal);
+      background: rgba(51, 200, 202, 0.08);
+    }
+
+    .transcript-thinking {
+      border-left: 2px solid var(--line-strong);
+    }
+
+    .transcript-assistant,
+    .transcript-output {
+      border-left: 2px solid var(--orange);
+      background: rgba(255, 154, 60, 0.07);
+    }
+
+    .transcript-final {
+      border-left: 2px solid var(--green);
+      background: rgba(88, 214, 139, 0.1);
+      cursor: pointer;
+    }
+
+    .transcript-image {
+      display: inline-block;
+      max-width: min(100%, 256px);
+      max-height: 192px;
+      margin: 4px 0;
+      vertical-align: middle;
+      border: 1px solid var(--line);
+      background: #000;
+      image-rendering: pixelated;
+    }
+
+    .transcript-boundary {
+      border-left: 2px solid var(--amber);
+      border-top: 1px dashed var(--amber);
+      border-bottom: 1px dashed var(--amber);
+      background: rgba(224, 163, 65, 0.14);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .context-picker select {
+      width: 100%;
+      max-width: 260px;
+      margin-top: 2px;
+      padding: 3px 6px;
+      font-size: 0.78rem;
+      color: var(--text);
+      background: rgba(16, 25, 34, 0.9);
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+    }
+
+    .transcript-empty,
+    .empty-state {
+      padding: 28px;
+      color: var(--muted);
+      text-align: center;
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius);
+      background: rgba(16, 25, 34, 0.72);
+    }
+
+    .stage-panel {
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+    }
+
+    .stage {
+      min-height: 0;
+      overflow: auto;
+      display: grid;
+      grid-template-columns: minmax(320px, 1fr) 220px;
+      gap: 12px;
+      padding: 12px;
+      align-items: stretch;
+    }
+
+    .board-zone {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      gap: 10px;
+    }
+
+    .board-wrap {
+      min-height: 460px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(90deg, rgba(237, 244, 247, 0.045) 1px, transparent 1px),
+        linear-gradient(rgba(237, 244, 247, 0.045) 1px, transparent 1px),
+        var(--board-bg);
+      background-size: 18px 18px;
+      overflow: hidden;
+      padding: 12px;
+    }
+
+    canvas {
+      display: block;
+      image-rendering: pixelated;
+      max-width: 100%;
+      max-height: 100%;
+      background: transparent;
+    }
+
+    .ascii-board {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: auto;
+      padding: 14px;
+      background: var(--card-2);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", "SFMono-Regular", ui-monospace, monospace;
+      font-size: clamp(5px, 0.78vw, 10px);
+      line-height: 1;
+      white-space: pre;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .stat {
+      min-width: 0;
+      padding: 9px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 0.66rem;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .stat span {
+      display: block;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .side-rail {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 10px;
+    }
+
+    .level-log,
+    .action-log {
+      min-height: 0;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+    }
+
+    .level-log h3,
+    .action-log h3 {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      margin: 0;
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-2);
+      font-size: 0.84rem;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .level-row,
+    .action-row {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      gap: 8px;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--row-line);
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .level-row.active,
+    .action-row.active {
+      background: var(--teal-soft);
+    }
+
+    .level-row span:first-child,
+    .action-row span:first-child {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .level-row span:last-child,
+    .action-row span:last-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 650;
+    }
+
+    .frame-count {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 1180px) {
+      body {
+        overflow: auto;
+      }
+
+      .shell {
+        height: auto;
+        min-height: calc(100vh - 20px);
+      }
+
+      .topbar,
+      .main,
+      .stage {
+        grid-template-columns: 1fr;
+      }
+
+      .toolbar {
+        justify-content: flex-start;
+      }
+
+      .board-wrap {
+        min-height: 380px;
+      }
+
+      .info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .transport {
+        grid-template-columns: auto auto minmax(0, 1fr);
+      }
+
+      .transport .speed {
+        grid-column: 1 / -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <h1>ARC3 Replay Viewer</h1>
+        <div class="subtitle" id="run-subtitle">Loading latest run...</div>
+      </div>
+      <div class="toolbar">
+        <div class="select-wrap">
+          <label for="run-select">Run</label>
+          <select id="run-select"></select>
+        </div>
+        <div class="select-wrap">
+          <label for="game-select">Game</label>
+          <select id="game-select"></select>
+        </div>
+        <button class="icon-button" id="reload-button" type="button" title="Reload run" aria-label="Reload run">&#10227;</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel agent-panel">
+        <div class="panel-head">
+          <div class="panel-title">
+            <h2>Agent Transcript</h2>
+            <span id="transcript-subtitle">Click a transcript block to inspect its board</span>
+          </div>
+          <div class="token-meter">
+            <div class="context-picker">
+              <div class="token-meter-top">
+                <span>Context</span>
+                <strong id="context-count">0 / 0</strong>
+              </div>
+              <select id="context-select" title="One context = system prompt through its final compaction reply. Counters follow the selection."></select>
+            </div>
+            <div>
+              <div class="token-meter-top">
+                <span>Generated tokens</span>
+                <strong id="token-count">0</strong>
+              </div>
+              <div class="meter-track"><div class="meter-fill" id="token-fill"></div></div>
+            </div>
+            <div>
+              <div class="token-meter-top">
+                <span>Responses</span>
+                <strong id="response-count">0</strong>
+              </div>
+              <div class="meter-track"><div class="meter-fill response-fill" id="response-fill"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="transcript-log" id="transcript-log"></div>
+      </section>
+
+      <section class="panel stage-panel">
+        <div class="panel-head">
+          <div class="panel-title">
+            <h2 id="game-title">Game</h2>
+            <span id="game-subtitle">Board replay</span>
+          </div>
+          <div class="frame-count" id="frame-count">0 / 0</div>
+        </div>
+
+        <div class="stage">
+          <div class="board-zone">
+            <div class="board-wrap">
+              <canvas id="board-canvas"></canvas>
+              <pre id="ascii-board" class="ascii-board" hidden></pre>
+            </div>
+            <div class="info-grid" id="info-grid"></div>
+          </div>
+
+          <aside class="side-rail">
+            <div class="level-log">
+              <h3>Levels</h3>
+              <div id="level-log"></div>
+            </div>
+
+            <div class="action-log">
+              <h3>Actions</h3>
+              <div id="action-log"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const DEFAULT_ARC_PALETTE = [
+      "rgb(255, 255, 255)", "rgb(204, 204, 204)", "rgb(153, 153, 153)", "rgb(102, 102, 102)",
+      "rgb(51, 51, 51)", "rgb(0, 0, 0)", "rgb(229, 58, 163)", "rgb(255, 123, 204)",
+      "rgb(249, 60, 49)", "rgb(30, 147, 255)", "rgb(136, 216, 241)", "rgb(255, 220, 0)",
+      "rgb(255, 133, 27)", "rgb(146, 18, 49)", "rgb(79, 204, 48)", "rgb(163, 86, 214)"
+    ];
+    let summaryPayload = null;
+    let currentGame = null;
+    let currentRunName = null;
+    let currentGameIndex = 0;
+    let replayFrames = [];
+    let actionFrames = [];
+    let generatedTokens = [];
+    let activeFrameIndex = 0;
+    let activeTranscriptBlockIndex = null;
+    let totalGeneratedTokens = 0;
+    let totalResponses = 0;
+    let gameLoadToken = 0;
+    // Contexts: the segments between compactions (or level rebuilds). null = show every context.
+    let activeContext = null;
+    let contextStats = [];
+
+    const runSubtitleEl = document.getElementById("run-subtitle");
+    const runSelectEl = document.getElementById("run-select");
+    const gameSelectEl = document.getElementById("game-select");
+    const reloadButtonEl = document.getElementById("reload-button");
+    const transcriptSubtitleEl = document.getElementById("transcript-subtitle");
+    const transcriptLogEl = document.getElementById("transcript-log");
+    const tokenCountEl = document.getElementById("token-count");
+    const responseCountEl = document.getElementById("response-count");
+    const tokenFillEl = document.getElementById("token-fill");
+    const responseFillEl = document.getElementById("response-fill");
+    const contextSelectEl = document.getElementById("context-select");
+    const contextCountEl = document.getElementById("context-count");
+    const gameTitleEl = document.getElementById("game-title");
+    const gameSubtitleEl = document.getElementById("game-subtitle");
+    const frameCountEl = document.getElementById("frame-count");
+    const canvasEl = document.getElementById("board-canvas");
+    const asciiBoardEl = document.getElementById("ascii-board");
+    const infoGridEl = document.getElementById("info-grid");
+    const levelLogEl = document.getElementById("level-log");
+    const actionLogEl = document.getElementById("action-log");
+
+    reloadButtonEl.addEventListener("click", () => loadRun(currentRunName, { preserveFrame: true }));
+    runSelectEl.addEventListener("change", () => {
+      currentRunName = runSelectEl.value || null;
+      currentGameIndex = 0;
+      loadRun(currentRunName);
+    });
+    gameSelectEl.addEventListener("change", () => {
+      currentGameIndex = Number(gameSelectEl.value || 0);
+      loadGame(currentGameIndex);
+    });
+    contextSelectEl.addEventListener("change", () => {
+      const value = contextSelectEl.value;
+      activeContext = value === "all" ? null : Number(value);
+      contextCountEl.textContent = activeContext === null
+        ? `all / ${contextStats.length}`
+        : `${activeContext + 1} / ${contextStats.length}`;
+      renderTranscriptRows();
+      renderTranscriptSelection({ scrollTranscript: false });
+      transcriptLogEl.scrollTop = 0;
+    });
+    transcriptLogEl.addEventListener("click", (event) => {
+      const row = event.target.closest(".transcript-entry");
+      if (!row || hasTranscriptTextSelection()) {
+        return;
+      }
+      setActiveFrame(Number(row.dataset.frameIndex || 0), {
+        force: true,
+        scrollTranscript: false,
+        transcriptBlockIndex: Number(row.dataset.blockIndex || 0),
+      });
+    });
+    transcriptLogEl.addEventListener("keydown", (event) => {
+      const row = event.target.closest(".transcript-entry");
+      if (!row || (event.key !== "Enter" && event.key !== " ")) {
+        return;
+      }
+      event.preventDefault();
+      setActiveFrame(Number(row.dataset.frameIndex || 0), {
+        force: true,
+        scrollTranscript: false,
+        transcriptBlockIndex: Number(row.dataset.blockIndex || 0),
+      });
+    });
+    levelLogEl.addEventListener("click", (event) => {
+      const row = event.target.closest(".level-row");
+      if (!row) {
+        return;
+      }
+      const frameIndex = Number(row.dataset.frameIndex || 0);
+      const transcriptFrameIndex = Number(row.dataset.transcriptFrameIndex || frameIndex);
+      const rawTranscriptBlockIndex = row.dataset.transcriptBlockIndex;
+      const transcriptBlockIndex = rawTranscriptBlockIndex == null || rawTranscriptBlockIndex === ""
+        ? null
+        : Number(rawTranscriptBlockIndex);
+      setActiveFrame(frameIndex, {
+        force: true,
+        transcriptFrameIndex,
+        transcriptBlockIndex,
+      });
+    });
+    actionLogEl.addEventListener("click", (event) => {
+      const row = event.target.closest(".action-row");
+      if (!row) {
+        return;
+      }
+      const frameIndex = Number(row.dataset.frameIndex || 0);
+      const transcriptFrameIndex = Number(row.dataset.transcriptFrameIndex || frameIndex);
+      const rawBlockIndex = row.dataset.transcriptBlockIndex;
+      const transcriptBlockIndex = rawBlockIndex == null || rawBlockIndex === ""
+        ? null
+        : Number(rawBlockIndex);
+      setActiveFrame(frameIndex, {
+        force: true,
+        transcriptFrameIndex,
+        transcriptBlockIndex,
+      });
+    });
+    window.addEventListener("resize", () => {
+      const frame = replayFrames[activeFrameIndex];
+      if (frame) {
+        renderBoard(frame.event);
+      }
+    });
+
+    async function loadRun(requestedRun = currentRunName, options = {}) {
+      const { preserveFrame = false, silent = false } = options;
+      const previousFrame = activeFrameIndex;
+      if (!silent) {
+        runSubtitleEl.textContent = requestedRun ? `Loading ${requestedRun}...` : "Loading latest run...";
+      }
+      try {
+        const url = new URL("/_api/run", window.location.origin);
+        if (requestedRun) {
+          url.searchParams.set("run", requestedRun);
+        }
+        const response = await fetch(url, { cache: "no-store" });
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.error || "Failed to load run");
+        }
+        summaryPayload = payload;
+        currentRunName = payload.selected_run || null;
+        syncRunUrl(currentRunName);
+        currentGameIndex = Math.min(currentGameIndex, Math.max((payload.games || []).length - 1, 0));
+        renderHeader();
+        await loadGame(currentGameIndex, {
+          targetFrameIndex: preserveFrame ? previousFrame : null,
+          silent,
+        });
+      } catch (error) {
+        summaryPayload = null;
+        currentGame = null;
+        replayFrames = [];
+        actionFrames = [];
+        generatedTokens = [];
+        totalGeneratedTokens = 0;
+        totalResponses = 0;
+        activeFrameIndex = 0;
+        runSubtitleEl.textContent = error.message;
+        runSelectEl.innerHTML = "";
+        gameSelectEl.innerHTML = "";
+        renderEmpty(error.message);
+      }
+    }
+
+    async function loadGame(gameIndex, options = {}) {
+      const { targetFrameIndex = null, silent = false } = options;
+      const requestToken = ++gameLoadToken;
+      const summary = summaryPayload?.games?.[gameIndex];
+      if (!summary) {
+        currentGame = null;
+        replayFrames = [];
+        actionFrames = [];
+        generatedTokens = [];
+        totalGeneratedTokens = 0;
+        totalResponses = 0;
+        renderEmpty("No game data found in this run.");
+        return;
+      }
+      if (!silent) {
+        renderEmpty("Loading replay...");
+      }
+      try {
+        const url = new URL("/_api/game", window.location.origin);
+        url.searchParams.set("index", String(gameIndex));
+        if (currentRunName) {
+          url.searchParams.set("run", currentRunName);
+        }
+        const response = await fetch(url, { cache: "no-store" });
+        const game = await response.json();
+        if (!response.ok) {
+          throw new Error(game.error || "Failed to load game");
+        }
+        if (requestToken !== gameLoadToken) {
+          return;
+        }
+        currentGame = { ...summary, ...game };
+        activeContext = null;
+        replayFrames = buildReplayFrames(currentGame);
+        actionFrames = replayFrames.filter((frame) => frame.kind === "action");
+        const generatedIndex = prepareGeneratedIndex(replayFrames);
+        totalGeneratedTokens = finiteNumber(currentGame?.generated_tokens) ?? generatedIndex.tokens;
+        totalResponses = generatedIndex.responses;
+        renderTranscriptLog();
+        renderLevelLog();
+        renderActionLog();
+        renderGameTitle();
+        const startsAtBeginning = targetFrameIndex == null;
+        const nextFrame = startsAtBeginning
+          ? 0
+          : Math.min(Math.max(0, targetFrameIndex), Math.max(0, replayFrames.length - 1));
+        setActiveFrame(nextFrame, {
+          force: true,
+          scrollTranscript: startsAtBeginning,
+        });
+      } catch (error) {
+        currentGame = null;
+        replayFrames = [];
+        actionFrames = [];
+        generatedTokens = [];
+        totalGeneratedTokens = 0;
+        totalResponses = 0;
+        renderEmpty(error.message);
+      }
+    }
+
+    function renderHeader() {
+      const runs = summaryPayload?.available_runs || [];
+      const games = summaryPayload?.games || [];
+      runSelectEl.innerHTML = runs.map((runName) => (
+        `<option value="${escapeHtml(runName)}">${escapeHtml(runName)}</option>`
+      )).join("");
+      if (currentRunName) {
+        runSelectEl.value = currentRunName;
+      }
+      gameSelectEl.innerHTML = games.map((game, index) => {
+        const label = game.display_name || game.game_id || `Game ${index + 1}`;
+        return `<option value="${index}">${escapeHtml(label)}</option>`;
+      }).join("");
+      gameSelectEl.value = String(currentGameIndex);
+      runSubtitleEl.textContent = `${summaryPayload.run_name || "Run"} - ${games.length} game${games.length === 1 ? "" : "s"} - ${runs.length} benchmark run director${runs.length === 1 ? "y" : "ies"} available`;
+    }
+
+    function renderGameTitle() {
+      const label = currentGame?.display_name || currentGame?.game_id || "Game";
+      const status = currentGame?.status || "UNKNOWN";
+      gameTitleEl.textContent = label;
+      gameSubtitleEl.textContent = `${status} - ${replayFrames.length} replay frame${replayFrames.length === 1 ? "" : "s"} - ${totalGeneratedTokens} generated token${totalGeneratedTokens === 1 ? "" : "s"} - ${totalResponses} response${totalResponses === 1 ? "" : "s"}`;
+    }
+
+    function buildReplayFrames(game) {
+      const events = Array.isArray(game.events) ? game.events : [];
+      const frames = buildReplayFramesFromEvents(events);
+      return appendCompletedFinalFrame(coalesceGenerationFrames(frames), game).map((frame, index) => ({
+        ...frame,
+        frameIndex: index,
+      }));
+    }
+
+    function prepareGeneratedIndex(frames) {
+      generatedTokens = [];
+      let pieceOffset = 0;
+      let generatedOffset = 0;
+      let responseOffset = 0;
+      for (const frame of frames) {
+        frame.pieceStart = pieceOffset;
+        frame.generatedStart = generatedOffset;
+        frame.responseStart = responseOffset;
+        if ((frame.tokenCount || 0) > 0) {
+          // A loop, not push(...tokens): one turn can hold hundreds of
+          // thousands of pieces, past the engine's argument limit.
+          for (const token of frame.tokens) {
+            generatedTokens.push(token);
+          }
+          pieceOffset += frame.tokens.length;
+          generatedOffset += frame.tokenCount;
+          responseOffset += frame.responseCount || 0;
+        }
+        frame.pieceEnd = pieceOffset;
+        frame.generatedEnd = generatedOffset;
+        frame.responseEnd = responseOffset;
+      }
+      return { tokens: generatedOffset, responses: responseOffset };
+    }
+
+    function buildReplayFramesFromEvents(events) {
+      const indexedEvents = events.map((event, index) => ({
+        ...(event || {}),
+        event_index: Number(event?.event_index ?? index),
+      }));
+      const initialFrames = [];
+      const segments = [];
+      const groups = new Map();
+      let currentBoardEvent = null;
+      let initialPushed = false;
+
+      for (const event of indexedEvents) {
+        const eventType = String(event.type || "");
+        if (eventType === "initial") {
+          currentBoardEvent = event;
+          if (!initialPushed) {
+            initialFrames.push(makeStateFrame(event, event, "initial"));
+            initialPushed = true;
+          }
+          continue;
+        }
+
+        if (eventType === "action") {
+          const analysisStep = normalizePositiveInt(event.analysis_step);
+          if (analysisStep === null) {
+            segments.push({
+              sortIndex: event.event_index,
+              frames: [makeActionFrame(event, event, null)],
+            });
+          } else {
+            const group = analysisGroup(groups, analysisStep, event.event_index);
+            group.sortIndex = Math.min(group.sortIndex, event.event_index);
+            if (!group.preBoard) {
+              group.preBoard = currentBoardEvent || event;
+            }
+            group.actions.push(event);
+          }
+          currentBoardEvent = event;
+          continue;
+        }
+
+        if (eventType === "analysis") {
+          const analysisStep = normalizePositiveInt(event.analysis_step);
+          if (analysisStep === null) {
+            const frame = makeGenerationFrame(event, currentBoardEvent || event, null);
+            if (frame.tokenCount > 0) {
+              segments.push({ sortIndex: event.event_index, frames: [frame] });
+            }
+          } else {
+            const group = analysisGroup(groups, analysisStep, event.event_index);
+            group.sortIndex = Math.min(group.sortIndex, event.event_index);
+            group.analysisEvent = event;
+            if (!group.preBoard) {
+              group.preBoard = hasBoardSnapshot(event) ? event : (currentBoardEvent || event);
+            }
+          }
+          continue;
+        }
+
+        if (hasBoardSnapshot(event)) {
+          currentBoardEvent = event;
+        }
+      }
+
+      for (const group of [...groups.values()].sort((left, right) => (
+        (left.analysisStep - right.analysisStep) || (left.sortIndex - right.sortIndex)
+      ))) {
+        const frames = [];
+        const boardBeforeActions = group.preBoard || group.analysisEvent || group.actions[0] || null;
+        if (group.analysisEvent) {
+          const generationFrame = makeGenerationFrame(group.analysisEvent, boardBeforeActions, group.analysisStep);
+          if (generationFrame.tokenCount > 0) {
+            frames.push(generationFrame);
+          }
+        }
+        for (const actionEvent of group.actions.sort(compareEventsByAction)) {
+          frames.push(makeActionFrame(actionEvent, actionEvent, group.analysisStep));
+        }
+        if (frames.length) {
+          segments.push({ sortIndex: group.sortIndex, frames });
+        }
+      }
+
+      const frames = [
+        ...initialFrames,
+        ...segments
+          .sort((left, right) => left.sortIndex - right.sortIndex)
+          .flatMap((segment) => segment.frames),
+      ];
+      if (!frames.length && currentBoardEvent) {
+        frames.push(makeStateFrame(currentBoardEvent, currentBoardEvent, "state"));
+      }
+      return frames;
+    }
+
+    function analysisGroup(groups, analysisStep, sortIndex) {
+      if (!groups.has(analysisStep)) {
+        groups.set(analysisStep, {
+          analysisStep,
+          sortIndex,
+          analysisEvent: null,
+          preBoard: null,
+          actions: [],
+        });
+      }
+      return groups.get(analysisStep);
+    }
+
+    function makeStateFrame(event, sourceEvent, kind) {
+      return {
+        event: event || {},
+        sourceEvent: sourceEvent || event || {},
+        sourceIndex: Number(sourceEvent?.event_index ?? 0),
+        kind,
+        actionDisplay: kind === "initial" ? (event?.action_display || "RESET") : "",
+        generatedText: "",
+        tokens: [],
+        tokenCount: 0,
+        responseCount: 0,
+        generatedPrefixCounts: [0],
+        returnDelta: 0,
+      };
+    }
+
+    function makeGenerationFrame(sourceEvent, boardEvent, analysisStep) {
+      const transcriptBlocks = transcriptBlocksWithCounts(transcriptBlocksFromEvent(sourceEvent));
+      const pieces = transcriptPiecesFromBlocks(transcriptBlocks);
+      const generatedPrefixCounts = generatedPrefixCountsForPieces(pieces);
+      const exactGeneratedTokens = finiteNumber(sourceEvent?.generated_tokens);
+      const blockGeneratedTokens = transcriptBlocks.length
+        ? (transcriptBlocks[transcriptBlocks.length - 1].generatedEnd || 0)
+        : 0;
+      const responseCount = transcriptBlocks.length
+        ? (transcriptBlocks[transcriptBlocks.length - 1].responseEnd || 0)
+        : 0;
+      return {
+        event: boardEvent || sourceEvent || {},
+        sourceEvent: sourceEvent || boardEvent || {},
+        sourceIndex: Number(sourceEvent?.event_index ?? 0),
+        kind: "generation",
+        analysisStep,
+        actionDisplay: "",
+        generatedText: pieces.map((piece) => piece.text).join(""),
+        transcriptBlocks,
+        tokens: pieces,
+        tokenCount: exactGeneratedTokens ?? blockGeneratedTokens,
+        responseCount: finiteNumber(sourceEvent?.response_count) ?? responseCount,
+        generatedPrefixCounts,
+        returnDelta: 0,
+      };
+    }
+
+    function attachTranscriptToFrame(frame, transcriptFrame) {
+      if (!frame || !transcriptFrame || !(transcriptFrame.tokenCount > 0)) {
+        return;
+      }
+      const blocks = transcriptBlocksWithCounts([
+        ...(Array.isArray(frame.transcriptBlocks) ? frame.transcriptBlocks : []),
+        ...(Array.isArray(transcriptFrame.transcriptBlocks) ? transcriptFrame.transcriptBlocks : []),
+      ]);
+      const pieces = transcriptPiecesFromBlocks(blocks);
+      const generatedPrefixCounts = generatedPrefixCountsForPieces(pieces);
+      const exactGeneratedTokens = finiteNumber(transcriptFrame.sourceEvent?.generated_tokens);
+      frame.generatedText = pieces.map((piece) => piece.text).join("");
+      frame.transcriptBlocks = blocks;
+      frame.tokens = pieces;
+      frame.tokenCount = exactGeneratedTokens ?? (blocks.length ? (blocks[blocks.length - 1].generatedEnd || 0) : 0);
+      frame.responseCount = finiteNumber(transcriptFrame.sourceEvent?.response_count)
+        ?? (blocks.length ? (blocks[blocks.length - 1].responseEnd || 0) : 0);
+      frame.generatedPrefixCounts = generatedPrefixCounts;
+    }
+
+    function coalesceGenerationFrames(frames) {
+      const coalesced = [];
+      for (const frame of Array.isArray(frames) ? frames : []) {
+        if (frame?.kind !== "generation") {
+          coalesced.push(frame);
+          continue;
+        }
+        const targetFrame = coalesced[coalesced.length - 1];
+        if (targetFrame && targetFrame.kind !== "action") {
+          attachTranscriptToFrame(targetFrame, frame);
+          continue;
+        }
+        if (hasBoardSnapshot(frame.event)) {
+          const stateFrame = makeStateFrame(frame.event, frame.sourceEvent || frame.event, "state");
+          attachTranscriptToFrame(stateFrame, frame);
+          coalesced.push(stateFrame);
+        }
+      }
+      return coalesced;
+    }
+
+    function makeActionFrame(sourceEvent, boardEvent, analysisStep) {
+      return {
+        event: boardEvent || sourceEvent || {},
+        sourceEvent: sourceEvent || boardEvent || {},
+        sourceIndex: Number(sourceEvent?.event_index ?? 0),
+        kind: "action",
+        analysisStep,
+        actionDisplay: sourceEvent?.action_display || sourceEvent?.action_name || "Action",
+        generatedText: "",
+        tokens: [],
+        tokenCount: 0,
+        responseCount: 0,
+        generatedPrefixCounts: [0],
+        returnDelta: numericReward(sourceEvent?.reward),
+      };
+    }
+
+    function appendCompletedFinalFrame(frames, game) {
+      if (!isTerminalStatus(game?.status)) {
+        return frames;
+      }
+      const finalEvent = completedFinalBoardEvent(game);
+      if (!hasBoardSnapshot(finalEvent)) {
+        return frames;
+      }
+      const lastFrame = frames[frames.length - 1];
+      if (lastFrame?.kind === "final") {
+        return frames;
+      }
+      const terminalEvent = {
+        ...finalEvent,
+        state: game?.status || finalEvent?.state,
+        final_arc_score: game?.final_arc_score ?? finalEvent?.final_arc_score,
+        elapsed_s: game?.elapsed_s ?? finalEvent?.elapsed_s,
+      };
+      return [
+        ...frames,
+        {
+          ...makeStateFrame(terminalEvent, terminalEvent, "final"),
+          actionDisplay: "FINAL",
+        },
+      ];
+    }
+
+    function completedFinalBoardEvent(game) {
+      const events = Array.isArray(game?.events) ? game.events : [];
+      for (let index = events.length - 1; index >= 0; index -= 1) {
+        if (hasBoardSnapshot(events[index])) {
+          return events[index];
+        }
+      }
+      return null;
+    }
+
+    function boardSnapshotKey(event) {
+      if (!hasBoardSnapshot(event)) {
+        return "";
+      }
+      if (Array.isArray(event.board) && event.board.length) {
+        return JSON.stringify(event.board);
+      }
+      return String(event.board_ascii || "");
+    }
+
+    function boardStateKey(event) {
+      if (!hasBoardSnapshot(event)) {
+        return "";
+      }
+      return [
+        boardSnapshotKey(event),
+        event?.score ?? "",
+        event?.level ?? "",
+        event?.state ?? "",
+      ].join("|");
+    }
+
+    function finiteNumber(value) {
+      if (value === null || value === undefined || value === "") {
+        return null;
+      }
+      const parsed = Number(value);
+      return Number.isFinite(parsed) ? parsed : null;
+    }
+
+    function numericReward(value) {
+      const parsed = finiteNumber(value);
+      return parsed === null ? 0 : parsed;
+    }
+
+    function compareEventsByAction(left, right) {
+      const leftAction = normalizePositiveInt(left.action_num);
+      const rightAction = normalizePositiveInt(right.action_num);
+      if (leftAction !== null && rightAction !== null && leftAction !== rightAction) {
+        return leftAction - rightAction;
+      }
+      return Number(left.event_index ?? 0) - Number(right.event_index ?? 0);
+    }
+
+    function normalizePositiveInt(value) {
+      const parsed = Number.parseInt(String(value ?? ""), 10);
+      return Number.isFinite(parsed) && parsed > 0 ? parsed : null;
+    }
+
+    function transcriptBlocksFromEvent(event) {
+      const sections = Array.isArray(event?.transcript_sections)
+        ? event.transcript_sections
+        : splitTranscriptSections(event?.transcript || "");
+      const blocks = transcriptBlocksFromSections(sections);
+      if (blocks.length) {
+        return blocks;
+      }
+      const fallback = sections.length ? "" : String(event?.transcript || "").trim();
+      return fallback
+        ? [{ label: "Transcript", content: fallback, kind: "assistant", generated: true }]
+        : [];
+    }
+
+    function transcriptBlocksFromSections(sections) {
+      const blocks = [];
+      for (const section of Array.isArray(sections) ? sections : []) {
+        const label = String(section?.label || "").trim().toUpperCase();
+        const content = String(section?.content || "").trim();
+        if (!content) {
+          continue;
+        }
+        if (isGeneratedSection(label) || isPromptSection(label) || isToolResponseSection(label) || isBoundarySection(label)) {
+          // Carried into a rebuilt context, not generated by this turn.
+          const retained = Boolean(section?.retained);
+          blocks.push({
+            label: `${retained ? "Retained · " : ""}${displayTranscriptLabel(label)}`,
+            content,
+            kind: transcriptBlockKind(label),
+            generated: isGeneratedSection(label) && !retained,
+            retained,
+            generatedTokenCount: finiteNumber(section?.generated_tokens),
+            elapsedSeconds: finiteNumber(section?.elapsed_s),
+            actionNumber: normalizePositiveInt(section?.action_num),
+            context: finiteNumber(section?.context),
+            compaction: section?.compaction || null,
+          });
+        }
+      }
+      return blocks;
+    }
+
+    function transcriptPiecesFromBlocks(blocks) {
+      const pieces = [];
+      for (const block of Array.isArray(blocks) ? blocks : []) {
+        const content = String(block?.content || "").trim();
+        if (!content) {
+          continue;
+        }
+        if (block.generated) {
+          for (const text of tokenizeGeneratedText(`${content}\n\n`)) {
+            pieces.push({ text, instant: false });
+          }
+          continue;
+        }
+        pieces.push({ text: content, instant: true, kind: block.kind, label: block.label });
+      }
+      return pieces;
+    }
+
+    function transcriptBlocksWithCounts(blocks) {
+      let generatedOffset = 0;
+      let responseOffset = 0;
+      let insideResponse = false;
+      return (Array.isArray(blocks) ? blocks : []).map((block) => {
+        const kind = String(block?.kind || "").trim();
+        const generatedStart = generatedOffset;
+        const responseStart = responseOffset;
+        if (kind === "user" || kind === "tool-response" || kind === "system" || kind === "boundary") {
+          insideResponse = false;
+        } else if (isGeneratedBlock(block)) {
+          if (!insideResponse) {
+            responseOffset += 1;
+            insideResponse = true;
+          }
+          generatedOffset += generatedTokenCountForBlock(block);
+        }
+        return {
+          ...block,
+          generatedStart,
+          generatedEnd: generatedOffset,
+          responseStart,
+          responseEnd: responseOffset,
+        };
+      });
+    }
+
+    function isGeneratedBlock(block) {
+      if (block?.retained) {
+        return false;
+      }
+      const kind = String(block?.kind || "").trim();
+      return Boolean(
+        block?.generated ||
+        kind === "thinking" ||
+        kind === "assistant" ||
+        kind === "output" ||
+        kind === "tool-call"
+      );
+    }
+
+    function generatedTokenCountForBlock(block) {
+      if (!isGeneratedBlock(block)) {
+        return 0;
+      }
+      const exact = finiteNumber(block?.generatedTokenCount);
+      if (exact !== null) {
+        return exact;
+      }
+      return tokenizeGeneratedText(`${String(block?.content || "").trim()}\n\n`).length;
+    }
+
+    function isGeneratedSection(label) {
+      return label === "THINKING" ||
+        label === "ASSISTANT" ||
+        label === "OUTPUT" ||
+        label.startsWith("TOOL CALL");
+    }
+
+    function isToolResponseSection(label) {
+      return label.startsWith("TOOL RESULT");
+    }
+
+    function isPromptSection(label) {
+      return label === "SYSTEM PROMPT" || label === "USER PROMPT" || label === "COMPACTION REQUEST";
+    }
+
+    function isBoundarySection(label) {
+      return label.startsWith("COMPACTION #") || label === "NEW LEVEL" || label === "CONTEXT REWRITE";
+    }
+
+    function transcriptBlockKind(label) {
+      if (label === "SYSTEM PROMPT") {
+        return "system";
+      }
+      if (label === "USER PROMPT" || label === "COMPACTION REQUEST") {
+        return "user";
+      }
+      if (isBoundarySection(label)) {
+        return "boundary";
+      }
+      if (label === "THINKING") {
+        return "thinking";
+      }
+      if (label === "OUTPUT") {
+        return "output";
+      }
+      if (label.startsWith("TOOL CALL")) {
+        return "tool-call";
+      }
+      if (label.startsWith("TOOL RESULT")) {
+        return "tool-response";
+      }
+      return "assistant";
+    }
+
+    function displayTranscriptLabel(label) {
+      if (label === "SYSTEM PROMPT") {
+        return "System";
+      }
+      if (label === "USER PROMPT") {
+        return "User";
+      }
+      if (label === "COMPACTION REQUEST") {
+        return "Compaction request";
+      }
+      if (label.startsWith("COMPACTION #")) {
+        return `Compaction ${label.slice("COMPACTION #".length)}`;
+      }
+      if (label === "NEW LEVEL") {
+        return "New level";
+      }
+      if (label === "CONTEXT REWRITE") {
+        return "Context rewrite";
+      }
+      return label.replace(":", "");
+    }
+
+    function generatedPrefixCountsForPieces(pieces) {
+      const counts = [0];
+      let count = 0;
+      for (const piece of pieces) {
+        if (!piece.instant) {
+          count += 1;
+        }
+        counts.push(count);
+      }
+      return counts;
+    }
+
+    function tokenizeGeneratedText(text) {
+      const matches = String(text || "").match(/\S+\s*/g);
+      return matches ? matches : [];
+    }
+
+    function hasBoardSnapshot(event) {
+      return Boolean(
+        event &&
+        ((Array.isArray(event.board) && event.board.length) || String(event.board_ascii || "").trim())
+      );
+    }
+
+    function frameHasTranscript(frame) {
+      return Boolean(frame && Array.isArray(frame.transcriptBlocks) && frame.transcriptBlocks.length);
+    }
+
+    function setActiveFrame(index, options = {}) {
+      const {
+        force = false,
+        scrollTranscript = true,
+        transcriptFrameIndex = null,
+        transcriptBlockIndex = null,
+      } = options;
+      if (!replayFrames.length) {
+        activeFrameIndex = 0;
+        renderEmpty("No replay frames recorded for this game yet.");
+        return;
+      }
+      const nextIndex = Math.min(Math.max(0, index), replayFrames.length - 1);
+      if (!force && nextIndex === activeFrameIndex) {
+        return;
+      }
+      activeFrameIndex = nextIndex;
+      const parsedBlockIndex = Number(transcriptBlockIndex);
+      activeTranscriptBlockIndex = transcriptBlockIndex == null || !Number.isFinite(parsedBlockIndex)
+        ? null
+        : Math.max(0, parsedBlockIndex);
+      renderActiveFrame({ scrollTranscript, transcriptFrameIndex });
+    }
+
+    function renderActiveFrame(options = {}) {
+      const { scrollTranscript = true, transcriptFrameIndex = null } = options;
+      const frame = replayFrames[activeFrameIndex];
+      if (!frame) {
+        return;
+      }
+      const countText = `${activeFrameIndex + 1} / ${replayFrames.length}`;
+      frameCountEl.textContent = countText;
+      renderBoard(frame.event);
+      renderInfo(frame);
+      renderTranscriptSelection({ scrollTranscript, transcriptFrameIndex });
+      renderLevelSelection();
+      syncActionLog();
+    }
+
+    function renderTranscriptLog() {
+      contextStats = computeContextStats();
+      if (activeContext !== null && !contextStats[activeContext]) {
+        activeContext = null;
+      }
+      renderContextSelect();
+      renderTranscriptRows();
+      renderTranscriptSelection({ scrollTranscript: false });
+    }
+
+    function renderTranscriptRows() {
+      const entries = transcriptEntries();
+      if (!entries.length) {
+        transcriptLogEl.innerHTML = '<div class="transcript-empty">No transcript sections recorded for this game yet.</div>';
+        transcriptSubtitleEl.textContent = "No transcript sections recorded";
+        tokenCountEl.textContent = "0";
+        responseCountEl.textContent = "0";
+        tokenFillEl.style.width = "0%";
+        responseFillEl.style.width = "0%";
+        return;
+      }
+      transcriptLogEl.innerHTML = entries.map(renderTranscriptEntry).join("");
+      const scope = activeContext === null
+        ? ""
+        : ` - context ${activeContext + 1} of ${contextStats.length}`;
+      transcriptSubtitleEl.textContent = `${entries.length} transcript block${entries.length === 1 ? "" : "s"}${scope}`;
+    }
+
+    function computeContextStats() {
+      // One entry per context, in order: where its blocks start in the
+      // game-wide token/response counts and how much it holds. Blocks carry
+      // frame-relative counts; frames carry the game-wide offsets.
+      const stats = [];
+      for (const frame of replayFrames) {
+        const blocks = Array.isArray(frame.transcriptBlocks) ? frame.transcriptBlocks : [];
+        for (const block of blocks) {
+          const context = finiteNumber(block?.context);
+          if (context === null) {
+            continue;
+          }
+          while (stats.length <= context) {
+            stats.push({ index: stats.length, tokenStart: null, tokenEnd: 0, responseStart: null, responseEnd: 0, firstFrameIndex: null });
+          }
+          const entry = stats[context];
+          const tokenStart = (frame.generatedStart || 0) + (block.generatedStart || 0);
+          const tokenEnd = (frame.generatedStart || 0) + (block.generatedEnd || 0);
+          const responseStart = (frame.responseStart || 0) + (block.responseStart || 0);
+          const responseEnd = (frame.responseStart || 0) + (block.responseEnd || 0);
+          entry.tokenStart = entry.tokenStart === null ? tokenStart : Math.min(entry.tokenStart, tokenStart);
+          entry.tokenEnd = Math.max(entry.tokenEnd, tokenEnd);
+          entry.responseStart = entry.responseStart === null ? responseStart : Math.min(entry.responseStart, responseStart);
+          entry.responseEnd = Math.max(entry.responseEnd, responseEnd);
+          if (entry.firstFrameIndex === null) {
+            entry.firstFrameIndex = frame.frameIndex;
+          }
+        }
+      }
+      for (const entry of stats) {
+        entry.tokenStart = entry.tokenStart ?? 0;
+        entry.responseStart = entry.responseStart ?? 0;
+        entry.tokens = Math.max(0, entry.tokenEnd - entry.tokenStart);
+        entry.responses = Math.max(0, entry.responseEnd - entry.responseStart);
+      }
+      return stats;
+    }
+
+    function contextOutcome(index) {
+      const info = Array.isArray(currentGame?.contexts) ? currentGame.contexts[index] : null;
+      if (!info) {
+        return index === contextStats.length - 1 ? "open" : "";
+      }
+      if (info.closed_by === "compaction") {
+        const compaction = info.compaction || {};
+        return ["journal", "summarize"].includes(compaction.mode) || compaction.dump_ok ? "compacted" : "compaction FAILED";
+      }
+      if (info.closed_by === "new level" || info.closed_by === "context rewrite") {
+        return info.closed_by;
+      }
+      return "open";
+    }
+
+    function renderContextSelect() {
+      const total = contextStats.length;
+      const options = [`<option value="all">All contexts (${total})</option>`];
+      contextStats.forEach((entry, index) => {
+        const outcome = contextOutcome(index);
+        const label = `Context ${index + 1} of ${total} - ${formatNumber(entry.tokens)} tokens - ${entry.responses} response${entry.responses === 1 ? "" : "s"}${outcome ? ` - ${outcome}` : ""}`;
+        options.push(`<option value="${index}">${escapeHtml(label)}</option>`);
+      });
+      contextSelectEl.innerHTML = options.join("");
+      contextSelectEl.value = activeContext === null ? "all" : String(activeContext);
+      contextCountEl.textContent = activeContext === null ? `all / ${total}` : `${activeContext + 1} / ${total}`;
+    }
+
+    function renderTranscriptEntry(entry) {
+      return [
+        `<div class="transcript-entry transcript-${escapeHtml(entry.kind)}" role="button" tabindex="0" data-frame-index="${entry.frameIndex}" data-block-index="${entry.blockIndex}" data-kind="${escapeHtml(entry.kind)}">`,
+        `<span class="transcript-label">${escapeHtml(entry.label)}</span>`,
+        renderTranscriptContent(entry.content),
+        "</div>",
+      ].join("");
+    }
+
+    // The adapter writes an image in a prompt as this placeholder, where
+    // the image was inserted; the page shows the image there instead.
+    const IMAGE_BLOCK_PLACEHOLDER = /\[image block ([0-9a-f]{64})\]/g;
+
+    function renderTranscriptContent(content) {
+      return escapeHtml(content).replace(IMAGE_BLOCK_PLACEHOLDER, (_, key) => {
+        const src = escapeHtml(transcriptImageUrl(key));
+        return `<a href="${src}" target="_blank" rel="noopener"><img class="transcript-image" src="${src}" alt="image block ${key.slice(0, 12)}" title="image block ${key}" loading="lazy"></a>`;
+      });
+    }
+
+    function transcriptImageUrl(key) {
+      const url = new URL("/_api/image", window.location.origin);
+      if (currentRunName) {
+        url.searchParams.set("run", currentRunName);
+      }
+      url.searchParams.set("block", key);
+      return `${url.pathname}${url.search}`;
+    }
+
+    function hasTranscriptTextSelection() {
+      const selection = window.getSelection();
+      if (!selection || selection.isCollapsed || !String(selection).trim()) {
+        return false;
+      }
+      return transcriptLogEl.contains(selection.anchorNode) || transcriptLogEl.contains(selection.focusNode);
+    }
+
+    function transcriptEntries() {
+      const entries = replayFrames.flatMap((frame) => (
+        (frame.transcriptBlocks || []).map((block, blockIndex) => ({
+          ...block,
+          blockIndex,
+          frameIndex: transcriptFrameForBlock(frame, block),
+        }))
+      ));
+      const finalFrame = finalTranscriptFrame();
+      if (finalFrame) {
+        entries.push({
+          label: "Final",
+          content: finalTranscriptContent(finalFrame),
+          kind: "final",
+          generated: false,
+          blockIndex: 0,
+          frameIndex: finalFrame.frameIndex,
+          context: contextStats.length ? contextStats.length - 1 : null,
+        });
+      }
+      if (activeContext === null) {
+        return entries;
+      }
+      return entries.filter((entry) => finiteNumber(entry?.context) === activeContext);
+    }
+
+    function blockContextForFrame(frameIndex, blockIndex) {
+      const frame = replayFrames[frameIndex];
+      const blocks = Array.isArray(frame?.transcriptBlocks) ? frame.transcriptBlocks : [];
+      if (!blocks.length) {
+        return null;
+      }
+      const block = blockIndex !== null && blockIndex !== undefined && blocks[blockIndex]
+        ? blocks[blockIndex]
+        : blocks[0];
+      return finiteNumber(block?.context);
+    }
+
+    function transcriptFrameForBlock(frame, block) {
+      const actionNumber = normalizePositiveInt(block?.actionNumber);
+      if (actionNumber === null) {
+        return frame.frameIndex;
+      }
+      const actionFrame = actionFrames.find((candidate) => (
+        normalizePositiveInt(candidate?.sourceEvent?.action_num) === actionNumber
+      ));
+      return actionFrame?.frameIndex ?? frame.frameIndex;
+    }
+
+    function finalTranscriptFrame() {
+      const explicitFinalFrame = replayFrames.find((frame) => frame.kind === "final");
+      if (explicitFinalFrame) {
+        return explicitFinalFrame;
+      }
+      if (!isTerminalStatus(currentGame?.status)) {
+        return null;
+      }
+      for (let index = replayFrames.length - 1; index >= 0; index -= 1) {
+        const frame = replayFrames[index];
+        if (hasBoardSnapshot(frame?.event)) {
+          return frame;
+        }
+      }
+      return null;
+    }
+
+    function isTerminalStatus(status) {
+      return ["COMPLETED_RUN", "won", "gave_up", "cancelled", "crashed"].includes(String(status || "").trim());
+    }
+
+    function finalTranscriptContent(frame) {
+      const details = [];
+      const state = frame.event?.state || frame.sourceEvent?.state;
+      const status = currentGame?.status === "COMPLETED_RUN" ? "Completed run" : currentGame?.status;
+      if (status && isTerminalStatus(currentGame?.status)) {
+        details.push(String(status));
+      } else if (state) {
+        details.push(String(state));
+      }
+      details.push(`ARC-AGI Score ${formatArcAgiScore(frame)}`);
+      return details.join("\n") || "Final frame";
+    }
+
+    function renderTranscriptSelection(options = {}) {
+      const { scrollTranscript = true, transcriptFrameIndex = null } = options;
+      const targetFrameIndex = transcriptFrameIndex == null
+        ? activeFrameIndex
+        : transcriptFrameIndex;
+      // A level or action click may land in a context other than the one
+      // on display: switch to it, then scroll as usual.
+      if (scrollTranscript && activeContext !== null) {
+        const targetContext = blockContextForFrame(targetFrameIndex, activeTranscriptBlockIndex);
+        if (targetContext !== null && targetContext !== activeContext && contextStats[targetContext]) {
+          activeContext = targetContext;
+          contextSelectEl.value = String(activeContext);
+          contextCountEl.textContent = `${activeContext + 1} / ${contextStats.length}`;
+          renderTranscriptRows();
+        }
+      }
+      let visibleTokens = visibleGeneratedTokenCount();
+      let visibleResponses = visibleResponseCount();
+      let tokenTotal = totalGeneratedTokens;
+      let responseTotal = totalResponses;
+      const scope = activeContext === null ? null : contextStats[activeContext];
+      if (scope) {
+        // Counters follow the displayed context: its own tokens and
+        // responses, exact, not the game-wide running totals.
+        visibleTokens = Math.min(scope.tokens, Math.max(0, visibleTokens - scope.tokenStart));
+        visibleResponses = Math.min(scope.responses, Math.max(0, visibleResponses - scope.responseStart));
+        tokenTotal = scope.tokens;
+        responseTotal = scope.responses;
+      }
+      tokenCountEl.textContent = scope ? `${visibleTokens} / ${formatNumber(tokenTotal)}` : String(visibleTokens);
+      responseCountEl.textContent = scope ? `${visibleResponses} / ${responseTotal}` : String(visibleResponses);
+      tokenFillEl.style.width = `${tokenTotal ? Math.min(100, (visibleTokens / tokenTotal) * 100) : 0}%`;
+      responseFillEl.style.width = `${responseTotal ? Math.min(100, (visibleResponses / responseTotal) * 100) : 0}%`;
+      if (!scrollTranscript) {
+        return;
+      }
+      const row = transcriptRowForFrame(targetFrameIndex, activeTranscriptBlockIndex);
+      if (row) {
+        requestAnimationFrame(() => row.scrollIntoView({ block: "start" }));
+      }
+    }
+
+    function transcriptRowForFrame(frameIndex, blockIndex = null) {
+      const rows = [...document.querySelectorAll(".transcript-entry")].filter(
+        (row) => Number(row.dataset.frameIndex) === Number(frameIndex)
+      );
+      if (blockIndex !== null && blockIndex !== undefined && Number.isFinite(Number(blockIndex))) {
+        const exactRow = rows.find((row) => Number(row.dataset.blockIndex) === Number(blockIndex));
+        if (exactRow) {
+          return exactRow;
+        }
+      }
+      return (
+        rows.find((row) => row.dataset.kind === "user") ||
+        rows.find((row) => row.dataset.kind === "thinking") ||
+        rows.find((row) => row.dataset.kind === "tool-call") ||
+        rows.find((row) => row.dataset.kind === "assistant") ||
+        rows.find((row) => row.dataset.kind === "output") ||
+        rows[0] ||
+        null
+      );
+    }
+
+    function transcriptFrameIndexForFrame(frameIndex) {
+      const frame = replayFrames[frameIndex];
+      if (!frame) {
+        return frameIndex;
+      }
+      if (frameHasTranscript(frame)) {
+        return frame.frameIndex;
+      }
+      const analysisStep = frame.analysisStep == null ? null : String(frame.analysisStep);
+      if (analysisStep !== null) {
+        const matching = replayFrames.find((candidate) => (
+          String(candidate.analysisStep) === analysisStep &&
+          frameHasTranscript(candidate)
+        ));
+        if (matching) {
+          return matching.frameIndex;
+        }
+      }
+      for (let index = frameIndex - 1; index >= 0; index -= 1) {
+        const candidate = replayFrames[index];
+        if (frameHasTranscript(candidate)) {
+          return candidate.frameIndex;
+        }
+      }
+      return frameIndex;
+    }
+
+    function renderLevelLog() {
+      const firstFrameByLevel = new Map();
+      const firstGenerationByLevel = new Map();
+      const firstGenerationBlockByLevel = new Map();
+      replayFrames.forEach((frame, index) => {
+        const level = frameLevel(frame);
+        if (level === null) {
+          return;
+        }
+        if (!firstFrameByLevel.has(level)) {
+          firstFrameByLevel.set(level, index);
+        }
+        if (
+          !firstGenerationByLevel.has(level) &&
+          frameHasTranscript(frame)
+        ) {
+          firstGenerationByLevel.set(level, index);
+          firstGenerationBlockByLevel.set(level, levelStartTranscriptBlockIndex(frame));
+        }
+      });
+      if (!firstFrameByLevel.size) {
+        levelLogEl.innerHTML = '<div class="empty-state">No levels recorded.</div>';
+        return;
+      }
+      levelLogEl.innerHTML = [...firstFrameByLevel.keys()].map((level, index) => {
+        const frameIndex = firstGenerationByLevel.get(level) ?? firstFrameByLevel.get(level);
+        const transcriptFrameIndex = firstGenerationByLevel.get(level)
+          ?? transcriptFrameIndexForFrame(frameIndex);
+        const transcriptBlockIndex = firstGenerationBlockByLevel.get(level);
+        const transcriptBlockAttr = transcriptBlockIndex == null
+          ? ""
+          : ` data-transcript-block-index="${transcriptBlockIndex}"`;
+        return `
+        <div class="level-row" data-level="${escapeHtml(level)}" data-frame-index="${frameIndex}" data-transcript-frame-index="${transcriptFrameIndex}"${transcriptBlockAttr}>
+          <span>${index + 1}</span>
+          <span>Level ${escapeHtml(level)}</span>
+        </div>
+      `;
+      }).join("");
+      renderLevelSelection();
+    }
+
+    function levelStartTranscriptBlockIndex(frame) {
+      const blocks = Array.isArray(frame?.transcriptBlocks) ? frame.transcriptBlocks : [];
+      const hasMarker = (block) => (
+        String(block?.content || "").includes("You have progressed to a new level!")
+      );
+      const progressedUserIndex = blocks.findIndex((block) => (
+        String(block?.kind || "") === "user" && hasMarker(block)
+      ));
+      if (progressedUserIndex >= 0) {
+        return progressedUserIndex;
+      }
+      // A level reached on the episode's final tool call has no follow-up user
+      // message; the marker only exists in the tool-response block.
+      const progressedAnyIndex = blocks.findIndex(hasMarker);
+      if (progressedAnyIndex >= 0) {
+        return progressedAnyIndex;
+      }
+      const userIndex = blocks.findIndex((block) => String(block?.kind || "") === "user");
+      return userIndex >= 0 ? userIndex : null;
+    }
+
+    function renderLevelSelection() {
+      const activeLevel = frameLevel(replayFrames[activeFrameIndex]);
+      document.querySelectorAll(".level-row").forEach((row) => {
+        row.classList.toggle("active", String(row.dataset.level) === String(activeLevel));
+      });
+    }
+
+    function frameLevel(frame) {
+      const level = frame?.event?.level ?? frame?.sourceEvent?.level;
+      if (level === null || level === undefined || level === "") {
+        return null;
+      }
+      return String(level);
+    }
+
+    function renderInfo(frame) {
+      infoGridEl.innerHTML = [
+        renderStat("Elapsed", formatElapsed(elapsedForFrame(frame))),
+        renderStat("ARC-AGI Score", formatArcAgiScore(frame)),
+        renderStat("Responses", `${visibleResponseCount()} / ${totalResponses}`),
+        renderStat("Generated Tokens", `${visibleGeneratedTokenCount()} / ${totalGeneratedTokens}`),
+      ].join("");
+    }
+
+    function elapsedForFrame(frame) {
+      const activeBlock = activeTranscriptBlock(frame);
+      return firstFiniteNumber([
+        activeBlock?.elapsedSeconds,
+        frame?.sourceEvent?.elapsed_s,
+        frame?.event?.elapsed_s,
+        frame?.kind === "final" ? currentGame?.elapsed_s : null,
+      ]);
+    }
+
+    function renderStat(label, value) {
+      return `<div class="stat"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(String(value))}</span></div>`;
+    }
+
+    function formatElapsed(value) {
+      const parsed = finiteNumber(value);
+      if (parsed === null || parsed < 0) {
+        return "-";
+      }
+      if (parsed < 60) {
+        return `${parsed.toFixed(parsed < 10 ? 1 : 0)}s`;
+      }
+      const totalSeconds = Math.round(parsed);
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      if (hours) {
+        return `${hours}h ${String(minutes).padStart(2, "0")}m ${String(seconds).padStart(2, "0")}s`;
+      }
+      return `${minutes}m ${String(seconds).padStart(2, "0")}s`;
+    }
+
+    function formatArcAgiScore(frame) {
+      const event = frame?.event || {};
+      const source = frame?.sourceEvent || event;
+      const frameScore = firstFiniteNumber([
+        source.final_arc_score,
+        event.final_arc_score,
+        source.arc_agi_score,
+        event.arc_agi_score,
+        source.arc_score,
+        event.arc_score,
+        source._official_arc_score,
+        event._official_arc_score,
+      ]);
+      if (frameScore !== null) {
+        return formatNumber(frameScore);
+      }
+
+      const isFinalFrame = frame?.kind === "final" || (
+        isTerminalStatus(currentGame?.status) && frame?.frameIndex === replayFrames.length - 1
+      );
+      const knownFinalScore = isFinalFrame ? firstFiniteNumber([
+        currentGame?.final_arc_score,
+        currentGame?.arc_agi_score,
+        currentGame?.arc_score,
+        currentGame?.official_arc_score,
+      ]) : null;
+      if (knownFinalScore !== null) {
+        return formatNumber(knownFinalScore);
+      }
+
+      return "-";
+    }
+
+    function firstFiniteNumber(candidates) {
+      for (const candidate of candidates) {
+        const value = finiteNumber(candidate);
+        if (value !== null) {
+          return value;
+        }
+      }
+      return null;
+    }
+
+    function visibleGeneratedTokenCount() {
+      const frame = replayFrames[activeFrameIndex];
+      if (!frame) {
+        return 0;
+      }
+      const block = activeTranscriptBlock(frame);
+      if (block) {
+        return (frame.generatedStart || 0) + (block.generatedEnd || 0);
+      }
+      return frame.generatedEnd || 0;
+    }
+
+    function visibleResponseCount() {
+      const frame = replayFrames[activeFrameIndex];
+      if (!frame) {
+        return 0;
+      }
+      const block = activeTranscriptBlock(frame);
+      if (block) {
+        return (frame.responseStart || 0) + (block.responseEnd || 0);
+      }
+      return frame.responseEnd || 0;
+    }
+
+    function activeTranscriptBlock(frame) {
+      if (activeTranscriptBlockIndex == null || !frameHasTranscript(frame)) {
+        return null;
+      }
+      const blocks = Array.isArray(frame.transcriptBlocks) ? frame.transcriptBlocks : [];
+      return blocks[activeTranscriptBlockIndex] || null;
+    }
+
+    function visibleActionCount(frame) {
+      if (!actionFrames.length) {
+        return 0;
+      }
+      const activeActionIndex = actionFrames.findIndex((actionFrame) => (
+        actionFrame.frameIndex === frame?.frameIndex
+      ));
+      if (activeActionIndex >= 0) {
+        return activeActionIndex + 1;
+      }
+      const analysisStep = frame?.analysisStep == null ? null : String(frame.analysisStep);
+      if (analysisStep !== null) {
+        const matchingActionIndex = actionFrames.findIndex((actionFrame) => (
+          String(actionFrame.analysisStep) === analysisStep
+        ));
+        if (matchingActionIndex >= 0) {
+          return matchingActionIndex + 1;
+        }
+      }
+      return actionFrames.filter((actionFrame) => actionFrame.frameIndex <= activeFrameIndex).length;
+    }
+
+    function splitTranscriptSections(text) {
+      const sectionRe = /^\[(.+?)\]\s*$/gm;
+      const matches = [...String(text || "").matchAll(sectionRe)];
+      return matches.map((match, index) => {
+        const start = match.index + match[0].length;
+        const end = index + 1 < matches.length ? matches[index + 1].index : text.length;
+        return {
+          label: String(match[1] || "").trim(),
+          content: text.slice(start, end).trim(),
+        };
+      });
+    }
+
+    function renderBoard(event) {
+      const board = Array.isArray(event?.board) && event.board.length ? event.board : null;
+      if (board) {
+        asciiBoardEl.hidden = true;
+        canvasEl.hidden = false;
+        drawBoard(board);
+        return;
+      }
+      clearBoard();
+      asciiBoardEl.hidden = false;
+      asciiBoardEl.textContent = event?.board_ascii || "No board snapshot recorded for this frame.";
+    }
+
+    function drawBoard(board) {
+      const rows = board.length;
+      const cols = Math.max(1, ...board.map((row) => row.length));
+      const wrapRect = canvasEl.parentElement.getBoundingClientRect();
+      const availableWidth = Math.max(1, wrapRect.width - 24);
+      const availableHeight = Math.max(1, wrapRect.height - 24);
+      const cellSize = Math.max(1, Math.floor(Math.min(availableWidth / cols, availableHeight / rows)));
+      const width = cols * cellSize;
+      const height = rows * cellSize;
+      const palette = summaryPayload?.arc_palette?.length ? summaryPayload.arc_palette : DEFAULT_ARC_PALETTE;
+      canvasEl.width = width;
+      canvasEl.height = height;
+      canvasEl.style.width = `${width}px`;
+      canvasEl.style.height = `${height}px`;
+      const ctx = canvasEl.getContext("2d");
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = palette[0] || "#fff";
+      ctx.fillRect(0, 0, width, height);
+      for (let row = 0; row < rows; row += 1) {
+        for (let col = 0; col < cols; col += 1) {
+          const value = Number(board[row][col] ?? 0);
+          ctx.fillStyle = palette[Math.max(0, Math.min(palette.length - 1, value))] || "#000";
+          ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+          if (cellSize >= 8) {
+            ctx.strokeStyle = "rgba(23,32,38,0.08)";
+            ctx.strokeRect(col * cellSize, row * cellSize, cellSize, cellSize);
+          }
+        }
+      }
+    }
+
+    function clearBoard() {
+      canvasEl.hidden = true;
+      const ctx = canvasEl.getContext("2d");
+      ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
+    }
+
+    function reportingTranscriptForActionFrame(frameIndex) {
+      // The user message that reports an executed action ("The previous code
+      // run took N environment actions...") lives in the NEXT analysis
+      // step's transcript, not the deliberation that issued the action.
+      for (let index = frameIndex + 1; index < replayFrames.length; index += 1) {
+        const candidate = replayFrames[index];
+        if (!frameHasTranscript(candidate)) {
+          continue;
+        }
+        const blocks = Array.isArray(candidate.transcriptBlocks) ? candidate.transcriptBlocks : [];
+        const userIndex = blocks.findIndex((block) => String(block?.kind || "") === "user");
+        return {
+          frameIndex: candidate.frameIndex,
+          blockIndex: userIndex >= 0 ? userIndex : null,
+        };
+      }
+      return {
+        frameIndex: transcriptFrameIndexForFrame(frameIndex),
+        blockIndex: null,
+      };
+    }
+
+    function renderActionLog() {
+      if (!actionFrames.length) {
+        actionLogEl.innerHTML = '<div class="empty-state">No actions recorded.</div>';
+        return;
+      }
+      actionLogEl.innerHTML = actionFrames.map((frame, index) => {
+        const action = frame.actionDisplay || frame.sourceEvent?.action_display || frame.sourceEvent?.action_name || "Action";
+        const reporting = reportingTranscriptForActionFrame(frame.frameIndex);
+        const blockAttr = reporting.blockIndex == null
+          ? ""
+          : ` data-transcript-block-index="${reporting.blockIndex}"`;
+        return `
+          <div class="action-row" data-frame-index="${frame.frameIndex}" data-transcript-frame-index="${reporting.frameIndex}"${blockAttr}>
+            <span>${index + 1}</span>
+            <span>${escapeHtml(action)}</span>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function syncActionLog() {
+      document.querySelectorAll(".action-row").forEach((row) => {
+        const active = Number(row.dataset.frameIndex) === activeFrameIndex;
+        row.classList.toggle("active", active);
+      });
+    }
+
+    function formatNumber(value) {
+      const num = Number(value);
+      if (!Number.isFinite(num)) {
+        return "-";
+      }
+      if (Number.isInteger(num)) {
+        return String(num);
+      }
+      return String(Number(num.toFixed(4)));
+    }
+
+    function renderEmpty(message) {
+      activeTranscriptBlockIndex = null;
+      transcriptLogEl.innerHTML = `<div class="transcript-empty">${escapeHtml(message)}</div>`;
+      tokenCountEl.textContent = "0";
+      responseCountEl.textContent = "0";
+      tokenFillEl.style.width = "0%";
+      responseFillEl.style.width = "0%";
+      gameTitleEl.textContent = "Game";
+      gameSubtitleEl.textContent = "Board replay";
+      frameCountEl.textContent = "0 / 0";
+      infoGridEl.innerHTML = "";
+      levelLogEl.innerHTML = '<div class="empty-state">No levels recorded.</div>';
+      actionLogEl.innerHTML = '<div class="empty-state">No actions recorded.</div>';
+      clearBoard();
+      asciiBoardEl.hidden = false;
+      asciiBoardEl.textContent = message;
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function syncRunUrl(runName) {
+      const url = new URL(window.location.href);
+      if (runName) {
+        url.searchParams.set("run", runName);
+      } else {
+        url.searchParams.delete("run");
+      }
+      history.replaceState(null, "", url);
+    }
+
+    loadRun(new URLSearchParams(window.location.search).get("run") || null);
+  </script>
+</body>
+</html>

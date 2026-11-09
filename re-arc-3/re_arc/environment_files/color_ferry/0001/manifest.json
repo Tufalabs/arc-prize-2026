@@ -1,0 +1,18 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "color-ferry",
+  "game_id": "color_ferry-0001",
+  "slug": "color_ferry",
+  "class_name": "ColorFerry",
+  "objective": "obj.reach_dock",
+  "mechanics": [
+    "mech.carry_color",
+    "mech.dye_basin",
+    "mech.color_shutter",
+    "mech.step_budget",
+    "mech.undo"
+  ],
+  "action_set": ["up", "down", "left", "right", "undo"],
+  "available_actions": [1, 2, 3, 4, 7]
+}

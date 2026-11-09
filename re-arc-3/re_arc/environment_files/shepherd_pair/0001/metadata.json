@@ -1,0 +1,8 @@
+{
+  "game_id": "shepherd_pair-0001",
+  "title": "Shepherd Pair",
+  "default_fps": 8,
+  "baseline_actions": [3, 5, 5, 27, 46, 52, 58],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "ShepherdPair"
+}

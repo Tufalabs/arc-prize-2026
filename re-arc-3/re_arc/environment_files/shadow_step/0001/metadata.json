@@ -1,0 +1,17 @@
+{
+  "baseline_actions": [
+    6,
+    25,
+    26
+  ],
+  "class_name": "ShadowStep",
+  "default_fps": 8,
+  "game_id": "shadow_step-0001",
+  "local_dir": "re_arc/environment_files/shadow_step/0001",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Shadow Step",
+  "idea": "A trail-avoidance puzzle where each move changes the shadowed cells, so the player must reach the exit without stepping into danger or blocking the path."
+}

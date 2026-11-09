@@ -1,0 +1,11 @@
+{
+  "variant": "0001",
+  "game_id": "conveyor_sort_gpt-0001",
+  "slug": "conveyor_sort_gpt",
+  "class_name": "ConveyorSortGpt",
+  "action_set": [
+    "space",
+    "click"
+  ],
+  "available_actions": [5, 6]
+}

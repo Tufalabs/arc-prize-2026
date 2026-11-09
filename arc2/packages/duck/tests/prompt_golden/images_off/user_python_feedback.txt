@@ -1,0 +1,5 @@
+check(fn) FAILED. Your fn's output for each failed train pair is rendered below:
+Train pair 0 — your output:
+0	10
+1	01
+Train pair 1 — your fn raised an error; no output to render.

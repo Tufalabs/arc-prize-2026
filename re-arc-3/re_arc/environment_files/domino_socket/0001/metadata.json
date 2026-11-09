@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    4,
+    8,
+    11
+  ],
+  "class_name": "DominoSocket",
+  "default_fps": 8,
+  "game_id": "domino_socket-0001",
+  "idea": "This is a placement puzzle about preparing a domino chain before triggering it. The board contains a start post, a small set of empty socket cells, walls, and one or more target posts. Clicking a socket cycles it between empty, horizontal domino, and vertical domino. Pressing SPACE topples the start post, and the chain propagates through the placed dominoes. Because the only placeable objects are long thin bars with two orientations, the visual system stays extremely simple. Bad placements are easy to understand because the fall simply stops where the route is broken, while correct placements create a visible cascading line. The objective is to build a valid chain that reaches the target posts. Level 1 has one start, one target, and a very short route with one turn, so the player immediately learns what socket orientation means. Level 2 has more sockets than needed and a wall divider, so the player must choose the correct chain instead of filling everything. Level 3 introduces two target posts that must both be hit by the same cascade through a carefully arranged branching corridor layout.",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Domino Socket"
+}

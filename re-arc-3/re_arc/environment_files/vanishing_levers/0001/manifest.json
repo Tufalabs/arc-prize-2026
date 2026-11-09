@@ -1,0 +1,19 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "vanishing-levers",
+  "game_id": "vanishing_levers-0001",
+  "slug": "vanishing_levers",
+  "class_name": "VanishingLevers",
+  "objective": "obj.light_all_cells",
+  "mechanics": [
+    "mech.line_flip",
+    "mech.dark_host_lever",
+    "mech.single_use_lever",
+    "mech.spatial_selector",
+    "mech.undo",
+    "mech.step_budget"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

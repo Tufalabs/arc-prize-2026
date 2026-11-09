@@ -1,0 +1,21 @@
+{
+  "baseline_actions": [
+    16,
+    17,
+    30,
+    28,
+    20,
+    30,
+    48
+  ],
+  "class_name": "PaintSnakes",
+  "default_fps": 8,
+  "game_id": "paint_snakes-0001",
+  "idea": "Guide colored snakes across a small grid so their bodies paint the floor into the target pattern, but each snake cannot cross its own wet trail. Direction actions move the active snake one cell and Space cycles the active snake. A snake paints every cell it leaves with its color; later snakes may overwrite older paint, but wet paint blocks movement until another snake dries it by crossing from the side. Gray target pads are neutral route markers that can be painted over and do not need to be cleared. Some levels add yellow pressure pads that open maroon gates only while a snake is parked on the pad, color-change cells that recolor a snake on entry so later paint must be made with the converted color, and color-mixing cells where repainting combines colors such as red plus blue into purple or blue plus yellow into green. Levels should teach direct painting, avoiding self-traps, overwriting, pressure-gate cooperation, using one snake to dry another's trail, parking on neutral pads, color conversion, color mixing, and final canvases where a wrong-looking early loop is needed to create a safe corridor for the last color.",
+  "tags": [
+    "keys-only",
+    "arc-like",
+    "hard"
+  ],
+  "title": "Paint Snakes"
+}

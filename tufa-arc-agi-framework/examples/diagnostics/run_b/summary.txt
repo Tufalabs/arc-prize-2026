@@ -1,0 +1,19 @@
+benchmark: random_seed42
+solver:    SolverRandom
+games:     2
+passes:    3
+runs:      6 (won: 3)
+states:    3 gave_up, 3 won
+started:   2026-10-10 09:16:36
+ended:     2026-10-10 09:16:37
+duration:  0s
+mean score:    22.56
+median score:  18.20
+total actions: 636
+total tokens:  174714
+generated tokens/sec: 249298.32 (job wallclock)
+total wallclock: 2.1s
+
+per-game (mean across passes):
+  example_game: score=45.12, levels=2.0/2, actions=12, tokens=3119
+  ls20-9607627b: score=0.00, levels=0.0/7, actions=200, tokens=55118

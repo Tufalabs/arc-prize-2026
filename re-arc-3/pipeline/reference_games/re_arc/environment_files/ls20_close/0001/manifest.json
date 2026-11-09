@@ -1,0 +1,29 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "ls20-close",
+  "game_id": "ls20_close-0001",
+  "slug": "ls20_close",
+  "class_name": "Ls20Close",
+  "objective": "obj.match_pads",
+  "mechanics": [
+    "mech.shape_cycle",
+    "mech.color_cycle",
+    "mech.rotation_cycle",
+    "mech.requirement_pads",
+    "mech.dark_room",
+    "mech.charge_reset"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "game_id": "stealth_to_exit-0001",
+  "title": "Stealth To Exit",
+  "idea": "A stealth puzzle where the player sneaks past guard vision, uses hiding or distractions, and reaches the exit before being detected.",
+  "default_fps": 6,
+  "baseline_actions": [
+    33
+  ],
+  "tags": [
+    "keys-only",
+    "debugging"
+  ],
+  "class_name": "StealthToExit"
+}

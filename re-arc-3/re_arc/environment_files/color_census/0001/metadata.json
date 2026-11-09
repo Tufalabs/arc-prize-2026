@@ -1,0 +1,8 @@
+{
+  "game_id": "color_census-0001",
+  "title": "Color Census",
+  "default_fps": 8,
+  "baseline_actions": [1, 2, 4, 15, 20, 40, 51],
+  "tags": ["click-only", "codex-reviewed", "codex-evaluated"],
+  "class_name": "ColorCensus"
+}

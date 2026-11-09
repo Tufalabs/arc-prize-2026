@@ -1,0 +1,1 @@
+Run one Python snippet in a game-scoped kernel against the preloaded puzzle. Available globals: `train_in`, `train_out`, `test_in`, `test_out`, `np`, `ascii_grid(arr)`, and `check(fn)`. Definitions and variables persist across calls. Use `print(...)` for compact output.

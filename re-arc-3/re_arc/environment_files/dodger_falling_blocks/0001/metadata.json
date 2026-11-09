@@ -1,0 +1,18 @@
+{
+  "game_id": "dodger_falling_blocks-0001",
+  "title": "Dodger (Falling Blocks)",
+  "idea": "A survival game where the player dodges falling blocks, shifting danger zones, and wind drift long enough to outlast the timer.",
+  "default_fps": 8,
+  "baseline_actions": [
+    47,
+    48,
+    48,
+    48,
+    48,
+    48
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "DodgerFallingBlocks"
+}

@@ -1,0 +1,593 @@
+[
+  {
+    "idea": "A lane-switching survival game where a glider weaves through towers, birds, and wind currents while grabbing shields and lasting until the timer runs out."
+  },
+  {
+    "idea": "A two-helper coordination puzzle where only one colored helper is active at a time, so the player alternates control to use arrows, switches, and positioning rules until both helpers can reach the final beacon setup."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A crate-routing puzzle where clickable directional arrows shove a cargo block across a compact board, and the player has to line that block up with the correct dock while ignoring misleading lanes and decoy targets."
+  },
+  {
+    "idea": "A timed maze game where the player crosses a compact map while lava vents and other hazards cycle on and off around the route to the exit."
+  },
+  {
+    "idea": "Move blue polyominoes and cyan mirror axes on a 21x21 board so every yellow target cell is covered by either real blue material or a reflected ghost copy. There is no avatar; clicks or Space select a shape or full-board mirror axis, and direction actions translate the selected object by one legal cell. Vertical and horizontal axes reflect recursively when both are present, so one real shape can generate vertical, horizontal, and double-reflected coverage while extra blue away from targets is allowed. Levels should teach fixed reflection, movable axes, multiple shapes, horizontal and vertical mirrors, and final two-axis placement where target coverage depends on recursive reflected copies rather than direct overlap."
+  },
+  {
+    "idea": "A button-sequencing puzzle framed like a rhythm toy, where large directional beat pads move a token around the board and the player must press them in the right order to steer it into the dock."
+  },
+  {
+    "idea": "Guide boats through a tiny harbor by ringing buoys that create circular waves. Clicks select a buoy, Space rings it, and direction keys move movable buoys one cell along dock rails. A wave expands one cell per turn, pushes boats outward, opens wave gates while touching them, and cancels if it meets another wave. Levels should teach pushing one boat, moving a buoy before ringing, using waves as temporary gates, canceling waves to protect a boat, timing two boats with one wave, and final harbors where a wave must first move a boat away from its target so it can later open the return route."
+  },
+  {
+    "idea": "A maze puzzle built around paired blink anchors, where movement is mixed with short teleports between marked positions and the player has to chain those jumps to cross walls and reach the goal."
+  },
+  {
+    "idea": "A bomber-style tactics game where bombs clear blocks, threaten enemies, and open the exit, but mistimed blasts or routes get the player trapped."
+  },
+  {
+    "idea": "Guide a one-cell side-view player through a tall falling maze where each left or right move is followed by automatic gravity until support, goal, switch, or trap. The player can only move horizontally, while clicks edit visible special blocks: green breakables, orange on/off supports, one-use red gravity reversers, and later purple builders that grow new supports. The camera scrolls over an 11-column map, with early descending ceilings and later offscreen terrain making memory and pre-editing matter. Levels should teach falling to supports, remote block removal, trap avoidance, orange toggles, gravity reversal, builder expansion, and late routes where the player must alter future fall paths before committing."
+  },
+  {
+    "idea": "A multi-mechanic puzzle about pushing a large boulder, rotating mirrors, and routing a dangerous beam so the receiver unlocks the path forward."
+  },
+  {
+    "idea": "A sokoban-like puzzle where pushing a boulder makes it roll onto plates, open doors, and help the player cross hazards to the goal."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A compact single-player Breakout variant with a paddle, bouncing ball, brick durability, and time pressure on a readable grid board."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A pursuit puzzle where the player must reach the goal while staying ahead of a chaser and manipulating gates, keys, and movable objects."
+  },
+  {
+    "idea": "A click-based path-drawing puzzle where a circuit must be completed from source to target while respecting directional flow, relays, and hazards."
+  },
+  {
+    "idea": "Implementation from existing spec clay-footprints.md"
+  },
+  {
+    "idea": "A timing-heavy movement puzzle where the player walks to a dock while obstacles and opportunities cycle on a clocklike schedule."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A timed collection maze where the player directly navigates a small avatar through wall layouts and must sweep up every coin on the board before the shrinking time bar runs out."
+  },
+  {
+    "idea": "This is a state-based routing puzzle where the player directly moves a single block with the arrow keys. The board contains color washer pads, matching color gates, walls, and a final dock. Stepping on a washer immediately recolors the block to that washer's color. Gates only allow passage when the block currently matches their color. The objective is to visit the washers in the correct order so the block can pass the needed gates and arrive on the final dock in the required color. The visual system is extremely simple: one block, a few colored pads, a few matching gates, and the goal. Feedback is immediate because the block visibly changes color the moment it touches a washer. Level 1 has one washer and one gate, so the player learns that color is a movement state rather than just decoration. Level 2 has two washer colors and two gates arranged so the order of recoloring matters. Level 3 adds a neutralizer pad that removes the current color, forcing the player to intentionally reset and rebuild the correct color route."
+  },
+  {
+    "idea": "This is a terrain-shaping puzzle where the player edits a landscape of vertical columns before releasing a ball. Each column is shown as a simple solid bar rising from the floor. Clicking a column cycles it through a small set of clearly different heights. A ball sits on top of the terrain, and pressing SPACE starts the run. Once released, the ball moves one cell at a time toward lower neighboring terrain, so the player sees a deterministic downhill path. The objective is to sculpt the terrain so the ball rolls into the correct catch basin. The object set is minimal: terrain bars, one or more balls, one or more basins, and a few walls. This stays close to low-resolution primitives and gives very readable feedback because every click visibly changes the terrain profile. Level 1 has one ball and one basin, with a simple misalignment that teaches terrain editing and the one-way release. Level 2 has two balls starting on different parts of the terrain, and both must be guided into separate basins using the same final landscape. Level 3 adds a raised blocker wall so the player must shape not just a slope but also an intermediate shelf that redirects the ball before the final drop."
+  },
+  {
+    "idea": "A dual-agent command puzzle where the player switches between two characters sharing one level and must issue movement instructions that leave both twins in the right places to finish the room."
+  },
+  {
+    "idea": "A factory-routing puzzle where conveyor choices and junctions must be configured so moving items end up in the correct destinations."
+  },
+  {
+    "idea": "A spatial layout puzzle where corner pieces and hallway segments have to be matched so the resulting corridor geometry forms the intended traversable route across the board."
+  },
+  {
+    "idea": "Paint a 10x10 editable canvas until it matches an upper-left reference pattern, using a basket that moves around the eight outside positions of the canvas. Direction actions move the basket on the rim, clicks select toolbar colors or the small dipper, and Space paints a half-plane, triangle, or narrow inset strip depending on basket position and tool. Paint overwrites previous paint, and validation ignores the two main diagonals, while the reference display uses ordinary target colors there instead of marker lines. Levels should teach broad single-color strokes, color selection, ignored diagonal boundaries, small-dipper precision, and final reference patterns solved by planning a layered overwrite stack."
+  },
+  {
+    "idea": "This is a structure-reconfiguration puzzle using hanging bars and cuttable ropes. The board shows a few horizontal bars suspended by straight vertical rope lines over gaps and corridors. Clicking a rope cuts it, causing its attached bar to fall straight downward until it lands on the floor, on another bar, or across a gap. A small walker can then move across the newly formed structure. The objective is to create a path to the goal by cutting the right ropes in the right order. Visually this is ideal for a 64x64 grid because everything is made of straight segments: ropes, bars, floors, and gaps. Feedback is immediate and self-explanatory because the cut bar visibly drops into a new position. Level 1 has one suspended bar over one gap, so cutting the rope obviously creates a bridge. Level 2 has multiple hanging bars where dropping one too early blocks the route, so the player learns that order matters. Level 3 uses stacked interactions where one fallen bar becomes the support that catches another, creating a staircase to the goal."
+  },
+  {
+    "idea": "A mobility puzzle where the player uses dash moves, crumbling tiles, moving platforms, and hazard timing to reach the exit."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A deterministic two-level debug task where the player moves a blue agent onto a green target."
+  },
+  {
+    "idea": "A carry-and-deliver puzzle where the player picks up a package, walks it through walls, doors, hazards, and moving threats, and must place it into the correct delivery bay without getting trapped or using the wrong dock."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A survival game where the player dodges falling blocks, shifting danger zones, and wind drift long enough to outlast the timer."
+  },
+  {
+    "idea": "This is a placement puzzle about preparing a domino chain before triggering it. The board contains a start post, a small set of empty socket cells, walls, and one or more target posts. Clicking a socket cycles it between empty, horizontal domino, and vertical domino. Pressing SPACE topples the start post, and the chain propagates through the placed dominoes. Because the only placeable objects are long thin bars with two orientations, the visual system stays extremely simple. Bad placements are easy to understand because the fall simply stops where the route is broken, while correct placements create a visible cascading line. The objective is to build a valid chain that reaches the target posts. Level 1 has one start, one target, and a very short route with one turn, so the player immediately learns what socket orientation means. Level 2 has more sockets than needed and a wall divider, so the player must choose the correct chain instead of filling everything. Level 3 introduces two target posts that must both be hit by the same cascade through a carefully arranged branching corridor layout."
+  },
+  {
+    "idea": "A timing maze where doors repeatedly open, warn, and close, so the player must move and wait on the right beats to slip through."
+  },
+  {
+    "idea": "A minimal click-precision game where each level presents a single valid target cell, and success depends on accurately tapping that exact spot to advance."
+  },
+  {
+    "idea": "A hidden-maze exploration game where local visual feedback acts like an echo, helping the player discover walls and find the route out."
+  },
+  {
+    "idea": "This is a field-control puzzle where loose leaf tokens drift under the influence of fixed fans. Each fan has a clear orientation and a straight beam extending from it. Clicking a fan toggles it on or off. After every action, a leaf inside an active beam moves one cell in the beam direction unless blocked. The objective is to guide the leaves into marked bins. Unlike the earlier airflow idea, the player is not drawing paths; instead, the board contains a small number of persistent push fields that can be activated or deactivated. This keeps the visual vocabulary very small: fans, beam lines, leaves, walls, and bins. Level 1 has one leaf and two fans in a simple room, so the player quickly learns how an active beam moves the token. Level 2 introduces walls and a second leaf, so beams must be switched on and off in the right order to avoid misrouting one token while fixing the other. Level 3 places bins in different corners and uses overlapping fan beams, forcing the player to exploit temporary parking spots and careful timing."
+  },
+  {
+    "idea": "A region-coloring puzzle where clicks spread fill through connected cells, and the challenge is to choose the right starting regions and order so the board ends in the intended color pattern."
+  },
+  {
+    "idea": "A flooding escape puzzle where water spreads through the map while the player pushes blocks and toggles gates to stay ahead of it."
+  },
+  {
+    "idea": "A phase-switching maze where the player changes between two movement states to cross matching tiles, bridges, and relays on the way to the goal."
+  },
+  {
+    "idea": "A path-shape puzzle where a footprint-shaped walker occupies several cells at once, so the player has to route that bulky footprint through narrow corridors without clipping walls or blocking the exit path."
+  },
+  {
+    "idea": "A timing puzzle where the player synchronizes movement with a repeating frequency pattern to open locks and safely advance."
+  },
+  {
+    "idea": "A Frogger-style crossing game where the player advances lane by lane through traffic and water, using logs and turtles as temporary footing while racing the timer to fill the required home slots."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A readable sprite-based reconstruction of FT09 Flip Tiles: click colored tiles to cycle their colors, use stencil tiles that affect neighbors, satisfy local target constraints, and solve all six boards before the timer expires."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "Navigate a blue body to a blue outlined goal while recording routes that return to the start and replay as pale ghosts on later attempts. Direction actions move the live player one board cell, and Space saves the route so far, animates the player rewinding through it, leaves a ghost with that timed route, and spawns a fresh live player at the start. Ghosts replay one recorded step for each live step, can hold pressure plates, can be blocked by current gate states, and can desynchronize if timing is wrong. Levels should teach simple goal movement, route recording, ghost-held devices, rewind side effects, gates and teleport timing, and final puzzles where saved routes act as both tools and obstacles."
+  },
+  {
+    "idea": "Roll colored fruits into baskets by steering them through reusable corner redirectors and configurable splitters. Direction actions move the farmer one cell and push fruit; clicks rotate marked corner redirectors and splitters, while Space can also rotate an adjacent splitter. Corner redirectors are active from the start and can be reused. Splitters duplicate only allowed fruit colors into the highlighted output directions. Levels should teach pushing fruit, redirecting fruit with reusable corners, rotating marked corners, color-limited splitting, using fruit as blockers, and final orchards where several corner pieces must be calibrated before pushing."
+  },
+  {
+    "idea": "A route puzzle where touching glyphs flips the player's mode and unlocks the final path only after the right relay pattern has been traversed."
+  },
+  {
+    "idea": "A click-to-aim mini golf puzzle where the player putts a ball around hazards, portals, gates, and bumpers into the hole."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A tiny platformer with jumps, keys, crumbling ledges, moving hazards, and switches packed into short deterministic challenge rooms."
+  },
+  {
+    "idea": "A coordination puzzle where a greedy companion follows its own pickup-seeking logic, so the player must route both characters around the board until their positions finally allow them to meet."
+  },
+  {
+    "idea": "A tactical archery puzzle where movement sets aim, arrows ricochet off mirrors or break obstacles, and every target must be hit to open the exit."
+  },
+  {
+    "idea": "A multi-agent hazard puzzle where the player clicks which pawn is active and passes progress between them to get through dangerous terrain."
+  },
+  {
+    "idea": "A movement puzzle where the player jumps through portals and around hazards, using careful skip lengths to reach the dock safely."
+  },
+  {
+    "idea": "A shepherding game where the player corrals sheep into a pen using walls, one-way gates, and occasional switches before time runs out."
+  },
+  {
+    "idea": "This is a traversal puzzle where the player moves a small walker with the arrow keys across gaps and platforms. The main objects are fixed floors, empty gaps, anchor posts, and long bridge bars attached to those anchors. Clicking an anchor flips its bar between two clear orientations, for example horizontal and vertical. In one orientation the bar may create a bridge across a gap, while in the other orientation it may block a corridor or leave the gap open. Because each bar is just a single thick line, the mechanic stays visually clean on a low-resolution grid. The objective is to reach the target pad by arranging the bridge bars into a useful layout. Feedback is immediate because the bar visibly rotates as soon as it is clicked. Level 1 has one gap and one hinged bar. The player learns that clicking the anchor changes whether the gap is crossable. Level 2 has two bars, where opening one route closes another, so the player must understand that the bars are both bridges and blockers. Level 3 uses longer bars and side corridors so the player must cross, backtrack, and reorient bars in the correct order to reach the exit."
+  },
+  {
+    "idea": "A weight-and-state puzzle where heavy and light interactions latch doors and switches differently, so the route depends on controlled toggling."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A traversal puzzle centered on a hookshot that pulls the player across gaps or around obstacles to reach otherwise inaccessible areas."
+  },
+  {
+    "idea": "An ice-sliding puzzle where movement continues until something stops the player, so level design is built around ricochet-like positioning."
+  },
+  {
+    "idea": "A perception-and-control puzzle where several similar tokens are shown at once, the player must infer which one is actually controllable, and only then guide that real agent to the target."
+  },
+  {
+    "idea": "A teleportation puzzle across separated islands where portals are the only way to cross water and the final objective is to reach the dock."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A click-routed maze where the player does not walk tile by tile, but instead commits to turns at junctions, so solving the level means choosing the correct branch points in sequence."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A classic key-and-door maze expanded with lasers, patrols, hazards, and waiting windows that make the collection order matter."
+  },
+  {
+    "idea": "A corridor maze where colored keys have to be collected in a strict order, because touching the wrong key resets progress and the final lock only opens after the full sequence is gathered correctly."
+  },
+  {
+    "idea": "Route moths into flower lamps by moving large lanterns whose light pulls moths in straight lines. There is no avatar; clicks select lanterns or blockers, direction actions move the selected object one cell, and Space advances one moth step. Each moth moves toward the brightest visible lantern along its row or column, stops at blockers, and sleeps permanently when it reaches a matching flower lamp. Levels should teach one-lantern attraction, blocking sightlines, moving lanterns as temporary walls, competing lanterns, waking sleeping moths by moving light away, and final boards where the same lantern must first separate moths and later reunite them at different flowers."
+  },
+  {
+    "idea": "Route mine carts by moving lanterns whose beams activate rail segments. Clicks select lanterns, direction keys move the selected lantern along wall rails, and Space advances all carts one rail step. A rail segment is usable only while lit; unlit rails stop carts, lit switch rails flip after a cart crosses, and carts can block or push each other. Levels should teach lighting a direct path, using darkness as a brake, moving lanterns while carts wait, making one cart hold another back, switch rails, and final mines where the same lantern must alternately release, stop, and redirect carts before all reach depots."
+  },
+  {
+    "idea": "A laser-routing puzzle where emitters, mirrors, prisms, switches, and shutters must be configured so beams charge the required targets."
+  },
+  {
+    "idea": "Cross a maze of drawbridges where stepping on one end of a bridge flips the bridge's orientation and changes future routes. Direction actions move the hiker one cell, Space waits without moving, and clicks rotate only marked fixed turnstiles. A bridge is a visible 1x3 or 3x1 platform; entering it from either end is allowed, but leaving it causes it to rotate 90 degrees around its center if the rotated cells are clear. Levels should teach bridge flipping, using a bridge as a temporary path, avoiding unwanted rotations, waiting to let moving stones clear space, turnstile redirection, and final layouts where a bridge must be flipped away from the exit to open a return route later."
+  },
+  {
+    "idea": "A two-pawn click puzzle where one pawn must hold a latch or gate state open while the other uses that temporary opening to advance."
+  },
+  {
+    "idea": "Reduce the counted bud population by making selected buds jump over other pieces on a white-tile board with movable rail platforms. The player clicks a bud and then a highlighted legal landing cell to jump, while direction actions move every yellow platform one rail cell when legal. Green-over-green jumps remove the jumped bud, purple posts are permanent jump hurdles, red buds can reposition without consuming greens, and blue buds are useful non-counted pieces. Levels should teach basic jump elimination, platforms as moving bridges, multiple platforms moving together, fixed and riding posts, reusable red movement, non-counted blue setup pieces, and final rail puzzles where preserving future jump opportunities matters more than greedy elimination."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A puzzle about moving through illuminated and shadowed spaces where safety and accessibility depend on the current light state."
+  },
+  {
+    "idea": "A route-planning challenge where the player has plenty of movement but only a strict number of turns, so facing changes become the scarce resource."
+  },
+  {
+    "idea": "Carry one mutable key through route-dependent lock mazes where every modifier changes which gates can open next."
+  },
+  {
+    "idea": "Click buttons to advance or reverse objects riding on closed loops, belts, and chained tracks until every tracked object sits in its matching target box simultaneously. There is no avatar; each button deterministically changes one loop, several loops, or a coupled subset of positions, and some objects belong to more than one logical cycle. Later loops can overlap, rotate, teleport across edges, share objects, or hide an indirect relationship, so the puzzle is about phase synchronization rather than pathfinding. Levels should teach a single controllable loop, overlapping belts, rotation, multiple targets, edge teleportation, subset coupling, missing reverse controls, hidden object relationships, and a final three-object simultaneous alignment."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A readable sprite-based reconstruction of LS20 Locksmith's seven tutorial levels: carry a mutable key, rotate it, change color and shape, use recharges, open sequential locks, ride animated pushers, and navigate a fogged finale."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A positioning puzzle where a magnetic pull attracts objects or the player, making distance and line alignment the core challenge."
+  },
+  {
+    "idea": "Move paired magnetic blocks into target sockets by flipping their polarity and using attraction or repulsion as visible movement. Clicks select a magnet block, direction keys move the selected block one cell, and Space flips its polarity. Opposite poles pull together when aligned with no wall between them, same poles push apart by one cell, and attached magnet pairs move as a group until separated. Levels should teach pulling, repelling, using a magnet as a stopper, forming and breaking pairs, pushing one block indirectly through another, and final sockets where a pair must be joined for transport, split for alignment, then rejoined to block a final slide."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A slider puzzle where pieces must be shifted until the visible arrangement matches the target pattern."
+  },
+  {
+    "idea": "A maze game with click-opened doors placed along a single winding corridor, where progress depends on navigating the path and opening the right door tiles at the right moments to reach the goal."
+  },
+  {
+    "idea": "A stripped-down maze race where the player simply pilots a token from start to finish through wall layouts before the available time budget is exhausted."
+  },
+  {
+    "idea": "A sequence-memory puzzle where colored pads must be visited in the generated order, after which the player still has to explicitly confirm the completed sequence with the finalize actions to clear the level."
+  },
+  {
+    "idea": "Implementation from existing spec mirror-fog.md"
+  },
+  {
+    "idea": "A coordination puzzle where a helper mirrors or reacts to the player's moves, and both positions have to be managed to solve the room."
+  },
+  {
+    "idea": "A symmetry puzzle where edits on one side of the board have mirrored consequences, and the player must end with a reflected arrangement that matches the target half exactly."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A dual-control puzzle where mirrored movement means every step affects two positions at once, so the player solves levels by exploiting symmetry."
+  },
+  {
+    "idea": "Control two main blocks at once until they meet on the same grid cell or cross horizontally in a mirrored move. Up and down move both blocks together, while left and right move the left block in the commanded direction and the right block in the opposite direction. Each block resolves collisions independently, so walls, gates, edges, hazards, and movable blockers can pin one block while the other continues and changes their relative alignment. Levels should teach mirrored horizontal motion, independent pinning, hazard resets, clickable blockers, gate pads that open only while occupied, multiple gate families, and final layouts where meeting requires temporarily separating the pair to create the right collision asymmetry."
+  },
+  {
+    "idea": "A click-based laser puzzle where shots bounce off mirrors and must be aimed through the board to strike the correct targets."
+  },
+  {
+    "idea": "A platforming room series where the player times movement around moving platforms, buttons, gates, and hazards to reach the goal."
+  },
+  {
+    "idea": "A stripped-down picross puzzle where visual row and column clues guide the player to fill the correct cells."
+  },
+  {
+    "idea": "A compact combat puzzle where one enemy reacts to the player inside a tiny arena, so every move is really a prediction about the opponent's response and the opening it creates."
+  },
+  {
+    "idea": "A one-screen platforming challenge built around tight jumps, careful timing, and a short but unforgiving route to the exit."
+  },
+  {
+    "idea": "A maze puzzle built around one-way teleports, so routing depends on committing to warps that can only be traversed in one direction."
+  },
+  {
+    "idea": "A symmetry puzzle where movement traces mirrored orbital paths, forcing the player to think about paired positions instead of a single token."
+  },
+  {
+    "idea": "A click-only painting puzzle where directional pads move a roller around a shape and the player must trace just the intended outline."
+  },
+  {
+    "idea": "Guide colored snakes across a small grid so their bodies paint the floor into the target pattern, but each snake cannot cross its own wet trail. Direction actions move the active snake one cell and Space cycles the active snake. A snake paints every cell it leaves with its color; later snakes may overwrite older paint, but wet paint blocks movement until another snake dries it by crossing from the side. Gray target pads are neutral route markers that can be painted over and do not need to be cleared. Some levels add yellow pressure pads that open maroon gates only while a snake is parked on the pad, color-change cells that recolor a snake on entry so later paint must be made with the converted color, and color-mixing cells where repainting combines colors such as red plus blue into purple or blue plus yellow into green. Levels should teach direct painting, avoiding self-traps, overwriting, pressure-gate cooperation, using one snake to dry another's trail, parking on neutral pads, color conversion, color mixing, and final canvases where a wrong-looking early loop is needed to create a safe corridor for the last color."
+  },
+  {
+    "idea": "A coverage puzzle where the player paints every target floor tile while avoiding forbidden areas, cleaners, and gates that can undo progress."
+  },
+  {
+    "idea": "A cargo-routing puzzle where clicking control panels opens or closes doors so a block can be moved into its dock."
+  },
+  {
+    "idea": "A click puzzle where path segments are connected step by step in a required order, so the player has to satisfy both the network topology and the sequence constraint of which link comes next."
+  },
+  {
+    "idea": "A pure shortest-path maze series where each room has one start, one goal, and fixed walls, asking the player to reason cleanly about the navigable route rather than about extra mechanics."
+  },
+  {
+    "idea": "A path-building puzzle where each click changes how the route is drawn, and the player must shape the resulting path so its structure matches a displayed target sequence exactly."
+  },
+  {
+    "idea": "A second sequence-matching path puzzle where the board is manipulated until the built route reproduces the required pattern, with the challenge coming from the order and structure of the constructed path."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A pipe puzzle where tiles are rotated until a continuous connection carries flow from the source to the endpoint."
+  },
+  {
+    "idea": "Move stones between height levels by stepping on pocket elevators that swap height with whatever stands on them. Direction keys move the miner, Space activates the current elevator, and clicks rotate marked rail pockets that constrain stone movement. Activating an elevator raises one cell while lowering another paired cell, so it can lift the miner, lower a stone into a pit, create a wall, or flatten a path. Levels should teach one lift, using height as a blocker, lowering stones into sockets, swapping height to recover a route, rotating rail pockets, and final caves where the only solution requires spending a useful high platform to create a later low passage."
+  },
+  {
+    "idea": "A solo Pong challenge where the player serves and controls one paddle while walls, mirrors, bumpers, and gates reshape the ball's path."
+  },
+  {
+    "idea": "An ice-and-pushing puzzle where sliding movement and crate interactions have to be combined to reach the goal without getting stuck."
+  },
+  {
+    "idea": "A combat puzzle where the player cannot simply dodge foes and instead has to shove different enemy types into spikes and other hazards."
+  },
+  {
+    "idea": "A compact crate puzzle where pushing the crate onto switches and pickups changes a narrow lane enough to open the goal path."
+  },
+  {
+    "idea": "A bridge-building puzzle where pushable pieces can only move forward and must be arranged to span gaps without wasting moves."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A teleport puzzle where progress depends on chaining portal uses in the right order so each relay opens access to the next area."
+  },
+  {
+    "idea": "A gated collection puzzle where gems, switches, and doors form a relay chain, so early pickups and toggles determine whether the later parts of the route can be opened in time."
+  },
+  {
+    "idea": "Move colored reticle shapes on a 64x64 pixel grid so their non-transparent pixels cover every matching target center. Direction actions move the selected reticle exactly 3 pixels, Space cycles selection, and the selected reticle is marked by a temporary white center pixel that is not part of any target. Targets are small dark frames with colored centers; only the center pixels matter, extra reticle pixels are allowed, and overlapping reticles can hide earlier pixels if drawn later. Levels should teach single-reticle alignment, multiple reticles, crosses and hollow shapes, overlap ordering, off-camera partial placement, recolor or transform pads, and final boards where all target centers must be covered without occluding needed colors."
+  },
+  {
+    "idea": "A chess-inspired movement puzzle where the player slides like a rook in straight lines and must use that constraint to reach the target."
+  },
+  {
+    "idea": "A multi-room adventure puzzle where progress depends on moving between connected rooms, collecting the right pickups, and unlocking the correct transition so the final room becomes reachable."
+  },
+  {
+    "idea": "A visual pattern puzzle where left and right inputs rotate a shape until it matches the displayed target orientation."
+  },
+  {
+    "idea": "This is a routing puzzle built from a moving puck, straight lane segments, walls, a goal pad, and a small number of large rotor junctions. Each rotor is drawn as a central hub with one bright arm showing the direction the puck will leave if it enters that hub. Clicking a rotor rotates that bright arm by 90 degrees. The puck advances one cell after every player action, so the player immediately sees both cause and effect: the board changes, then the puck responds. If the puck reaches a rotor and the chosen exit is blocked, the hub flashes red and the puck stays in place. The objective is to configure the rotors so the puck reaches the goal pad. The visual language stays simple: bars for lanes, squares for walls, one puck, one goal, and a few hub-like rotors. Level 1 has one puck, one goal, two rotors, and an open layout. The player learns that clicking a rotor changes the puck's next turn. Level 2 adds walls and a longer route, so the player must rotate the correct junction while the puck is already traveling. Level 3 uses two pucks launched from different starts, and both must reach their own goal pads under the same final rotor configuration."
+  },
+  {
+    "idea": "This is a click-only packing puzzle where discs are moved indirectly by row and column emitters. The board contains a small number of loose discs, fixed walls, target pads, and emitters on the edges. Clicking an emitter sends a one-cell pulse through its whole row or column, pushing every free disc in that line by one cell unless blocked. The player never drags discs directly, which makes the cause-and-effect structure very clean: click a line, watch all affected discs shift. Because the board consists of squares, pads, and edge arrows, the visual complexity stays low. The objective is to push the discs into the correct pad layout. Level 1 has one disc and two useful emitters, so the player immediately understands that pulses move objects along straight lines. Level 2 has multiple discs that can block each other, so the player must reason about packing order rather than only direction. Level 3 adds a narrow chamber where the discs must be staged into temporary holding cells before the final pulse sequence can place them on their pads."
+  },
+  {
+    "idea": "A board-manipulation puzzle where whole rows and columns are the pieces being moved or aligned, so the player solves patterns by thinking in strips instead of individual cells."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A click-memory puzzle where only a subset of tiles is safe, so the player has to identify and tap the valid pattern without triggering failures."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "This is a carrying puzzle built from a walker, a few loose weight blocks, and one or more balance bridges. Each balance bridge is shown as a simple horizontal bar with left and right loading pans. Above each pan, a small ghost outline indicates how many blocks that side wants. When the pans match the shown requirement, the bridge rises or locks into a usable crossing height; when they do not, it stays misaligned. The player moves with the arrow keys and uses SPACE to pick up or drop one weight block at a time. The objective is to configure the bridges so the walker can reach the target. The mechanic is readable because the whole board is just bars, blocks, outlines, and one walker. Level 1 has one bridge and two weight blocks, teaching pick-up and the visual meaning of the ghost requirements. Level 2 uses two balance bridges in sequence, so using a block for the first bridge can leave the second one unsolved. Level 3 places the blocks in awkward side rooms, forcing the player to decide transport order and sometimes temporarily break one bridge to solve the next."
+  },
+  {
+    "idea": "A multi-pawn puzzle where the player clicks to choose which pawn is active, moves it into place, and alternates until the board settles into the solved arrangement."
+  },
+  {
+    "idea": "A game where you need to make water from a source and pour it into a bucket. The water source is placed somewhere in the upper edge of the screen, and it has to arrive in a bucket somewher on the screen. Water flows down with gravity, and it splits if it hits a flat surface. But if the flat surface is blocked on one side, then it only flows in the other direction. The player can place blocks anywhere on the screen by clicking on the point, and the block will appear there. By clicking the space, the water starts flowing, and blocks can\u2019t be placed anymore, so either the water lands in the bucket, or it doesn\u2019t (so you either win or lose the level). The first level is a single bucket and a source not aligned with each other so the player need to construct something to make the water fall into it (like a stair like pattern). The second level has 2 buckets, so the player needs to make the water split into both of them. The third level has 3 buckets."
+  },
+  {
+    "idea": "A trail-avoidance puzzle where each move changes the shadowed cells, so the player must reach the exit without stepping into danger or blocking the path."
+  },
+  {
+    "idea": "A movement puzzle where the player's current shape matters, so progress comes from remolding the avatar to fit gates and corridors."
+  },
+  {
+    "idea": "A route-optimization puzzle packed with doors, hazards, and small interactions, where the board can often be completed in several ways but the real challenge is finding the shortest valid solution."
+  },
+  {
+    "idea": "A click-based sequencing puzzle where nodes must be activated in the proper order while walls block line of sight and the action budget stays tight."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "Move one or more skewer handles on a 6-pixel grid to pierce colored blocks and arrange ordered stacks on scoring skewers. A handle carries a row or column of gray skewer segments; colored blocks can be pushed, pierced onto a segment, carried with the handle, or transferred at intersections between horizontal and vertical skewers. The bottom display shows the required color sequence for each scoring skewer, read from the handle outward, and structural gray segments do not count as target colors. Levels should teach single horizontal skewering, reordering a row of blocks, fixed vertical sticks, distributing one load across multiple targets, obstacles, two controllable skewers, shared intersection blocks, and final short-rail transfer puzzles."
+  },
+  {
+    "idea": "Click matching controls to extend, retract, translate, or later rotate capped slider assemblies until every fixed magenta target is covered by a movable magenta marker. There is no avatar; most pieces are 3-pixel-thick sliders with a fixed gray cap and a moving free end, and one control affects every same-colored piece. Some sliders carry child pieces recursively, so moving a parent moves its descendants while child controls can still adjust relative offsets. Levels should teach independent extension, stacked child sliders, movable wall assemblies, same-color coupling, collision rollback against walls or pieces, rotation controls, and final target placement where a temporary structure must be built, shifted, and dismantled without overlap."
+  },
+  {
+    "idea": "A row-shifting puzzle where each click slides an entire strip of the board, and the target arrangement only appears after the right sequence of whole-row moves."
+  },
+  {
+    "idea": "A grid-based Snake variant where the player grows while collecting food and must avoid collisions with walls and the body's trail."
+  },
+  {
+    "idea": "A Sokoban-style box-pushing puzzle with an added time bar, so efficient crate routing matters as much as correctness."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A two-pawn maze game where the player switches between separated wings of the map and coordinates both sides to complete the route."
+  },
+  {
+    "idea": "A connection puzzle where the board contains split routes and paired endpoints, and the player has to join the correct pairs without letting the branches interfere with each other."
+  },
+  {
+    "idea": "A click-based routing puzzle where a branching path is assembled one commitment at a time, so each chosen segment constrains which later branches can still produce a complete route."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A balancing puzzle where clicks transfer blocks between two stacks until both sides have exactly the same height."
+  },
+  {
+    "idea": "This is a spatial pattern puzzle built around a movable stamp head and a blank board of target cells. The player moves the stamp head with the arrow keys and presses SPACE to imprint its current shape onto the cells underneath it. Clicking side knobs rotates the stamp by 90 degrees. The simplest version uses a chunky 2x2 or 1x3 stamp so the printed result is always visually legible on the grid. The objective is to cover the required target cells while avoiding forbidden cells. This keeps the object set extremely small: stamp head, target cells, forbidden cells, and maybe one or two different ink colors. The feedback is very direct because every press leaves a visible mark immediately. Level 1 uses one stamp shape and a very small target region, so the player learns movement, rotation, and pressing. Level 2 introduces forbidden cells, forcing the player to care about exact placement rather than just covering the area. Level 3 adds a second stamp color or a second stamp head, so the player must place overlapping shapes in the right order to satisfy the full pattern."
+  },
+  {
+    "idea": "A stealth puzzle where the player sneaks past guard vision, uses hiding or distractions, and reaches the exit before being detected."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "Build small component programs from tray tokens so running the red main component emits the target color sequence. The upper area shows hollow target boxes and colored component frames; clicks move or swap solid literal tokens and hollow pointer tokens into component slots, while Space runs the checker. Literals emit their color, pointers call the component with the same border color and then return, and recursive levels may finish as soon as the final target is emitted. Levels should teach direct literal order, fixed and movable pointers, multiple subcomponents, repeated subroutine calls, pointer color identity without connector hints, recursion, two-row target scanning, and energy-limited edit-and-test planning."
+  },
+  {
+    "idea": "A gate-toggle maze where stepping on or activating switches flips doors and walls elsewhere in the level, making the route depend on the current global switch state."
+  },
+  {
+    "idea": "This is a collection puzzle where the player drives a wide plow-like blade with the arrow keys. The board contains loose pellets, walls, bins, and the blade itself. Any pellet directly in front of the blade is pushed along as the blade moves, and groups of pellets can be swept together as a small pile. The objective is to push all pellets into the correct bins without leaving any trapped in corners. This differs from ordinary box-pushing because the player is managing a front edge and a crowd of small pieces rather than a single crate. The visuals remain simple: a rectangular blade, round pellets, bins, and walls. Level 1 asks the player to sweep a few pellets into one large bin in an open room. Level 2 adds partitions so the player must first gather pellets into a controllable cluster before pushing them to the bin. Level 3 introduces two pellet colors and two bins, so the player must separate piles instead of just collecting everything together."
+  },
+  {
+    "idea": "A switch puzzle where each activation changes the wall or door layout, so progress depends on choosing the right toggle order."
+  },
+  {
+    "idea": "A coordination puzzle where multiple agents move in lockstep, so one input always has to be evaluated from more than one position at once."
+  },
+  {
+    "idea": "A shape-and-size puzzle where the player toggles body size to pass different gates, press plates, and solve rooms that care about footprint."
+  },
+  {
+    "idea": "A pursuit puzzle about forcing contact with another actor, where movement timing and board position determine whether the player can safely close in and complete the tag."
+  },
+  {
+    "idea": "A click-order game where targets must be tapped in the exact prescribed sequence and mistakes reset progress."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A teleport-routing puzzle where moving onto an entry pad is only half the action, because the player must also click the correct destination pad in that network to collect keys, bypass gates, and reach the exit."
+  },
+  {
+    "idea": "An area-control puzzle where the player claims territory by tracing safe loops while avoiding enemies and surviving barrier pulses."
+  },
+  {
+    "idea": "A stealth-routing game where guard patrol timings determine when crossings are safe and whether the remote gate can be reached in time."
+  },
+  {
+    "idea": "A gate-timing puzzle where movement windows are short and the route only works when the player syncs actions with the gate cycle."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A Rush Hour style sliding-block puzzle where each vehicle can move only along its own orientation, and the player wins by clearing a lane so the goal car can finally drive out."
+  },
+  {
+    "idea": "A coverage puzzle where the player leaves a trail and must touch all required floor cells while handling switches, teleports, and enemies."
+  },
+  {
+    "idea": "A Tron-inspired survival duel where each rider leaves an impassable trail and wins by outlasting or trapping the opponent."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A turn-budget maze where the board advances its own gate and phase clock after every action, so even waiting or detouring changes the future layout of the route."
+  },
+  {
+    "idea": "This is a fluid-balancing puzzle made from a few vertical tanks, visible water fill bars, simple valves between tanks, one or more floating blocks, and exit ledges. Clicking a valve toggles it open or closed. After each action, water redistributes one step across the currently open connections, so the player can watch levels rise and fall rather than seeing a hidden calculation. Floating blocks move with the water level, and the objective is to raise the correct float to the exit height. The board remains visually simple because each tank is just a rectangle, the water is a solid fill region, the valves are single gate tiles, and the floats are blocks. The mechanic is easy to read: open or close paths, then watch levels equalize. Level 1 has two tanks and one float. Opening the only valve raises the float to a reachable exit ledge. Level 2 has three tanks with different starting water levels, so the player must choose which valves to open and when. Level 3 has two floats in the same system, and the player must sequence valve changes so one float reaches its goal without dropping the other below its required height."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage."
+  },
+  {
+    "idea": "A maze built from linked warp corridors, where stepping into one hallway can reappear elsewhere, so the player has to understand the hidden hallway graph rather than trust the visible geometry."
+  },
+  {
+    "idea": "A lane puzzle where alternating phases and interwoven corridors force the player to thread a path through the board in the correct rhythm."
+  },
+  {
+    "idea": "A navigation puzzle where a bulky 2x2 body must be driven through ember-lined corridors and parked fully on the dock without clipping danger."
+  },
+  {
+    "idea": "This is a reconfiguration puzzle where the player moves a walker through a room whose long bars can slide between two fixed positions. Each movable bar is connected by a visible straight line to a winch tile. Clicking a winch pulls its bar to its alternate position; clicking again returns it. A bar may become a bridge over a gap in one state and a wall or ceiling in the other. Because each interaction only toggles between two clearly drawn positions, the board remains readable even on a low-resolution grid. The objective is to use the winches to create a traversable route to the goal while sometimes standing in the correct place before moving the bar back. Level 1 has a single sliding bar that toggles between blocking a hallway and spanning a gap. Level 2 has two winches whose bars overlap spatially, so pulling one can prevent the other from being useful. Level 3 requires the player to stand on a bar, move it with a nearby winch, and then continue on foot, creating a more layered traversal puzzle without adding new object types."
+  },
+  {
+    "idea": "Move sail crates into colored harbors by rotating their sails and releasing global wind gusts. Clicks select or rotate a sail crate, direction keys move the worker, and Space blows wind one step in the current wind direction. A sail crate moves only if its sail faces the wind, while sideways sails act as blockers; crates can block each other, press pads, or shield other crates from gusts. Levels should teach single-crate wind movement, rotating sails to stop motion, using one crate as a windbreak, staging several crates before a gust, changing wind direction with corner fans, and final harbors where the same crate must be blocker, passenger, and pad-holder at different times."
+  },
+  {
+    "idea": ""
+  },
+  {
+    "idea": "A click-based circuit puzzle where missing wire pieces must be placed in the right orientations to carry power from the source to the load."
+  },
+  {
+    "idea": "A click-order puzzle on a zigzag track where nodes have to be activated in the proper progression before time expires, so both ordering and pace matter."
+  }
+]

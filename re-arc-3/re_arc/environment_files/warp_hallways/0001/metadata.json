@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    15,
+    13,
+    13
+  ],
+  "class_name": "WarpHallways",
+  "default_fps": 8,
+  "game_id": "warp_hallways-0001",
+  "local_dir": "re_arc/environment_files/warp_hallways/0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Warp Hallways",
+  "idea": "A maze built from linked warp corridors, where stepping into one hallway can reappear elsewhere, so the player has to understand the hidden hallway graph rather than trust the visible geometry."
+}

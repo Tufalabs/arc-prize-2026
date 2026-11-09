@@ -1,0 +1,8 @@
+{
+  "game_id": "pair_sort-0001",
+  "title": "Pair Sort",
+  "default_fps": 8,
+  "baseline_actions": [1, 4, 9, 29, 37, 46, 51],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "PairSort"
+}

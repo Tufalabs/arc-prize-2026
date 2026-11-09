@@ -1,0 +1,8 @@
+{
+  "game_id": "stone_skaters-0001",
+  "title": "Stone Skaters",
+  "default_fps": 8,
+  "baseline_actions": [3, 5, 9, 25, 51, 54, 85],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "StoneSkaters"
+}

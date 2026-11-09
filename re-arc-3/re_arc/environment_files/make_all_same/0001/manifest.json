@@ -1,0 +1,16 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "make_all_same-0001",
+  "game_id": "make_all_same-0001",
+  "slug": "make_all_same",
+  "class_name": "MakeAllSame",
+  "objective": "obj.match_target",
+  "mechanics": [
+    "mech.click_select",
+    "mech.resize"
+  ],
+  "layout_template": "grid_blocks_3_levels",
+  "action_set": ["up", "down", "click"],
+  "available_actions": [1, 2, 6]
+}

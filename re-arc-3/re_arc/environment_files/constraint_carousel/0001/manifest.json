@@ -1,0 +1,26 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "constraint-carousel",
+  "game_id": "constraint_carousel-0001",
+  "slug": "constraint_carousel",
+  "class_name": "ConstraintCarousel",
+  "objective": "obj.local_color_inventory",
+  "mechanics": [
+    "mech.click_rotate",
+    "mech.overlapping_constraints",
+    "mech.single_use_pivots",
+    "mech.undo",
+    "mech.step_budget"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

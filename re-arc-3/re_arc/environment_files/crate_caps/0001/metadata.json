@@ -1,0 +1,8 @@
+{
+  "game_id": "crate_caps-0001",
+  "title": "Crate Caps",
+  "default_fps": 8,
+  "baseline_actions": [4, 10, 11, 32, 41, 60, 69],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "CrateCaps"
+}

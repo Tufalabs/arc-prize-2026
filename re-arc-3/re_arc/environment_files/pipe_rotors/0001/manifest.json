@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "pipe-rotors",
+  "game_id": "pipe_rotors-0001",
+  "slug": "pipe_rotors",
+  "class_name": "PipeRotors",
+  "objective": "obj.fill_all_terminals",
+  "mechanics": ["mech.rotate_live_pipe", "mech.reciprocal_connectivity", "mech.undo", "mech.action_budget"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "ghost",
+  "game_id": "ghost-0001",
+  "slug": "ghost",
+  "class_name": "Ghost",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.route_recording",
+    "mech.replay_ghosts",
+    "mech.pressure_plates",
+    "mech.timed_gates",
+    "mech.teleporters"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

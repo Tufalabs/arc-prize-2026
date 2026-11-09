@@ -1,0 +1,11 @@
+{
+  "variant": "0001",
+  "game_id": "flood_fill-0001",
+  "slug": "flood_fill",
+  "class_name": "FloodFill",
+  "action_set": [
+    "space",
+    "click"
+  ],
+  "available_actions": [5, 6]
+}

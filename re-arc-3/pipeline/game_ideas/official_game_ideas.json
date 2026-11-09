@@ -1,0 +1,127 @@
+[
+{
+"title": "Axis Reflect",
+"description": "Move blue polyominoes and cyan mirror axes on a 21x21 board so every yellow target cell is covered by either real blue material or a reflected ghost copy. There is no avatar; clicks or Space select a shape or full-board mirror axis, and direction actions translate the selected object by one legal cell. Vertical and horizontal axes reflect recursively when both are present, so one real shape can generate vertical, horizontal, and double-reflected coverage while extra blue away from targets is allowed. Levels should teach fixed reflection, movable axes, multiple shapes, horizontal and vertical mirrors, and final two-axis placement where target coverage depends on recursive reflected copies rather than direct overlap.",
+"num_levels": 8
+},
+{
+"title": "Bottomless Pit",
+"description": "Guide a one-cell side-view player through a tall falling maze where each left or right move is followed by automatic gravity until support, goal, switch, or trap. The player can only move horizontally, while clicks edit visible special blocks: green breakables, orange on/off supports, one-use red gravity reversers, and later purple builders that grow new supports. The camera scrolls over an 11-column map, with early descending ceilings and later offscreen terrain making memory and pre-editing matter. Levels should teach falling to supports, remote block removal, trap avoidance, orange toggles, gravity reversal, builder expansion, and late routes where the player must alter future fall paths before committing.",
+"num_levels": 9
+},
+{
+"title": "Crane Dipper",
+"description": "Paint a 10x10 editable canvas until it matches an upper-left reference pattern, using a basket that moves around the eight outside positions of the canvas. Direction actions move the basket on the rim, clicks select toolbar colors or the small dipper, and Space paints a half-plane, triangle, or narrow inset strip depending on basket position and tool. Paint overwrites previous paint, and validation ignores the two main diagonals even though the reference still displays them, so the puzzle is about stroke order and controlled overpainting. Levels should teach broad single-color strokes, color selection, diagonal-boundary ambiguity, small-dipper precision, and final reference patterns solved by planning a layered overwrite stack.",
+"num_levels": 6
+},
+{
+"title": "Connector",
+"description": "Arrange connected pieces on a 20x20 grid so every visible red endpoint overlaps exactly one endpoint of the same hidden polarity at the same coordinate. The player selects a piece, moves it one cell at a time, and uses Space to rotate ordinary pieces or cycle expandable pieces through size variants. Connector bodies may overlap freely, but endpoint contacts only count as exact same-polarity pairs; three-way overlaps and opposite-polarity overlaps do not satisfy anything. Levels should teach endpoint overlap, rotation, polarity mismatches, harmless body overlap, expandable handles, grey masking of inactive pieces from level 3 onward, and final arrangements that require revealing and positioning several pieces in the right order.",
+"num_levels": 6
+},
+{
+"title": "Dual Control",
+"description": "Move a green 2x2 avatar through the left playfield while operating a black right-side machinery panel that changes the world around it. Direction actions move the avatar in small render-grid increments only while it remains supported, and panel clicks cycle bridges, reveal hidden buttons, activate matching teleporters, or drive a remote manipulator. The puzzle is not just routing: a panel click can strand the avatar, remove support, or only work when the avatar stands on the right trigger or sensor. Levels should teach safe bridge cycling, trigger-revealed controls, teleporter pairing, support-sensitive panel changes, remote gripper movement, and final sensor-gated manipulator sequences.",
+"num_levels": 6
+},
+{
+"title": "Flip Tiles",
+"description": "Click editable 3x3 tiles on a 32x32 logical playfield until all visible target-marker constraints are satisfied at the same time. Each tile has a center color state; regular tiles cycle only themselves, while special tiles show magenta pattern cells that also flip neighboring tile centers in a fixed local shape. The bottom row is a click budget, and clicking empty space or target markers has no effect, so the player must infer which tiles are actuators and how their effects overlap. Levels should teach one-tile color cycling, reading target markers, overlapping 3x3 neighborhoods, multi-color cycles, cross-effect special tiles, and final boards where fixing one marker can disturb another unless clicks are ordered carefully.",
+"num_levels": 6
+},
+{
+"title": "Ghost",
+"description": "Navigate a blue body to a blue outlined goal while recording routes that return to the start and replay as pale ghosts on later attempts. Direction actions move the live player one board cell, and Space saves the route so far, animates the player rewinding through it, leaves a ghost with that timed route, and spawns a fresh live player at the start. Ghosts replay one recorded step for each live step, can hold pressure plates, can be blocked by current gate states, and can desynchronize if timing is wrong. Levels should teach simple goal movement, route recording, ghost-held devices, rewind side effects, gates and teleport timing, and final puzzles where saved routes act as both tools and obstacles.",
+"num_levels": 7
+},
+{
+"title": "Keepaway",
+"description": "Push and park selected green agents and yellow cross blocks into matching dark-framed homes on a pixel grid with 3-pixel movement. Direction actions move the selected green agent, clicks switch selection, and pushed objects can be shoved through purple barriers even though agents cannot walk through them. Grey walls stop both walking and pushed objects, homes require exact one-pixel-inset placement by shape, and later timed pushers can move agents or blocks across otherwise impossible boundaries. Levels should teach click selection, throwing agents through purple barriers, shape-specific homes, yellow cross parking, grey-versus-purple wall behavior, timed pushers, and final multi-object arrangements where the useful push must be staged before exact parking.",
+"num_levels": 7
+},
+{
+"title": "Leap Frog",
+"description": "Reduce the counted bud population by making selected buds jump over other pieces on a white-tile board with movable rail platforms. The player clicks a bud and then a highlighted legal landing cell to jump, while direction actions move every yellow platform one rail cell when legal. Green-over-green jumps remove the jumped bud, purple posts are permanent jump hurdles, red buds can reposition without consuming greens, and blue buds are useful non-counted pieces. Levels should teach basic jump elimination, platforms as moving bridges, multiple platforms moving together, fixed and riding posts, reusable red movement, non-counted blue setup pieces, and final rail puzzles where preserving future jump opportunities matters more than greedy elimination.",
+"num_levels": 10
+},
+{
+"title": "Looping Chains",
+"description": "Click buttons to advance or reverse objects riding on closed loops, belts, and chained tracks until every tracked object sits in its matching target box simultaneously. There is no avatar; each button deterministically changes one loop, several loops, or a coupled subset of positions, and some objects belong to more than one logical cycle. Later loops can overlap, rotate, teleport across edges, share objects, or hide an indirect relationship, so the puzzle is about phase synchronization rather than pathfinding. Levels should teach a single controllable loop, overlapping belts, rotation, multiple targets, edge teleportation, subset coupling, missing reverse controls, hidden object relationships, and a final three-object simultaneous alignment.",
+"num_levels": 8
+},
+{
+"title": "Locksmith",
+"description": "Move through a compact maze while carrying a visible mutable key whose shape, color, and rotation must exactly match lock icons. Direction actions move the player one maze cell; stepping on white rotate tiles, four-color tiles, or shape-marker tiles changes the current key, and stepping onto a lock opens it only if the HUD key matches that lock's target. Yellow pickups recharge the visible energy bar, white pushers carry the player along corridors, and some modifier tiles move automatically after player steps. Levels should teach rotation matching, recharges, color changes, pushers, shape changes, moving modifiers, multiple locks with persistent key state, and a fogged finale.",
+"num_levels": 7
+},
+{
+"title": "Mirrored",
+"description": "Control two main blocks at once until they meet on the same grid cell or cross horizontally in a mirrored move. Up and down move both blocks together, while left and right move the left block in the commanded direction and the right block in the opposite direction. Each block resolves collisions independently, so walls, gates, edges, hazards, and movable blockers can pin one block while the other continues and changes their relative alignment. Levels should teach mirrored horizontal motion, independent pinning, hazard resets, clickable blockers, gate pads that open only while occupied, multiple gate families, and final layouts where meeting requires temporarily separating the pair to create the right collision asymmetry.",
+"num_levels": 6
+},
+{
+"title": "Robot Legs",
+"description": "Place jointed robots by clicking their endpoint handles rather than dragging their bodies directly. Each robot has a central body connected to one or more endpoint handles; after a selected endpoint is moved to a clicked coordinate, the body recenters at the average of all endpoint centers, so moving one leg indirectly translates and rotates the robot. Endpoint placements are blocked by gray wall masks, bodies rewind on cyan body-blocker overlap, and targets are satisfied by body overlap with matching rings. Levels should teach midpoint and centroid control, multiple robots, multi-leg forms, body-blocking terrain, fixed colored targets, color pickups for neutral robots, and final puzzles where collecting the wrong colors creates unsatisfied bodies.",
+"num_levels": 6
+},
+{
+"title": "Reticle",
+"description": "Move colored reticle shapes on a 64x64 pixel grid so their non-transparent pixels cover every matching target center. Direction actions move the selected reticle exactly 3 pixels, Space cycles selection, and the selected reticle is marked by a temporary white center pixel that is not part of any target. Targets are small dark frames with colored centers; only the center pixels matter, extra reticle pixels are allowed, and overlapping reticles can hide earlier pixels if drawn later. Levels should teach single-reticle alignment, multiple reticles, crosses and hollow shapes, overlap ordering, off-camera partial placement, recolor or transform pads, and final boards where all target centers must be covered without occluding needed colors.",
+"num_levels": 8
+},
+{
+"title": "Sliders",
+"description": "Click matching controls to extend, retract, translate, or later rotate capped slider assemblies until every fixed magenta target is covered by a movable magenta marker. There is no avatar; most pieces are 3-pixel-thick sliders with a fixed gray cap and a moving free end, and one control affects every same-colored piece. Some sliders carry child pieces recursively, so moving a parent moves its descendants while child controls can still adjust relative offsets. Levels should teach independent extension, stacked child sliders, movable wall assemblies, same-color coupling, collision rollback against walls or pieces, rotation controls, and final target placement where a temporary structure must be built, shifted, and dismantled without overlap.",
+"num_levels": 8
+},
+{
+"title": "Subroutine",
+"description": "Build small component programs from tray tokens so running the red main component emits the target color sequence. The upper area shows hollow target boxes and colored component frames; clicks move or swap solid literal tokens and hollow pointer tokens into component slots, while Space runs the checker. Literals emit their color, pointers call the component with the same border color and then return, and recursive levels may finish as soon as the final target is emitted. Levels should teach direct literal order, fixed and movable pointers, multiple subcomponents, repeated subroutine calls, pointer color identity without connector hints, recursion, two-row target scanning, and energy-limited edit-and-test planning.",
+"num_levels": 8
+},
+{
+"title": "Spellcaster",
+"description": "Move a small two-color player through a 64x64 maze while casting spells from a 3x3 clickable board to reach the orange finish portal. Direction actions move the player by its current scale, while clicking exact spell patterns can shrink or grow the body, teleport it to a marked target, blast colored gate targets, or reshape special corner blocks. Walls, gates, blast targets, blockers, and corner pieces are collidable, and yellow recharges reduce spent actions, so spells must be used sparingly and at the right location or facing. Levels should teach resize passages, teleport bypasses, blast-gate removal, combining resize with blast, recharges, corner-block transformations, and final routes where spell order determines which corridors remain reachable.",
+"num_levels": 6
+},
+{
+"title": "Skewer",
+"description": "Move one or more skewer handles on a 6-pixel grid to pierce colored blocks and arrange ordered stacks on scoring skewers. A handle carries a row or column of gray skewer segments; colored blocks can be pushed, pierced onto a segment, carried with the handle, or transferred at intersections between horizontal and vertical skewers. The bottom display shows the required color sequence for each scoring skewer, read from the handle outward, and structural gray segments do not count as target colors. Levels should teach single horizontal skewering, reordering a row of blocks, fixed vertical sticks, distributing one load across multiple targets, obstacles, two controllable skewers, shared intersection blocks, and final short-rail transfer puzzles.",
+"num_levels": 8
+},
+{
+"title": "Spill",
+"description": "Set up movable barriers and corner deflectors, then press the spill action to run a deterministic water simulation that must fill every yellow basin without touching failure walls. Levels use small logical pixel grids with purple streams, yellow sources and basins, light-blue movable bars, and later pink corner deflectors; moving pieces is the planning phase, and the spill phase is the check. Water flows from sources through open space, splits or stops on bars, fills basins, and flashes failure walls if any stream leaks into forbidden cells. Levels should teach single-source containment, movable splitters, multiple basins, movable embedded sources, sideways basin filling through deflection, rotated displays, and final arrangements where one source both creates a boundary and supplies a basin.",
+"num_levels": 6
+},
+{
+"title": "Suika Vacuum",
+"description": "Click points on a 64x64 play area to create shrinking vacuum markers that pull nearby blobs and enemy ships toward the clicked location. Friendly blobs of equal size merge into the next size, incompatible friendly contacts undo the click, and enemy ships can downgrade friendly blobs or merge with enemies of the same type. Goals are circular bubbles checked by contained object centers, and the top display specifies required friendly sizes and enemy types rather than assigning each object to a fixed goal. Levels should teach vacuum movement, pairwise merging, partitioning mass into several target sizes, avoiding enemy hits, using enemies to downgrade oversized blobs, merging enemies as objectives, and final compositions where one extra hit or merge ruins the target inventory.",
+"num_levels": 9
+},
+{
+"title": "True Naming",
+"description": "Program a notched actor by toggling instruction bits on a right-side program grid, then click Run to execute the visible program against a target outline. The left reference machine shows sample programs selected by bottom buttons; those samples demonstrate which bit patterns mean movement, resizing, rotation, recoloring, checkpoints, or timed laser-safe routes, but the right program must be edited manually. A run only wins if the actor finishes with the target position, rotation, scale, and color; passing through the target earlier is not enough. Levels should teach basic command encoding, copying reference samples, four-direction routing, shrinking through gaps, rotation and color transforms, checkpoint resets, laser timing, and final compact programs under collision rejection.",
+"num_levels": 7
+},
+{
+"title": "Translate",
+"description": "Edit colored symbol sequences so the lower configuration satisfies visible translation rules shown in the upper panel. Bracket cursors move through selectable symbol slots or whole rule sides; up and down cycle glyph identity within a fixed color family, while visual rotation is ignored by validation. Early levels edit the lower answer row using one-to-one, one-to-many, and many-to-many rules, while later levels require two-hop translation or editing the rule table itself. Levels should teach direct substitution, expansion rules, left-to-right sequence parsing, ignoring rotation, cyan-to-magenta-to-yellow chaining, whole-rule-side cycling, and final tree-style rule editing where several valid proofs can produce the fixed target row.",
+"num_levels": 6
+},
+{
+"title": "Stealth",
+"description": "Move a blue character through a graph-like stealth maze of chunky stopping nodes and connector bars while enemy logic advances after valid moves. Direction inputs rotate and slide the player one graph edge, blocked inputs spend time without advancing enemies, and reaching the green goal wins before the step meter empties. Enemy updates are ordered: front-facing ambushers can trigger, red patrollers move and reverse at walls, active chasers follow delayed history or sight logic, and collisions decide whether the player or enemy explodes. Levels should teach graph-edge route reading, blocked-input timing, safe enemy removal, patrol reversal, ambusher facing, chaser baiting, collectible enemies, and final routes that depend on remembering enemy update order.",
+"num_levels": 9
+},
+{
+"title": "Valvecheck",
+"description": "Click blue valves to conserve and transfer black reservoir volume so colored curl pieces align with matching target bars. There is no avatar; each level has a gravity direction, and a valve moves a fixed slab of reservoir space from one linked reservoir to another along that gravity axis. Curls stay attached to the upstream edge of their current reservoir, so transferring volume out moves a curl with gravity while transferring volume in moves it against gravity; active gates later move curls across separators without moving volume. Levels should teach one-curl alignment, reverse transfers, multiple curls, vertical gravity, wall gaps, gate activation by reservoirs touching both sides, curl swaps, and final simultaneous color-and-coordinate satisfaction.",
+"num_levels": 7
+},
+{
+"title": "Warehouse",
+"description": "Move a green warehouse worker on a 16x16 logical grid to place every crate on blue target pads while helpers and adversaries act after each player action. Direction actions move or turn the worker, and Space picks up, drops, or neutralizes the faced object; a carried crate keeps its offset from the worker and moves only if both destinations are clear. Orange helpers attach nearby crates and route them to targets, while purple adversaries steal crates toward blue steal zones using deterministic shortest paths. Levels should teach pickup and drop, target placement, helper cooperation, dashed transfer walls, multi-helper staging, adversary neutralization, contested crate ownership, steal zones, and final timing where crates must be staged for helpers before adversaries interfere.",
+"num_levels": 9
+}
+]

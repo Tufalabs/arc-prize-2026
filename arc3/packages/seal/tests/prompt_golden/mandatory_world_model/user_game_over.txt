@@ -1,0 +1,15 @@
+Palette legend image: one swatch per color index, labelled with the index (top-left), the character `ascii_grid` renders it as (top-right), and its name.
+[image:512x512]
+The code executed 2 actions in the previous sequence.
+Executed actions: UP, LEFT.
+You are still on the same level.
+The game is over.
+Current state: step 3, level 1.
+You may explore for up to 10 more moves, but write a world model as soon as feasible. Until you do, you may only perform one action per tool call.
+Valid actions right now: UP, DOWN, LEFT, RIGHT.
+The frame above is the state you lost in — study it, since it shows exactly what went wrong.
+RESET is the only action that can be executed now. Call `submit_action([Action('RESET')])` inside Python; any other action is refused.
+RESET restores the current level to its starting state; the level you had reached is not lost.
+
+Current grid image:
+[image:32x32]

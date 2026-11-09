@@ -1,0 +1,31 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "latch-bridges",
+  "game_id": "latch_bridges-0001",
+  "slug": "latch_bridges",
+  "class_name": "LatchBridges",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.latch_bridge",
+    "mech.click_turnstile",
+    "mech.moving_blocker",
+    "mech.step_budget"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

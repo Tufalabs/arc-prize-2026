@@ -1,0 +1,22 @@
+[project]
+name = "taaf"
+version = "0.1.0"
+description = "Tufa ARC-AGI framework, ARC-AGI2 orchestration layer"
+requires-python = "==3.12.12"
+dependencies = [
+    "matplotlib>=3.11.0",
+    "numpy>=2.0.0",
+    "scipy>=1.10",
+    "kaggle>=2.2.0",
+    "zstandard>=0.22",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+taaf = ["kaggle/*.ipynb", "data/*.npz"]

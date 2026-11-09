@@ -1,0 +1,27 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "island-inverter",
+  "game_id": "island_inverter-0001",
+  "slug": "island_inverter",
+  "class_name": "IslandInverter",
+  "objective": "obj.reveal_star",
+  "mechanics": [
+    "mech.component_flip",
+    "mech.boundary_access",
+    "mech.heterogeneous_reverse_faces",
+    "mech.component_merge_split",
+    "mech.undo",
+    "mech.timer"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click",
+    "undo"
+  ],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

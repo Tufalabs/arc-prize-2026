@@ -1,0 +1,22 @@
+{
+  "baseline_actions": [
+    3,
+    4,
+    4,
+    6,
+    12,
+    10,
+    15,
+    26
+  ],
+  "class_name": "Sliders",
+  "default_fps": 8,
+  "game_id": "sliders-0001",
+  "idea": "Click matching controls to extend, retract, translate, or later rotate capped slider assemblies until every fixed magenta target is covered by a movable magenta marker. There is no avatar; most pieces are 3-pixel-thick sliders with a fixed gray cap and a moving free end, and one control affects every same-colored piece. Some sliders carry child pieces recursively, so moving a parent moves its descendants while child controls can still adjust relative offsets. Levels should teach independent extension, stacked child sliders, movable wall assemblies, same-color coupling, collision rollback against walls or pieces, rotation controls, and final target placement where a temporary structure must be built, shifted, and dismantled without overlap.",
+  "tags": [
+    "click-only",
+    "official-reimplemented",
+    "easy"
+  ],
+  "title": "Sliders"
+}

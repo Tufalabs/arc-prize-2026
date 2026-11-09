@@ -1,0 +1,18 @@
+{
+  "game_id": "chase_escape-0001",
+  "title": "ChaseEscape",
+  "idea": "A pursuit puzzle where the player must reach the goal while staying ahead of a chaser and manipulating gates, keys, and movable objects.",
+  "default_fps": 8,
+  "baseline_actions": [
+    15,
+    19,
+    26,
+    35,
+    9,
+    55
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "ChaseEscape"
+}

@@ -1,0 +1,20 @@
+{
+  "game_id": "compass_stretch-0001",
+  "title": "Compass Stretch",
+  "default_fps": 8,
+  "baseline_actions": [
+    8,
+    14,
+    23,
+    32,
+    43,
+    48,
+    53,
+    61
+  ],
+  "tags": [
+    "click-keys",
+    "codex-reviewed"
+  ],
+  "class_name": "CompassStretch"
+}

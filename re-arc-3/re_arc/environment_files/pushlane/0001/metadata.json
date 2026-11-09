@@ -1,0 +1,14 @@
+{
+  "game_id": "pushlane-0001",
+  "title": "Push Lane",
+  "idea": "A compact crate puzzle where pushing the crate onto switches and pickups changes a narrow lane enough to open the goal path.",
+  "default_fps": 8,
+  "baseline_actions": [
+    24
+  ],
+  "tags": [
+    "keys-only", 
+    "debugging"
+  ],
+  "class_name": "Pushlane"
+}

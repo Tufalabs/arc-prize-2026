@@ -1,0 +1,12 @@
+Undo the most recent change you made to a file. One step only: calling it again, before you make another edit, finds nothing to take back.
+
+{
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "description": "File to undo; omit for the most recent change"
+    }
+  },
+  "required": []
+}

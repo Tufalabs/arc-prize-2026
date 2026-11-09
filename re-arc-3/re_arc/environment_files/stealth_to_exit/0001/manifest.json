@@ -1,0 +1,40 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "stealth-to-exit-v1",
+  "game_id": "stealth_to_exit-0001",
+  "slug": "stealth_to_exit",
+  "class_name": "StealthToExit",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.guard_vision",
+    "mech.hiding",
+    "mech.noise_distraction",
+    "mech.key_door",
+    "mech.timer"
+  ],
+  "layout_template": "multi_level_stealth",
+  "action_set": ["up", "down", "left", "right"],
+  "available_actions": [1, 2, 3, 4],
+  "source_spec": {
+    "spec_id": "stealth-to-exit-v1",
+    "difficulty": "hard",
+    "grid_size": [32, 18],
+    "action_set": ["up", "down", "left", "right"],
+    "target_optimal_steps": 90,
+    "time_limit": 288,
+    "objective": "obj.reach_goal",
+    "mechanics": [
+      "mech.guard_vision",
+      "mech.hiding",
+      "mech.noise_distraction",
+      "mech.key_door",
+      "mech.timer"
+    ],
+    "validation": {
+      "require_dsl_win": true,
+      "max_actions_test": 600,
+      "required_terminal_state": "WIN"
+    }
+  }
+}

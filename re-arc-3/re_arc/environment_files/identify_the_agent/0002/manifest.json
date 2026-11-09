@@ -1,0 +1,18 @@
+{
+  "generator": "manual",
+  "variant": "0002",
+  "game_id": "identify_the_agent-0002",
+  "slug": "identify_the_agent",
+  "class_name": "IdentifyTheAgent",
+  "objective": "obj.reach_target",
+  "mechanics": ["mech.grid_move", "mech.role_discovery", "mech.collect"],
+  "action_set": ["move_4"],
+  "available_actions": [1, 2, 3, 4],
+  "source_spec": {
+    "grid_size": [16, 16],
+    "time_limit": 80,
+    "entity_count": 3,
+    "levels": 3,
+    "description": "Three progressive levels: open navigation, higher resolution, and cross collection."
+  }
+}

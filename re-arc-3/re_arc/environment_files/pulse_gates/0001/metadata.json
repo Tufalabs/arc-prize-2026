@@ -1,0 +1,8 @@
+{
+  "game_id": "pulse_gates-0001",
+  "title": "Pulse Gates",
+  "default_fps": 8,
+  "baseline_actions": [1, 3, 4, 23, 37, 51, 64],
+  "tags": ["click-only", "codex-reviewed", "codex-evaluated"],
+  "class_name": "PulseGates"
+}

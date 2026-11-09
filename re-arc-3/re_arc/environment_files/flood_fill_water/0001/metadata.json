@@ -1,0 +1,18 @@
+{
+  "game_id": "flood_fill_water-0001",
+  "title": "FloodFillWater",
+  "idea": "A flooding escape puzzle where water spreads through the map while the player pushes blocks and toggles gates to stay ahead of it.",
+  "default_fps": 8,
+  "baseline_actions": [
+    23,
+    28,
+    24,
+    26,
+    27,
+    30
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "FloodFillWater"
+}

@@ -1,0 +1,8 @@
+{
+  "game_id": "flood_paint-0001",
+  "title": "Flood Paint",
+  "default_fps": 8,
+  "baseline_actions": [2, 4, 5, 19, 25, 33, 39],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "FloodPaint"
+}

@@ -1,0 +1,8 @@
+{
+  "game_id": "beam_compass-0001",
+  "title": "Beam Compass",
+  "default_fps": 8,
+  "baseline_actions": [1, 6, 6, 12, 21, 30, 42],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "BeamCompass"
+}

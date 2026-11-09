@@ -1,0 +1,18 @@
+{
+  "game_id": "herding-0001",
+  "title": "Herding",
+  "idea": "A shepherding game where the player corrals sheep into a pen using walls, one-way gates, and occasional switches before time runs out.",
+  "default_fps": 8,
+  "baseline_actions": [
+    24,
+    30,
+    43,
+    42,
+    36,
+    97
+  ],
+  "tags": [
+    "click-keys"
+  ],
+  "class_name": "Herding"
+}

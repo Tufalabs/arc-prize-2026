@@ -1,0 +1,88 @@
+{
+  "name": "reap307-kimi-mixed-cekl-cosine120-20261030",
+  "training_base_commit": "1f02342768e687180cf8c80b64b9199ef63c8572",
+  "main_ancestor": "9406a5e08fdb36013d5ee608d7deeb5eb4426280",
+  "recipe_head": "1f02342768e687180cf8c80b64b9199ef63c8572",
+  "evaluation_head": "9f292f04936ba1bdd8f4ddb1151e3b131f5e10eb",
+  "evaluation_review_id": 5711911733,
+  "review_finding": "Resolve relative checkpoint paths before sending them to Slurm workers; adoption resolves paths first",
+  "model": "Qwen3.8-Flash-Next-NVFP4-arc3-reap307",
+  "frozen_base": true,
+  "frozen_routers": true,
+  "ranks": {
+    "attention": 128,
+    "shared": 256,
+    "routed": 16
+  },
+  "gpu_limit": 8,
+  "gpus": 4,
+  "global_rows_per_update": 4,
+  "gpu_choice_reason": "Native trainer has one packed row per rank; keep PR120 global batch rather than doubling it",
+  "loss": "CE on every completion token plus 0.3 teacher KL at usable recorded byte-aligned positions",
+  "data_policy": "Exactly the 19 committed collections in configs/flash_sft/reap307-kimi-mixed-sources.json; mandatory-world-model collection excluded",
+  "holdout": [
+    "pathfinder-0001",
+    "taps-0001",
+    "cd82-fb555c5d",
+    "dc22-fdcac232",
+    "escape_velocity-0001"
+  ],
+  "excluded_holdout_relatives": [
+    "crane_dipper-0001"
+  ],
+  "passes": 2,
+  "schedule": {
+    "peak_lr": 0.0001,
+    "warmup_updates": 5,
+    "cosine_passes": 1,
+    "final_lr": 1e-05,
+    "flat_following_passes": 1
+  },
+  "validation_every": 20,
+  "save_every": 20,
+  "evaluation": {
+    "heldout_games": 5,
+    "heldout_passes": 20,
+    "official_and_hard_games": 36,
+    "official_and_hard_passes": 3,
+    "hard_baseline_multiplier": 3,
+    "kimi_student": true,
+    "fp8_kv": true
+  },
+  "additional_differences_from_pr120": [
+    "Larger all-published-Kimi corpus including new rounds and ARC2 data, rather than the frozen 789-row corpus",
+    "Current PR131 harness serialization and reasoning-enabled summaries; old teacher context content remains recorded content",
+    "Native main-stack Flash SFT trainer rather than PR120 original FSDP implementation",
+    "Cosine boundary scales to one pass of this corpus rather than a fixed 198 updates",
+    "Checkpoints every 20 updates to retain every validated candidate rather than every 40",
+    "Official complete holdout evaluation and FP8 KV rather than historical Official25 with INT4 KV"
+  ],
+  "training_submission_gate": "PR131 reviewed, current-harness CPU preparation and tests passed, audited disjoint data ready, one GPU qualification update passed",
+  "evaluation_approval_id": 5712702415,
+  "native_base_pr": 122,
+  "native_base_commit": "1f02342768e687180cf8c80b64b9199ef63c8572",
+  "new_sources": [
+    "arc2-train-hard+arc2-eval-20261030-110002",
+    "seal-re-arc-unlisted-s20261006-20261030-071018"
+  ],
+  "additional_differences_from_pr122": [
+    "CE on all completions plus 0.3 KL at usable recorded teacher positions",
+    "Expanded published Kimi ARC2 and ARC3 corpus with current-harness serialization",
+    "One-pass cosine boundary computed from the expanded corpus",
+    "Checkpoints every 20 updates rather than 40; CE and CE+KL validation",
+    "Official PR131 evaluation with explicit FP8 KV"
+  ],
+  "config": "configs/flash_sft/reap307-kimi-mixed-cosine.json",
+  "source_manifest": "configs/flash_sft/reap307-kimi-mixed-sources.json",
+  "additional_baseline_exclusions": [
+    "sliders-0001"
+  ],
+  "shared_artifacts": "/data/shared/research/arc_3_results/shared/reap307-kimi-mixed-cekl-cosine120-20261030/artifacts",
+  "recipe_status": "frozen",
+  "data_build_job": "3635386",
+  "train_rows": 1934,
+  "total_updates": 968,
+  "cosine_decay_until": 483,
+  "training_rows_sha256": "1115e607b758b553f3f81baf2d90311d41d5a83186c89a5767dc92b1755d43d5",
+  "validation_rows_sha256": "9b8ce4b0f693800ad2c7f9b08678749305f8286076daf7f12f571279a66b1553"
+}

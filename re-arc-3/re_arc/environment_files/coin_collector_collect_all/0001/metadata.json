@@ -1,0 +1,18 @@
+{
+  "game_id": "coin_collector_collect_all-0001",
+  "title": "CoinCollectorCollectAll",
+  "idea": "A timed collection maze where the player directly navigates a small avatar through wall layouts and must sweep up every coin on the board before the shrinking time bar runs out.",
+  "default_fps": 8,
+  "baseline_actions": [
+    33,
+    44,
+    70,
+    66,
+    90,
+    97
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "CoinCollectorCollectAll"
+}

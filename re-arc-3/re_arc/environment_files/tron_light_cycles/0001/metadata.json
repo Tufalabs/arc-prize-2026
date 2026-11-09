@@ -1,0 +1,18 @@
+{
+  "game_id": "tron_light_cycles-0001",
+  "title": "TronLightCycles",
+  "idea": "A Tron-inspired survival duel where each rider leaves an impassable trail and wins by outlasting or trapping the opponent.",
+  "default_fps": 8,
+  "baseline_actions": [
+    120,
+    150,
+    61,
+    42,
+    93,
+    60
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "TronLightCycles"
+}

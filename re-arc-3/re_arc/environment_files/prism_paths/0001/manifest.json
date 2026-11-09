@@ -1,0 +1,19 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "prism-paths",
+  "game_id": "prism_paths-0001",
+  "slug": "prism_paths",
+  "class_name": "PrismPaths",
+  "objective": "obj.reach_exit",
+  "mechanics": [
+    "mech.light_bridges",
+    "mech.push_mirrors",
+    "mech.rotate_mirrors",
+    "mech.atomic_support",
+    "mech.preview",
+    "mech.undo"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 7]
+}

@@ -1,0 +1,19 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "looping-chains",
+  "game_id": "looping_chains-0001",
+  "slug": "looping_chains",
+  "class_name": "LoopingChains",
+  "objective": "obj.align_riders",
+  "mechanics": [
+    "mech.click_cycle",
+    "mech.overlap_transfer",
+    "mech.oriented_target",
+    "mech.edge_wrap",
+    "mech.subset_cycle",
+    "mech.remote_echo"
+  ],
+  "action_set": ["click"],
+  "available_actions": [1, 2, 3, 4, 5, 6]
+}

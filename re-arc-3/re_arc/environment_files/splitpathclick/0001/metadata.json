@@ -1,0 +1,13 @@
+{
+  "game_id": "splitpathclick-0001",
+  "title": "Split Path Click",
+  "idea": "A click-based routing puzzle where a branching path is assembled one commitment at a time, so each chosen segment constrains which later branches can still produce a complete route.",
+  "default_fps": 8,
+  "baseline_actions": [
+    4
+  ],
+  "tags": [
+    "click-only"
+  ],
+  "class_name": "Splitpathclick"
+}

@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    5,
+    11,
+    16
+  ],
+  "class_name": "FanDrift",
+  "default_fps": 8,
+  "game_id": "fan_drift-0001",
+  "idea": "This is a field-control puzzle where loose leaf tokens drift under the influence of fixed fans. Each fan has a clear orientation and a straight beam extending from it. Clicking a fan toggles it on or off. After every action, a leaf inside an active beam moves one cell in the beam direction unless blocked. The objective is to guide the leaves into marked bins. Unlike the earlier airflow idea, the player is not drawing paths; instead, the board contains a small number of persistent push fields that can be activated or deactivated. This keeps the visual vocabulary very small: fans, beam lines, leaves, walls, and bins. Level 1 has one leaf and two fans in a simple room, so the player quickly learns how an active beam moves the token. Level 2 introduces walls and a second leaf, so beams must be switched on and off in the right order to avoid misrouting one token while fixing the other. Level 3 places bins in different corners and uses overlapping fan beams, forcing the player to exploit temporary parking spots and careful timing.",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Fan Drift"
+}

@@ -1,0 +1,123 @@
+{
+  "cutoff_utc": "2026-10-30T13:18:15.764150+00:00",
+  "collections": [
+    {
+      "name": "arc3__seal-re-arc-rest-s20261002-20261028-214737",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-re-arc-rest-s20261002-20261028-214737",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-re-arc-rest-s20261002-20261028-214737/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "88744c52c716e8b80af06dc387da165b69c12b57d9c389469516d284d39fa323"
+    },
+    {
+      "name": "arc3__seal-smoke-20261027-170835",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-20261027-170835",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-20261027-170835/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "5abd64980664ed34bcf9352de7efd0d624ebddf85771cacf2c7cebc63b203c47"
+    },
+    {
+      "name": "arc3__seal-smoke-20261027-180714",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-20261027-180714",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-20261027-180714/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "9d673e677cc3f438e002b3dc91ed3b2664b25bba6a1c22f5d41803d187ba171d"
+    },
+    {
+      "name": "arc3__seal-smoke-20261027-181442",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-20261027-181442",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-20261027-181442/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "7e84b4138a4244ede767c773ae6536bbd161636b6251941ac526bffb51aed0e0"
+    },
+    {
+      "name": "arc3__seal-smoke-20261027-184543",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-20261027-184543",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-20261027-184543/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "eb1d21e86337990b81ac7fda708e018f98e4c51fc0f24d7ab570a35edaf4e759"
+    },
+    {
+      "name": "arc3__seal-smoke-20261028-173617",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-20261028-173617",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-20261028-173617/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "726019d1e7da45e3eb7bc155db53886eb9d3d4230b4b0617166a2a25c64b1eeb"
+    },
+    {
+      "name": "arc3__seal-smoke-s20261003-20261029-062616",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261003-20261029-062616",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261003-20261029-062616/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "35cacfbaca8ffa1c659ae29b6ee430181fd39473d3561c653c4a5bb790731e82"
+    },
+    {
+      "name": "arc3__seal-smoke-s20261003-20261029-065606",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261003-20261029-065606",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261003-20261029-065606/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "0f8c67b98e0366cb380f9860be413593fc33c0b9e99ca1b8cf5397973baebb7f"
+    },
+    {
+      "name": "arc3__seal-smoke-s20261004-20261029-062641",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261004-20261029-062641",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261004-20261029-062641/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "0999f1e2c12c72cfb5821b6668ebfbcf665debd8f22f6397498769c54f5f5b9d"
+    },
+    {
+      "name": "arc3__seal-smoke-s20261004-20261029-085243",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261004-20261029-085243",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261004-20261029-085243/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "1f6c9f8513f7cb85ea94293f4ade43bbe079e9c29ae72ec26727e530d0fc479e"
+    },
+    {
+      "name": "arc3__seal-smoke-s20261005-20261029-062712",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261005-20261029-062712",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261005-20261029-062712/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "436f3de590db96a03e7fa58c97d9606689217b0c3ef0458e8ee746f677ffedc6"
+    },
+    {
+      "name": "arc3__seal-smoke-s20261005-20261029-110500",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261005-20261029-110500",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261005-20261029-110500/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "480b780d9ea9b757e26942688deee5ee8046a3034ccb4161beeb48bfdfb6ac28"
+    },
+    {
+      "name": "arc3__seal-smoke-s20261007-20261029-151901",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261007-20261029-151901",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261007-20261029-151901/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "929c639505bd52df78874e6264a1f7806a798ff06d1076bc901dc7a258910734"
+    },
+    {
+      "name": "arc3__seal-smoke-s20261008-20261029-194219",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261008-20261029-194219",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-smoke-s20261008-20261029-194219/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "10471ffa3a174d28fda0cf1a6baa552ce39948dd35769f823bf7c7bd057deb48"
+    },
+    {
+      "name": "arc2__arc2-train-easy-20261028-080042",
+      "root": "/data/shared/research/arc_2_results/shared/distill/kimi-k3.1-pro/arc2-train-easy-20261028-080042",
+      "archive": "/data/shared/research/arc_2_results/shared/distill/kimi-k3.1-pro/arc2-train-easy-20261028-080042/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "b98f9e38219f823bb9a0c4409f433841f3eed36015d91380470d8e86a50eb8dc"
+    },
+    {
+      "name": "arc2__arc2-train-hard+arc2-eval-20261028-085042",
+      "root": "/data/shared/research/arc_2_results/shared/distill/kimi-k3.1-pro/arc2-train-hard+arc2-eval-20261028-085042",
+      "archive": "/data/shared/research/arc_2_results/shared/distill/kimi-k3.1-pro/arc2-train-hard+arc2-eval-20261028-085042/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "69cc730fa74f230b2a8d0792213e3cb0cdc24579802a737072259dc701ee83a1"
+    },
+    {
+      "name": "arc2__arc2-train-hard+arc2-eval-20261028-120605",
+      "root": "/data/shared/research/arc_2_results/shared/distill/kimi-k3.1-pro/arc2-train-hard+arc2-eval-20261028-120605",
+      "archive": "/data/shared/research/arc_2_results/shared/distill/kimi-k3.1-pro/arc2-train-hard+arc2-eval-20261028-120605/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "8d997362260c2c419841fc08ff2ce5cccfe72e156f6321ea081d6ebe4b71de83"
+    },
+    {
+      "name": "arc2__arc2-train-hard+arc2-eval-20261030-110002",
+      "root": "/data/shared/research/arc_2_results/shared/distill/kimi-k3.1-pro/arc2-train-hard+arc2-eval-20261030-110002",
+      "archive": "/data/shared/research/arc_2_results/shared/distill/kimi-k3.1-pro/arc2-train-hard+arc2-eval-20261030-110002/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "c692d3bb639b28016171a649228cc17380dabd23c99c7766ed18dcfd96f94320"
+    },
+    {
+      "name": "arc3__seal-re-arc-unlisted-s20261006-20261030-071018",
+      "root": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-re-arc-unlisted-s20261006-20261030-071018",
+      "archive": "/data/shared/research/arc_3_results/shared/distill/kimi-k3.1-pro/seal-re-arc-unlisted-s20261006-20261030-071018/retained_traces/trace_bundle.tar.zst",
+      "archive_sha256": "e3a6a140b02b5b655a92eb0cedfc56f0a5a7a1042d52f1def62a6af7dd96a375"
+    }
+  ],
+  "policy": "Explicit reviewed collection list; immutable archive SHA256s; no success/reward filter",
+  "excluded_collections": {
+    "arc3__seal-smoke-wm-mandatory-s20261009-20261030-130449": "Mandatory-world-model teacher prompt differs from the world_model_default student baseline"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "spec-custom-coin-collector-collect-all-0001",
+  "game_id": "coin_collector_collect_all-0001",
+  "slug": "coin_collector_collect_all",
+  "class_name": "CoinCollectorCollectAll",
+  "objective": "obj.collect_all",
+  "mechanics": [
+    "mech.avatar_navigation",
+    "mech.collect_all",
+    "mech.timer_bar"
+  ],
+  "layout_template": "fixed_six_level_series",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "source_spec": {
+    "spec_id": "spec-custom-coin-collector-collect-all-0001",
+    "difficulty": "hard",
+    "grid_size": [
+      32,
+      18
+    ],
+    "action_set": [
+      "up",
+      "down",
+      "left",
+      "right",
+      "space"
+    ],
+    "objective": "obj.collect_all",
+    "time_model": "timebar_steps_per_cell",
+    "levels": 6,
+    "validation": {
+      "require_dsl_win": true,
+      "required_terminal_state": "WIN"
+    }
+  }
+}

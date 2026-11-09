@@ -1,0 +1,8 @@
+{
+  "game_id": "contact_alchemy-0001",
+  "title": "Contact Alchemy",
+  "default_fps": 8,
+  "baseline_actions": [1, 1, 2, 8, 25, 41, 55],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "ContactAlchemy"
+}

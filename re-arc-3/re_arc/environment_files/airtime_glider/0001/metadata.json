@@ -1,0 +1,18 @@
+{
+  "game_id": "airtime_glider-0001",
+  "title": "Airtime Glider",
+  "idea": "A lane-switching survival game where a glider weaves through towers, birds, and wind currents while grabbing shields and lasting until the timer runs out.",
+  "default_fps": 8,
+  "baseline_actions": [
+    111,
+    112,
+    112,
+    112,
+    112,
+    112
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "AirtimeGlider"
+}

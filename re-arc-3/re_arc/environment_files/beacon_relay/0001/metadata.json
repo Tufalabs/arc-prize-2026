@@ -1,0 +1,8 @@
+{
+  "game_id": "beacon_relay-0001",
+  "title": "Beacon Relay",
+  "default_fps": 8,
+  "baseline_actions": [9, 17, 23, 37, 42, 51, 61],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "BeaconRelay"
+}

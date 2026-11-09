@@ -1,0 +1,16 @@
+{
+  "game_id": "debug_identify_the_agent-0001",
+  "title": "Debug Identify The Agent",
+  "idea": "A deterministic two-level debug task where the player moves a blue agent onto a green target.",
+  "default_fps": 8,
+  "baseline_actions": [
+    4,
+    24
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "DebugIdentifyTheAgent"
+}

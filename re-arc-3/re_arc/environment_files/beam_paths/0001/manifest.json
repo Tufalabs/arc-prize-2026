@@ -1,0 +1,19 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "beam-paths",
+  "game_id": "beam_paths-0001",
+  "slug": "beam_paths",
+  "class_name": "BeamPaths",
+  "objective": "obj.reach_exit",
+  "mechanics": [
+    "mech.beam_reflection",
+    "mech.rotate_by_bump",
+    "mech.powered_doors",
+    "mech.optical_slit",
+    "mech.undo",
+    "mech.timer"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

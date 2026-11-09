@@ -1,0 +1,183 @@
+# Virtual workspace root — not a package itself. Members live under
+# packages/; shared dev tooling and tool config live here.
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[dependency-groups]
+dev = [
+    "taaf",
+    "platypus",
+    "duck",
+    "sweeper",
+    # tests/test_deployment_snapshot.py, which diffs every deployment's whole
+    # configuration against a committed tree. Its report is what makes a
+    # regeneration readable — the alternative is a hand-rolled dict walk whose
+    # output nobody wants in a PR.
+    "deepdiff>=9.1.0",
+    "ipykernel>=7.2.0",
+    "jupyter>=1.1.1",
+    # tools/trace_page.py: the model's replies, and the Python it writes.
+    "markdown-it-py>=3.0.0",
+    "matplotlib>=3.11.0",
+    "nbconvert>=7.17.0",
+    "nbstripout>=0.9.1",
+    "pandas>=2.3.0",
+    "pygments>=2.19.0",
+    "pyright>=1.1.300",
+    "pytest>=9.0.2",
+    "pytest-asyncio>=1.3.0",
+    "pytest-xdist>=3.6.1",
+    "ruff>=0.15.9",
+]
+
+[tool.uv.sources]
+taaf = { workspace = true }
+platypus = { workspace = true }
+duck = { workspace = true }
+sweeper = { workspace = true }
+# The LLM layer, shared with the ARC3 solver.
+ullm = { path = "../arc3/packages/ullm", editable = true }
+
+# Pin ullm's direct dependencies to the combination its own CI runs green
+# against. Not because those versions are canonical, but because a dependent
+# cannot fix what breaks inside them: resolving fresh jumps openai 2->3,
+# anthropic 0->1 and mcp 1->2, none of which ullm's backends have been run
+# against. `uv lock` is conservative, so this holds the first resolve and the
+# lock holds it afterwards.
+#
+# protobuf is deliberately absent: arc3-platypus locks it at two versions
+# under different markers, so a single `==` would break a resolution branch.
+#
+# vllm is absent too: the engine is pinned by the override below, not held
+# by a constraint.
+[tool.uv]
+# extra-build-variables below arrived in uv 0.8.6. This floor states that,
+# but it is NOT a guard: an older uv rejects the unknown field, discards
+# this whole [tool.uv] table -- floor included -- and carries on, so the
+# variables that keep the vllm build off nightly binaries are silently
+# dropped (measured upstream with uv 0.6.6). Nothing in this file can stop a
+# uv too old to read it; the floor only refuses a uv new enough to parse the
+# table but older than the variables need. Keep workers on a current uv.
+required-version = ">=0.8.6"
+constraint-dependencies = [
+    "anthropic==0.117.0",
+    "jsonschema==4.26.0",
+    "mistune==3.3.3",
+    "nest-asyncio==1.6.0",
+    "numpy==2.3.5",
+    "openai==2.46.0",
+    "openai-harmony==0.0.8",
+    "pillow==12.3.0",
+    "transformers==5.16.1",
+    "typeguard==4.5.2",
+]
+override-dependencies = [
+    # The engine: upstream vLLM v0.29.0 plus our changes (the fork's TUFA.md says what they
+    # are). It is pure Python over upstream's precompiled binaries, which the build
+    # variables below select; the installed version reads 0.29.1.devN+g<sha>.
+    "vllm @ git+https://github.com/Tufalabs/arc-prize-2026-vllm@a1edcd2caf6c3d3521aaac063004c49ef7f9ffcd",
+]
+
+# The vllm fork is pure Python on top of v0.29.0, so its build just unpacks
+# upstream's precompiled wheel for this exact base commit and overlays the
+# fork's .py files. Declared here rather than in anyone's shell: a forgotten
+# env var produced a working install with the WRONG (nightly) binaries once.
+[tool.uv.extra-build-variables]
+vllm = { VLLM_USE_PRECOMPILED = "1", VLLM_PRECOMPILED_WHEEL_COMMIT = "98dff2a81d747d1dba01a47f939f48c3526d4206" }
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+# Per-member suites plus the root's cross-member integration tests. Each
+# package adds its own path here when it lands.
+testpaths = ["packages/taaf/tests", "packages/platypus/tests", "packages/duck/tests", "packages/sweeper/tests", "tests"]
+markers = [
+    "gpu: needs a GPU + the serving stack; run via `make test-gpu` under a GPU allocation",
+    "b200: a gpu test needing a B200-class card and ~128G of host RAM — the duck's production engine beside its concurrent game hosts; dispatched separately by `make test-duck-engine-srun`",
+    "api: spends money on provider APIs; requires the explicit ULLM_API_TESTS=1 opt-in (`make test-api`)",
+    "local: needs a machine we control — spawns subprocesses and asserts on what the scheduler does with them; run via `make test-local`, and by `test-full`",
+]
+# Parallelism (pytest-xdist) is NOT set here: it belongs to the cheap tier
+# only, so it lives on the Makefile's `test` target. A global default would
+# also apply to the gpu tier, where each worker would start its own engine on
+# the one GPU the job was allocated and they would OOM each other.
+addopts = "-m 'not gpu and not api and not local'"
+filterwarnings = [
+    "error",
+    # ullm's Unix-socket proxy leaves its client sockets and their event loop
+    # to the garbage collector, so the warning fires at an arbitrary later
+    # moment — under xdist that lands on whichever test the worker is running,
+    # and the suite fails somewhere unrelated. Scoped to AF_UNIX (family=1)
+    # sockets so a leak of ours on any other kind still errors, and the LLM
+    # integration tests pass without it when run on their own.
+    "ignore:unclosed <socket\\.socket fd=\\d+, family=1:ResourceWarning",
+    "ignore:unclosed event loop:ResourceWarning",
+    # Import-time noise from the GPU stack, scoped by issuing module so our
+    # own deprecation usage still errors. vLLM inspects a model architecture
+    # by importing it, which pulls torch's own deprecated internals — under
+    # "error" that surfaces as "failed to be inspected" and the engine never
+    # starts, with the real cause buried in a registry traceback.
+    "ignore::DeprecationWarning:torch.*",
+    # FlashAttention's CuTe DSL path on the B200 warns while compiling its
+    # forward kernel. Benign, but under "error" it stops the engine at start-up.
+    "ignore:Argument aux_data .* cannot be converted to a JitArgument:UserWarning",
+    "ignore:tcgen05.OperandMajorMode is deprecated:DeprecationWarning",
+    "ignore::DeprecationWarning:cutlass.*",
+    "ignore::DeprecationWarning:vllm.vllm_flash_attn.*",
+    # vLLM 0.25.1 passes max_rollback_tokens into xgrammar's GrammarMatcher;
+    # xgrammar 0.2.3 warns. Fired on every grammar compile, and under "error"
+    # it kills the grammar-compile thread with the EngineCore.
+    "ignore:max_rollback_tokens is deprecated:DeprecationWarning",
+    # vLLM's engine shutdown leaves zmq contexts to the collector; their
+    # __del__ warns. Message-scoped, so our own unclosed resources still error.
+    "ignore:Unclosed context:ResourceWarning",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+src = ["packages/taaf/src", "packages/platypus/src", "packages/sweeper/src", "tests"]
+# The Kaggle notebook template carries placeholder names (``__TAAF_*__``) that
+# are only defined once rendered, so linting it reports undefined names for
+# every one of them. The wheelhouse notebooks are generated by the
+# build_notebook.py beside each, whose cells are its Python strings (checked
+# there) and a forked notebook's cells kept verbatim.
+extend-exclude = ["packages/taaf/src/taaf/kaggle/*.ipynb", "tools/kaggle/*/*.ipynb"]
+
+[tool.ruff.lint]
+# Each of these is a rule we deliberately do not follow, not a backlog.
+ignore = [
+    "E731",  # lambda assignment reads fine for a short local
+    "E741",  # `l` / `I` as loop names in numeric code
+    # Timestamps are local-naive on purpose: they survive JSON round-trips
+    # and are compared against each other, never across machines.
+    "DTZ005",
+    "DTZ006",
+    # Teardown paths swallow everything by design — a failure while cleaning
+    # up must not mask the error that caused the cleanup.
+    "BLE001",
+    "S110",
+    # Implicit string concatenation inside a collection is how the long HTML
+    # fragments stay readable at 120 columns.
+    "ISC004",
+    # ValueError is the right type for a malformed value even when the
+    # immediate check happens to be an isinstance.
+    "TRY004",
+    # Deliberate: the process handle outlives the function that opened it.
+    "SIM115",
+    # Tests read and write small files and spawn processes inline; routing
+    # that through an executor would obscure what each test is doing.
+    "ASYNC221",
+    "ASYNC230",
+    # A subprocess.run without check= is one whose return code is read.
+    "PLW1510",
+    # datetime(...) literals are naive on purpose, as DTZ005 above.
+    "DTZ001",
+    # date.today() as a shuffle seed: the point is the local date a run was
+    # launched on, and the resolved integer is printed either way.
+    "DTZ011",
+    # dict(key=value) reads better than a brace literal for keyword-shaped data.
+    "C408",
+    # Two unrelated contexts stay as two nested `with`s.
+    "SIM117",
+]

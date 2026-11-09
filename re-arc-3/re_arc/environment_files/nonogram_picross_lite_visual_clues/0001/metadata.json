@@ -1,0 +1,18 @@
+{
+  "game_id": "nonogram_picross_lite_visual_clues-0001",
+  "title": "Nonogram Picross Lite Visual Clues",
+  "idea": "A stripped-down picross puzzle where visual row and column clues guide the player to fill the correct cells.",
+  "default_fps": 8,
+  "baseline_actions": [
+    9,
+    24,
+    60,
+    84,
+    85,
+    205
+  ],
+  "tags": [
+    "click-keys"
+  ],
+  "class_name": "NonogramPicrossLiteVisualClues"
+}

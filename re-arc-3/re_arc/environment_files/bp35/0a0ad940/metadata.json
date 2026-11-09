@@ -1,0 +1,24 @@
+{
+  "game_id": "bp35-0a0ad940",
+  "title": "BP35",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 20,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/bottomless_pit",
+  "tags": [
+    "official",
+    "click-keys"
+  ],
+  "baseline_actions": [
+    21,
+    48,
+    44,
+    38,
+    33,
+    87,
+    86,
+    131,
+    163
+  ],
+  "local_dir": "environment_files/bp35/0a0ad940",
+  "date_downloaded": "2026-04-08T20:07:48.891045+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "counterweight-court",
+  "game_id": "counterweight_court-0001",
+  "slug": "counterweight_court",
+  "class_name": "CounterweightCourt",
+  "objective": "obj.reach_goal",
+  "mechanics": ["mech.counterweight_lifts", "mech.push_stones", "mech.collision_clearance", "mech.undo"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

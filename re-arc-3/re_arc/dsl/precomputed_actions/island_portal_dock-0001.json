@@ -1,0 +1,88 @@
+{
+  "actions": [
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "island_portal_dock-0001",
+  "generated_at_utc": "2026-04-01T14:28:27.115531+00:00",
+  "generator_agent": "IslandPortalDockDslAgent",
+  "initial_observation_signature": "8373b520b655fbfdae00d3a6ba8038c959f04f14",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 18,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 3,
+  "terminal_state": "WIN",
+  "total_levels": 3
+}

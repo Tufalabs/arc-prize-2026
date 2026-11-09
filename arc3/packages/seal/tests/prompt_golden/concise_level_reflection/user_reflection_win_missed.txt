@@ -1,0 +1,15 @@
+Palette legend image: one swatch per color index, labelled with the index (top-left), the character `ascii_grid` renders it as (top-right), and its name.
+[image:512x512]
+The code executed 2 actions in the previous sequence.
+Executed actions: UP, LEFT.
+You have won level 1!
+Your world model did not predict this win: `test_world_model()` now fails on `history[-1]`.
+<the win screen as a delta from the frame before the move>
+
+Reflect briefly on what you learned from this level and how you beat it. You may also write/update and clean up your world model along the way.
+
+When you are done, reply in plain text, with no tool call: that reply ends this turn.
+`submit_action` is not available in this turn.
+
+Current grid image:
+[image:32x32]

@@ -1,0 +1,8 @@
+{
+  "game_id": "vector_wake-0001",
+  "title": "Vector Wake",
+  "default_fps": 16,
+  "baseline_actions": [9, 12, 19, 28, 43, 54, 63],
+  "tags": ["click-keys", "arc-like", "medium", "codex-reviewed"],
+  "class_name": "VectorWake"
+}

@@ -1,0 +1,2 @@
+[budget] Tokens left on this puzzle: about 11k of 65k.
+[budget] About 11,000 generated tokens remain for this puzzle. Make sure your best current candidate is in `test_out` now — for every test input — and refine only if room remains.

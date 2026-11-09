@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    15,
+    15,
+    15
+  ],
+  "class_name": "HazardBaton",
+  "default_fps": 8,
+  "game_id": "hazard_baton-0001",
+  "local_dir": "re_arc/environment_files/hazard_baton/0001",
+  "tags": [
+    "click-keys",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Hazard Baton",
+  "idea": "A multi-agent hazard puzzle where the player clicks which pawn is active and passes progress between them to get through dangerous terrain."
+}

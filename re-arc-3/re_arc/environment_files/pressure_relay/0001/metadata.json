@@ -1,0 +1,8 @@
+{
+  "game_id": "pressure_relay-0001",
+  "title": "Pressure Relay",
+  "default_fps": 8,
+  "baseline_actions": [4, 12, 13, 35, 57, 63, 86],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "PressureRelay"
+}

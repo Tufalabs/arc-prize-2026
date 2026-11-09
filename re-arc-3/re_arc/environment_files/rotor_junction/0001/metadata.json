@@ -1,0 +1,15 @@
+{
+  "baseline_actions": [
+    10,
+    14,
+    7
+  ],
+  "class_name": "RotorJunction",
+  "default_fps": 8,
+  "game_id": "rotor_junction-0001",
+  "idea": "This is a routing puzzle built from a moving puck, straight lane segments, walls, a goal pad, and a small number of large rotor junctions. Each rotor is drawn as a central hub with one bright arm showing the direction the puck will leave if it enters that hub. Clicking a rotor rotates that bright arm by 90 degrees. The puck advances one cell after every player action, so the player immediately sees both cause and effect: the board changes, then the puck responds. If the puck reaches a rotor and the chosen exit is blocked, the hub flashes red and the puck stays in place. The objective is to configure the rotors so the puck reaches the goal pad. The visual language stays simple: bars for lanes, squares for walls, one puck, one goal, and a few hub-like rotors. Level 1 has one puck, one goal, two rotors, and an open layout. The player learns that clicking a rotor changes the puck's next turn. Level 2 adds walls and a longer route, so the player must rotate the correct junction while the puck is already traveling. Level 3 uses two pucks launched from different starts, and both must reach their own goal pads under the same final rotor configuration.",
+  "tags": [
+    "click-keys"
+  ],
+  "title": "Rotor Junction"
+}

@@ -1,0 +1,22 @@
+{
+  "game_id": "tn36-ef4dde99",
+  "title": "TN36",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 3,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/true_naming",
+  "tags": [
+    "official",
+    "click-only"
+  ],
+  "baseline_actions": [
+    32,
+    72,
+    26,
+    40,
+    30,
+    55,
+    62
+  ],
+  "local_dir": "environment_files/tn36/ef4dde99",
+  "date_downloaded": "2026-04-08T20:07:49.155679+00:00"
+}

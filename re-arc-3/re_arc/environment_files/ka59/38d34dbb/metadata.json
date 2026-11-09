@@ -1,0 +1,22 @@
+{
+  "game_id": "ka59-38d34dbb",
+  "title": "KA59",
+  "idea": "An imported ARC benchmark reference game kept in its original form for comparison, tooling, and evaluation coverage.",
+  "default_fps": 10,
+  "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/keepaway",
+  "tags": [
+    "official",
+    "click-keys"
+  ],
+  "baseline_actions": [
+    28,
+    109,
+    51,
+    51,
+    33,
+    132,
+    326
+  ],
+  "local_dir": "environment_files/ka59/38d34dbb",
+  "date_downloaded": "2026-04-08T20:07:48.716889+00:00"
+}

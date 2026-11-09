@@ -1,0 +1,17 @@
+{
+  "game_id": "re_create-0001",
+  "title": "ReCreate",
+  "default_fps": 8,
+  "baseline_actions": [
+    4,
+    9,
+    26
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "ReCreate"
+}

@@ -1,0 +1,119 @@
+# Virtual workspace root — not a package itself. Members live under
+# packages/ (the ullm fork lives at packages/ullm, keeping the import
+# name `ullm`). Shared dev tooling and tool config live here.
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv]
+# extra-build-variables below arrived in uv 0.8.6. This floor states that,
+# but it is NOT a guard: an older uv rejects the unknown field, discards
+# this whole [tool.uv] table -- floor included -- and carries on, so the
+# variables that keep the vllm build off nightly binaries are silently
+# dropped (measured with uv 0.6.6). Nothing in this file can stop a uv too
+# old to read it; the floor only refuses a uv new enough to parse the
+# table but older than the variables need. Keep workers on a current uv.
+required-version = ">=0.8.6"
+override-dependencies = [
+    # The engine: upstream vLLM v0.29.0 plus our changes (the fork's TUFA.md says what they
+    # are). It is pure Python over upstream's precompiled binaries, which the build
+    # variables below select; the installed version reads 0.29.1.devN+g<sha>.
+    "vllm @ git+https://github.com/Tufalabs/arc-prize-2026-vllm@a1edcd2caf6c3d3521aaac063004c49ef7f9ffcd",
+]
+
+[tool.uv.sources]
+tufa-arc-agi-framework = { path = "../tufa-arc-agi-framework", editable = true }
+arc-agi-3-local = { path = "../re-arc-3", editable = true }
+
+# The vllm fork is pure Python on top of v0.29.0, so its build just unpacks
+# upstream's precompiled wheel for this exact base commit and overlays our
+# .py files. Declared here rather than in anyone's shell: a forgotten env
+# var produced a working install with the WRONG (nightly) binaries once.
+[tool.uv.extra-build-variables]
+vllm = { VLLM_USE_PRECOMPILED = "1", VLLM_PRECOMPILED_WHEEL_COMMIT = "98dff2a81d747d1dba01a47f939f48c3526d4206" }
+
+[dependency-groups]
+dev = [
+    # tests/test_deployment_snapshot.py, which diffs every deployment's whole
+    # configuration against a committed tree. Its report is what makes a
+    # regeneration readable — the alternative is a hand-rolled dict walk whose
+    # output nobody wants in a PR.
+    "deepdiff>=9.1.0",
+    "ipykernel>=7.2.0",
+    "jupyter>=1.1.1",
+    # tools/trace_page.py: the model's replies, and the Python it writes.
+    "markdown-it-py>=3.0.0",
+    "matplotlib>=3.11.0",
+    "nbconvert>=7.17.0",
+    "nbstripout>=0.9.1",
+    "pandas>=2.3.0",
+    "polars>=1.35.0",
+    "pygments>=2.19.0",
+    "pyright>=1.1.300",
+    "pytest>=9.0.2",
+    "pytest-asyncio>=1.3.0",
+    "pytest-xdist>=3.6.1",
+    "ruff>=0.15.9",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+# Per-member suites + root cross-member integration tests.
+testpaths = ["packages/duck/tests", "packages/framediff/tests", "packages/platypus/tests", "packages/reference-agents/tests", "packages/seal/tests", "packages/sweeper/tests", "packages/ullm/tests", "tests"]
+markers = [
+    "gpu: needs a GPU + the vllm extra; run via `make test-gpu` under a SLURM GPU allocation",
+    "api: spends money on provider APIs; requires the explicit ULLM_API_TESTS=1 opt-in (`make test-api`)",
+    "local: needs a machine we control — spawns game subprocesses and reads what the scheduler does with them; run via `make test-local`, and by `test-full`",
+]
+# Parallelism (pytest-xdist) is NOT set here: it belongs to the cheap tier
+# only, so it lives on the Makefile's `test` target. A global default would
+# also apply to the gpu tier, where each worker starts its own vLLM engine on
+# the one GPU the job was allocated and they OOM each other.
+addopts = "-m 'not gpu and not api and not local'"
+filterwarnings = [
+    "error",
+    # Third-party import-time noise from the GPU stack; scoped by issuing
+    # module so our own deprecation usage still errors.
+    "ignore::DeprecationWarning:torch.*",
+    # FlashAttention's CuTe DSL path on the B200 emits these while compiling its
+    # forward kernel. Benign, but under "error" they stop the engine at start-up.
+    "ignore:Argument aux_data .* cannot be converted to a JitArgument:UserWarning",
+    "ignore:tcgen05.OperandMajorMode is deprecated:DeprecationWarning",
+    "ignore::DeprecationWarning:cutlass.*",
+    "ignore::DeprecationWarning:vllm.vllm_flash_attn.*",
+    # vLLM 0.25.1 passes max_rollback_tokens=num_speculative_tokens into
+    # xgrammar's GrammarMatcher; xgrammar 0.2.3 warns (the arg is deprecated
+    # and only -1 is silent). A benign third-party deprecation fired on every
+    # grammar compile in the OpenAI-server structured-output path — under
+    # "error" it kills the EngineCore (grammar-compile thread) and takes the
+    # vllm-server backend tests down with it. The pytest filter reaches the
+    # spawned EngineCore, so this scoped ignore is what keeps it non-fatal.
+    "ignore:max_rollback_tokens is deprecated:DeprecationWarning",
+    # vLLM's engine shutdown leaves zmq contexts to GC; their __del__ warns.
+    # Message-scoped so our own unclosed resources still error.
+    "ignore:Unclosed context:ResourceWarning",
+]
+
+[tool.ruff]
+line-length = 120
+src = ["packages/platypus/src", "packages/duck/src", "packages/framediff/src", "packages/reference-agents/src", "packages/seal/src", "packages/sweeper/src", "tests"]
+extend-exclude = [
+    # The seal's example world models are data, not code: each is handed to
+    # the model verbatim as its starting world_model.py, so every character is
+    # prompt-visible and the formatter must not touch them.
+    "packages/seal/src/seal/seeds/world_model_keyboard.py",
+    "packages/seal/src/seal/seeds/world_model_mouse.py",
+    # Generated by the build_notebook.py beside each, whose cells are its
+    # Python strings (checked there) and, in arc3-site-0290, a forked
+    # notebook's cells kept verbatim.
+    "tools/kaggle/*/*.ipynb",
+]
+
+[tool.ruff.lint]
+ignore = ["E731", "E741"]
+
+[tool.ruff.lint.per-file-ignores]
+# A notebook cell body is a coroutine at top level, so `await` there is the
+# idiomatic form rather than a misplaced one — the root demo notebook awaits a
+# deploy the same way.
+"*.ipynb" = ["F704"]

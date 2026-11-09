@@ -1,0 +1,48 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+# Scratch-backed side-by-side environments used for runtime experiments
+.venv.*
+
+# Local secrets (API keys) — never commit
+.env
+.env.*
+
+.vscode/
+slurm*
+.nfs*
+*.out
+.DS_Store
+
+# Upstream dataset checkout; the packed .npz artifacts are what we commit
+.data-src/
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Generated outputs
+notebooks/*.gif
+notebooks/*.mp4
+notebooks/runs/
+# Executed copies of demo.ipynb with its flags rewritten, produced by the
+# run-a-variant helper. Generated, per-run, and never the source.
+notebooks/_run_*.ipynb
+*.pkl
+
+# Per-column GPU test logs
+.gpu-test-logs/
+demo_runs/
+# Local investigation notes and run reports, separate from repository docs
+/docs/
+
+# Ad-hoc run/driver logs (nohup harness output etc.) — never commit
+*.log

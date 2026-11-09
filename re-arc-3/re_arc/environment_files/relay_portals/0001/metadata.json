@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    8,
+    8,
+    11
+  ],
+  "class_name": "RelayPortals",
+  "default_fps": 6,
+  "game_id": "relay_portals-0001",
+  "local_dir": "re_arc/environment_files/relay_portals/0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Relay Portals",
+  "idea": "A teleport puzzle where progress depends on chaining portal uses in the right order so each relay opens access to the next area."
+}

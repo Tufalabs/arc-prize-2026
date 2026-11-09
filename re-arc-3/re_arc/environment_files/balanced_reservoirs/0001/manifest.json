@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "balanced-reservoirs",
+  "game_id": "balanced_reservoirs-0001",
+  "slug": "balanced_reservoirs",
+  "class_name": "BalancedReservoirs",
+  "objective": "obj.balance_overlapping_groups",
+  "mechanics": ["mech.directed_transfer", "mech.conservation", "mech.overlapping_equalities", "mech.undo"],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

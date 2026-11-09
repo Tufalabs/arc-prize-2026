@@ -1,0 +1,24 @@
+{
+  "game_id": "easy_taps-0001",
+  "title": "Easy Taps",
+  "idea": "A minimal click-precision game where each level presents a single valid target cell, and success depends on accurately tapping that exact spot to advance.",
+  "default_fps": 10,
+  "baseline_actions": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "tags": [
+    "click-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "EasyTaps"
+}

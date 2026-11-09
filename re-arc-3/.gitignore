@@ -1,0 +1,65 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Runs
+/runs/
+artifacts/
+pipeline/runs/**
+!pipeline/runs/**/
+!pipeline/runs/**/gifs.md
+!pipeline/runs/**/gifs/*.gif
+runs
+logs
+pipeline/worktrees
+/gifs/
+
+# Learned notes
+learned
+
+# UV
+two_ideas.json
+
+# Repo-local evaluator bootstrap tools
+.tools/
+
+# VS Code
+.vscode/
+
+# Assistant
+.claude/
+.codex/
+
+# Fetched by re_arc.official_games, not shipped here.
+re_arc/environment_files/ar25/0c556536/ar25.py
+re_arc/environment_files/bp35/0a0ad940/bp35.py
+re_arc/environment_files/cd82/fb555c5d/cd82.py
+re_arc/environment_files/cn04/2fe56bfb/cn04.py
+re_arc/environment_files/dc22/fdcac232/dc22.py
+re_arc/environment_files/ft09/0d8bbf25/ft09.py
+re_arc/environment_files/g50t/5849a774/g50t.py
+re_arc/environment_files/ka59/38d34dbb/ka59.py
+re_arc/environment_files/lf52/271a04aa/lf52.py
+re_arc/environment_files/lp85/305b61c3/lp85.py
+re_arc/environment_files/ls20/9607627b/ls20.py
+re_arc/environment_files/m0r0/492f87ba/m0r0.py
+re_arc/environment_files/r11l/495a7899/r11l.py
+re_arc/environment_files/re86/8af5384d/re86.py
+re_arc/environment_files/s5i5/18d95033/s5i5.py
+re_arc/environment_files/sb26/7fbdac44/sb26.py
+re_arc/environment_files/sc25/635fd71a/sc25.py
+re_arc/environment_files/sk48/d8078629/sk48.py
+re_arc/environment_files/sp80/589a99af/sp80.py
+re_arc/environment_files/su15/1944f8ab/su15.py
+re_arc/environment_files/tn36/ef4dde99/tn36.py
+re_arc/environment_files/tr87/cd924810/tr87.py
+re_arc/environment_files/tu93/0768757b/tu93.py
+re_arc/environment_files/vc33/5430563c/vc33.py
+re_arc/environment_files/wa30/ee6fef47/wa30.py

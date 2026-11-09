@@ -1,0 +1,19 @@
+{
+  "game_id": "ft09_close-0001",
+  "title": "FT09 Close",
+  "idea": "A readable sprite-based reconstruction of FT09 Flip Tiles: click colored tiles to cycle their colors, use stencil tiles that affect neighbors, satisfy local target constraints, and solve all six boards before the timer expires.",
+  "default_fps": 8,
+  "baseline_actions": [
+    4,
+    7,
+    14,
+    16,
+    21,
+    13
+  ],
+  "tags": [
+    "click-only"
+  ],
+  "class_name": "Ft09Close",
+  "local_dir": "environment_files/ft09_close/0001"
+}

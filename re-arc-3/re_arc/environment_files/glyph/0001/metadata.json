@@ -1,0 +1,21 @@
+{
+  "game_id": "glyph-0001",
+  "title": "Glyph Relay",
+  "idea": "A route puzzle where touching glyphs flips the player's mode and unlocks the final path only after the right relay pattern has been traversed.",
+  "default_fps": 8,
+  "baseline_actions": [
+    36,
+    46,
+    53,
+    64,
+    84,
+    98,
+    105
+  ],
+  "tags": [
+    "click-keys",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Glyph"
+}

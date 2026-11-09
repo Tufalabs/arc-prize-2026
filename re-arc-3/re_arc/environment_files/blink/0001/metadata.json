@@ -1,0 +1,22 @@
+{
+  "game_id": "blink-0001",
+  "title": "Blink Anchors",
+  "idea": "A maze puzzle built around paired blink anchors, where movement is mixed with short teleports between marked positions and the player has to chain those jumps to cross walls and reach the goal.",
+  "default_fps": 8,
+  "baseline_actions": [
+    11,
+    15,
+    17,
+    22,
+    28,
+    28,
+    29,
+    45
+  ],
+  "tags": [
+    "click-keys",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Blink"
+}

@@ -1,0 +1,392 @@
+{
+ "action_seed": 7237765275446321282,
+ "derive_seed": [
+  {
+   "parts": [
+    20260725,
+    "plan",
+    0
+   ],
+   "seed": 87357073498858720868019660823270056553
+  },
+  {
+   "parts": [
+    7237765275446321282,
+    "premove",
+    0
+   ],
+   "seed": 326506227736869390813251309369229720785
+  },
+  {
+   "parts": [
+    0,
+    "node",
+    3
+   ],
+   "seed": 136278360964266990660555864978094016045
+  },
+  {
+   "parts": [
+    "a",
+    1,
+    "b"
+   ],
+   "seed": 157530122239086836646678685582358742424
+  }
+ ],
+ "frame": [
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0
+  ],
+  [
+   0,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ ],
+ "game_seed": 20260725,
+ "nodes": [
+  {
+   "available_actions": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "orders": [
+    [
+     "ACTION3",
+     "ACTION1",
+     "ACTION4",
+     "ACTION2"
+    ],
+    [
+     "ACTION2",
+     "ACTION4",
+     "ACTION3",
+     "ACTION1"
+    ],
+    [
+     "ACTION1",
+     "ACTION2",
+     "ACTION3",
+     "ACTION4"
+    ],
+    [
+     "ACTION2",
+     "ACTION3",
+     "ACTION1",
+     "ACTION4"
+    ]
+   ],
+   "plan_index": 0,
+   "plan_seed": 328637305347008831476654732951329622248,
+   "with_frame": false
+  },
+  {
+   "available_actions": [
+    1,
+    2,
+    6
+   ],
+   "orders": [
+    [
+     "CLICK(4,4)",
+     "ACTION1",
+     "CLICK(7,7)",
+     "ACTION2",
+     "CLICK(1,1)"
+    ],
+    [
+     "CLICK(7,7)",
+     "ACTION2",
+     "CLICK(1,1)",
+     "ACTION1",
+     "CLICK(4,4)"
+    ],
+    [
+     "ACTION1",
+     "CLICK(4,4)",
+     "CLICK(1,1)",
+     "ACTION2",
+     "CLICK(7,7)"
+    ],
+    [
+     "ACTION1",
+     "ACTION2",
+     "CLICK(1,1)",
+     "CLICK(4,4)",
+     "CLICK(7,7)"
+    ]
+   ],
+   "plan_index": 0,
+   "plan_seed": 328637305347008831476654732951329622248,
+   "with_frame": true
+  },
+  {
+   "available_actions": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "orders": [
+    [
+     "ACTION3",
+     "ACTION4",
+     "ACTION2",
+     "ACTION1"
+    ],
+    [
+     "ACTION2",
+     "ACTION3",
+     "ACTION4",
+     "ACTION1"
+    ],
+    [
+     "ACTION1",
+     "ACTION4",
+     "ACTION3",
+     "ACTION2"
+    ],
+    [
+     "ACTION1",
+     "ACTION3",
+     "ACTION4",
+     "ACTION2"
+    ]
+   ],
+   "plan_index": 1,
+   "plan_seed": 201689451277525221963325786596456575515,
+   "with_frame": false
+  },
+  {
+   "available_actions": [
+    1,
+    2,
+    6
+   ],
+   "orders": [
+    [
+     "CLICK(7,7)",
+     "CLICK(4,4)",
+     "ACTION1",
+     "CLICK(1,1)",
+     "ACTION2"
+    ],
+    [
+     "ACTION2",
+     "ACTION1",
+     "CLICK(1,1)",
+     "CLICK(4,4)",
+     "CLICK(7,7)"
+    ],
+    [
+     "CLICK(4,4)",
+     "ACTION2",
+     "CLICK(1,1)",
+     "CLICK(7,7)",
+     "ACTION1"
+    ],
+    [
+     "CLICK(7,7)",
+     "CLICK(1,1)",
+     "ACTION2",
+     "CLICK(4,4)",
+     "ACTION1"
+    ]
+   ],
+   "plan_index": 1,
+   "plan_seed": 201689451277525221963325786596456575515,
+   "with_frame": true
+  }
+ ],
+ "premove": [
+  {
+   "available_actions": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "phase": 0,
+   "rounds": [
+    [
+     "ACTION3",
+     "ACTION4",
+     "ACTION1",
+     "ACTION2"
+    ]
+   ],
+   "with_frame": false
+  },
+  {
+   "available_actions": [
+    1,
+    6
+   ],
+   "phase": 0,
+   "rounds": [
+    [
+     "CLICK(4,4)",
+     "CLICK(7,7)",
+     "CLICK(1,1)",
+     "ACTION1"
+    ],
+    [
+     "CLICK(8,1)"
+    ]
+   ],
+   "with_frame": true
+  },
+  {
+   "available_actions": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "phase": 1,
+   "rounds": [
+    [
+     "ACTION1",
+     "ACTION4",
+     "ACTION2",
+     "ACTION3"
+    ]
+   ],
+   "with_frame": false
+  },
+  {
+   "available_actions": [
+    1,
+    6
+   ],
+   "phase": 1,
+   "rounds": [
+    [
+     "CLICK(7,7)",
+     "ACTION1",
+     "CLICK(1,1)",
+     "CLICK(4,4)"
+    ],
+    [
+     "CLICK(8,1)"
+    ]
+   ],
+   "with_frame": true
+  }
+ ]
+}

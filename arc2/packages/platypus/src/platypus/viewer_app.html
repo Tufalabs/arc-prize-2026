@@ -1,0 +1,1544 @@
+<!doctype html>
+<!-- Ported from arc3-platypus viewer_app.html (itself adapted from ARC3-Training inference/viewer/improved
+     at commit 3903a160): the transcript and its contexts as they stand there, a puzzle and its answers
+     where the game board, the actions and the levels were. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARC2 Replay Viewer</title>
+  <style>
+    :root {
+      --bg: #070b10;
+      --surface: #0f171e;
+      --surface-2: #151f27;
+      --ink: #edf4f7;
+      --muted: #91a3ad;
+      --line: #293743;
+      --line-strong: #465866;
+      --teal: #33c8ca;
+      --teal-soft: #123d43;
+      --red: #ff6b63;
+      --amber: #e0a341;
+      --orange: #ff9a3c;
+      --green: #58d68b;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
+      --control: #0b1117;
+      --card: #101922;
+      --card-2: #0c141b;
+      --board-bg: #0a1016;
+      --row-line: #1b2730;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", system-ui, sans-serif;
+      letter-spacing: 0;
+    }
+
+    body {
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    button,
+    select {
+      font: inherit;
+      color: inherit;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: none;
+      height: calc(100vh - 20px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      gap: 10px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .brand {
+      min-width: 0;
+      display: grid;
+      gap: 4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.15rem, 1.7vw, 1.65rem);
+      font-weight: 760;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.92rem;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .select-wrap {
+      display: grid;
+      gap: 3px;
+    }
+
+    .select-wrap label {
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 720;
+      text-transform: uppercase;
+    }
+
+    select {
+      height: 36px;
+      min-width: 190px;
+      max-width: 320px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--control);
+      padding: 0 9px;
+    }
+
+    .icon-button {
+      width: 36px;
+      height: 36px;
+      display: inline-grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--control);
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .icon-button.primary {
+      border-color: var(--teal);
+      background: var(--teal);
+      color: #031112;
+    }
+
+    .icon-button:disabled {
+      cursor: not-allowed;
+      opacity: 0.45;
+    }
+
+    .main {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: minmax(560px, 1.18fr) minmax(480px, 0.82fr);
+      gap: 10px;
+    }
+
+    .panel {
+      min-height: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .agent-panel {
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+    }
+
+    .panel-head {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-2);
+    }
+
+    .panel-title {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+    }
+
+    .panel-title h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 760;
+    }
+
+    .panel-title span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .token-meter {
+      display: grid;
+      grid-template-columns: minmax(170px, 1.5fr) repeat(2, minmax(110px, 1fr));
+      gap: 10px;
+      width: min(560px, 58vw);
+    }
+
+    .token-meter-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .token-meter-top span:first-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .token-meter strong {
+      color: var(--ink);
+      font-size: 0.95rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .meter-track {
+      height: 7px;
+      border-radius: 999px;
+      background: var(--row-line);
+      overflow: hidden;
+    }
+
+    .meter-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--teal), var(--green));
+    }
+
+    .meter-fill.response-fill {
+      background: linear-gradient(90deg, var(--amber), var(--teal));
+    }
+
+    .transcript-log {
+      min-height: 0;
+      overflow: auto;
+      overflow-anchor: none;
+      padding: 10px;
+      background: linear-gradient(180deg, var(--card), var(--card-2));
+    }
+
+    .transcript-entry {
+      display: block;
+      width: 100%;
+      margin: 0 0 8px;
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(11, 18, 24, 0.82);
+      color: var(--ink);
+      text-align: left;
+      cursor: text;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-family: "IBM Plex Mono", "SFMono-Regular", ui-monospace, monospace;
+      font-size: 0.92rem;
+      line-height: 1.56;
+      user-select: text;
+    }
+
+    .transcript-entry:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: -2px;
+    }
+
+    .transcript-label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-family: Inter, "Segoe UI", system-ui, sans-serif;
+      font-size: 0.74rem;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .transcript-system {
+      border-left: 2px solid var(--amber);
+      background: rgba(224, 163, 65, 0.08);
+    }
+
+    .transcript-user {
+      border-left: 2px solid var(--green);
+      background: rgba(88, 214, 139, 0.08);
+    }
+
+    .transcript-tool-call,
+    .transcript-tool-response {
+      border-left: 2px solid var(--teal);
+      background: rgba(51, 200, 202, 0.08);
+    }
+
+    .transcript-thinking {
+      border-left: 2px solid var(--line-strong);
+    }
+
+    .transcript-assistant,
+    .transcript-output {
+      border-left: 2px solid var(--orange);
+      background: rgba(255, 154, 60, 0.07);
+    }
+
+    .transcript-final {
+      border-left: 2px solid var(--green);
+      background: rgba(88, 214, 139, 0.1);
+      cursor: pointer;
+    }
+
+    .transcript-boundary {
+      border-left: 2px solid var(--amber);
+      border-top: 1px dashed var(--amber);
+      border-bottom: 1px dashed var(--amber);
+      background: rgba(224, 163, 65, 0.14);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .context-picker select {
+      width: 100%;
+      max-width: 260px;
+      margin-top: 2px;
+      padding: 3px 6px;
+      font-size: 0.78rem;
+      color: var(--text);
+      background: rgba(16, 25, 34, 0.9);
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+    }
+
+    .transcript-empty,
+    .empty-state {
+      padding: 28px;
+      color: var(--muted);
+      text-align: center;
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius);
+      background: rgba(16, 25, 34, 0.72);
+    }
+
+    .stage-panel {
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+    }
+
+    .stage {
+      min-height: 0;
+      overflow: auto;
+      display: grid;
+      grid-template-columns: minmax(320px, 1fr) 190px;
+      gap: 12px;
+      padding: 12px;
+      align-items: start;
+    }
+
+    .puzzle-zone {
+      min-width: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .puzzle-section {
+      min-width: 0;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+    }
+
+    .puzzle-section h3 {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .puzzle-section h3 span {
+      margin-left: 6px;
+      color: var(--ink);
+      font-weight: 650;
+      text-transform: none;
+    }
+
+    .pair {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-top: 1px solid var(--row-line);
+    }
+
+    .pair:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .pair .arrow {
+      align-self: center;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    figure.grid {
+      min-width: 0;
+      margin: 0;
+      display: grid;
+      gap: 4px;
+      justify-items: start;
+    }
+
+    figure.grid canvas {
+      border: 1px solid var(--line-strong);
+      background: var(--board-bg);
+    }
+
+    figure.grid figcaption {
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    figure.grid.correct canvas {
+      outline: 2px solid var(--green);
+      outline-offset: 1px;
+    }
+
+    figure.grid.wrong canvas {
+      outline: 2px solid var(--red);
+      outline-offset: 1px;
+    }
+
+    figure.grid.correct figcaption {
+      color: var(--green);
+    }
+
+    figure.grid.wrong figcaption {
+      color: var(--red);
+    }
+
+    .grid-missing {
+      display: grid;
+      place-items: center;
+      padding: 6px;
+      border: 1px dashed var(--line-strong);
+      border-radius: 6px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      text-align: center;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .stat {
+      min-width: 0;
+      padding: 9px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 0.66rem;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .stat span {
+      display: block;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .frame-count {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .side-rail {
+      min-height: 0;
+      display: grid;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+    }
+
+    .answer-log {
+      min-height: 0;
+      max-height: 70vh;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+    }
+
+    .answer-log h3 {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      margin: 0;
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-2);
+      font-size: 0.84rem;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .answer-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--row-line);
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .answer-row.active {
+      background: var(--teal-soft);
+    }
+
+    .answer-row span:first-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 650;
+    }
+
+    .answer-row span:last-child {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .transcript-entry.active {
+      border-color: var(--teal);
+      box-shadow: inset 0 0 0 1px var(--teal);
+    }
+
+    .transcript-answer {
+      border-left: 2px solid var(--green);
+      border-top: 1px dashed var(--green);
+      border-bottom: 1px dashed var(--green);
+      background: rgba(88, 214, 139, 0.12);
+      color: var(--muted);
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .transcript-meta {
+      border-left: 2px solid var(--line-strong);
+      color: var(--muted);
+    }
+
+    .transcript-retained {
+      opacity: 0.6;
+    }
+
+    .transcript-image {
+      display: block;
+      max-width: min(100%, 420px);
+      margin: 6px 0;
+      border: 1px solid var(--line);
+      image-rendering: pixelated;
+    }
+
+    @media (max-width: 1180px) {
+      body {
+        overflow: auto;
+      }
+
+      .shell {
+        height: auto;
+        min-height: calc(100vh - 20px);
+      }
+
+      .topbar,
+      .main,
+      .stage {
+        grid-template-columns: 1fr;
+      }
+
+      .toolbar {
+        justify-content: flex-start;
+      }
+
+      .info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .side-rail {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <h1>ARC2 Replay Viewer</h1>
+        <div class="subtitle" id="run-subtitle">Loading latest run...</div>
+      </div>
+      <div class="toolbar">
+        <div class="select-wrap">
+          <label for="run-select">Run</label>
+          <select id="run-select"></select>
+        </div>
+        <div class="select-wrap">
+          <label for="game-select">Puzzle</label>
+          <select id="game-select"></select>
+        </div>
+        <button class="icon-button" id="reload-button" type="button" title="Reload run" aria-label="Reload run">&#10227;</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel agent-panel">
+        <div class="panel-head">
+          <div class="panel-title">
+            <h2>Agent Transcript</h2>
+            <span id="transcript-subtitle">Click a transcript block to see the answer standing at that point</span>
+          </div>
+          <div class="token-meter">
+            <div class="context-picker">
+              <div class="token-meter-top">
+                <span>Context</span>
+                <strong id="context-count">0 / 0</strong>
+              </div>
+              <select id="context-select" title="One context = system prompt through the summary that closed it. Counters follow the selection."></select>
+            </div>
+            <div>
+              <div class="token-meter-top">
+                <span>Generated tokens</span>
+                <strong id="token-count">0</strong>
+              </div>
+              <div class="meter-track"><div class="meter-fill" id="token-fill"></div></div>
+            </div>
+            <div>
+              <div class="token-meter-top">
+                <span>Responses</span>
+                <strong id="response-count">0</strong>
+              </div>
+              <div class="meter-track"><div class="meter-fill response-fill" id="response-fill"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="transcript-log" id="transcript-log" tabindex="-1"></div>
+      </section>
+
+      <section class="panel stage-panel">
+        <div class="panel-head">
+          <div class="panel-title">
+            <h2 id="game-title">Puzzle</h2>
+            <span id="game-subtitle">Puzzle and answers</span>
+          </div>
+          <div class="frame-count" id="answer-count">0 / 0</div>
+        </div>
+
+        <div class="stage">
+          <div class="puzzle-zone">
+            <div class="info-grid" id="info-grid"></div>
+            <div id="puzzle"></div>
+          </div>
+
+          <aside class="side-rail">
+            <div class="answer-log">
+              <h3>Answers</h3>
+              <div id="answer-log"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const DEFAULT_ARC_PALETTE = [
+      "#000000", "#0074D9", "#FF4136", "#2ECC40", "#FFDC00",
+      "#AAAAAA", "#F012BE", "#FF851B", "#7FDBFF", "#870C25"
+    ];
+    // The largest side, in pixels, a grid is drawn at.
+    const GRID_BOX = 168;
+    let summaryPayload = null;
+    let currentGame = null;
+    let currentRunName = null;
+    let currentGameIndex = 0;
+    // The puzzle a link names, until the run's list has arrived to find it in.
+    let linkedPuzzle = null;
+    // Every transcript card of the game in order, with its running counts.
+    let blocks = [];
+    let activeBlockIndex = null;
+    // The answer on display: 0 before the first one.
+    let activeAnswer = 0;
+    let totalGeneratedTokens = 0;
+    let totalResponses = 0;
+    let gameLoadToken = 0;
+    // Contexts: the stretches between summaries, takes and rebuilds. null = show every context.
+    let activeContext = null;
+    let contextStats = [];
+
+    const runSubtitleEl = document.getElementById("run-subtitle");
+    const runSelectEl = document.getElementById("run-select");
+    const gameSelectEl = document.getElementById("game-select");
+    const reloadButtonEl = document.getElementById("reload-button");
+    const transcriptSubtitleEl = document.getElementById("transcript-subtitle");
+    const transcriptLogEl = document.getElementById("transcript-log");
+    const tokenCountEl = document.getElementById("token-count");
+    const responseCountEl = document.getElementById("response-count");
+    const tokenFillEl = document.getElementById("token-fill");
+    const responseFillEl = document.getElementById("response-fill");
+    const contextSelectEl = document.getElementById("context-select");
+    const contextCountEl = document.getElementById("context-count");
+    const gameTitleEl = document.getElementById("game-title");
+    const gameSubtitleEl = document.getElementById("game-subtitle");
+    const answerCountEl = document.getElementById("answer-count");
+    const puzzleEl = document.getElementById("puzzle");
+    const infoGridEl = document.getElementById("info-grid");
+    const answerLogEl = document.getElementById("answer-log");
+
+    reloadButtonEl.addEventListener("click", () => loadRun(currentRunName, { preserveSelection: true }));
+    runSelectEl.addEventListener("change", () => {
+      currentRunName = runSelectEl.value || null;
+      currentGameIndex = 0;
+      loadRun(currentRunName);
+    });
+    gameSelectEl.addEventListener("change", () => {
+      currentGameIndex = Number(gameSelectEl.value || 0);
+      syncUrl();
+      loadGame(currentGameIndex);
+    });
+    contextSelectEl.addEventListener("change", () => {
+      const value = contextSelectEl.value;
+      activeContext = value === "all" ? null : Number(value);
+      renderContextCount();
+      renderTranscriptRows();
+      renderSelection({ scrollTranscript: false });
+      transcriptLogEl.scrollTop = 0;
+    });
+    transcriptLogEl.addEventListener("click", (event) => {
+      const row = event.target.closest(".transcript-entry");
+      if (!row || hasTranscriptTextSelection()) {
+        return;
+      }
+      selectBlock(Number(row.dataset.blockIndex || 0), { scrollTranscript: false });
+    });
+    transcriptLogEl.addEventListener("keydown", (event) => {
+      const row = event.target.closest(".transcript-entry");
+      if (!row) {
+        return;
+      }
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        selectBlock(Number(row.dataset.blockIndex || 0), { scrollTranscript: false });
+        return;
+      }
+      if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+        // Step through the cards on display, the selection following the focus.
+        const next = event.key === "ArrowDown" ? row.nextElementSibling : row.previousElementSibling;
+        if (next && next.classList.contains("transcript-entry")) {
+          event.preventDefault();
+          next.focus();
+          selectBlock(Number(next.dataset.blockIndex || 0), { scrollTranscript: false });
+        }
+      }
+    });
+    answerLogEl.addEventListener("click", (event) => {
+      const row = event.target.closest(".answer-row");
+      if (row) {
+        selectAnswer(Number(row.dataset.answer || 0));
+      }
+    });
+    window.addEventListener("resize", () => {
+      if (currentGame) {
+        renderPuzzle();
+      }
+    });
+
+    async function loadRun(requestedRun = currentRunName, options = {}) {
+      const { preserveSelection = false, silent = false } = options;
+      const previousBlock = activeBlockIndex;
+      if (!silent) {
+        runSubtitleEl.textContent = requestedRun ? `Loading ${requestedRun}...` : "Loading latest run...";
+      }
+      try {
+        const url = new URL("/_api/run", window.location.origin);
+        if (requestedRun) {
+          url.searchParams.set("run", requestedRun);
+        }
+        const response = await fetch(url, { cache: "no-store" });
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.error || "Failed to load run");
+        }
+        summaryPayload = payload;
+        currentRunName = payload.selected_run || null;
+        if (linkedPuzzle) {
+          const linked = (payload.games || []).findIndex((game) => (
+            game.game_id === linkedPuzzle.gameId
+            && (linkedPuzzle.pass === null || Number(game.pass_index) + 1 === linkedPuzzle.pass)
+          ));
+          currentGameIndex = linked >= 0 ? linked : currentGameIndex;
+          linkedPuzzle = null;
+        }
+        currentGameIndex = Math.min(currentGameIndex, Math.max((payload.games || []).length - 1, 0));
+        syncUrl();
+        renderHeader();
+        await loadGame(currentGameIndex, {
+          targetBlockIndex: preserveSelection ? previousBlock : null,
+          silent,
+        });
+      } catch (error) {
+        summaryPayload = null;
+        resetGame();
+        runSubtitleEl.textContent = error.message;
+        runSelectEl.innerHTML = "";
+        gameSelectEl.innerHTML = "";
+        renderEmpty(error.message);
+      }
+    }
+
+    async function loadGame(gameIndex, options = {}) {
+      const { targetBlockIndex = null, silent = false } = options;
+      const requestToken = ++gameLoadToken;
+      const summary = summaryPayload?.games?.[gameIndex];
+      if (!summary) {
+        resetGame();
+        renderEmpty("No puzzle found in this run.");
+        return;
+      }
+      if (!silent) {
+        renderEmpty("Loading replay...");
+      }
+      try {
+        const url = new URL("/_api/game", window.location.origin);
+        url.searchParams.set("index", String(gameIndex));
+        if (currentRunName) {
+          url.searchParams.set("run", currentRunName);
+        }
+        const response = await fetch(url, { cache: "no-store" });
+        const game = await response.json();
+        if (!response.ok) {
+          throw new Error(game.error || "Failed to load puzzle");
+        }
+        if (requestToken !== gameLoadToken) {
+          return;
+        }
+        currentGame = { ...summary, ...game };
+        activeContext = null;
+        blocks = buildBlocks(currentGame);
+        const last = blocks[blocks.length - 1];
+        totalGeneratedTokens = finiteNumber(currentGame.generated_tokens) ?? (last ? last.generatedEnd : 0);
+        totalResponses = finiteNumber(currentGame.response_count) ?? (last ? last.responseEnd : 0);
+        renderTranscriptLog();
+        renderAnswerLog();
+        renderGameTitle();
+        const startsAtBeginning = targetBlockIndex == null;
+        selectBlock(startsAtBeginning ? 0 : targetBlockIndex, { scrollTranscript: startsAtBeginning });
+      } catch (error) {
+        resetGame();
+        renderEmpty(error.message);
+      }
+    }
+
+    function resetGame() {
+      currentGame = null;
+      blocks = [];
+      activeBlockIndex = null;
+      activeAnswer = 0;
+      totalGeneratedTokens = 0;
+      totalResponses = 0;
+    }
+
+    function renderHeader() {
+      const runs = summaryPayload?.available_runs || [];
+      const games = summaryPayload?.games || [];
+      runSelectEl.innerHTML = runs.map((runName) => (
+        `<option value="${escapeHtml(runName)}">${escapeHtml(runName)}</option>`
+      )).join("");
+      if (currentRunName) {
+        runSelectEl.value = currentRunName;
+      }
+      gameSelectEl.innerHTML = games.map((game, index) => {
+        const label = game.display_name || game.game_id || `Puzzle ${index + 1}`;
+        return `<option value="${index}">${escapeHtml(label)}</option>`;
+      }).join("");
+      gameSelectEl.value = String(currentGameIndex);
+      runSubtitleEl.textContent = `${summaryPayload.run_name || "Run"} - ${games.length} puzzle run${games.length === 1 ? "" : "s"} - ${runs.length} benchmark run dir${runs.length === 1 ? "" : "s"}`;
+    }
+
+    function renderGameTitle() {
+      const label = currentGame?.display_name || currentGame?.game_id || "Puzzle";
+      const answers = gameAnswers().length;
+      gameTitleEl.textContent = label;
+      gameSubtitleEl.textContent = `${answers} answer${answers === 1 ? "" : "s"} - ${formatNumber(totalGeneratedTokens)} generated tokens - ${totalResponses} responses`;
+    }
+
+    function gameAnswers() {
+      return Array.isArray(currentGame?.answers) ? currentGame.answers : [];
+    }
+
+    function buildBlocks(game) {
+      const built = [];
+      for (const section of Array.isArray(game?.sections) ? game.sections : []) {
+        const label = String(section?.label || "").trim().toUpperCase();
+        const content = String(section?.content || "").trim();
+        if (!content) {
+          continue;
+        }
+        const retained = Boolean(section?.retained);
+        built.push({
+          label: displayTranscriptLabel(label) + (retained ? " (kept from before the summary)" : ""),
+          content,
+          kind: transcriptBlockKind(label),
+          // A retained round was generated, and is counted, where it first appears.
+          generated: isGeneratedSection(label) && !retained,
+          retained,
+          generatedTokenCount: finiteNumber(section?.generated_tokens),
+          elapsedSeconds: finiteNumber(section?.elapsed_s),
+          answer: Math.max(0, Number(section?.answer) || 0),
+          context: finiteNumber(section?.context),
+          compaction: section?.compaction || null,
+        });
+      }
+      if (built.length && isTerminalStatus(game?.status)) {
+        const answers = Array.isArray(game?.answers) ? game.answers.length : 0;
+        const score = finiteNumber(game?.final_score);
+        built.push({
+          label: "Final",
+          content: [
+            String(game.status),
+            score === null ? null : `score ${formatNumber(score)}`,
+            `${answers} answer${answers === 1 ? "" : "s"}`,
+          ].filter(Boolean).join(" - "),
+          kind: "final",
+          generated: false,
+          retained: false,
+          generatedTokenCount: null,
+          elapsedSeconds: finiteNumber(game?.elapsed_s),
+          answer: answers,
+          context: built[built.length - 1].context,
+          compaction: null,
+        });
+      }
+      return blocksWithCounts(built);
+    }
+
+    function blocksWithCounts(list) {
+      let generatedOffset = 0;
+      let responseOffset = 0;
+      let insideResponse = false;
+      return list.map((block, index) => {
+        const generatedStart = generatedOffset;
+        const responseStart = responseOffset;
+        if (block.generated) {
+          if (!insideResponse) {
+            responseOffset += 1;
+            insideResponse = true;
+          }
+          generatedOffset += generatedTokenCountForBlock(block);
+        } else if (!block.retained || !isGeneratedBlock(block)) {
+          insideResponse = false;
+        }
+        return {
+          ...block,
+          index,
+          generatedStart,
+          generatedEnd: generatedOffset,
+          responseStart,
+          responseEnd: responseOffset,
+        };
+      });
+    }
+
+    function isTerminalStatus(status) {
+      const value = String(status || "").trim();
+      return Boolean(value) && value !== "playing" && value !== "unknown";
+    }
+
+    function isBoundarySection(label) {
+      return label.startsWith("COMPACTION #") || label === "NEW TAKE" || label === "CONTEXT REWRITE";
+    }
+
+    function transcriptBlockKind(label) {
+      if (label === "SYSTEM PROMPT") {
+        return "system";
+      }
+      if (label === "USER PROMPT" || label === "COMPACTION REQUEST") {
+        return "user";
+      }
+      if (label.startsWith("ANSWER #")) {
+        return "answer";
+      }
+      if (isBoundarySection(label)) {
+        return "boundary";
+      }
+      if (label === "THINKING") {
+        return "thinking";
+      }
+      if (label === "OUTPUT") {
+        return "output";
+      }
+      if (label.startsWith("TOOL CALL")) {
+        return "tool-call";
+      }
+      if (label.startsWith("TOOL RESULT")) {
+        return "tool-response";
+      }
+      if (label === "ASSISTANT") {
+        return "assistant";
+      }
+      return "meta";
+    }
+
+    function displayTranscriptLabel(label) {
+      if (label === "SYSTEM PROMPT") {
+        return "System";
+      }
+      if (label === "USER PROMPT") {
+        return "User";
+      }
+      if (label === "COMPACTION REQUEST") {
+        return "Compaction request";
+      }
+      if (label.startsWith("COMPACTION #")) {
+        return `Compaction ${label.slice("COMPACTION #".length)}`;
+      }
+      if (label.startsWith("ANSWER #")) {
+        return `Answer ${label.slice("ANSWER #".length)}`;
+      }
+      if (label === "NEW TAKE") {
+        return "New take";
+      }
+      if (label === "CONTEXT REWRITE") {
+        return "Context rewrite";
+      }
+      return label.replace(":", "");
+    }
+
+    function renderTranscriptLog() {
+      contextStats = computeContextStats();
+      if (activeContext !== null && !contextStats[activeContext]) {
+        activeContext = null;
+      }
+      renderContextSelect();
+      renderTranscriptRows();
+    }
+
+    function visibleBlocks() {
+      return activeContext === null
+        ? blocks
+        : blocks.filter((block) => finiteNumber(block.context) === activeContext);
+    }
+
+    function renderTranscriptRows() {
+      const entries = visibleBlocks();
+      if (!entries.length) {
+        transcriptLogEl.innerHTML = '<div class="transcript-empty">No transcript sections recorded for this puzzle yet.</div>';
+        transcriptSubtitleEl.textContent = "No transcript sections recorded";
+        return;
+      }
+      transcriptLogEl.innerHTML = entries.map(renderTranscriptEntry).join("");
+      const scope = activeContext === null
+        ? ""
+        : ` - context ${activeContext + 1} of ${contextStats.length}`;
+      transcriptSubtitleEl.textContent = `${entries.length} transcript block${entries.length === 1 ? "" : "s"}${scope}`;
+    }
+
+    function renderTranscriptEntry(entry) {
+      const classes = ["transcript-entry", `transcript-${entry.kind}`];
+      if (entry.retained) {
+        classes.push("transcript-retained");
+      }
+      return [
+        `<div class="${classes.join(" ")}" role="button" tabindex="0" data-block-index="${entry.index}" data-kind="${escapeHtml(entry.kind)}">`,
+        `<span class="transcript-label">${escapeHtml(entry.label)}</span>`,
+        renderContent(entry.content),
+        "</div>",
+      ].join("");
+    }
+
+    function renderContent(content) {
+      // An image the model was shown is in the run's block store, which the
+      // viewer serves as PNG under the run's own path.
+      const escaped = escapeHtml(content);
+      const base = summaryPayload?.image_base;
+      if (!base) {
+        return escaped;
+      }
+      return escaped.replace(/\[image block ([0-9a-f]{64})\]/g, (_match, key) => (
+        `<img class="transcript-image" loading="lazy" alt="image ${key.slice(0, 8)}" src="${escapeHtml(base)}${key}.png">`
+      ));
+    }
+
+    function computeContextStats() {
+      // One entry per context, in order: where its cards start in the
+      // game-wide token and response counts and how much it holds.
+      const stats = [];
+      for (const block of blocks) {
+        const context = finiteNumber(block.context);
+        if (context === null) {
+          continue;
+        }
+        while (stats.length <= context) {
+          stats.push({ index: stats.length, tokenStart: null, tokenEnd: 0, responseStart: null, responseEnd: 0 });
+        }
+        const entry = stats[context];
+        entry.tokenStart = entry.tokenStart === null ? block.generatedStart : Math.min(entry.tokenStart, block.generatedStart);
+        entry.tokenEnd = Math.max(entry.tokenEnd, block.generatedEnd);
+        entry.responseStart = entry.responseStart === null ? block.responseStart : Math.min(entry.responseStart, block.responseStart);
+        entry.responseEnd = Math.max(entry.responseEnd, block.responseEnd);
+      }
+      for (const entry of stats) {
+        entry.tokenStart = entry.tokenStart ?? 0;
+        entry.responseStart = entry.responseStart ?? 0;
+        entry.tokens = Math.max(0, entry.tokenEnd - entry.tokenStart);
+        entry.responses = Math.max(0, entry.responseEnd - entry.responseStart);
+      }
+      return stats;
+    }
+
+    function contextOutcome(index) {
+      const info = Array.isArray(currentGame?.contexts) ? currentGame.contexts[index] : null;
+      if (!info || !info.closed_by) {
+        return "open";
+      }
+      return info.closed_by === "compaction" ? "summarized" : String(info.closed_by);
+    }
+
+    function renderContextSelect() {
+      const total = contextStats.length;
+      const options = [`<option value="all">All contexts (${total})</option>`];
+      contextStats.forEach((entry, index) => {
+        const outcome = contextOutcome(index);
+        const label = `Context ${index + 1} of ${total} - ${formatNumber(entry.tokens)} tokens - ${entry.responses} response${entry.responses === 1 ? "" : "s"}${outcome ? ` - ${outcome}` : ""}`;
+        options.push(`<option value="${index}">${escapeHtml(label)}</option>`);
+      });
+      contextSelectEl.innerHTML = options.join("");
+      contextSelectEl.value = activeContext === null ? "all" : String(activeContext);
+      renderContextCount();
+    }
+
+    function renderContextCount() {
+      const total = contextStats.length;
+      contextCountEl.textContent = activeContext === null ? `all / ${total}` : `${activeContext + 1} / ${total}`;
+    }
+
+    function selectBlock(index, options = {}) {
+      const { scrollTranscript = true } = options;
+      if (!blocks.length) {
+        activeBlockIndex = null;
+        activeAnswer = 0;
+        renderEmpty("No transcript recorded for this puzzle yet.");
+        return;
+      }
+      activeBlockIndex = Math.min(Math.max(0, Number(index) || 0), blocks.length - 1);
+      activeAnswer = blocks[activeBlockIndex].answer;
+      renderSelection({ scrollTranscript });
+    }
+
+    function selectAnswer(number) {
+      // The card at which this answer came to stand: its marker.
+      let target = blocks.findIndex((block) => block.kind === "answer" && block.answer === number);
+      if (target < 0) {
+        target = blocks.findIndex((block) => block.answer === number);
+      }
+      if (target < 0) {
+        activeAnswer = number;
+        renderStage();
+        return;
+      }
+      selectBlock(target, { scrollTranscript: true });
+    }
+
+    function renderSelection(options = {}) {
+      const { scrollTranscript = true } = options;
+      const block = blocks[activeBlockIndex];
+      // A jump from the answer list may land in a context other than the
+      // one on display: switch to it, then scroll as usual.
+      if (scrollTranscript && activeContext !== null && block) {
+        const targetContext = finiteNumber(block.context);
+        if (targetContext !== null && targetContext !== activeContext && contextStats[targetContext]) {
+          activeContext = targetContext;
+          contextSelectEl.value = String(activeContext);
+          renderContextCount();
+          renderTranscriptRows();
+        }
+      }
+      let visibleTokens = block ? block.generatedEnd : 0;
+      let visibleResponses = block ? block.responseEnd : 0;
+      let tokenTotal = totalGeneratedTokens;
+      let responseTotal = totalResponses;
+      const scope = activeContext === null ? null : contextStats[activeContext];
+      if (scope) {
+        // Counters follow the displayed context: its own tokens and
+        // responses, exact, not the game-wide running totals.
+        visibleTokens = Math.min(scope.tokens, Math.max(0, visibleTokens - scope.tokenStart));
+        visibleResponses = Math.min(scope.responses, Math.max(0, visibleResponses - scope.responseStart));
+        tokenTotal = scope.tokens;
+        responseTotal = scope.responses;
+      }
+      tokenCountEl.textContent = `${formatNumber(visibleTokens)} / ${formatNumber(tokenTotal)}`;
+      responseCountEl.textContent = `${visibleResponses} / ${responseTotal}`;
+      tokenFillEl.style.width = `${tokenTotal ? Math.min(100, (visibleTokens / tokenTotal) * 100) : 0}%`;
+      responseFillEl.style.width = `${responseTotal ? Math.min(100, (visibleResponses / responseTotal) * 100) : 0}%`;
+      let activeRow = null;
+      transcriptLogEl.querySelectorAll(".transcript-entry").forEach((row) => {
+        const active = Number(row.dataset.blockIndex) === activeBlockIndex;
+        row.classList.toggle("active", active);
+        if (active) {
+          activeRow = row;
+        }
+      });
+      renderStage();
+      if (scrollTranscript && activeRow) {
+        requestAnimationFrame(() => activeRow.scrollIntoView({ block: "start" }));
+      }
+    }
+
+    function renderStage() {
+      const answers = gameAnswers();
+      answerCountEl.textContent = `answer ${activeAnswer} / ${answers.length}`;
+      renderInfo();
+      renderPuzzle();
+      answerLogEl.querySelectorAll(".answer-row").forEach((row) => {
+        row.classList.toggle("active", Number(row.dataset.answer) === activeAnswer);
+      });
+    }
+
+    function renderInfo() {
+      const block = blocks[activeBlockIndex];
+      const score = finiteNumber(currentGame?.final_score);
+      infoGridEl.innerHTML = [
+        renderStat("Elapsed", formatElapsed(block?.elapsedSeconds ?? null)),
+        renderStat("Final score", score === null ? String(currentGame?.status || "-") : `${formatNumber(score)} (${currentGame?.status || "-"})`),
+        renderStat("Responses", `${block ? block.responseEnd : 0} / ${totalResponses}`),
+        renderStat("Generated Tokens", `${formatNumber(block ? block.generatedEnd : 0)} / ${formatNumber(totalGeneratedTokens)}`),
+      ].join("");
+    }
+
+    function renderAnswerLog() {
+      const answers = gameAnswers();
+      const rows = ['<div class="answer-row" data-answer="0"><span>Before any answer</span><span>0s</span></div>'];
+      for (const answer of answers) {
+        rows.push(
+          `<div class="answer-row" data-answer="${Number(answer.number)}"><span>Answer ${Number(answer.number)}</span><span>${escapeHtml(formatElapsed(answer.elapsed_s))}</span></div>`
+        );
+      }
+      answerLogEl.innerHTML = rows.join("");
+    }
+
+    function renderPuzzle() {
+      const puzzle = currentGame?.puzzle || {};
+      const train = Array.isArray(puzzle.train) ? puzzle.train : [];
+      const test = Array.isArray(puzzle.test) ? puzzle.test : [];
+      const answers = gameAnswers();
+      const standing = activeAnswer > 0 ? answers[activeAnswer - 1] : null;
+      const scored = isTerminalStatus(currentGame?.status) && Array.isArray(currentGame?.result?.pairs);
+      const isFinalAnswer = Boolean(standing) && activeAnswer === answers.length && isTerminalStatus(currentGame?.status);
+      // The run scores its final answer only. Where that answer was right,
+      // the grid it matched with is the solution, and any attempt of any
+      // answer can be held against it; where it was wrong, the solution is
+      // not in the run, and only the final answer is known to be wrong.
+      const verdicts = scored ? currentGame.result.pairs : [];
+      const lastAnswer = answers[answers.length - 1];
+      const solution = (index) => {
+        const verdict = verdicts[index];
+        if (!verdict || !verdict.correct) {
+          return null;
+        }
+        const grid = lastAnswer?.predictions?.[index]?.[`attempt_${Number(verdict.matched_attempt) + 1}`];
+        return gridSize(grid) ? JSON.stringify(grid) : null;
+      };
+      const grids = [];
+      const figure = (grid, caption, verdict = "") => {
+        const size = gridSize(grid);
+        if (!size) {
+          return `<figure class="grid"><div class="grid-missing" style="width:${GRID_BOX}px;height:${Math.round(GRID_BOX / 2)}px">${escapeHtml(caption)}: none</div></figure>`;
+        }
+        grids.push(grid);
+        return `<figure class="grid ${verdict}"><canvas data-grid="${grids.length - 1}"></canvas><figcaption>${escapeHtml(caption)} - ${size}</figcaption></figure>`;
+      };
+      const testRows = test.map((item, index) => {
+        const prediction = standing?.predictions?.[index] || {};
+        const verdict = verdicts[index];
+        const known = solution(index);
+        const mark = (grid) => {
+          if (!verdict || !gridSize(grid)) {
+            return "";
+          }
+          if (known !== null) {
+            return JSON.stringify(grid) === known ? "correct" : "wrong";
+          }
+          return isFinalAnswer ? "wrong" : "";
+        };
+        const same = gridSize(prediction.attempt_1) && JSON.stringify(prediction.attempt_1) === JSON.stringify(prediction.attempt_2);
+        const cells = standing
+          ? [
+            figure(prediction.attempt_1, "attempt 1", mark(prediction.attempt_1)),
+            figure(prediction.attempt_2, same ? "attempt 2 (same grid)" : "attempt 2", mark(prediction.attempt_2)),
+          ]
+          : [`<figure class="grid"><div class="grid-missing" style="width:${GRID_BOX}px;height:${Math.round(GRID_BOX / 2)}px">no answer yet</div></figure>`];
+        return `<div class="pair">${figure(item?.input, `test ${index + 1} input`)}<span class="arrow">&rarr;</span>${cells.join("")}</div>`;
+      });
+      const trainRows = train.map((pair, index) => (
+        `<div class="pair">${figure(pair?.input, `example ${index + 1} input`)}<span class="arrow">&rarr;</span>${figure(pair?.output, "output")}</div>`
+      ));
+      const legend = !standing || !scored
+        ? ""
+        : (verdicts.some((verdict) => verdict?.correct) || isFinalAnswer
+          ? " - green matches the solution, red does not"
+          : " - not scored: the run's final answer was wrong, so the solution is not in the run");
+      const heading = standing
+        ? `Answer ${activeAnswer} of ${answers.length}, standing since ${formatElapsed(standing.elapsed_s)}${isFinalAnswer ? " (final)" : ""}${legend}`
+        : (answers.length ? "No answer standing yet at this point" : "No answer was recorded");
+      puzzleEl.innerHTML = [
+        `<div class="puzzle-section"><h3>Test and prediction<span>${escapeHtml(heading)}</span></h3>${testRows.join("") || '<div class="empty-state">No test input recorded.</div>'}</div>`,
+        `<div class="puzzle-section" style="margin-top:10px"><h3>Examples<span>${train.length} pair${train.length === 1 ? "" : "s"}</span></h3>${trainRows.join("") || '<div class="empty-state">No examples recorded.</div>'}</div>`,
+      ].join("");
+      puzzleEl.querySelectorAll("canvas[data-grid]").forEach((canvas) => drawGrid(canvas, grids[Number(canvas.dataset.grid)]));
+    }
+
+    function gridSize(grid) {
+      if (!Array.isArray(grid) || !grid.length || !Array.isArray(grid[0])) {
+        return "";
+      }
+      return `${grid.length}x${Math.max(...grid.map((row) => (Array.isArray(row) ? row.length : 0)))}`;
+    }
+
+    function drawGrid(canvas, grid) {
+      const rows = grid.length;
+      const cols = Math.max(1, ...grid.map((row) => row.length));
+      const cellSize = Math.max(2, Math.floor(GRID_BOX / Math.max(rows, cols)));
+      const width = cols * cellSize;
+      const height = rows * cellSize;
+      const palette = summaryPayload?.arc_palette?.length ? summaryPayload.arc_palette : DEFAULT_ARC_PALETTE;
+      canvas.width = width;
+      canvas.height = height;
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = palette[0] || "#000";
+      ctx.fillRect(0, 0, width, height);
+      for (let row = 0; row < rows; row += 1) {
+        for (let col = 0; col < cols; col += 1) {
+          const value = Number(grid[row][col] ?? 0);
+          ctx.fillStyle = palette[Math.max(0, Math.min(palette.length - 1, value))] || "#000";
+          ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+        }
+      }
+      if (cellSize >= 5) {
+        // Cell lines, as the model's own pictures have them.
+        ctx.strokeStyle = "rgba(128, 128, 128, 0.45)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        for (let col = 1; col < cols; col += 1) {
+          ctx.moveTo(col * cellSize + 0.5, 0);
+          ctx.lineTo(col * cellSize + 0.5, height);
+        }
+        for (let row = 1; row < rows; row += 1) {
+          ctx.moveTo(0, row * cellSize + 0.5);
+          ctx.lineTo(width, row * cellSize + 0.5);
+        }
+        ctx.stroke();
+      }
+    }
+
+    function renderEmpty(message) {
+      transcriptLogEl.innerHTML = `<div class="transcript-empty">${escapeHtml(message)}</div>`;
+      tokenCountEl.textContent = "0";
+      responseCountEl.textContent = "0";
+      tokenFillEl.style.width = "0%";
+      responseFillEl.style.width = "0%";
+      gameTitleEl.textContent = "Puzzle";
+      gameSubtitleEl.textContent = "Puzzle and answers";
+      answerCountEl.textContent = "0 / 0";
+      infoGridEl.innerHTML = "";
+      puzzleEl.innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
+      answerLogEl.innerHTML = '<div class="empty-state">No answers recorded.</div>';
+    }
+
+    function isGeneratedBlock(block) {
+      const kind = String(block?.kind || "").trim();
+      return Boolean(
+        block?.generated ||
+        kind === "thinking" ||
+        kind === "assistant" ||
+        kind === "output" ||
+        kind === "tool-call"
+      );
+    }
+
+    function generatedTokenCountForBlock(block) {
+      if (!isGeneratedBlock(block)) {
+        return 0;
+      }
+      const exact = finiteNumber(block?.generatedTokenCount);
+      if (exact !== null) {
+        return exact;
+      }
+      return tokenizeGeneratedText(`${String(block?.content || "").trim()}\n\n`).length;
+    }
+
+    function isGeneratedSection(label) {
+      return label === "THINKING" ||
+        label === "ASSISTANT" ||
+        label === "OUTPUT" ||
+        label.startsWith("TOOL CALL");
+    }
+
+    function tokenizeGeneratedText(text) {
+      const matches = String(text || "").match(/\S+\s*/g);
+      return matches ? matches : [];
+    }
+
+    function hasTranscriptTextSelection() {
+      const selection = window.getSelection();
+      if (!selection || selection.isCollapsed || !String(selection).trim()) {
+        return false;
+      }
+      return transcriptLogEl.contains(selection.anchorNode) || transcriptLogEl.contains(selection.focusNode);
+    }
+
+    function finiteNumber(value) {
+      if (value === null || value === undefined || value === "") {
+        return null;
+      }
+      const parsed = Number(value);
+      return Number.isFinite(parsed) ? parsed : null;
+    }
+
+    function renderStat(label, value) {
+      return `<div class="stat"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(String(value))}</span></div>`;
+    }
+
+    function formatElapsed(value) {
+      const parsed = finiteNumber(value);
+      if (parsed === null || parsed < 0) {
+        return "-";
+      }
+      if (parsed < 60) {
+        return `${parsed.toFixed(parsed < 10 ? 1 : 0)}s`;
+      }
+      const totalSeconds = Math.round(parsed);
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      if (hours) {
+        return `${hours}h ${String(minutes).padStart(2, "0")}m ${String(seconds).padStart(2, "0")}s`;
+      }
+      return `${minutes}m ${String(seconds).padStart(2, "0")}s`;
+    }
+
+    function formatNumber(value) {
+      const num = Number(value);
+      if (!Number.isFinite(num)) {
+        return "-";
+      }
+      if (Number.isInteger(num)) {
+        return String(num);
+      }
+      return String(Number(num.toFixed(4)));
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    // The address names the run and the puzzle shown (its id and its pass,
+    // counted from one as the puzzle list counts it), so that a copied link
+    // opens on the same puzzle.
+    function syncUrl() {
+      const url = new URL(window.location.href);
+      const game = summaryPayload?.games?.[currentGameIndex];
+      const fields = {
+        run: currentRunName,
+        puzzle: game?.game_id,
+        pass: game ? Number(game.pass_index) + 1 : null,
+      };
+      for (const [name, value] of Object.entries(fields)) {
+        if (value === null || value === undefined || value === "") {
+          url.searchParams.delete(name);
+        } else {
+          url.searchParams.set(name, String(value));
+        }
+      }
+      history.replaceState(null, "", url);
+    }
+
+    function puzzleFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const gameId = params.get("puzzle");
+      if (!gameId) {
+        return null;
+      }
+      const pass = params.get("pass");
+      return { gameId, pass: pass === null || pass === "" ? null : Number(pass) };
+    }
+
+    linkedPuzzle = puzzleFromUrl();
+    loadRun(new URLSearchParams(window.location.search).get("run") || null);
+  </script>
+</body>
+</html>

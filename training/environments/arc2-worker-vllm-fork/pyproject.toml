@@ -1,0 +1,61 @@
+[project]
+name = "arc2-training-worker-vllm-fork"
+version = "0.1.0"
+# The ARC-2 rollout worker for engines served from the harness environment
+# (the `platypus` submodule's lock, which pins the arc-prize-2026-vllm fork). The
+# worker checks its tokenizer and image processing against the engine's
+# (ullm's EngineProxy compares the Transformers, torch, torchvision, Pillow and
+# NumPy versions), so this stack must equal the harness lock's. The 27B
+# launcher's worker, on the repository lock's vLLM 0.25.1 stack, is
+# ../arc2-worker.
+requires-python = "==3.12.12"
+dependencies = [
+    "duck",
+    "platypus",
+    "taaf",
+    "ullm",
+    "numpy==2.3.5",
+    "pillow==12.3.0",
+    "transformers==5.16.1",
+    "torch==2.13.0",
+    "torchvision==0.28.0",
+    "vllm; sys_platform == 'linux'",
+]
+
+[tool.uv]
+package = false
+# extra-build-variables need uv 0.8.6 (see the harness's pyproject).
+required-version = ">=0.8.6"
+override-dependencies = [
+    "ullm",
+    # The harness lock's engine. ullm's own range does not admit the fork;
+    # the harness and arc2-platypus workspaces override it the same way.
+    "vllm @ git+https://github.com/Tufalabs/arc-prize-2026-vllm@a1edcd2caf6c3d3521aaac063004c49ef7f9ffcd ; sys_platform == 'linux'",
+    # Prebuilt FlashInfer kernels: the worker never starts an engine.
+    "flashinfer-jit-cache; python_full_version < '3'",
+]
+constraint-dependencies = [
+    "anthropic==0.117.0",
+    "jsonschema==4.26.0",
+    "mistune==3.3.3",
+    "openai==2.46.0",
+    "openai-harmony==0.0.8",
+    "tokenizers==0.23.2",
+    "typeguard==4.5.2",
+]
+
+# The fork is pure Python over upstream's precompiled v0.29.0 binaries, as in
+# the harness lock; without the commit, uv would package nightly binaries.
+[tool.uv.extra-build-variables]
+vllm = { VLLM_USE_PRECOMPILED = "1", VLLM_PRECOMPILED_WHEEL_COMMIT = "98dff2a81d747d1dba01a47f939f48c3526d4206" }
+
+# A separate project so identically named ARC-2 and ARC-3 packages never share
+# one interpreter. All source pins are the parent gitlinks.
+[tool.uv.workspace]
+members = []
+
+[tool.uv.sources]
+duck = { path = "../../arc2-platypus/packages/duck", editable = true }
+platypus = { path = "../../arc2-platypus/packages/platypus", editable = true }
+taaf = { path = "../../arc2-platypus/packages/taaf", editable = true }
+ullm = { path = "../../platypus/packages/ullm" }

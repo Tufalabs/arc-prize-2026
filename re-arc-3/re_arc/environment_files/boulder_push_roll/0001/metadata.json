@@ -1,0 +1,18 @@
+{
+  "game_id": "boulder_push_roll-0001",
+  "title": "BoulderPushRoll",
+  "idea": "A sokoban-like puzzle where pushing a boulder makes it roll onto plates, open doors, and help the player cross hazards to the goal.",
+  "default_fps": 8,
+  "baseline_actions": [
+    28,
+    29,
+    42,
+    37,
+    37,
+    51
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "BoulderPushRoll"
+}

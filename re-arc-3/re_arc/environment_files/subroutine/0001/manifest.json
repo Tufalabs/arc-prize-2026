@@ -1,0 +1,32 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "subroutine",
+  "game_id": "subroutine-0001",
+  "slug": "subroutine",
+  "class_name": "Subroutine",
+  "objective": "obj.match_emissions",
+  "mechanics": [
+    "mech.click_swap",
+    "mech.program_tokens",
+    "mech.subroutine_calls",
+    "mech.recursion",
+    "mech.step_bar"
+  ],
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space",
+    "click"
+  ],
+  "available_actions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

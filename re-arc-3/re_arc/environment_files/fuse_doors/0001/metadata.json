@@ -1,0 +1,8 @@
+{
+  "game_id": "fuse_doors-0001",
+  "title": "Fuse Doors",
+  "default_fps": 8,
+  "baseline_actions": [6, 10, 15, 40, 44, 56, 61],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "FuseDoors"
+}

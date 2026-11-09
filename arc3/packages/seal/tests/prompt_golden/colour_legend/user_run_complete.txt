@@ -1,0 +1,9 @@
+Color legend image: one swatch per color, labelled with the color name used in this prompt.
+[image:128x512]
+The code executed 2 actions in the previous sequence.
+Executed actions: UP, LEFT.
+You have completed the run!
+Current state: step 3, level 1.
+
+Current grid image:
+[image:32x32]

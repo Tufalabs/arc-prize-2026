@@ -1,0 +1,18 @@
+{
+  "game_id": "pong_solo_training_walls-0001",
+  "title": "Pong Solo Training Walls",
+  "idea": "A solo Pong challenge where the player serves and controls one paddle while walls, mirrors, bumpers, and gates reshape the ball's path.",
+  "default_fps": 10,
+  "baseline_actions": [
+    101,
+    121,
+    136,
+    156,
+    181,
+    211
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "PongSoloTrainingWalls"
+}

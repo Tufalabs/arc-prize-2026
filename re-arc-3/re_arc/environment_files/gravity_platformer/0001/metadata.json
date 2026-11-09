@@ -1,0 +1,18 @@
+{
+  "game_id": "gravity_platformer-0001",
+  "title": "Gravity Platformer",
+  "idea": "A tiny platformer with jumps, keys, crumbling ledges, moving hazards, and switches packed into short deterministic challenge rooms.",
+  "default_fps": 8,
+  "baseline_actions": [
+    37,
+    35,
+    38,
+    35,
+    36,
+    30
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "GravityPlatformer"
+}

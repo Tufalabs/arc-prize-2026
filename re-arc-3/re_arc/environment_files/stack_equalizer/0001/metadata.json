@@ -1,0 +1,17 @@
+{
+  "game_id": "stack_equalizer-0001",
+  "title": "StackEqualizer",
+  "idea": "A balancing puzzle where clicks transfer blocks between two stacks until both sides have exactly the same height.",
+  "default_fps": 4,
+  "baseline_actions": [
+    2,
+    7,
+    8
+  ],
+  "tags": [
+    "click-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "StackEqualizer"
+}

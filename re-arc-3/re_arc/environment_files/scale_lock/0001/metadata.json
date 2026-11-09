@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    25,
+    82,
+    62
+  ],
+  "class_name": "ScaleLock",
+  "default_fps": 8,
+  "game_id": "scale_lock-0001",
+  "idea": "This is a carrying puzzle built from a walker, a few loose weight blocks, and one or more balance bridges. Each balance bridge is shown as a simple horizontal bar with left and right loading pans. Above each pan, a small ghost outline indicates how many blocks that side wants. When the pans match the shown requirement, the bridge rises or locks into a usable crossing height; when they do not, it stays misaligned. The player moves with the arrow keys and uses SPACE to pick up or drop one weight block at a time. The objective is to configure the bridges so the walker can reach the target. The mechanic is readable because the whole board is just bars, blocks, outlines, and one walker. Level 1 has one bridge and two weight blocks, teaching pick-up and the visual meaning of the ghost requirements. Level 2 uses two balance bridges in sequence, so using a block for the first bridge can leave the second one unsolved. Level 3 places the blocks in awkward side rooms, forcing the player to decide transport order and sometimes temporarily break one bridge to solve the next.",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Scale Lock"
+}

@@ -1,0 +1,18 @@
+{
+  "game_id": "shortest_route_challenge-0001",
+  "title": "Shortest Route Challenge",
+  "idea": "A route-optimization puzzle packed with doors, hazards, and small interactions, where the board can often be completed in several ways but the real challenge is finding the shortest valid solution.",
+  "default_fps": 8,
+  "baseline_actions": [
+    14,
+    14,
+    12,
+    19,
+    9,
+    15
+  ],
+  "tags": [
+    "keys-only"
+  ],
+  "class_name": "ShortestRouteChallenge"
+}

@@ -1,0 +1,47 @@
+[project]
+name = "arc2-training-worker"
+version = "0.1.0"
+# The pinned ARC2 submodule packages currently require this exact interpreter.
+# This is an isolated worker project; the repository root accepts any 3.12.x.
+requires-python = "==3.12.12"
+dependencies = [
+    "duck",
+    "platypus",
+    "taaf",
+    "ullm",
+    "numpy==2.3.5",
+    "pillow==12.3.0",
+    "transformers==5.14.1",
+    "torchvision==0.26.0; sys_platform == 'linux'",
+    "torchvision==0.28.0; sys_platform != 'linux'",
+    "vllm==0.25.1; sys_platform == 'linux'",
+]
+
+[tool.uv]
+package = false
+required-version = ">=0.8.6"
+override-dependencies = [
+    "ullm",
+    # Keep the same FlashInfer 0.6.13 stack as the vLLM 0.25.1 server.
+    "flashinfer-jit-cache; python_full_version < '3'",
+]
+constraint-dependencies = [
+    "anthropic==0.117.0",
+    "jsonschema==4.26.0",
+    "mistune==3.3.3",
+    "nest-asyncio==1.6.0",
+    "openai==2.46.0",
+    "openai-harmony==0.0.8",
+    "typeguard==4.5.2",
+]
+
+# This is a separate project so identically named ARC-2 and ARC-3 packages
+# never share one interpreter. All source pins are the parent gitlinks.
+[tool.uv.workspace]
+members = []
+
+[tool.uv.sources]
+duck = { path = "../../arc2-platypus/packages/duck", editable = true }
+platypus = { path = "../../arc2-platypus/packages/platypus", editable = true }
+taaf = { path = "../../arc2-platypus/packages/taaf", editable = true }
+ullm = { path = "../../platypus/packages/ullm" }

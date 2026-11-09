@@ -1,0 +1,18 @@
+{
+  "class_name": "MirrorMatch",
+  "default_fps": 8,
+  "game_id": "mirror_match-0001",
+  "baseline_actions": [
+    4,
+    9,
+    13
+  ],
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Mirror Match",
+  "idea": "A symmetry puzzle where edits on one side of the board have mirrored consequences, and the player must end with a reflected arrangement that matches the target half exactly."
+}

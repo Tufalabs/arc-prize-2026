@@ -1,0 +1,8 @@
+idea_json: pipeline/game_ideas/official_game_ideas.json
+model: gpt-5.5
+reasoning_effort: xhigh
+codex_reasoning_effort: medium
+spec_background: true
+implementation_prompt_path: pipeline/prompts/codex_check_visual_prompt.md
+implementation_backend: codex
+spec_instructions_path: pipeline/prompts/spec_prompt.md

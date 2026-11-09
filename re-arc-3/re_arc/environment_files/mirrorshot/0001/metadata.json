@@ -1,0 +1,20 @@
+{
+  "baseline_actions": [
+    3,
+    4,
+    5,
+    4,
+    5
+  ],
+  "default_fps": 8,
+  "game_id": "mirrorshot-0001",
+  "local_dir": "re_arc/environment_files/mirrorshot/0001",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Mirror Shot",
+  "idea": "A click-based laser puzzle where shots bounce off mirrors and must be aimed through the board to strike the correct targets."
+}

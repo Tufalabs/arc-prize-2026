@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "one-hand-courier",
+  "game_id": "one_hand_courier-0001",
+  "slug": "one_hand_courier",
+  "class_name": "OneHandCourier",
+  "objective": "obj.deliver_parcel",
+  "mechanics": ["mech.single_hand", "mech.portable_keys", "mech.socket_gates", "mech.undo", "mech.step_budget"],
+  "action_set": ["up", "down", "left", "right", "space", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 7]
+}

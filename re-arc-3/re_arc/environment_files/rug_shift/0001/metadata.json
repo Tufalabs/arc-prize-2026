@@ -1,0 +1,8 @@
+{
+  "game_id": "rug_shift-0001",
+  "title": "Rug Shift",
+  "default_fps": 8,
+  "baseline_actions": [2, 4, 7, 15, 23, 31, 40],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "RugShift"
+}

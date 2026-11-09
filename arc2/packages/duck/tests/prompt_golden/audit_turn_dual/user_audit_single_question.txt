@@ -1,0 +1,65 @@
+You have answered this puzzle. Here it is again, with your answer.
+
+2 example pairs, input on the left and output on the right; exact digit rows follow each label:
+train_in[0] -> train_out[0]  (3x4 -> 5x9)
+train_in[0]:
+0	7348
+1	2092
+2	3491
+
+train_out[0]:
+0	394216941
+1	048945465
+2	088731165
+3	411839570
+4	919821663
+<image 76x36 sha256:2840116d71687c94 alt='train_in[0] -> train_out[0]  (3x4 -> 5x9)'>
+train_in[1] -> train_out[1]  (3x4 -> 5x9)
+train_in[1]:
+0	8010
+1	4895
+2	4332
+
+train_out[1]:
+0	775165675
+1	234695585
+2	204410177
+3	287480763
+4	036599762
+<image 76x36 sha256:57585d8f2745b553 alt='train_in[1] -> train_out[1]  (3x4 -> 5x9)'>
+
+The test input and your answers:
+test_in[0]  (7x7)
+test_in[0]:
+0	4622430
+1	6093998
+2	6931180
+3	3861933
+4	4523601
+5	0879126
+6	2388537
+<image 44x44 sha256:b3fed63b25916350 alt='test_in[0]  (7x7)'>
+test_out[0][0]  (7x7)
+test_out[0][0]:
+0	4622430
+1	6093998
+2	6931180
+3	3861933
+4	4523601
+5	0879126
+6	2388537
+<image 44x44 sha256:b3fed63b25916350 alt='test_out[0][0]  (7x7)'>
+test_out[0][1]: the same as test_out[0][0]
+
+Your last reply, which these answers rest on:
+
+> The rule: every row is mirrored.
+>
+> - Colours are kept.
+
+Audit this answer. Do the work in the kernel first, revising `test_out` as you go, then answer each question in your final reply.
+
+1. Support. How much of the training data shows each part of your rule? One pair can show a part several times, on several objects. A part shown only once, or one you doubted while deriving it, is a doubt. Colours, counts, sizes and directions often do play a special role, but a rule that gives one such a role needs extra care.
+2. What is new. What do the test inputs have that no training input has? What do all training inputs share that the test does not? For each, does your rule decide it, or did you choose?
+3. Your answer. Leave `test_out` holding what you now think: your likeliest answer in `test_out[i][0]`. If a doubt above has another reading that also fits every training pair and changes a test output, put the strongest such output in `test_out[i][1]`.
+4. Confidence. How confident are you, from 0 to 100, that your answer is right? Put the number in \boxed{}.

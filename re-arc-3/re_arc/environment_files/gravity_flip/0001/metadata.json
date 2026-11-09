@@ -1,0 +1,17 @@
+{
+  "game_id": "gravity_flip-0001",
+  "title": "Gravity Flip",
+  "default_fps": 10,
+  "baseline_actions": [
+    4,
+    9,
+    6
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "class_name": "GravityFlip"
+}

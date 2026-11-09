@@ -1,0 +1,114 @@
+{
+  "actions": [
+    [
+      6,
+      {
+        "x": 15,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 47,
+        "y": 31
+      }
+    ],
+    [
+      6,
+      {
+        "x": 15,
+        "y": 25
+      }
+    ],
+    [
+      6,
+      {
+        "x": 47,
+        "y": 39
+      }
+    ],
+    [
+      6,
+      {
+        "x": 15,
+        "y": 39
+      }
+    ],
+    [
+      6,
+      {
+        "x": 47,
+        "y": 25
+      }
+    ],
+    [
+      6,
+      {
+        "x": 15,
+        "y": 11
+      }
+    ],
+    [
+      6,
+      {
+        "x": 47,
+        "y": 39
+      }
+    ],
+    [
+      6,
+      {
+        "x": 15,
+        "y": 25
+      }
+    ],
+    [
+      6,
+      {
+        "x": 47,
+        "y": 53
+      }
+    ],
+    [
+      6,
+      {
+        "x": 15,
+        "y": 39
+      }
+    ],
+    [
+      6,
+      {
+        "x": 47,
+        "y": 11
+      }
+    ],
+    [
+      6,
+      {
+        "x": 15,
+        "y": 53
+      }
+    ],
+    [
+      6,
+      {
+        "x": 47,
+        "y": 25
+      }
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "pick_and_place-0001",
+  "generated_at_utc": "2026-05-12T11:12:05.865621+00:00",
+  "generator_agent": "PickAndPlaceDslAgent",
+  "initial_observation_signature": "4615eab355960e72c0d936d17f36cc2415ba536e",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 14,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 3,
+  "terminal_state": "WIN",
+  "total_levels": 3
+}

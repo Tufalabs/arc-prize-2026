@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    3,
+    6,
+    11
+  ],
+  "class_name": "FloodFill",
+  "default_fps": 8,
+  "game_id": "flood_fill-0001",
+  "tags": [
+    "click-keys",
+    "debugging",
+    "arc-like",
+    "easy"
+  ],
+  "title": "Flood Fill",
+  "idea": "A region-coloring puzzle where clicks spread fill through connected cells, and the challenge is to choose the right starting regions and order so the board ends in the intended color pattern."
+}

@@ -1,0 +1,8 @@
+{
+  "game_id": "counterweight_court-0001",
+  "title": "Counterweight Court",
+  "default_fps": 8,
+  "baseline_actions": [8, 11, 19, 29, 43, 45, 53],
+  "tags": ["keys-only", "arc-like", "medium", "codex-reviewed"],
+  "class_name": "CounterweightCourt"
+}

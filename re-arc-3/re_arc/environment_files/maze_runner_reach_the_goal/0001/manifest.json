@@ -1,0 +1,23 @@
+{
+  "generator": "manual-spec-implementation",
+  "variant": "0001",
+  "game_id": "maze_runner_reach_the_goal-0001",
+  "slug": "maze_runner_reach_the_goal",
+  "class_name": "MazeRunnerReachTheGoal",
+  "objective": "obj.reach_goal",
+  "mechanics": [
+    "mech.grid_movement",
+    "mech.wall_collision",
+    "mech.time_limit",
+    "mech.multi_tile_player"
+  ],
+  "layout_template": "maze",
+  "action_set": [
+    "up",
+    "down",
+    "left",
+    "right",
+    "space"
+  ],
+  "available_actions": [1, 2, 3, 4, 5]
+}

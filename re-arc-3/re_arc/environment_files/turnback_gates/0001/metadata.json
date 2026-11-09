@@ -1,0 +1,8 @@
+{
+  "game_id": "turnback_gates-0001",
+  "title": "Turnback Gates",
+  "default_fps": 8,
+  "baseline_actions": [2, 5, 8, 25, 43, 45, 61],
+  "tags": ["click-keys", "codex-reviewed"],
+  "class_name": "TurnbackGates"
+}

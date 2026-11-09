@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    5,
+    7,
+    10
+  ],
+  "class_name": "SweeperBlade",
+  "default_fps": 8,
+  "game_id": "sweeper_blade-0001",
+  "idea": "This is a collection puzzle where the player drives a wide plow-like blade with the arrow keys. The board contains loose pellets, walls, bins, and the blade itself. Any pellet directly in front of the blade is pushed along as the blade moves, and groups of pellets can be swept together as a small pile. The objective is to push all pellets into the correct bins without leaving any trapped in corners. This differs from ordinary box-pushing because the player is managing a front edge and a crowd of small pieces rather than a single crate. The visuals remain simple: a rectangular blade, round pellets, bins, and walls. Level 1 asks the player to sweep a few pellets into one large bin in an open room. Level 2 adds partitions so the player must first gather pellets into a controllable cluster before pushing them to the bin. Level 3 introduces two pellet colors and two bins, so the player must separate piles instead of just collecting everything together.",
+  "tags": [
+    "keys-only",
+    "debugging"
+  ],
+  "title": "Sweeper Blade"
+}

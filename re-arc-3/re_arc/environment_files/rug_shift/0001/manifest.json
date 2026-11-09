@@ -1,0 +1,12 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "rug-shift",
+  "game_id": "rug_shift-0001",
+  "slug": "rug_shift",
+  "class_name": "RugShift",
+  "objective": "obj.match_docks",
+  "mechanics": ["mech.supported_transport", "mech.cargo_brakes", "mech.convoy_blocking"],
+  "action_set": ["up", "down", "left", "right", "space", "click"],
+  "available_actions": [1, 2, 3, 4, 5, 6]
+}

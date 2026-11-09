@@ -1,0 +1,16 @@
+{
+  "game_id": "teleport_maze-0001",
+  "title": "Teleport Maze",
+  "default_fps": 10,
+  "baseline_actions": [
+    6,
+    21,
+    14
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "TeleportMaze"
+}

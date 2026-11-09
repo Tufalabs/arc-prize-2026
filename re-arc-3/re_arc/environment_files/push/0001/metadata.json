@@ -1,0 +1,21 @@
+{
+  "game_id": "push-0001",
+  "title": "Ice Push",
+  "idea": "An ice-and-pushing puzzle where sliding movement and crate interactions have to be combined to reach the goal without getting stuck.",
+  "default_fps": 8,
+  "baseline_actions": [
+    14,
+    16,
+    18,
+    20,
+    22,
+    20,
+    22
+  ],
+  "tags": [
+    "keys-only",
+    "debugging",
+    "no-time-bar"
+  ],
+  "class_name": "Push"
+}

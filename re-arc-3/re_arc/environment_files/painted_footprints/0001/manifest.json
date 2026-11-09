@@ -1,0 +1,19 @@
+{
+  "generator": "manual",
+  "variant": "0001",
+  "spec_id": "painted-footprints",
+  "game_id": "painted_footprints-0001",
+  "slug": "painted_footprints",
+  "class_name": "PaintedFootprints",
+  "objective": "obj.match_pads",
+  "mechanics": [
+    "mech.footprint_paint",
+    "mech.color_support_push",
+    "mech.paint_stations",
+    "mech.route_repainting",
+    "mech.undo",
+    "mech.step_budget"
+  ],
+  "action_set": ["up", "down", "left", "right", "space", "click", "undo"],
+  "available_actions": [1, 2, 3, 4, 5, 6, 7]
+}

@@ -1,0 +1,52 @@
+{
+  "typeCheckingMode": "strict",
+  "pythonVersion": "3.12",
+  "pythonPlatform": "Linux",
+  "include": [
+    "packages",
+    "tests",
+    "tools"
+  ],
+  "extraPaths": [
+    "../re-arc-3",
+    "tests"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    ".*",
+    // The seal's example world models: the model's source, read with
+    // `history`, `Unknown` and `Action` bound by the harness at load.
+    "packages/seal/src/seal/seeds/world_model_*.py"
+  ],
+  "reportUnnecessaryIsInstance": true,
+  "reportConstantRedefinition": true,
+  "reportInvalidStringEscapeSequence": true,
+  "reportUnknownVariableType": "warning",
+  "reportUnknownMemberType": false,
+  "reportUnknownParameterType": "warning",
+  "reportUnknownArgumentType": "warning",
+  // Unused imports are ruff's (F401, in `make lint`, on every machine alike).
+  // Pyright's copy is off because on the GitHub runner -- and only there --
+  // it reports `import ullm.backends.<module>` in tests/test_traces.py as
+  // not accessed while the module is used four times, and `make static`
+  // treats any warning as a failure. The report never reproduced locally in
+  // any pyright version, install shape or thread count; a check that is
+  // right here and wrong there enforces nothing, and the same check with a
+  // deterministic verdict is already on.
+  "reportUnusedImport": "none",
+  "reportUnusedVariable": "warning",
+  "reportMissingTypeStubs": false,
+  "reportPrivateUsage": false,
+  "executionEnvironments": [
+    {
+      "root": "packages/ullm",
+      "reportUnknownArgumentType": "none",
+      "reportUnknownVariableType": "none",
+      "reportUnknownParameterType": "none",
+      "reportUnknownMemberType": "none",
+      "reportMissingTypeArgument": "none",
+      "reportUnnecessaryIsInstance": "none"
+    }
+  ]
+}

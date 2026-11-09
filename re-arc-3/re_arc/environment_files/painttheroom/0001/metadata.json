@@ -1,0 +1,16 @@
+{
+  "game_id": "painttheroom-0001",
+  "title": "Paint the Room",
+  "idea": "A coverage puzzle where the player paints every target floor tile while avoiding forbidden areas, cleaners, and gates that can undo progress.",
+  "default_fps": 8,
+  "baseline_actions": [
+    16,
+    72,
+    66,
+    62
+  ],
+  "tags": [
+    "click-keys"
+  ],
+  "class_name": "Painttheroom"
+}

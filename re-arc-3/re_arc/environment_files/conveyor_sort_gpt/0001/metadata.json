@@ -1,0 +1,16 @@
+{
+  "baseline_actions": [
+    3,
+    4,
+    4
+  ],
+  "class_name": "ConveyorSortGpt",
+  "default_fps": 8,
+  "game_id": "conveyor_sort_gpt-0001",
+  "tags": [
+    "click-keys",
+    "debugging"
+  ],
+  "title": "Conveyor Sort GPT",
+  "idea": "A factory-routing puzzle where conveyor choices and junctions must be configured so moving items end up in the correct destinations."
+}

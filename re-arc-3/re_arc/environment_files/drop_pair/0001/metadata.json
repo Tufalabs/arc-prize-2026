@@ -1,0 +1,8 @@
+{
+  "game_id": "drop_pair-0001",
+  "title": "Drop & Pair",
+  "default_fps": 8,
+  "baseline_actions": [2, 5, 7, 25, 40, 45, 50],
+  "tags": ["click-keys", "codex-reviewed", "codex-evaluated"],
+  "class_name": "DropPair"
+}

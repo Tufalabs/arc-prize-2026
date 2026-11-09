@@ -1,0 +1,18 @@
+{
+  "baseline_actions": [
+    5,
+    10,
+    9
+  ],
+  "class_name": "ClockDockWalk",
+  "default_fps": 6,
+  "game_id": "clock_dock_walk-0001",
+  "local_dir": "re_arc/environment_files/clock_dock_walk/0001",
+  "tags": [
+    "keys-only",
+    "ka59_mechanics",
+    "debugging"
+  ],
+  "title": "Clock Dock Walk",
+  "idea": "A timing-heavy movement puzzle where the player walks to a dock while obstacles and opportunities cycle on a clocklike schedule."
+}

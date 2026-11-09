@@ -1,0 +1,92 @@
+{
+  "actions": [
+    [
+      3,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      1,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      4,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      3,
+      {}
+    ],
+    [
+      2,
+      {}
+    ],
+    [
+      3,
+      {}
+    ]
+  ],
+  "episode_reward": 1.0,
+  "game_id": "gravity_flip-0001",
+  "generated_at_utc": "2026-05-12T11:12:06.394009+00:00",
+  "generator_agent": "GravityFlipDslAgent",
+  "initial_observation_signature": "1cc8625dd4e96f0d7cc1901a36348a1e9ca924dc",
+  "initial_state": "NOT_FINISHED",
+  "num_actions": 19,
+  "schema_version": 1,
+  "seed": 0,
+  "solved_levels": 3,
+  "terminal_state": "WIN",
+  "total_levels": 3
+}
