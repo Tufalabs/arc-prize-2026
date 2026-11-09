@@ -1,9 +1,9 @@
 # Tufa Labs: ARC Prize 2026
 
 The code behind Tufa Labs' ARC-AGI-2 and ARC-AGI-3 entries in ARC Prize 2026.
-Our [paper](https://tufalabs.github.io/arc-writeups/paper/paper.html),
-[ARC2 writeup](https://tufalabs.github.io/arc-writeups/arc2_writeup/arc2_writeup.html),
-[ARC3 writeup](https://tufalabs.github.io/arc-writeups/arc3_writeup/arc3_writeup.html) and
+Our [paper](https://www.kaggle.com/competitions/arc-prize-2026-paper-track/writeups/general-approaches-now-beat-domain-specific-tricks),
+[ARC2 writeup](https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/writeups/general-approaches-now-beat-domain-specific-tricks),
+[ARC3 writeup](https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-3/writeups/general-approaches-now-beat-domain-specific-tricks) and
 [supplementary material](https://tufalabs.github.io/arc-writeups/supplementary/overview.html)
 explain what it does and what each part is worth.
 
