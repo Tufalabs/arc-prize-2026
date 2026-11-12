@@ -4,7 +4,7 @@ Tufa Labs' solver for the ARC-AGI-2 track of ARC Prize 2026. An LLM solves each
 task in a persistent Python REPL and places its answer grids there. The harness
 hosts the REPL, scores the answers and reports what each game cost.
 
-- [Writeup](https://tufalabs.github.io/arc-writeups/arc2_writeup/arc2_writeup.html) and
+- [Writeup](https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/writeups/general-approaches-now-beat-domain-specific-tricks) and
   [supplementary material](https://tufalabs.github.io/arc-writeups/supplementary/overview.html)
 - [Submission notebook](https://www.kaggle.com/code/jeroencottaar/arc2-demo-duck-xkbl4-final)
 

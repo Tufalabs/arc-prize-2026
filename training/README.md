@@ -2,7 +2,7 @@
 
 Supervised fine-tuning and reinforcement learning for language-model agents
 solving **ARC-AGI-2** tasks and playing **ARC-AGI-3** games, as used for Tufa
-Labs' ARC Prize 2026 entries. Our [paper](https://tufalabs.github.io/arc-writeups/paper/paper.html) and
+Labs' ARC Prize 2026 entries. Our [paper](https://www.kaggle.com/competitions/arc-prize-2026-paper-track/writeups/general-approaches-now-beat-domain-specific-tricks) and
 [supplementary material](https://tufalabs.github.io/arc-writeups/supplementary/overview.html) report the results.
 
 License: [MIT-0](LICENSE).

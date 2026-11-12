@@ -5,7 +5,7 @@ game from a persistent Python REPL, where it can inspect frames, write code and
 send actions. The harness hosts the REPL and the game, scores the play and
 reports what each game cost.
 
-- [Writeup](https://tufalabs.github.io/arc-writeups/arc3_writeup/arc3_writeup.html) and
+- [Writeup](https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-3/writeups/general-approaches-now-beat-domain-specific-tricks) and
   [supplementary material](https://tufalabs.github.io/arc-writeups/supplementary/overview.html)
 - [Submission notebook](https://www.kaggle.com/code/jeroencottaar/tufa-labs-arc3-final-solution)
 

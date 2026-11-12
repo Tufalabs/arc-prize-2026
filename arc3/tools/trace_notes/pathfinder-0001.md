@@ -2,7 +2,7 @@
 A full ARC3 game: Pathfinder
 
 === intro
-Supplementary material for our [ARC3 writeup](https://tufalabs.github.io/arc-writeups/arc3_writeup/arc3_writeup.html). This material was written by AI agents and human reviewed. An [overview](https://tufalabs.github.io/arc-writeups/supplementary/overview.html) lists all our supplementary material.
+Supplementary material for our [ARC3 writeup](https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-3/writeups/general-approaches-now-beat-domain-specific-tricks). This material was written by AI agents and human reviewed. An [overview](https://tufalabs.github.io/arc-writeups/supplementary/overview.html) lists all our supplementary material.
 
 This page shows everything that passed between our harness and the model while it played one game: the system prompt, every message and picture the harness sent, the model's reasoning, each piece of Python it ran, and what came back. The trace is complete and verbatim.
 
